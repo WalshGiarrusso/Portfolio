@@ -73,8 +73,9 @@
         /*Header*/
         #headerBorderCheat
         {
-            margin: 3% 10% 0% 10%;
+            margin: 3% 14.6% 0% 14.6%;
             border-bottom: solid 1px gray;
+            transition: 0.3s;
         }
         #mainHeader
         {
@@ -82,27 +83,42 @@
             padding-top:0px;
             color:black;
             font-size: 60px;
-            position:fixed;
+            position:absolute;
             top:0;
             left:50%;
             right:50%;
             width:435px;
-            margin-left: -217.5px;
-            
-            
-            
-            
+            margin-left: -217.5px;        
         }
         #headerText p
         {
            margin-top:15px;
            padding-top:0px;
            margin-bottom:0px;
-           text-align:center;
-            
+           text-align:center;         
         }
-
         /*End Header*/
+        #homePageTextContent
+        {
+            top:0px;
+            margin-left:250px;
+            width:430px;
+            display:inline-block;
+            float:left;
+        }
+         #homePageTextContent p
+        {
+            font-size:20px;
+        }
+        #partition1BorderCheat
+        {
+          margin: 3% 14.6% 0% 14.6%;
+          border-bottom: solid 1px gray;
+          transition: 0.3s;
+        }   
+        
+
+
     </style>
 </head>
 <body>
@@ -117,20 +133,50 @@
         <a href="#  ">Contact</a>
     </div>
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
     <!--End Sidebar-->
 
     <div id="mainContent">
-        <div id="headerBorderCheat">
-            <div id="mainHeader">
-                <div id="headerText">
-                    <p>Walsh Giarrusso</p>
+        <div id="partition1">
+            <div id="headerBorderCheat">
+                <div id="mainHeader">
+                    <div id="headerText">
+                        <p>Walsh Giarrusso</p>
+                    </div>
                 </div>
+            </div>
+            <div id="homePageTextContent">
+                <div style="display:inline-block;">
+                    <p>Hey!</p>
 
+                    <p>
+                        My name is Walsh Anthony Giarrusso. <br />
+                        I'm a junior in high school. <br />
+                        I like data analytics, politics, music, & art. <br />
+                        I've chosen to express those interests <br />
+                        through this website. <br />
+                        Have a look around! <br />
+                    </p>
+                </div>
+                <!--FIGURE OUT TWO COLUMN MIXING TEXT AND IMAGE-->
+            </div>
+            <div style="display:inline-block; width:250px; height:510px;margin-left:11.713%; overflow:hidden; margin-top:-25px;">
+                <img id="portraitContainer" src="https://i.ibb.co/k0vYxDF/Portrait.png" alt="Portrait" border="0" style="float:right; width:310px; transition:0.3s;">
             </div>
         </div>
 
-    </div>
+        <div id="partition1BorderCheat" style="margin-top:-70px;"></div>
+
+        <div id="partition2">
+
+
+        </div>
+
+
+
+
+
+        </div>
 
     <script>
         /* Sidebar */
@@ -138,11 +184,15 @@
             document.getElementById("mySidenav").style.width = "250px";           
             document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
             document.getElementById("headerBorderCheat").style.borderBottomColor = "black";
+            document.getElementById("partition1BorderCheat").style.borderBottomColor = "black";
+            document.getElementById("portraitContainer").style.filter = "brightness(40%)";
         }
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";           
             document.body.style.backgroundColor = "white";
             document.getElementById("headerBorderCheat").style.borderBottomColor = "gray";
+            document.getElementById("partition1BorderCheat").style.borderBottomColor = "black";
+            document.getElementById("portraitContainer").style.filter = "brightness(100%)";
         }
     </script>
 </body>
