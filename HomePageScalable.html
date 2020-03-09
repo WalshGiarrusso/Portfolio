@@ -1,11 +1,184 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
+
     <meta charset="utf-8" />
-    <title></title>
+
+    <title>Walsh Giarrusso</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
+
+    <style>
+        body
+        {
+            /* FONT */
+            color: black;
+            font-family: century-old-style-std, serif;
+            font-weight: 400;   /*Bold is weight 700*/
+            font-style: normal;
+            /* SETUP */
+            margin: 3% 1.5% 3% 1.5%;
+            /* ANIMATION */
+            transition: 0.3s;
+        }
+        /* SIDEBAR */
+        .sidebar
+        {
+            /* SETUP */
+            height:100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 2.5%;
+            /* VISUAL */
+            background-color: #111;
+            /* ANIMATION */
+            transition: 0.5s;
+        }
+        .sidebar p 
+        {
+            /* SETUP */
+            padding: 5% 2.5% 0% 10%;            
+            display: block;
+            /* ANIMATION */
+            transition: 0.5s;
+            /* VISUAL */
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+        }
+        .sidebar a
+        {
+            /* SETUP */
+            padding: 5% 2.5% 5% 20%;            
+            display: block;
+            /* ANIMATION */
+            transition: 0.5s;
+            /* VISUAL */
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+        }
+        .sidebar a:hover 
+        {
+            /* VISUAL */
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn 
+        {
+            /* SETUP */
+            position: absolute;
+            top: 0;
+            right: 25px;            
+            margin-left: 50px;
+            /* VISUAL */
+            font-size: 36px;
+        }
+        @media screen and (max-height: 450px) 
+        {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        }
+        /* HEADER */
+        #headerWrapper
+        {
+            /* SETUP */
+            position:absolute;
+            top: 4%;
+            left: 15%;
+            right: 15%;
+            
+            /* BORDER */
+            border-bottom: solid 1px gray;
+            /* ANIMATION */
+            transition: 0.3s;
+            
+        }
+        #headerContent p
+        {
+            margin:0%;
+            font-size:50px;
+            text-align:center;
+        }
+        /* ICONS */
+        #buttonWrapper
+        {
+            /* SETUP */
+            margin-left:13.85%;
+            margin-right:13.85%;
+            
+            
+            /* BORDER */
+            border-bottom: solid 1px gray;
+            /* ANIMATION */
+            transition: 0.3s;
+        }
+        #buttonContent
+        {
+            /* SETUP */
+            display:inline-block;
+        }
+
+
+
+    </style>
+
 </head>
+
 <body>
+    <!--Sidebar-->
+    <div class="sidebar" id="mainSidebar">
+        <p> Walsh <br /> Giarrusso </p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#  ">Home</a>
+        <a href="#  ">Gallery</a>
+        <a href="#  ">About</a>
+        <a href="#  ">Contact</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer; margin-left: 2.5%;" onclick="openNav()">&#9776;</span>
+
+    <!--Header-->
+    <div id="headerWrapper">
+        <div id="headerContent">
+            <p>
+                Walsh Giarrusso
+            </p>
+        </div>
+    </div>
+    <!--PLACEHOLDER-->
+    <div id="buttonWrapper">
+        <div id="buttonContent">
+
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+
+    <script>
+        /* Sidebar */
+        function openNav() {
+            document.getElementById("mainSidebar").style.width = "15%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+            document.getElementById("headerWrapper").style.borderBottomColor = "black";
+            document.getElementById("buttonWrapper").style.borderBottomColor = "black";
+        }
+        function closeNav() {
+            document.getElementById("mainSidebar").style.width = "0";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("headerWrapper").style.borderBottomColor = "gray";
+            document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
+        }
+    </script>
 
 </body>
+
 </html>
