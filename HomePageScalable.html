@@ -125,6 +125,172 @@
         }
 
 
+<<<<<<< Updated upstream
+=======
+        }
+        #partitionText p
+        {
+            font-size:20px;
+        }
+        #partitionImageWrapper
+        {
+            /*SETUP*/
+            
+            display:inline-block;
+            padding: 5% 2.5% 2.5% 0%;
+            height:62vh;
+            float:right;
+
+        }
+        #partitionImage
+        {
+            
+           /*SETUP*/
+           padding-left: 5vw;
+           height:60vh;
+           overflow:hidden;
+           
+           /*BORDER*/
+           border-left: solid 1px gray;
+           /*ANIMATION*/
+           transition: 0.3s; 
+                 
+        }
+    /* FEATURED */
+        #featuredHeader
+        {
+            /*SETUP*/
+            display:inline-block;
+            margin-left:13.85%;
+            margin-right:13.85%;
+            width:72.3%;
+            
+           
+            
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+        #featuredHeader p
+        {
+            /*SETUP*/
+            margin:0;
+            padding:2%;
+            /*VISUAL*/
+            text-align:center;
+            font-size:40px;
+            /*ANIMATION*/
+            transition:0.3s;
+        }
+        #featuredWrapper
+        {
+            /*SETUP*/
+            display:inline-block;
+            margin-left:13.85%;
+            margin-right:13.85%;
+            width:72.3%;
+            
+           
+            
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+        #featuredContentWrapper{
+           text-align:center;
+           width:100%;
+          
+            
+        }
+       
+        .ContentThumbnailWrapper
+        {
+            /*SETUP*/
+            display:inline-block;
+            margin:3% 5% 3% 5%;
+            overflow:hidden; 
+            height:45vh; 
+            width: 15vw;
+
+        }
+        .ContentThumbnailWrapper:hover .ContentThumbnail
+        {
+            /*VISUAL*/
+            
+            filter: blur(5px) brightness(85%);
+        }
+        .ContentThumbnailWrapper:hover .ContentThumbnailDescription
+        {
+            /*VISUAL*/
+            
+            opacity:1;
+        }
+
+        
+        .ContentThumbnail
+        {
+            /*SETUP*/
+            display:inline-block;            
+            height: 55vh;
+            width: 25vw;
+            object-fit:cover;
+            /*VISUAL*/            
+            filter: blur(2px) brightness(100%);
+            
+            /*ANIMATION*/
+            transition:0.1s;            
+        }
+        .ContentThumbnailDescription
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+             right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+        }
+        .ContentThumbnailDescriptionText
+        {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    /*HIDES*/
+        @media only screen and (max-width: 518px)
+        {
+            #giarrussoHeader
+            {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 1239px)
+        {
+            #partitionImage
+            {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+        @media only screen and (max-width: 1142px)
+        {
+            #partitionImage
+            {
+                display:none;
+            }
+        }
+>>>>>>> Stashed changes
 
     </style>
 
@@ -160,23 +326,91 @@
         <br />
         <br />
     </div>
+<<<<<<< Updated upstream
+=======
+<!--PARTITION-->
+    <div id="partitionContent">
+        <div id="partitionTextPadding">
+            <div id="partitionText">
+                <p>Hey!</p>
+
+                <p>
+                    My name is Walsh Anthony Giarrusso. <br />
+                    I'm a junior in high school. <br />
+                    I like data analytics, politics, music, & art. <br />
+                    I've chosen to express those interests through this website. <br />
+                    Have a look around! <br />
+                </p>
+            </div>
+        </div>
+        <div id="partitionImageWrapper">
+            <img src="https://i.ibb.co/QpjKtWc/Portrait-Crop.png" alt="Portrait-Crop" border="0" id="partitionImage">
+        </div>
+    </div>
+<!--FEATURED-->
+    <div id="featuredHeader">
+        <p>
+            Featured
+        </p>
+    </div>
+    <div id="featuredWrapper">
+        <div id="featuredContentWrapper">
+            <div class="ContentThumbnailWrapper">
+                <a href="       ">
+                    <img src="https://i.picsum.photos/id/237/200/300.jpg" class="ContentThumbnail" />
+                </a>
+                <div class="ContentThumbnailDescription">
+                    <p class="ContentThumbnailDescriptionText">
+                        LOREM
+                    </p>
+                </div>
+            </div>
+            <div class="ContentThumbnailWrapper">
+                <a href="       ">
+                    <img src="https://i.picsum.photos/id/23/200/300.jpg" class="ContentThumbnail" />
+                </a>
+                <div class="ContentThumbnailDescription">
+                    <p class="ContentThumbnailDescriptionText">
+                        IPSUM
+                    </p>
+                </div>
+            </div>
+            <div class="ContentThumbnailWrapper">
+                <a href="       ">
+                    <img src="https://i.picsum.photos/id/27/200/300.jpg" class="ContentThumbnail" />
+                </a>
+                <div class="ContentThumbnailDescription">
+                    <p class="ContentThumbnailDescriptionText">
+                        DOLOR
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> Stashed changes
 
 
 
     <script>
-        /* Sidebar */
-        function openNav() {
+    /* Sidebar */
+        function openNav()
+        {
             document.getElementById("mainSidebar").style.width = "15%";
             document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
             document.getElementById("headerWrapper").style.borderBottomColor = "black";
             document.getElementById("buttonWrapper").style.borderBottomColor = "black";
         }
-        function closeNav() {
+        function closeNav()
+        {
             document.getElementById("mainSidebar").style.width = "0";
             document.body.style.backgroundColor = "white";
             document.getElementById("headerWrapper").style.borderBottomColor = "gray";
             document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
         }
+   
+
+
     </script>
 
 </body>
