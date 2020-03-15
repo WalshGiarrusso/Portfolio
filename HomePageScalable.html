@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
 
     <title>Walsh Giarrusso</title>
-
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
 
     <style>
@@ -64,13 +64,36 @@
         {
             /* SETUP */
             padding: 5% 2.5% 5% 20%;            
-            display: block;
+            display: inline-block;
+            
+           
             /* ANIMATION */
             transition: 0.5s;
             /* VISUAL */
             text-decoration: none;
             font-size: 1.8vw;
             color: #818181;
+        }
+        .sidebar a:after
+        {
+            /*SETUP*/
+            display:block;
+            padding-top:2px;
+            content: '';
+            /*VISUAL*/
+            border-bottom: solid 2px #818181;  
+            transform: scaleX(0);  
+            /*ANIMATION*/
+            transition: .5s;
+            transform-origin:   0 50%;
+        }
+
+        .sidebar a:hover:after 
+        {
+            /* VISUAL */
+            transform: scaleX(1.05); 
+            /*ANIMATION*/
+            transform-origin: 0% 50%;
         }
         .sidebar a:hover 
         {
@@ -86,6 +109,11 @@
             margin-left: 50px;
             /* VISUAL */
             font-size: 36px;
+            
+        }     
+        .sidebar .closebtn:after
+        {
+            border-bottom: none;  
         }
         @media screen and (max-height: 450px) 
         {
@@ -206,7 +234,7 @@
                  
         }
     /* FEATURED */
-        #Header
+        .Header
         {
             /*SETUP*/
             display:inline-block;
@@ -221,7 +249,7 @@
             /*ANIMATION*/
             transition: 0.3s;
         }
-        #Header p
+        .Header p
         {
             /*SETUP*/
 
@@ -340,6 +368,75 @@
             /*ANIMATION*/
             transition: 0.5s;
         }
+    /*PRELUDE*/
+        #preludeContentWrapper
+        {          
+            /*SETUP*/
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
+            text-align:center;
+           
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+
+        }
+       
+        #preludeContent
+        {
+            /*SETUP*/
+            text-align:center;
+            margin: 2% 5% 2% 5%;
+            padding-bottom:0.3vw;
+        }
+        #preludeContent p
+        {
+            /*VISUAL*/
+            font-size:1.4vw;
+
+        }
+        #preludeContent a
+        {
+            /*VISUAL*/
+            font-family: lato, sans-serif;
+            font-size:1.4vw;
+            text-decoration:none;
+            font-weight:500;
+            font-style:normal;
+            color:black;
+            /*ANIMATION*/
+            transition: 0.3s;
+
+        }
+        #preludeContent a:after
+        {
+            /*SETUP*/
+            display:block;
+            content: '';
+            /*VISUAL*/
+            border-bottom: solid 0.12vw black;  
+            transform: scaleX(0);  
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+        #preludeContent a:hover:after
+        {
+            /*VISUAL*/
+            transform: scaleX(.2); 
+        }
+        #preludeContent a:hover
+        {
+           
+            /*VISUAL*/
+            font-size:1.7vw;
+            
+
+
+        }
+     
      
        
       
@@ -435,7 +532,7 @@
                 <p>
                     My name is Walsh Anthony Giarrusso. <br />
                     I'm a junior in high school. <br />
-                    I like data analytics, politics, music, & art. <br />
+                    I like writing, coding, music, & art. <br />
                     I've chosen to express those interests through this website. <br />
                     Have a look around! <br />
                 </p>
@@ -446,7 +543,7 @@
         </div>
     </div>
 <!--FEATURED-->
-    <div id="Header">
+    <div class="Header">
         <p>
             Featured
         </p>
@@ -496,10 +593,27 @@
         </div>
     </div>
     <!--PRELUDE-->
-    <div id="Header">
+    <div class="Header">
         <p>
             What You'll Find Here (& Why It's Here)
         </p>
+    </div>
+    <div id="preludeContentWrapper">
+        <div id="preludeContent">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div style="max-height:25px;">
+                <a href="   ">
+                    More about me ›
+                </a>
+            </div>
+            
+        </div>
+
     </div>
 
 
@@ -516,12 +630,22 @@
             document.getElementById("partitionText").style.borderBottomColor = "black";
             document.getElementById("partitionImage").style.borderRightColor = "black";
             document.getElementById("partitionImage").style.filter = "brightness(40%)";
-            document.getElementById("Header").style.borderBottomColor = "black";
+
+            var header = document.getElementsByClassName("Header");
+            var i;
+            for (i = 0; i < header.length; i++)
+            {
+                header[i].style.borderBottomColor = "black";
+            }
+
             document.getElementById("featuredWrapper").style.borderBottomColor = "black";     
             document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
-            
 
+            
+            document.getElementById("preludeContentWrapper").style.borderBottomColor = "black";  
         }
+
+
         function closeNav() {
             document.getElementById("mainSidebar").style.width = "0";
             document.body.style.backgroundColor = "white";
@@ -531,9 +655,18 @@
             document.getElementById("partitionText").style.borderBottomColor = "gray";
             document.getElementById("partitionImage").style.borderRightColor = "gray";
             document.getElementById("partitionImage").style.filter = "brightness(100%)";
-            document.getElementById("Header").style.borderBottomColor = "gray";
+
+            var header = document.getElementsByClassName("Header");
+            var i;
+            for (i = 0; i < header.length; i++)
+            {
+                header[i].style.borderBottomColor = "gray";
+            }
+
             document.getElementById("featuredWrapper").style.borderBottomColor = "gray";   
             document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
+
+            document.getElementById("preludeContentWrapper").style.borderBottomColor = "gray";  
            
             
             }
