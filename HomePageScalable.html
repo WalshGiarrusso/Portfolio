@@ -208,6 +208,7 @@
         #featuredHeader p
         {
             /*SETUP*/
+
             margin:0;
             padding:2%;
             /*VISUAL*/
@@ -216,22 +217,88 @@
             /*ANIMATION*/
             transition:0.3s;
         }
-        #featuredWrapper
+        #featuredWrapper 
         {
             /*SETUP*/
-            display:inline-block;
-            margin-left:13.85%;
-            margin-right:13.85%;
-            width:72.3%;
- 
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
             /*BORDER*/
             border-bottom: solid 1px gray;
             /*ANIMATION*/
             transition: 0.3s;
-        }
-        #featuredContentWrapper
-        {
+            }
 
+        #featuredContentWrapper 
+        {
+            /*SETUP*/
+            text-align: center;
+            margin: 2% 0% 2% 0%;
+        }
+
+        .ContentThumbnail 
+        {
+            /*SETUP*/
+            display: inline-block;
+            margin: 0% 4% 0% 4%;
+          
+            height: 30%;
+            width: 20%;
+            transition: 0.3s;
+            
+            
+            
+            
+        }
+        .ContentThumbnail:hover .ContentThumbnailCaption 
+        {
+            /*VISUAL*/
+            filter: opacity(100%);
+            z-index: 1;
+        }
+        .ContentThumbnail:hover .ContentThumbnailImage
+        {
+            
+                /*SETUP*/
+            transform:scale(1.2);
+                /*VISUAL*/
+            filter: brightness(50%);
+            
+            
+            
+        }
+
+        .ContentThumbnail a 
+        {
+            /*SETUP*/
+            display: inline-block;
+            position: relative;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+        .ContentThumbnailImage 
+         {
+            /*SETUP*/
+            display: inline-block;
+            
+            /*ANIMATION*/
+            transition: transform .5s, filter 1s;
+        }
+
+        .ContentThumbnailCaption 
+        {
+            /*SETUP*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*VISUAL*/
+            color: white;
+            filter: opacity(0);
+            /*ANIMATION*/
+            transition: 0.3s;
         }
        
       
@@ -328,6 +395,42 @@
     <div id="featuredWrapper">
         <div id="featuredContentWrapper">
             
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+            </div>
+
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
+
+                </a>
+            </div>
+
+            <div class="ContentThumbnail">
+                <a href==" ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
+
+                </a>
+            </div>
+
+
+
+
+
         </div>
     </div>
 
@@ -347,9 +450,7 @@
             document.getElementById("partitionImage").style.filter = "brightness(40%)";
             document.getElementById("featuredHeader").style.borderBottomColor = "black";
             document.getElementById("featuredWrapper").style.borderBottomColor = "black";
-            document.getElementById("ContentThumbnailFeatured1").style.filter = "brightness(40%)";
-            document.getElementById("ContentThumbnailFeatured2").style.filter = "brightness(40%)";
-            document.getElementById("ContentThumbnailFeatured3").style.filter = "brightness(40%)";
+            
 
         }
         function closeNav() {
@@ -362,11 +463,11 @@
             document.getElementById("partitionImage").style.borderRightColor = "gray";
             document.getElementById("partitionImage").style.filter = "brightness(100%)";
             document.getElementById("featuredHeader").style.borderBottomColor = "gray";
-            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";
-            document.getElementById("ContentThumbnailFeatured1").style.filter = "brightness(100%)";
-            document.getElementById("ContentThumbnailFeatured2").style.filter = "brightness(100%)";
-            document.getElementById("ContentThumbnailFeatured3").style.filter = "brightness(100%)";
-        }
+            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";            
+            }
+
+
+
     </script>
 
 </body>
