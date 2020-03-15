@@ -50,13 +50,14 @@
         .sidebar p 
         {
             /* SETUP */
-            padding: 5% 2.5% 0% 10%;            
+            padding: 5% 0% 0% 10%;            
             display: block;
+            margin-top:9vh;
             /* ANIMATION */
             transition: 0.5s;
             /* VISUAL */
             text-decoration: none;
-            font-size: 30px;
+            font-size: 2.2vw;
             color: white;
         }
         .sidebar a
@@ -68,7 +69,7 @@
             transition: 0.5s;
             /* VISUAL */
             text-decoration: none;
-            font-size: 25px;
+            font-size: 1.8vw;
             color: #818181;
         }
         .sidebar a:hover 
@@ -109,7 +110,7 @@
         #headerContent p
         {
             margin:0%;
-            font-size:50px;
+            font-size:4vw;
             text-align:center;
         }
     /* ICONS */
@@ -138,6 +139,9 @@
             margin-left:13.85%;
             margin-right:13.85%;
             width:72.3%;
+            height:70vh;
+
+            overflow:hidden;
            
             
             /*BORDER*/
@@ -150,25 +154,34 @@
         {
             /*SETUP*/
             display:inline-block;
-            padding: 5% 0% 5% 5%;
+            padding: 5% 0% 2vw 5%;
+            max-width:40vw;
+            
         }
         #partitionText
         {
             /*SETUP*/
             display:inline-block;
             padding: 0% 5% 0% 0%;
+
             width:100%;
+           
             
 
         }
         #partitionText p
         {
-            font-size:20px;
+            /*VISUAL*/
+            font-size:1.424128843vw;
+           
+            /*ANIMATION*/
+            transition:0.3s;
         }
         #partitionImageWrapper
         {
             /*SETUP*/
-            
+            white-space:nowrap;
+            max-width:23vw;
             display:inline-block;
             padding: 5% 2.5% 2.5% 0%;
             height:62vh;
@@ -179,9 +192,12 @@
         {
             
            /*SETUP*/
-           padding-left: 5vw;
-           height:60vh;
-           overflow:hidden;
+           display:inline-block;
+
+           padding-left: 3vw;
+           height:90%;
+           
+           
            
            /*BORDER*/
            border-left: solid 1px gray;
@@ -213,7 +229,7 @@
             padding:2%;
             /*VISUAL*/
             text-align:center;
-            font-size:40px;
+            font-size:3.2vw;
             /*ANIMATION*/
             transition:0.3s;
         }
@@ -224,28 +240,40 @@
             margin-left: 13.85%;
             margin-right: 13.85%;
             width: 72.3%;
+            
+           
             /*BORDER*/
             border-bottom: solid 1px gray;
             /*ANIMATION*/
             transition: 0.3s;
-            }
+        }
 
         #featuredContentWrapper 
         {
             /*SETUP*/
             text-align: center;
-            margin: 2% 0% 2% 0%;
+            margin: 3% 0vw 3% 0vw;
+            max-height:300px;
+            white-space:nowrap;
+            
+            /*ANIMATION*/
+            transition: 0.3s;
         }
 
         .ContentThumbnail 
         {
             /*SETUP*/
             display: inline-block;
-            margin: 0% 4% 0% 4%;
-          
-            height: 30%;
-            width: 20%;
+            
+            margin: 0% 5% 0% 5%;
+            max-height:300px;
+            max-width:200px;
+            width:15%;
+            
+            
+            /*ANIMATION*/
             transition: 0.3s;
+            
             
             
             
@@ -253,9 +281,11 @@
         }
         .ContentThumbnail:hover .ContentThumbnailCaption 
         {
+            /*SETUP*/
+            z-index: 1;
             /*VISUAL*/
             filter: opacity(100%);
-            z-index: 1;
+            
         }
         .ContentThumbnail:hover .ContentThumbnailImage
         {
@@ -274,6 +304,7 @@
             /*SETUP*/
             display: inline-block;
             position: relative;
+            
             /*ANIMATION*/
             transition: 0.3s;
         }
@@ -282,9 +313,16 @@
          {
             /*SETUP*/
             display: inline-block;
+            vertical-align: middle;
+            width:100%;
+            height:100%;
+           
+            max-height:300px;
+            max-width:200px;
+            
             
             /*ANIMATION*/
-            transition: transform .5s, filter 1s;
+            transition: transform .5s, filter .5s;
         }
 
         .ContentThumbnailCaption 
@@ -294,12 +332,15 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            
             /*VISUAL*/
             color: white;
             filter: opacity(0);
+            font-size: 2vw;
             /*ANIMATION*/
-            transition: 0.3s;
+            transition: 0.5s;
         }
+     
        
       
 
@@ -307,29 +348,47 @@
 
 
 
-    /*HIDES*/
-        @media only screen and (max-width: 518px)
-        {
-            #giarrussoHeader
-            {
-                display: none;
-            }
-        }
+    /*HIDES*/   
         @media only screen and (max-width: 1239px)
         {
             #partitionImage
             {
+                /*
                 padding-left: 0;
                 border-left: none;
+                */
+
+                height:auto;
+                width: 23vw;
+                
+            }
+            #partitionImageWrapper
+            {
+                height:auto;
+                width: 23vw;
+            }
+            #partitionContent{
+                height:auto;
+            }
+            #partitionText p
+            {
+                /*
+                    font-size:2vw;
+                */
             }
         }
         @media only screen and (max-width: 1142px)
         {
+            /*
             #partitionImage
             {
                 display:none;
+                
+
             }
+           */
         }
+       
 
     </style>
 
@@ -352,7 +411,7 @@
     <div id="headerWrapper">
         <div id="headerContent">
             <p>
-                Walsh <span id="giarrussoHeader">Giarrusso</span>
+                Walsh Giarrusso
             </p>
         </div>
     </div>
@@ -401,6 +460,7 @@
                         <h3>Lorem</h3>
                         <p>Ipsum</p>
                     </div>
+                   
                     <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
                 </a>
             </div>
@@ -411,17 +471,19 @@
                         <h3>Lorem</h3>
                         <p>Ipsum</p>
                     </div>
+                    <span class="helper"></span>
                     <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
 
                 </a>
             </div>
 
             <div class="ContentThumbnail">
-                <a href==" ">
+                <a href="   ">
                     <div class="ContentThumbnailCaption">
                         <h3>Lorem</h3>
                         <p>Ipsum</p>
                     </div>
+                    <span class="helper"></span>
                     <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
 
                 </a>
@@ -449,7 +511,8 @@
             document.getElementById("partitionImage").style.borderRightColor = "black";
             document.getElementById("partitionImage").style.filter = "brightness(40%)";
             document.getElementById("featuredHeader").style.borderBottomColor = "black";
-            document.getElementById("featuredWrapper").style.borderBottomColor = "black";
+            document.getElementById("featuredWrapper").style.borderBottomColor = "black";     
+            document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
             
 
         }
@@ -463,7 +526,10 @@
             document.getElementById("partitionImage").style.borderRightColor = "gray";
             document.getElementById("partitionImage").style.filter = "brightness(100%)";
             document.getElementById("featuredHeader").style.borderBottomColor = "gray";
-            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";            
+            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";   
+            document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
+           
+            
             }
 
 
