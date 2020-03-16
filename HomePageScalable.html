@@ -504,7 +504,7 @@
 
     <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" onclick="openNav()">&#9776;</span>
 
-<!--Header-->
+    <!--Header-->
     <div id="headerWrapper">
         <div id="headerContent">
             <p>
@@ -512,7 +512,7 @@
             </p>
         </div>
     </div>
-<!--PLACEHOLDER-->
+    <!--PLACEHOLDER-->
     <div id="buttonWrapper">
         <div id="buttonContent">
             <br />
@@ -523,7 +523,7 @@
         <br />
         <br />
     </div>
-<!--PARTITION-->
+    <!--PARTITION-->
     <div id="partitionContent">
         <div id="partitionTextPadding">
             <div id="partitionText">
@@ -542,7 +542,7 @@
             <img src="https://i.ibb.co/QpjKtWc/Portrait-Crop.png" alt="Portrait-Crop" border="0" id="partitionImage">
         </div>
     </div>
-<!--FEATURED-->
+    <!--FEATURED-->
     <div class="Header">
         <p>
             Featured
@@ -550,14 +550,14 @@
     </div>
     <div id="featuredWrapper">
         <div id="featuredContentWrapper">
-            
+
             <div class="ContentThumbnail">
                 <a href="   ">
                     <div class="ContentThumbnailCaption">
                         <h3>Lorem</h3>
                         <p>Ipsum</p>
                     </div>
-                   
+
                     <img src="https://i.picsum.photos/id/15/200/300.jpg" class="ContentThumbnailImage" />
                 </a>
             </div>
@@ -601,9 +601,9 @@
     <div id="preludeContentWrapper">
         <div id="preludeContent">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <div style="max-height:25px;">
@@ -611,11 +611,11 @@
                     More about me ›
                 </a>
             </div>
-            
+
         </div>
 
     </div>
-
+    <!--FOOTER-->
 
 
 
@@ -633,16 +633,15 @@
 
             var header = document.getElementsByClassName("Header");
             var i;
-            for (i = 0; i < header.length; i++)
-            {
+            for (i = 0; i < header.length; i++) {
                 header[i].style.borderBottomColor = "black";
             }
 
-            document.getElementById("featuredWrapper").style.borderBottomColor = "black";     
+            document.getElementById("featuredWrapper").style.borderBottomColor = "black";
             document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
 
-            
-            document.getElementById("preludeContentWrapper").style.borderBottomColor = "black";  
+
+            document.getElementById("preludeContentWrapper").style.borderBottomColor = "black";
         }
 
 
@@ -658,18 +657,17 @@
 
             var header = document.getElementsByClassName("Header");
             var i;
-            for (i = 0; i < header.length; i++)
-            {
+            for (i = 0; i < header.length; i++) {
                 header[i].style.borderBottomColor = "gray";
             }
 
-            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";   
+            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";
             document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
 
-            document.getElementById("preludeContentWrapper").style.borderBottomColor = "gray";  
-           
-            
-            }
+            document.getElementById("preludeContentWrapper").style.borderBottomColor = "gray";
+
+
+        }
 
 
 
