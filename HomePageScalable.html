@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
 
     <style>
+
+     /* * { border: 1px solid red; }*/
+
         body
         {
             /* FONT */
@@ -19,7 +22,7 @@
             font-weight: 400;   /*Bold is weight 700*/
             font-style: normal;
             /* SETUP */
-            padding: 3% 1.5% 3% 1.5%;
+            padding: 3% 1.5% 0% 1.5%;
             margin:0;
             /* ANIMATION */
             transition: 0.3s;
@@ -44,7 +47,8 @@
             overflow-x: hidden;
             padding-top: 2.5%;
             /* VISUAL */
-            background-color: #111;
+            
+            background-color: #3b2e34;
             /* ANIMATION */
             transition: 0.5s;
         }
@@ -211,13 +215,6 @@
             margin: 0 3vw 0 3vw;
         }
 
-
-
-
-
-
-
-
     /* PARTITION */
         #partitionContent
         {
@@ -334,7 +331,6 @@
             /*ANIMATION*/
             transition: 0.3s;
         }
-
         #featuredContentWrapper 
         {
             /*SETUP*/
@@ -346,7 +342,6 @@
             /*ANIMATION*/
             transition: 0.3s;
         }
-
         .ContentThumbnail 
         {
             /*SETUP*/
@@ -385,7 +380,6 @@
             
             
         }
-
         .ContentThumbnail a 
         {
             /*SETUP*/
@@ -395,7 +389,6 @@
             /*ANIMATION*/
             transition: 0.3s;
         }
-
         .ContentThumbnailImage 
          {
             /*SETUP*/
@@ -411,7 +404,6 @@
             /*ANIMATION*/
             transition: transform .5s, filter .5s;
         }
-
         .ContentThumbnailCaption 
         {
             /*SETUP*/
@@ -437,13 +429,10 @@
             width: 72.3%;
             text-align:center;
            
-            /*BORDER*/
-            border-bottom: solid 1px gray;
             /*ANIMATION*/
             transition: 0.3s;
 
-        }
-       
+        }    
         #preludeContent
         {
             /*SETUP*/
@@ -496,19 +485,120 @@
 
         }
         /*FOOTER*/
+       
         #footerWrapper
         {
             /*SETUP*/
-            margin: 5vw 0% -3.5% -2%;
-            width:104%;
-            height:10vw;
-            bottom:0;
+            margin: 0% -1.55% 0% -1.55%;
+            padding: 0.5% 15.35%;
+            overflow:auto;
             /*VISUAL*/
-           
-            /*background-color: #333333;*/
+            background-color: #3b2e34;
+            color:white;
+            /*ANIMATION*/
+            transition:0.3s;
             
+           
+            
+        }
+        #footerContent
+        {
+            
+            /*SETUP*/
+            padding: .5vw 0vw;
+            overflow:auto;
+            
+        }
+        #footerPartitionLeft
+        {
+            /*SETUP*/
+            float:left;
+            height:auto;
+            padding: .5vw 0vw .5vw .5vw;
+            /*VISUAL*/
+            font-size:2vw;
+            
+        }
+        #footerPartitionLeft p 
+        {
+            /*SETUP*/
+            margin:0;
+            margin-top: -0.5vw;
+        }
+        
+        #footerPartitionRight
+        {
+            /*SETUP*/
+            float:right;
+            height:100%;
+            padding-left:7.5vw;
+            /*VISUAL*/
+            border-left: 1px solid white;
+            
+            
+        }
+        .FooterDrop
+        {
+            /*SETUP*/
+            display:inline-block;
+            margin-right:4vw;
+            height:auto;
+            
+            
+            
+        }
+        .FooterDrop p
+        {
+            /*SETUP*/
+            margin: 0vw 0vw;
+            
+         
+        }
+
+        .FooterDrop a
+        {
+            /*VISUAL*/
+            text-decoration:none;
+            color:black;
+            font-size: 2vw;
+            font-weight:500;
+            color:white;
+          
+          
+        }
+        .FooterDrop ul
+        {
+            /*SETUP*/
+            padding-left:1.5vw;
+            /*VISUAL*/
+            list-style-type: none;
+            margin: 0;
+            
+          
+        }
+        .FooterDrop li a
+        {
+            /*VISUAL*/
+            font-size: 1.5vw;
+            color:gray;
+            /*ANIMATION*/
+            transition:0.1s;
+        }
+        .FooterDrop li a:hover
+        {
+            /*VISUAL*/
+            
+            color:white;
 
         }
+        #footerDropfiller
+        {
+            
+            /*VISUAL*/
+            visibility:hidden;
+
+        }
+      
              
      
        
@@ -523,10 +613,7 @@
         {
             #partitionImage
             {
-                /*
-                padding-left: 0;
-                border-left: none;
-                */
+            
 
                 height:auto;
                 width: 23vw;
@@ -540,24 +627,9 @@
             #partitionContent{
                 height:auto;
             }
-            #partitionText p
-            {
-                /*
-                    font-size:2vw;
-                */
-            }
+           
         }
-        @media only screen and (max-width: 1142px)
-        {
-            /*
-            #partitionImage
-            {
-                display:none;
-                
-
-            }
-           */
-        }
+    
        
 
     </style>
@@ -707,17 +779,166 @@
     <!--FOOTER-->
     <div id="footerWrapper">
         <div id="footerContent">
+            <div id="footerPartitionLeft">
+                <p>
+                    Walsh Giarrusso
+                </p>
+                    
+            </div>
+            <div id="footerPartitionRight">
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Home
+                        </a>
+                    </p>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Lorem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Ipsum
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Dolor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Gallery
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Dolor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Sit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Amet
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            About
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Dolor
+                            </a>
+                        </li>
 
+                    </ul>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Contact
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Dolor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
+       
     </div>
-
-
-
-
-
-
-
     <script>
         /* Sidebar */
         function openNav() {
@@ -740,7 +961,10 @@
             document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
 
 
-            document.getElementById("preludeContentWrapper").style.borderBottomColor = "black";
+            
+            document.getElementById("footerWrapper").style.filter = "brightness(40%)";
+
+
         }
 
 
@@ -763,7 +987,8 @@
             document.getElementById("featuredWrapper").style.borderBottomColor = "gray";
             document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
 
-            document.getElementById("preludeContentWrapper").style.borderBottomColor = "gray";
+            
+            document.getElementById("footerWrapper").style.filter = "brightness(100%)";
 
 
         }
@@ -771,7 +996,6 @@
 
 
     </script>
-
 </body>
 
 </html>
