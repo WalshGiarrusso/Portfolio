@@ -482,13 +482,6 @@ body {
             color: white;
         }
 
-#footerDropfiller {
-    /*SETUP*/
-    max-height: 9.5168374817vw;
-    overflow:hidden;
-    /*VISUAL*/
-    visibility: hidden;
-}
 
 
 
