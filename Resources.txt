@@ -2,3 +2,15 @@ https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
 
 sidebar orig color:
 background-color: #111;
+
+
+non placeholder partitionleft:
+p>Hey!</p>
+
+                <p>
+                    My name is Walsh Anthony Giarrusso. <br />
+                    I'm a junior in high school. <br />
+                    I like writing, coding, music, & art. <br />
+                    I've chosen to express those interests through this website. <br />
+                    Have a look around! <br />
+                </p>
