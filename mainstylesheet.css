@@ -441,9 +441,9 @@ body {
 
 .FooterDrop {
     /*SETUP*/
-    display: inline-block;
+    display: inline-grid;
     margin-right: 4vw;
-    height: auto;
+    
 }
 
     .FooterDrop p {
@@ -461,8 +461,9 @@ body {
     }
 
     .FooterDrop ul {
-        /*SETUP*/
+        /*SEtup*/
         padding-left: 1.5vw;
+        display:table-column;
         /*VISUAL*/
         list-style-type: none;
         margin: 0;
@@ -482,6 +483,9 @@ body {
         }
 
 #footerDropfiller {
+    /*SETUP*/
+    max-height: 9.5168374817vw;
+    overflow:hidden;
     /*VISUAL*/
     visibility: hidden;
 }
