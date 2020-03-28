@@ -1,0 +1,793 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Walsh Giarrusso</title>
+    <link rel="icon" href="http://walshgiarrusso.com/favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
+
+    <style>
+
+        /* * { border: 1px solid red; }*/
+
+        body {
+            /* FONT */
+            color: black;
+            font-family: century-old-style-std, serif;
+            font-weight: 400; /*Bold is weight 700*/
+            font-style: normal;
+            /* SETUP */
+            padding: 3% 1.5% 0% 1.5%;
+            margin: 0;
+            /* ANIMATION */
+            transition: 0.3s;
+            /*REMOVE SCROLLBAR*/
+            -ms-overflow-style: none;
+        }
+            /*REMOVE SCROLLBAR*/
+            body::-webkit-scrollbar {
+                display: none;
+            }
+        /* SIDEBAR */
+        .sidebar {
+            /* SETUP */
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 2.5%;
+            /* VISUAL */
+            background-color: #3b2e34;
+            /* ANIMATION */
+            transition: 0.5s;
+        }
+            .sidebar p {
+                /* SETUP */
+                padding: 5% 0% 0% 10%;
+                display: block;
+                margin-top: 9vh;
+                /* ANIMATION */
+                transition: 0.5s;
+                /* VISUAL */
+                text-decoration: none;
+                font-size: 2.2vw;
+                color: white;
+            }
+            .sidebar a {
+                /* SETUP */
+                padding: 5% 2.5% 5% 20%;
+                display: inline-block;
+                /* ANIMATION */
+                transition: 0.5s;
+                /* VISUAL */
+                text-decoration: none;
+                font-size: 1.8vw;
+                color: #818181;
+            }
+                .sidebar a:after {
+                    /*SETUP*/
+                    display: block;
+                    padding-top: 2px;
+                    content: '';
+                    /*VISUAL*/
+                    border-bottom: solid 2px #818181;
+                    transform: scaleX(0);
+                    /*ANIMATION*/
+                    transition: .5s;
+                    transform-origin: 0 50%;
+                }
+                .sidebar a:hover:after {
+                    /* VISUAL */
+                    transform: scaleX(1.05);
+                    /*ANIMATION*/
+                    transform-origin: 0% 50%;
+                }
+                .sidebar a:hover {
+                    /* VISUAL */
+                    color: #f1f1f1;
+                }
+            .sidebar .closebtn {
+                /* SETUP */
+                position: absolute;
+                top: 0;
+                right: 25px;
+                margin-left: 50px;
+                /* VISUAL */
+                font-size: 36px;
+            }
+                .sidebar .closebtn:after {
+                    border-bottom: none;
+                }
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+        /* HEADER */
+        #headerWrapper {
+            /* SETUP */
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            /* BORDER */
+            border-bottom: solid 1px gray;
+            /* ANIMATION */
+            transition: 0.3s;
+        }
+        #headerContent p {
+            margin: 0%;
+            font-size: 4vw;
+            text-align: center;
+        }
+        /* ICONS */
+        #buttonWrapper {
+            /* SETUP */
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
+            height: 6.8vw;
+            text-align: center;
+            /* BORDER */
+            border-bottom: solid 1px gray;
+            /* ANIMATION */
+            transition: 0.3s;
+        }
+        #buttonContent {
+            /* SETUP */
+            display: inline-block;
+            height: 3.8vw;
+            width: 72.3%;
+        }
+        .ButtonIcon img {
+            /*SETUP*/
+            display: inline-block;
+            width: 4.5vw;
+            margin: .35vw 0vw .35vw 0vw;
+            padding: .7vw;
+            /*ANIMATION*/
+            -webkit-transition: background-color 0.3s, border-radius 1.5s;
+        }
+            .ButtonIcon img:hover {
+                /*SETUP*/
+                /*VISUAL*/
+                background-color: rgba(179, 179, 179, 0.5);
+                border-radius: 40%;
+                /*ANIMATION*/
+                -webkit-transition: background-color 0.3s, border-radius 0s;
+            }
+        .ButtonIcon {
+            /*SETUP*/
+            position: relative;
+            display: inline-block;
+        }
+        .HeaderButton {
+            /*SETUP*/
+            display: inline-block;
+            margin: 0 3vw 0 3vw;
+        }
+
+
+
+        /* PARTITION */
+        #partitionContent {
+            /*SETUP*/
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
+            height: 70vh;
+            overflow: hidden;
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+        #partitionTextPadding {
+            /*SETUP*/
+            display: inline-block;
+            padding: 5% 0% 2vw 5%;
+            max-width: 40vw;
+        }
+
+        #partitionText {
+            /*SETUP*/
+            display: inline-block;
+            padding: 0% 5% 0% 0%;
+            width: 100%;
+        }
+
+            #partitionText p {
+                /*VISUAL*/
+                font-size: 1.424128843vw;
+                /*ANIMATION*/
+                transition: 0.3s;
+            }
+
+        #partitionImageWrapper {
+            /*SETUP*/
+            white-space: nowrap;
+            max-width: 23vw;
+            display: inline-block;
+            padding: 5% 2.5% 2.5% 0%;
+            height: 62vh;
+            float: right;
+        }
+
+        #partitionImage {
+            /*SETUP*/
+            display: inline-block;
+            padding-left: 3vw;
+            height: 90%;
+            /*BORDER*/
+            border-left: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+        /* FEATURED */
+        .Header {
+            /*SETUP*/
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+            .Header p {
+                /*SETUP*/
+                margin: 0;
+                padding: 2%;
+                /*VISUAL*/
+                text-align: center;
+                font-size: 3.2vw;
+                /*ANIMATION*/
+                transition: 0.3s;
+            }
+
+        #featuredWrapper {
+            /*SETUP*/
+            display: inline-block;
+            margin-left: 13.85%;
+            margin-right: 13.85%;
+            width: 72.3%;
+            /*BORDER*/
+            border-bottom: solid 1px gray;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+        #featuredContentWrapper {
+            /*SETUP*/
+            text-align: center;
+            margin: 3% 0vw 3% 0vw;
+            max-height: 300px;
+            white-space: nowrap;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+        .ContentThumbnail {
+            /*SETUP*/
+            display: inline-block;
+            margin: 0% 5% 0% 5%;
+            max-height: 300px;
+            max-width: 200px;
+            width: 15%;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+            .ContentThumbnail:hover .ContentThumbnailCaption {
+                /*SETUP*/
+                z-index: 1;
+                /*VISUAL*/
+                filter: opacity(100%);
+            }
+
+            .ContentThumbnail:hover .ContentThumbnailImage {
+                /*SETUP*/
+                transform: scale(1.2);
+                /*VISUAL*/
+                filter: brightness(50%);
+            }
+
+            .ContentThumbnail a {
+                /*SETUP*/
+                display: inline-block;
+                position: relative;
+                /*ANIMATION*/
+                transition: 0.3s;
+            }
+
+        .ContentThumbnailImage {
+            /*SETUP*/
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            max-height: 300px;
+            max-width: 200px;
+            /*ANIMATION*/
+            transition: transform .5s, filter .5s;
+        }
+
+        .ContentThumbnailCaption {
+            /*SETUP*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*VISUAL*/
+            color: white;
+            filter: opacity(0);
+            font-size: 2vw;
+            /*ANIMATION*/
+            transition: 0.5s;
+        }
+
+
+       
+
+
+        /*FOOTER*/
+
+        #footerWrapper {
+            /*SETUP*/
+            margin: 0% -1.55% 0% -1.55%;
+            padding: 0.5% 15.35%;
+            overflow: auto;
+            /*VISUAL*/
+            background-color: #3b2e34;
+            color: white;
+            /*ANIMATION*/
+            transition: 0.3s;
+        }
+
+        #footerContent {
+            /*SETUP*/
+            padding: .5vw 0vw;
+            overflow: auto;
+        }
+
+        #footerPartitionLeft {
+            /*SETUP*/
+            float: left;
+            height: auto;
+            padding: .5vw 0vw .5vw .5vw;
+            /*VISUAL*/
+            font-size: 2vw;
+        }
+
+            #footerPartitionLeft p {
+                /*SETUP*/
+                margin: 0;
+                margin-top: -0.5vw;
+            }
+
+        #footerPartitionRight {
+            /*SETUP*/
+            float: right;
+            height: 100%;
+            padding-left: 7.5vw;
+            /*VISUAL*/
+            border-left: 1px solid white;
+        }
+
+        .FooterDrop {
+            /*SETUP*/
+            display: inline-block;
+            margin-right: 4vw;
+            height: auto;
+        }
+
+            .FooterDrop p {
+                /*SETUP*/
+                margin: 0vw 0vw;
+            }
+
+            .FooterDrop a {
+                /*VISUAL*/
+                text-decoration: none;
+                color: black;
+                font-size: 2vw;
+                font-weight: 500;
+                color: white;
+            }
+
+            .FooterDrop ul {
+                /*SETUP*/
+                padding-left: 1.5vw;
+                /*VISUAL*/
+                list-style-type: none;
+                margin: 0;
+            }
+
+            .FooterDrop li a {
+                /*VISUAL*/
+                font-size: 1.5vw;
+                color: gray;
+                /*ANIMATION*/
+                transition: 0.1s;
+            }
+
+                .FooterDrop li a:hover {
+                    /*VISUAL*/
+                    color: white;
+                }
+
+        #footerDropfiller {
+            /*VISUAL*/
+            visibility: hidden;
+        }
+
+
+
+
+
+
+
+
+
+
+        /*HIDES*/
+        @media only screen and (max-width: 1239px) {
+            #partitionImage {
+                height: auto;
+                width: 23vw;
+            }
+
+            #partitionImageWrapper {
+                height: auto;
+                width: 23vw;
+            }
+
+            #partitionContent {
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Sidebar-->
+    <div class="sidebar" id="mainSidebar">
+        <p> Walsh <br /> Giarrusso </p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#  ">Home</a>
+        <a href="#  ">Gallery</a>
+        <a href="#  ">About</a>
+        <a href="#  ">Contact</a>
+    </div>
+
+    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" onclick="openNav()">&#9776;</span>
+
+    <!--Header-->
+    <div id="headerWrapper">
+        <div id="headerContent">
+            <p>
+                Gallery
+            </p>
+        </div>
+    </div>
+    <!--PLACEHOLDER-->
+    <div id="buttonWrapper">
+        <div id="buttonContent">
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="http://walshgiarrusso.com/Icons/Home/Home.svg" />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="http://walshgiarrusso.com/Icons/Gallery/Gallery.svg  " />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="http://walshgiarrusso.com/Icons/About/About.svg " />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="http://walshgiarrusso.com/Icons/Contact/Contact.svg   " />
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!--PARTITION-->
+
+    <!--FEATURED-->
+    <div class="Header">
+        <p>
+            Featured
+        </p>
+    </div>
+
+
+    <div id="featuredWrapper">
+        <div id="featuredContentWrapper">
+
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+
+                    <img src="https://i.picsum.photos/id/15/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+            </div>
+
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+                    <span class="helper"></span>
+                    <img src="https://i.picsum.photos/id/1/200/300.jpg" class="ContentThumbnailImage" />
+
+                </a>
+            </div>
+
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Lorem</h3>
+                        <p>Ipsum</p>
+                    </div>
+                    <span class="helper"></span>
+                    <img src="https://i.picsum.photos/id/67/200/300.jpg" class="ContentThumbnailImage" />
+
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!--PRELUDE-->
+
+    <!--FOOTER-->
+    <div id="footerWrapper">
+        <div id="footerContent">
+            <div id="footerPartitionLeft">
+                <p>
+                    Walsh Giarrusso
+                </p>
+
+            </div>
+            <div id="footerPartitionRight">
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Home
+                        </a>
+                    </p>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Lorem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Ipsum
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Dolor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Gallery
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Dolor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Sit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Amet
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            About
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Dolor
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="FooterDrop">
+                    <p>
+                        <a href="   ">
+                            Contact
+                        </a>
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="   ">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="   ">
+                                Ipsum
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="footerDropfiller">
+                        <ul>
+                            <li>
+                                <a href="   ">
+                                    Dolor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Sit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="   ">
+                                    Amet
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        /* Sidebar */
+        function openNav() {
+            document.getElementById("mainSidebar").style.width = "15%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+            document.getElementById("headerWrapper").style.borderBottomColor = "black";
+            document.getElementById("buttonWrapper").style.borderBottomColor = "black";
+            document.getElementById("partitionContent").style.borderBottomColor = "black";
+            document.getElementById("partitionText").style.borderBottomColor = "black";
+            document.getElementById("partitionImage").style.borderRightColor = "black";
+            document.getElementById("partitionImage").style.filter = "brightness(40%)";
+
+            var header = document.getElementsByClassName("Header");
+            var i;
+            for (i = 0; i < header.length; i++) {
+                header[i].style.borderBottomColor = "black";
+            }
+
+            document.getElementById("featuredWrapper").style.borderBottomColor = "black";
+            document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
+
+
+
+            document.getElementById("footerWrapper").style.filter = "brightness(40%)";
+
+
+        }
+
+
+        function closeNav() {
+            document.getElementById("mainSidebar").style.width = "0";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("headerWrapper").style.borderBottomColor = "gray";
+            document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
+            document.getElementById("partitionContent").style.borderBottomColor = "gray";
+            document.getElementById("partitionText").style.borderBottomColor = "gray";
+            document.getElementById("partitionImage").style.borderRightColor = "gray";
+            document.getElementById("partitionImage").style.filter = "brightness(100%)";
+
+            var header = document.getElementsByClassName("Header");
+            var i;
+            for (i = 0; i < header.length; i++) {
+                header[i].style.borderBottomColor = "gray";
+            }
+
+            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";
+            document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
+
+
+            document.getElementById("footerWrapper").style.filter = "brightness(100%)";
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
