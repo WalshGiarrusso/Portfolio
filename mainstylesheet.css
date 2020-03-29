@@ -592,9 +592,10 @@ body {
 }
 #typeSelectorButton:hover {
     /*VISUAL*/
+    padding-left:.5vw;
     background-position: left bottom;
     border-left: .4vw solid gray;
-    margin-right: -.4vw;
+    margin-right: -.9vw;
 }
 #dateSelector {
     /*SETUP*/

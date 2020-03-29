@@ -351,7 +351,9 @@
 
     </div>
     <script>
-        /* Sidebar */
+    
+/* Sidebar */
+
         function openNav() {
             document.getElementById("mainSidebar").style.width = "15%";
             document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
@@ -408,13 +410,36 @@
 
         }
 
-    function fakeFocusWithin() {
+        function fakeFocusWithin() {
         var ds = document.getElementById("dateSelector");
-        ds.id = "dateSelectorJS";
+            ds.id = "dateSelectorJS";
+            
+            setInterval(checkActiveObjects, 1000);
+            checkActiveObjects();
+            
+        
+        
+    }
+    
+
+    function checkActiveObjects() {
+        
+        var ds = document.getElementById("dateSelectorJS");
+        
+        
+            if (!document.hasFocus()) {
+                
+                ds.id = "dateSelector";
+            }
+        
+        
     }
 
+    
+    
+
     window.onclick = function (e) {
-        if ((!e.target.matches('.dateSelectorInput')) && (!e.target.matches('.dateSelectorInputEnd'))) {
+        if (((!e.target.matches('.dateSelectorInput')) && (!e.target.matches('.dateSelectorInputEnd')))) {
 
             var ds = document.getElementById("dateSelectorJS");
             ds.id = "dateSelector";
@@ -422,6 +447,7 @@
         }
     }
 
+    
 
     </script>
 </body>
