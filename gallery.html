@@ -16,7 +16,7 @@
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
     
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 
 </head>
@@ -70,26 +70,36 @@
         </div>
     </div>
 
-    
+
     <!--SIFTER-->
-
     <div id="sifterWrapper">
-       
-        <div id="searchBar">
-            <input type="text" id="searchBarInput" onkeyup="searchFunction" placeholder="Search by Title" />
-        </div>
+        <div id="sortTools">
 
-        <div id="typeSelector">
-            <button id="dropdownTypeSelector" onclick="Dropdown()">
-                Select Type<span style="font-size: 1.5vw; display:-webkit-inline-box;">&#9662;</span>
-            </button>
-        </div>
+            <div id="searchBar">
+                <input type="text" id="searchBarInput"  onkeyup="searchFunction()" placeholder="Search by Title" />
+            </div>
 
-        <div id="dateSelector">
-            <input id="dateSelectorInput" type="date" />
-        </div>
+            <div id="typeSelector">
+                <button id="typeSelectorButton" onclick="dropdownFunction()">
+                    Select Type ▾
+                </button>
+            </div>
 
+            <div id="dateSelector">
+
+                From
+                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" />/
+                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" />/
+                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInput" />To
+                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" />/
+                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" />/
+                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInput" />
+            </div>
+            
+
+        </div>
     </div>
+  
 
 
 
@@ -97,7 +107,7 @@
 
     <div id="browserWrapper">
         <div id="browserContentWrapper">
-            
+
             <ul id="browserList">
                 <li>
                     <div class="ContentThumbnail">
@@ -230,7 +240,7 @@
                 </li>
 
             </ul>
-            
+
 
         </div>
     </div>
@@ -352,12 +362,15 @@
             document.getElementById("sifterWrapper").style.borderBottomColor = "black";
 
 
+
             var thumbnail = document.getElementsByClassName("ContentThumbnail");
-           
+
             var i;
             for (i = 0; i < thumbnail.length; i++) {
                 thumbnail[i].style.filter = "brightness(40%)";
             }
+
+            document.getElementById("sifterWrapper").style.filter = "brightness(40%)";
             document.getElementById("footerWrapper").style.filter = "brightness(40%)";
 
 
@@ -375,12 +388,12 @@
 
 
             var thumbnail = document.getElementsByClassName("ContentThumbnail");
-            
+
             var i;
             for (i = 0; i < thumbnail.length; i++) {
                 thumbnail[i].style.filter = "brightness(100%)";
             }
-
+            document.getElementById("sifterWrapper").style.filter = "brightness(100%)";
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
 
@@ -391,6 +404,9 @@
 
         }
 
+        function dropdownFunction() {
+
+        }
 
 
 
