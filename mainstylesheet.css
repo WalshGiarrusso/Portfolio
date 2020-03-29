@@ -490,6 +490,88 @@ body {
 
 /*SIFTER*/
 
+#sifterWrapper {
+    /*SETUP*/
+    margin: 0% 13.85%;
+    width: 72.3%;
+   overflow:hidden;
+    display: flex;
+    /*VISUAL*/
+    border-bottom: 1px solid gray;
+    /*ANIMATION*/
+    transition: 0.3s;
+}
+
+#searchBar {
+    /*SETUP*/
+    display:inline-block;
+    margin-bottom: 1px;
+    margin-left:1vw;
+    overflow: hidden;
+    max-height: 3vw;
+    width: 30vw;
+    
+}
+
+#searchBarInput {
+    /*SETUP*/
+    height: 2.5vw;
+    width: 30vw;
+    /*VISUAL*/
+    border: none;
+    outline: none;
+    color: black;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 1.5vw;
+}
+
+#typeSelector {
+    /*SETUP*/
+    display:inline-block;
+    max-height:3vw;
+    margin-bottom:-0.55vw;
+    /*ANIMATION*/
+    transition:0.3s;
+
+}
+#dropdownTypeSelector {
+    /*SETUP*/
+    display: inline-block;
+    height: 2.5vw;
+    /*VISUAL*/
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 1.5vw;
+    /*VISUAL*/
+    cursor: pointer;
+    
+}
+#typeSelector:hover{
+    /*VISUAL*/
+    background-color:lightgray;
+}
+
+#dateSelector {
+    /*SETUP*/
+    display: none;
+    
+    height: 2.5vw;
+}
+#dateSelectorInput {
+    /*VISUAL*/
+   
+    border: 0;
+    outline: 0;
+}
+  
+
+
+
+
 
 /*BROWSER*/
 #browserWrapper {
@@ -501,6 +583,21 @@ body {
     /*SETUP*/
     text-align: center;
     margin: 2vw 0vw;
+}
+#browserList {
+        /*SETUP*/
+        margin:0;
+        padding:0;
+       
+        /*VISUAL*/
+        list-style-type: none;
+
+}
+#browserContentWrapper li{
+    /*SETUP*/
+    display:inline-block;
+    padding:0;
+    margin:0;
 }
 
 #browserContentWrapper .ContentThumbnail{
