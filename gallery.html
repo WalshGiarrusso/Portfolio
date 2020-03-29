@@ -88,12 +88,12 @@
             <div id="dateSelector">
 
                 From
-                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" />/
-                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" />/
-                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInput" />To
-                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" />/
-                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" />/
-                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInput" />
+                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()" />/
+                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()" />/
+                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInput" onclick="fakeFocusWithin()" />To
+                <input type="text" required maxlength="2" size="5" placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()" />/
+                <input type="text" required maxlength="2" size="3" placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()" />/
+                <input type="text" required maxlength="4" size="4" placeholder="Year" class="dateSelectorInputEnd" onclick="fakeFocusWithin()" />
             </div>
             
 
@@ -408,6 +408,19 @@
 
         }
 
+    function fakeFocusWithin() {
+        var ds = document.getElementById("dateSelector");
+        ds.id = "dateSelectorJS";
+    }
+
+    window.onclick = function (e) {
+        if ((!e.target.matches('.dateSelectorInput')) && (!e.target.matches('.dateSelectorInputEnd'))) {
+
+            var ds = document.getElementById("dateSelectorJS");
+            ds.id = "dateSelector";
+       
+        }
+    }
 
 
     </script>
