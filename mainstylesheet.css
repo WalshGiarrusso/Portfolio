@@ -588,7 +588,7 @@ body {
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: all 0.3s, width 0.1s;
 }
 #typeSelectorButton:hover {
     /*VISUAL*/
@@ -601,19 +601,25 @@ body {
     /*SETUP*/
     margin: 0;
     height: 3vw;
+    
+    
+    
+    
+    
     /*VISUAL*/
     font-family: inherit;
-    font-size: inherit;
+    font-size: 0;
     background: linear-gradient(to right, #f2f2f2 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: 0.5s;
 }
 #dateSelector:hover{
     /*SETUP*/
      margin-right: -0.4vw;
+     padding-left:0.25vw;
     /*VISUAL*/
     background-position: left bottom;
     border-left: .4vw solid gray;
@@ -624,10 +630,11 @@ body {
     /*SETUP*/
     margin: 0;
     margin-right: -0.4vw;
+    padding-left:0.25vw;
     height: 3vw;
     /*VISUAL*/
     font-family: inherit;
-    font-size: inherit;
+    font-size: 0;
     background: linear-gradient(to right, #f2f2f2 50%, white 50%);
     background-size: 200% 100%;
     background-position: left bottom;
@@ -635,31 +642,44 @@ body {
     /*ANIMATION*/
     transition: 0.3s;
 }
+#dateSelector p, #dateSelectorJS p{
+    /*SETUP*/
+    display:inline;
+    padding:0;
+    margin:0;
+    /*VISUAL*/
+    font-family: inherit;
+    font-size: 1.4vw;
+}
 
 
 
 .dateSelectorInput {
     /*SETUP*/
     padding: 0;
+    padding-left: -.75vw;
     border: 0;
     outline: 0;
     height: 3vw;
+    margin: 0vw -0.3vw;
     /*VISUAL*/
     font-family: inherit;
-    font-size: inherit;
-    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
-    background-size: 200% 100%;
+    font-size: 1.4vw;
+    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
+    background-size: 400% 100%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: 0.3s
 }
 .dateSelectorInput:focus {
     /*VISUAL*/
+   
     background-position: left bottom;
     border-left: .2vw solid gray;
-    padding-left:0.4vw;
-    margin-right:0.4vw;     
+    margin: 0vw .5vw 0vw .3vw;
+   
+        
 }
 .dateSelectorInputEnd {
     /*SETUP*/
@@ -667,11 +687,12 @@ body {
     border: 0;
     outline: 0;
     height: 3vw;
+    margin: 0vw -0.3vw;
     /*VISUAL*/
     font-family: inherit;
-    font-size: inherit;
-    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
-    background-size: 200% 100%;
+    font-size: 1.4vw;
+    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
+    background-size: 400% 100%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
@@ -681,7 +702,8 @@ body {
     /*VISUAL*/
     background-position: left bottom;
     border-left: .2vw solid gray;
-    padding-left:0.4vw;
+    padding-right:0.5vw;
+    margin-left:0.5vw;
 }
 
   
