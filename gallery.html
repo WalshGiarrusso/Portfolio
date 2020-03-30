@@ -10,12 +10,12 @@
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
-    
+
 
 
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
-
+    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
     <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 
@@ -84,7 +84,7 @@
            <input type="number" placeholder="Day" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Year" class="DateInput" />
-           <p>To:</p>
+           <p>To:<span style="visibility:hidden; font-size: 0.2vw;width:0.1vw;">a</span></p>
            <input type="number" placeholder="Month" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
@@ -508,9 +508,20 @@
         mxh = $('#sifterWrapper').height();
         $('#searchBar').height(mxh);
         $('#typeSelector').height(mxh);
-      
-
     });
+            var resizeId;
+    $(window).resize(function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(doneResizing, 500);
+    })
+    function doneResizing() {
+        var mxh;
+        mxh = $('#dateSelector').height();
+        $('#searchBar').height(mxh);
+        $('#typeSelector').height(mxh);
+      
+    }
+
       
 
     

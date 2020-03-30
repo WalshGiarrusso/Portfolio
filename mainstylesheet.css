@@ -505,7 +505,7 @@ input[type=number] {
     width: 72.3%;
     text-align: center;
     overflow:hidden;    
-    
+    margin-top: 20px;
     /*VISUAL*/
     font-family: inherit;
     font-size: 1.4vw;
@@ -592,6 +592,7 @@ input[type=number] {
     /*SETUP*/
     padding-left:0.25vw;
     margin-left :1.25vw;
+   
     
     background-position:left bottom;
 }
@@ -631,7 +632,7 @@ input[type=number] {
     /*SETUP*/
     display:inline-block;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: 0.1s;
     
 
 }
@@ -649,12 +650,12 @@ input[type=number] {
     background-position: right bottom;
     -webkit-backface-visibility: hidden;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: 0s;
 }
 .DateInput:focus{
     /*SETUP*/
-    border-left:0.2vw solid gray;
-    margin-right:0;
+    border-left:0.15vw solid gray;
+    margin:0.05vw;
     
    
     /*VISUAL*/
