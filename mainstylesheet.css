@@ -495,7 +495,7 @@ body {
     /*SETUP*/
     display:flex;
     align-items:center;
-    height:2.8vw;
+   
     margin: 0% 13.85%;
     width: 72.3%;
     border-bottom: 1px solid gray;
@@ -505,6 +505,7 @@ body {
     /*ANIMATION*/
     transition:0.3s;
 }
+
 #sortTools {
     /*SETUP*/
     margin: 0 1vw;
@@ -541,7 +542,7 @@ body {
     font-family: inherit;
     font-size: inherit;
     background: linear-gradient(to right, #cccccc, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.66666%, white 66.666667%);
-    background-size: 300% 100%;
+    background-size: 300% 200%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
@@ -583,8 +584,8 @@ body {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
-    background: linear-gradient(to right, #f2f2f2 50%, white 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
+    background-size: 400% 200%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
@@ -601,18 +602,15 @@ body {
     /*SETUP*/
     margin: 0;
     height: 3vw;
-    
-    
-    
-    
-    
     /*VISUAL*/
     font-family: inherit;
     font-size: 0;
-    background: linear-gradient(to right, #f2f2f2 50%, white 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
+    background-size: 400% 200%;
     background-position: right bottom;
     border-left: 0 solid gray;
+    background-clip: padding-box;
+    overflow:hidden;
     /*ANIMATION*/
     transition: 0.5s;
 }
@@ -635,10 +633,12 @@ body {
     /*VISUAL*/
     font-family: inherit;
     font-size: 0;
-    background: linear-gradient(to right, #f2f2f2 50%, white 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
+    background-size: 400% 200%;
+
     background-position: left bottom;
     border-left: .4vw solid gray;
+    
     /*ANIMATION*/
     transition: 0.3s;
 }
@@ -666,11 +666,11 @@ body {
     font-family: inherit;
     font-size: 1.4vw;
     background: linear-gradient(to right, #cccccc 25%, transparent 50%);
-    background-size: 400% 100%;
+    background-size: 400% 200%;
     background-position: right bottom;
     border-left: 0 solid gray;
     /*ANIMATION*/
-    transition: 0.3s
+    transition: all 0.3s, border-width 0s;
 }
 .dateSelectorInput:focus {
     /*VISUAL*/
