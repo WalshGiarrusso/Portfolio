@@ -21,7 +21,7 @@
 
 </head>
 
-<body onload="resize(); resizeEnd();">
+<body>
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
         <p> Walsh <br /> Giarrusso </p>
@@ -72,38 +72,7 @@
 
 
     <!--SIFTER-->
-    <div id="sifterWrapper">
-        <div id="sortTools">
-
-            <div id="searchBar">
-                <input type="text" id="searchBarInput"  onkeyup="searchFunction()" placeholder="Search by Title" />
-            </div>
-
-            <div id="typeSelector">
-                <button id="typeSelectorButton" onclick="dropdownFunction()">
-                    Select Type ▾
-                </button>
-            </div>
-
-            <div id="dateSelector">
-
-                <p>From:<span style="width:0.25vw; visibility:hidden;">.</span></p>
-                <input type="text" required maxlength="2"  placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()" oninput="resize()"       />
-                <p>/</p>
-                <input type="text" required maxlength="2"   placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()"    oninput="resize()"         />
-                <p>/</p>
-                <input type="text" required maxlength="4"   placeholder="Year" class="dateSelectorInput" onclick="fakeFocusWithin()"    oninput="resize()"        />
-                <p><span style="width:0.5vw; visibility:hidden;">.</span>To:<span style="width:0.25vw; visibility:hidden;">.</span></p>
-                <input type="text" required maxlength="2"  placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()"     oninput="resize()"      />
-                <p>/</p>
-                <input type="text" required maxlength="2"   placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()"       oninput="resize()"      />
-                <p>/</p>
-                <input type="text" required maxlength="4"  placeholder="Year" class="dateSelectorInputEnd" onclick="fakeFocusWithin()"     oninput="resizeEnd()"    />
-            </div>
-            
-
-        </div>
-    </div>
+    
   
 
 
@@ -380,7 +349,7 @@
                 thumbnail[i].style.filter = "brightness(40%)";
             }
 
-            document.getElementById("sifterWrapper").style.filter = "brightness(40%)";
+            
             document.getElementById("footerWrapper").style.filter = "brightness(40%)";
 
 
@@ -403,127 +372,12 @@
             for (i = 0; i < thumbnail.length; i++) {
                 thumbnail[i].style.filter = "brightness(100%)";
             }
-            document.getElementById("sifterWrapper").style.filter = "brightness(100%)";
+            
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
 
-        function searchFunction() {
-
-
-
-
-        }
-
-        function dropdownFunction() {
-
-        }
-
-        function fakeFocusWithin() {
-            var ds = document.getElementById("dateSelector");
-            if (!(ds == null)) {
-                ds.id = "dateSelectorJS";
-                }
-            
-            
-            setInterval(checkActiveObjects, 1000);
-            checkActiveObjects();
-            
-        
-        
-    }
-    
-
-    function checkActiveObjects() {
-        
-        var ds = document.getElementById("dateSelectorJS");
-        
-        
-            if (!document.hasFocus()) {
-                if (!(ds == null)) {
-                ds.id = "dateSelector";
-                }
-                
-            }
-        
-        
-    }
-
-    
-    
-
-    window.onclick = function (e) {
-        if (((!e.target.matches('.dateSelectorInput')) && (!e.target.matches('.dateSelectorInputEnd')))) {
-
-
-            var ds = document.getElementById("dateSelectorJS");
-            if (!(ds == null)) {
-                ds.id = "dateSelector";
-            }
-
-        var inp = document.getElementsByClassName("dateSelectorInput");
-        var i;
-            for (i = 0; i < inp.length; i++) {
-                if ((inp[i].value.length > 0) && !(inp[i] === document.activeElement)) {
-
-                inp[i].style.width = ( inp[i].value.length + 'ch');
-                
-                
-            } 
-            
-        }
-
-            var inpe = document.getElementsByClassName("dateSelectorInputEnd");
-        var i;
-            for (i = 0; i < inpe.length; i++) {
-                if ((inpe[i].value.length > 0) && !(inpe[i] === document.activeElement)) {
-
-                inpe[i].style.width = ( inpe[i].value.length + 'ch');
-                
-                
-            } 
-            
-        }
        
-        }
-    }
-
-    function resize() {
-        var inp = document.getElementsByClassName("dateSelectorInput");
-        var i;
-        for (i = 0; i < inp.length; i++) {
-            if (inp[i].value.length > 0) {
-                inp[i].style.width = (1 + inp[i].value.length + 'ch');
-                inp[i].style.paddingRight = "0.30vw";
-                inp[i].style.paddingLeft = "0.30vw";
-            } else {
-                inp[i].style.width = (.75 + inp[i].getAttribute('placeholder').length + 'ch');
-                inp[i].style.paddingRight = "0.50vw";
-                inp[i].style.paddingLeft = "0.50vw";
-            }
-            
-        }
-
-        
-    }
     
-
-    function resizeEnd() {
-        var inp = document.getElementsByClassName("dateSelectorInputEnd");
-        var i;
-        for (i = 0; i < inp.length; i++) {
-            if (inp[i].value.length > 0) {
-                inp[i].style.width = (1 + inp[i].value.length + 'ch');
-                inp[i].style.paddingRight = "0.30vw";
-                inp[i].style.paddingLeft = "0.30vw";
-            } else {
-                inp[i].style.width = (.25 + inp[i].getAttribute('placeholder').length + 'ch');
-                inp[i].style.paddingRight = "0.50vw";
-                inp[i].style.paddingLeft = "0.50vw";
-                
-            }
-            
-        }
-    }
 
     </script>
 </body>
