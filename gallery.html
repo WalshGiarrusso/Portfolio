@@ -21,7 +21,7 @@
 
 </head>
 
-<body onload="resize(); resizeEnd();">
+<body>
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
         <p> Walsh <br /> Giarrusso </p>
@@ -72,39 +72,28 @@
 
 
     <!--SIFTER-->
-    <div id="sifterWrapper">
-        <div id="sortTools">
+   <div id="sifterWrapper">
+       <input type="text" id="searchBar" placeholder="Search by Title"/>
+       <button id="typeSelector">
+           Select Type ▾
+       </button>
+       <div id="dateSelector">
+           <p>From:</p>
+           <input type="number" placeholder="Month" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Day" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Year" class="DateInput" />
+           <p>To:<span style="visibility:hidden; font-size: 0.2vw;width:0.1vw;">a</span></p>
+           <input type="number" placeholder="Month" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Day" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Year" class="DateInput">
+       </div>
 
-            <div id="searchBar">
-                <input type="text" id="searchBarInput"  onkeyup="searchFunction()" placeholder="Search by Title" />
-            </div>
+   </div>
 
-            <div id="typeSelector">
-                <button id="typeSelectorButton" onclick="dropdownFunction()">
-                    Select Type ▾
-                </button>
-            </div>
-
-            <div id="dateSelector">
-
-                <p>From:<span style="width:0.25vw; visibility:hidden;">.</span></p>
-                <input type="text" required maxlength="2"  placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()" oninput="resize()"       />
-                <p>/</p>
-                <input type="text" required maxlength="2"   placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()"    oninput="resize()"         />
-                <p>/</p>
-                <input type="text" required maxlength="4"   placeholder="Year" class="dateSelectorInput" onclick="fakeFocusWithin()"    oninput="resize()"        />
-                <p><span style="width:0.5vw; visibility:hidden;">.</span>To:<span style="width:0.25vw; visibility:hidden;">.</span></p>
-                <input type="text" required maxlength="2"  placeholder="Month" class="dateSelectorInput" onclick="fakeFocusWithin()"     oninput="resize()"      />
-                <p>/</p>
-                <input type="text" required maxlength="2"   placeholder="Day" class="dateSelectorInput" onclick="fakeFocusWithin()"       oninput="resize()"      />
-                <p>/</p>
-                <input type="text" required maxlength="4"  placeholder="Year" class="dateSelectorInputEnd" onclick="fakeFocusWithin()"     oninput="resizeEnd()"    />
-            </div>
-            
-
-        </div>
-    </div>
-  
 
 
 
@@ -355,9 +344,10 @@
         </div>
 
     </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-    
-/* Sidebar */
+
+        /* Sidebar */
 
 
 
@@ -380,7 +370,7 @@
                 thumbnail[i].style.filter = "brightness(40%)";
             }
 
-            document.getElementById("sifterWrapper").style.filter = "brightness(40%)";
+            $('#sifterWrapper').css("filter", "brightness(40%)");
             document.getElementById("footerWrapper").style.filter = "brightness(40%)";
 
 
@@ -393,7 +383,7 @@
             document.getElementById("headerWrapper").style.borderBottomColor = "gray";
             document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
 
-
+            
             document.getElementById("sifterWrapper").style.borderBottomColor = "gray";
 
 
@@ -403,127 +393,142 @@
             for (i = 0; i < thumbnail.length; i++) {
                 thumbnail[i].style.filter = "brightness(100%)";
             }
-            document.getElementById("sifterWrapper").style.filter = "brightness(100%)";
+            $('#sifterWrapper').css("filter", "brightness(100%)");
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
-
-        function searchFunction() {
-
-
-
-
-        }
-
-        function dropdownFunction() {
-
-        }
-
-        function fakeFocusWithin() {
-            var ds = document.getElementById("dateSelector");
-            if (!(ds == null)) {
-                ds.id = "dateSelectorJS";
-                }
-            
-            
-            setInterval(checkActiveObjects, 1000);
-            checkActiveObjects();
-            
+     //LENGTHSET
+    $(document).ready(function () {
         
-        
-    }
-    
+        $('#dateSelector > input').each(function () {
+            var ph;
+            ph = $(this).attr('placeholder');
+            var cl;
+            cl = ph.length;
 
-    function checkActiveObjects() {
-        
-        var ds = document.getElementById("dateSelectorJS");
-        
-        
-            if (!document.hasFocus()) {
-                if (!(ds == null)) {
-                ds.id = "dateSelector";
-                }
-                
+            if (ph == 'Month') {
+                $(this).css("width", 1 + cl + 'ch');
             }
-        
-        
-    }
-
-    
-    
-
-    window.onclick = function (e) {
-        if (((!e.target.matches('.dateSelectorInput')) && (!e.target.matches('.dateSelectorInputEnd')))) {
-
-
-            var ds = document.getElementById("dateSelectorJS");
-            if (!(ds == null)) {
-                ds.id = "dateSelector";
+            if (ph == 'Day') {
+                $(this).css("width", 0.5 + cl + 'ch');
             }
-
-        var inp = document.getElementsByClassName("dateSelectorInput");
-        var i;
-            for (i = 0; i < inp.length; i++) {
-                if ((inp[i].value.length > 0) && !(inp[i] === document.activeElement)) {
-
-                inp[i].style.width = ( inp[i].value.length + 'ch');
-                
-                
-            } 
+            if (ph == 'Year') {
+                $(this).css("width", 0.2 + cl + 'ch');
+            }
             
-        }
-
-            var inpe = document.getElementsByClassName("dateSelectorInputEnd");
-        var i;
-            for (i = 0; i < inpe.length; i++) {
-                if ((inpe[i].value.length > 0) && !(inpe[i] === document.activeElement)) {
-
-                inpe[i].style.width = ( inpe[i].value.length + 'ch');
-                
-                
-            } 
+        });  
+    });
+    //DYNAMIC LENGTH
+    $('.DateInput').on('input', function () {
+        var inp;
+        inp = $(this).val();
+        
+        inpl = inp.length;
+        if (inpl > 0) {
+            $(this).css("width", .1 + inpl + 'ch')
+        } else {
+            var ph1;
+            ph1 = $(this).attr('placeholder');
+            var cl1;
+            cl1 = ph1.length;
+            $(this).css("width", 0.75 + cl1 + 'ch');
+        };
+    });
+    //RESTRICT CHAR
+    $('.DateInput').keypress(function () {
+        var ph2;
+        ph2 = $(this).attr('placeholder');
+        var inpl2;
+        inpl2 = $(this).val().length;
+        if (ph2 == 'Month') {
             
-        }
-       
-        }
-    }
+            if (inpl2 == "2") {
+                return false;
+            };
+            
+            
+        };
+        if (ph2 == 'Day') {
+            if (inpl2 == "2") {
+                return false;
+            };
+        };
+        if (ph2 == 'Year') {
+             if (inpl2 == "4") {
+                return false;
+            };
+        };
+      
+    });
+    //SHOWBAD
+    $('.DateInput').on('input', function () {
+        var ph3;
+        ph3 = $(this).attr('placeholder');
+        var pval;
+        pval = $(this).val();
+        if (ph3 == 'Month') {
+            
+            if (pval > 12) {
 
-    function resize() {
-        var inp = document.getElementsByClassName("dateSelectorInput");
-        var i;
-        for (i = 0; i < inp.length; i++) {
-            if (inp[i].value.length > 0) {
-                inp[i].style.width = (1 + inp[i].value.length + 'ch');
-                inp[i].style.paddingRight = "0.30vw";
-                inp[i].style.paddingLeft = "0.30vw";
+                $(this).css('color', 'red');
             } else {
-                inp[i].style.width = (.75 + inp[i].getAttribute('placeholder').length + 'ch');
-                inp[i].style.paddingRight = "0.50vw";
-                inp[i].style.paddingLeft = "0.50vw";
-            }
+                $(this).css('color', 'black');
+            };
             
-        }
+            
+        };
+        if (ph3 == 'Day') {
+            if (pval > 31) {
 
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
+        if (ph3 == 'Year') {
+             if (pval > 2029) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
         
+    });
+    //FOCUS
+    $('.DateInput').focusin(function () {
+        $('#dateSelector').prop('id', 'dsjv')
+    });
+    $('.DateInput').focusout(function () {
+        $('#dsjv').prop('id', 'dateSelector')
+    });
+
+    //HEIGHT
+    $(document).ready(function () {
+        var mxh;
+        mxh = $('#sifterWrapper').height();
+        $('#searchBar').height(mxh);
+        $('#typeSelector').height(mxh);
+    });
+            var resizeId;
+    $(window).resize(function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(doneResizing, 500);
+    })
+    function doneResizing() {
+        var mxh;
+        mxh = $('#dateSelector').height();
+        $('#searchBar').height(mxh);
+        $('#typeSelector').height(mxh);
+      
     }
+
+      
+
     
 
-    function resizeEnd() {
-        var inp = document.getElementsByClassName("dateSelectorInputEnd");
-        var i;
-        for (i = 0; i < inp.length; i++) {
-            if (inp[i].value.length > 0) {
-                inp[i].style.width = (1 + inp[i].value.length + 'ch');
-                inp[i].style.paddingRight = "0.30vw";
-                inp[i].style.paddingLeft = "0.30vw";
-            } else {
-                inp[i].style.width = (.25 + inp[i].getAttribute('placeholder').length + 'ch');
-                inp[i].style.paddingRight = "0.50vw";
-                inp[i].style.paddingLeft = "0.50vw";
-                
-            }
-            
-        }
-    }
+
+
+
 
     </script>
 </body>

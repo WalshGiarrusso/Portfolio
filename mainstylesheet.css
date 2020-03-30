@@ -2,7 +2,6 @@
 
 /* * { border: 1px solid red; }*/
 
-
 body {
     /* FONT */
     color: black;
@@ -16,6 +15,14 @@ body {
     transition: 0.3s;
     /*REMOVE SCROLLBAR*/
     -ms-overflow-style: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
     /*REMOVE SCROLLBAR*/
     body::-webkit-scrollbar {
@@ -135,7 +142,7 @@ body {
     margin-left: 13.85%;
     margin-right: 13.85%;
     width: 72.3%;
-    height: 6.8vw;
+    
     text-align: center;
     /* BORDER */
     border-bottom: solid 1px gray;
@@ -493,217 +500,166 @@ body {
 /*SIFTER*/
 #sifterWrapper {
     /*SETUP*/
-    display:flex;
-    align-items:center;
-   
+    display: inline-block;
     margin: 0% 13.85%;
     width: 72.3%;
-    border-bottom: 1px solid gray;
-    overflow: hidden;
-    /*VISUAL*/
-    font-size:1.4vw;
-    /*ANIMATION*/
-    transition:0.3s;
-}
-
-#sortTools {
-    /*SETUP*/
-    margin: 0 1vw;
-    display: flex;
-    align-items: baseline;
-    width:100%;
-    
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    text-align: center;
+    overflow:hidden;    
+    margin-top: 20px;
     /*VISUAL*/
     font-family: inherit;
-    font-size: inherit;
-}
-
-#searchBar {
-    /*SETUP*/
-    min-width: 9.09vw;
-    max-width: 40vw;
-    margin: 0;
-    height: 3vw;
-    
-    
-
-    
-}
-
-#searchBarInput {
-    /*SETUP*/
-    height: 3vw;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    /*VISUAL*/
-    font-family: inherit;
-    font-size: inherit;
-    background: linear-gradient(to right, #cccccc, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.66666%, white 66.666667%);
-    background-size: 300% 200%;
-    background-position: right bottom;
-    border-left: 0 solid gray;
+    font-size: 1.4vw;
     /*ANIMATION*/
     transition: 0.3s;
 }
-    #searchBarInput:hover {
-        /*VISUAL*/
-        padding-left:.5vw;
-        background-position: 50% bottom;
-        border-left: .4vw solid gray;
-        margin-right: -.9vw;
-    }
-    #searchBarInput:focus {
-        /*VISUAL*/
-        padding-left: .5vw;
-        background-position: left bottom;
-        border-left: .4vw solid gray;
-        margin-right: -.9vw;
-    }
-#typeSelector {
+#sifterWrapper > *{
     /*SETUP*/
-   
-    margin: 0;
-    padding:0;
-    height: 3vw;
-    /*VISUAL*/
-    
-    font-family: inherit;
-    font-size: inherit;
-}
-#typeSelectorButton {
-    /*SETUP*/
-    height: 3vw;
-    padding: 0;
+    background-clip:padding-box;
+    margin: 0vw 1.5vw;
     border: 0;
     outline: 0;
+    display:inline-block;
+    
     /*VISUAL*/
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
-    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
-    background-size: 400% 200%;
-    background-position: right bottom;
+    -webkit-backface-visibility: hidden;
     border-left: 0 solid gray;
+    font-family:inherit;
+    font-size:inherit;
     /*ANIMATION*/
-    transition: all 0.3s, width 0.1s;
+    transition: 0.3s;
+    
 }
-#typeSelectorButton:hover {
+#sifterWrapper > *:hover{
+    /*SETUP*/
+    margin-right:1.25vw;
+    /*VISUAL  */
+    border-left: 0.25vw solid gray;   
+}
+#sifterWrapper > *:focus{
+    /*SETUP*/
+    margin-right:1.25vw;
+    /*VISUAL  */
+    border-left: 0.25vw solid gray;   
+}
+#searchBar{
     /*VISUAL*/
-    padding-left:.5vw;
+    
+    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+}
+#searchBar:hover{
+    /*SETUP*/
+    padding-left:0.25vw;
+    margin-right: 1vw;
+    /*VISUAL*/
+    background-position: center bottom;
+}
+#searchBar:focus{
+    /*SETUP*/
+    padding-left:0.25vw;
+    margin-right: 1vw;
+    /*VISUAL*/
     background-position: left bottom;
-    border-left: .4vw solid gray;
-    margin-right: -.9vw;
+}
+#typeSelector {
+    /*SETUP*/
+    /*VISUAL*/
+    cursor:pointer;
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    
+}
+#typeSelector:hover{
+    /*SETUP*/
+    padding-left:0.25vw;
+    margin-right: 1.125vw;
+    margin-right: 1.375vw;
+    /*VISUAL*/
+    background-position:left bottom;
+   
 }
 #dateSelector {
-    /*SETUP*/
-    margin: 0;
-    height: 3vw;
+    font-size:0;
     /*VISUAL*/
-    font-family: inherit;
-    font-size: 0;
-    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
-    background-size: 400% 200%;
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
     background-position: right bottom;
-    border-left: 0 solid gray;
-    background-clip: padding-box;
-    overflow:hidden;
-    /*ANIMATION*/
-    transition: 0.5s;
+    -webkit-backface-visibility: hidden;
 }
 #dateSelector:hover{
     /*SETUP*/
-     margin-right: -0.4vw;
-     padding-left:0.25vw;
-    /*VISUAL*/
-    background-position: left bottom;
-    border-left: .4vw solid gray;
-   
-   
-}
-#dateSelectorJS {
-    /*SETUP*/
-    margin: 0;
-    margin-right: -0.4vw;
     padding-left:0.25vw;
-    height: 3vw;
+    margin-left :1.25vw;
+   
+    
+    background-position:left bottom;
+}
+#dsjv {
+    /*SETUP*/
+    padding-left: 0.25vw;
+    margin-right: 1vw;
+    text-align: center;
+    margin: 0vw 1.5vw;
+    border: 0;
+    outline: 0;
+    display: inline-block;
     /*VISUAL*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    border-left: 0.25vw solid gray;
+    background-position: left bottom;
+    text-align: center;
     font-family: inherit;
     font-size: 0;
-    background: linear-gradient(to right, #f2f2f2 25%, white 50%);
-    background-size: 400% 200%;
-
-    background-position: left bottom;
-    border-left: .4vw solid gray;
+    -webkit-backface-visibility: hidden;
+    /*ANIMATION*/
+    transition: 0.3s;
+}
+#dsjv > *{
+    /*SETUP*/
+    display:inline-block;
     
     /*ANIMATION*/
     transition: 0.3s;
 }
-#dateSelector p, #dateSelectorJS p{
-    /*SETUP*/
-    display:inline;
-    padding:0;
-    margin:0;
+#dateSelector p, #dsjv p{
     /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
+    font-size:1.4vw;
+}
+#dateSelector > * {
+    /*SETUP*/
+    display:inline-block;
+    /*ANIMATION*/
+    transition: 0.1s;
+    
+
 }
 
-
-
-.dateSelectorInput {
+.DateInput {
     /*SETUP*/
-    padding: 0;
-    padding-left: -.75vw;
     border: 0;
     outline: 0;
-    height: 3vw;
-    margin: 0vw -0.3vw;
+    margin: 0 0.2vw;
     /*VISUAL*/
     font-family: inherit;
     font-size: 1.4vw;
-    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
-    background-size: 400% 200%;
+    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size: 200% 100%;
     background-position: right bottom;
-    border-left: 0 solid gray;
+    -webkit-backface-visibility: hidden;
     /*ANIMATION*/
-    transition: all 0.3s, border-width 0s;
+    transition: 0s;
 }
-.dateSelectorInput:focus {
-    /*VISUAL*/
-   
-    background-position: left bottom;
-    border-left: .2vw solid gray;
-    margin: 0vw .5vw 0vw .3vw;
-   
-        
-}
-.dateSelectorInputEnd {
+.DateInput:focus{
     /*SETUP*/
-    padding: 0;
-    border: 0;
-    outline: 0;
-    height: 3vw;
-    margin: 0vw -0.3vw;
-    /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
-    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
-    background-size: 400% 100%;
-    background-position: right bottom;
-    border-left: 0 solid gray;
-    /*ANIMATION*/
-    transition: 0.3s;
-}
-.dateSelectorInputEnd:focus{
+    border-left:0.15vw solid gray;
+    margin:0.05vw;
+    
+   
     /*VISUAL*/
     background-position: left bottom;
-    border-left: .2vw solid gray;
-    padding-right:0.5vw;
-    margin-left:0.5vw;
 }
 
   
