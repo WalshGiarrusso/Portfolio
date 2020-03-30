@@ -504,12 +504,11 @@ input[type=number] {
     margin: 0% 13.85%;
     width: 72.3%;
     text-align: center;
-    overflow:hidden;
+    overflow:hidden;    
     
     /*VISUAL*/
     font-family: inherit;
     font-size: 1.4vw;
-   
     /*ANIMATION*/
     transition: 0.3s;
 }
@@ -544,6 +543,7 @@ input[type=number] {
 }
 #searchBar{
     /*VISUAL*/
+    
     background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
     background-size: 300% 100%;
     background-position: right bottom;

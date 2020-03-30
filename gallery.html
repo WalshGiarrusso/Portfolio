@@ -501,7 +501,17 @@
     $('.DateInput').focusout(function () {
         $('#dsjv').prop('id', 'dateSelector')
     });
-    
+
+    //HEIGHT
+    $(document).ready(function () {
+        var mxh;
+        mxh = $('#sifterWrapper').height();
+        $('#searchBar').height(mxh);
+        $('#typeSelector').height(mxh);
+      
+
+    });
+      
 
     
 
