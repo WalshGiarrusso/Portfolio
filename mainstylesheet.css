@@ -17,6 +17,14 @@ body {
     /*REMOVE SCROLLBAR*/
     -ms-overflow-style: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
     /*REMOVE SCROLLBAR*/
     body::-webkit-scrollbar {
         display: none;
@@ -491,6 +499,135 @@ body {
 /*GALLERY\\ ONLY*/
 
 /*SIFTER*/
+#sifterWrapper{
+    /*SETUP*/
+    margin-top:2vw;
+  
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:baseline;
+    justify-content: space-around;
+    margin: 0% 13.85%;
+    width: 72.3%;
+    overflow:hidden;
+    
+    
+    /*ANIMATION*/
+    transition:0.3s;
+}
+#sifterWrapper > *{
+    /*SETUP*/
+    vertical-align:text-bottom;
+    margin: 0.45vw 0vw;
+    padding: 0.5vw 0vw;
+  
+    border:0;
+    outline:0;
+    /*VISUAL*/
+    font-size:1.4vw;
+    font-family: century-old-style-std, serif;
+    background-clip:padding-box;
+    background-color:transparent;
+    /*ANIMATION*/
+    transition:0.3s;
+
+}
+#searchBar {
+    /*SETUP*/
+    border-left:0 solid gray;
+    margin-right:0;
+    
+    /*VISUAL*/
+    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+   
+}
+#searchBar:hover{
+    /*SETUP*/
+    border-left:0.5vw solid gray;
+    margin-right:-0.5vw;
+    /*VISUAL*/
+    background-position: center bottom;
+}
+#searchBar:focus{
+    /*SETUP*/
+    border-left:0.5vw solid gray;
+    margin-right:-0.5vw;
+    /*VISUAL*/
+    background-position: left bottom;
+}
+#typeSelector {
+    /*SETUP*/
+    border-left: 0 solid gray;
+    margin-right: 0;
+    
+    /*VISUAL*/
+    cursor: pointer;
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+#typeSelector:hover{
+    /*SETUP*/
+    padding-left:0.5vw;
+    padding-right:0.2vw;
+    
+    border-left:0.5vw solid gray;
+    margin-right:-1.2vw;
+    /*VISUAL*/
+    background-position: left bottom;
+}
+#dateSelector {
+    /*SETUP*/
+    border-left: 0 solid gray;
+    margin-right: 0;
+    display:flex;
+    align-items:baseline;
+    
+    
+    
+    /*VISUAL*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    
+}
+#dateSelector:hover{
+    /*SETUP*/
+    padding-left:0.5vw;
+    padding-right:0.2vw;
+    border-left:0.5vw solid gray;
+    margin-right:-1.2vw;
+    /*VISUAL*/
+    background-position: left bottom;
+}
+#dateSelector > *{
+    /*SETUP*/
+    
+    width:6ch;
+    padding:0;
+    margin: 0 0.2vw;
+    border:0;
+    outline:0;
+    /*VISUAL*/
+   
+    font-size:inherit;
+    font-family:inherit;
+    /*ANIMATION*/
+    transition:0.3s;
+}
+#dateSelector > p {
+    /*SETUP*/
+    width: auto;
+    margin: 0;
+}
+.dateInput {
+    /*VISUAL*/
+    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
+    background-size: 400% 100%;
+    background-position: right bottom;
+}
 
 
   

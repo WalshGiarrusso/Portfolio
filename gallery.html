@@ -10,12 +10,12 @@
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
-
+    
 
 
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
-    
+
     <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 
@@ -72,8 +72,26 @@
 
 
     <!--SIFTER-->
-    
-  
+    <div id="sifterWrapper">
+        <input type="text" id="searchBar" placeholder="Search by Title" />
+        <button id="typeSelector">Select Type &#9662;</button>
+        <div id="dateSelector">
+            <p>From:</p>
+            <input type="number" id="m1"  class="dateInput" placeholder="Month" />
+            <p>/</p>
+            <input type="number"  id="d1" class="dateInput" placeholder="Day" />
+            <p>/</p>
+            <input type="number"  id="y1" class="dateInput" placeholder="Year" style="margin-right:0.5vw;" />
+            <p> To:</p>
+            <input type="number"  id="m2" class="dateInput" placeholder="Month" />
+            <p>/</p>
+            <input type="number" id="d2" class="dateInput" placeholder="Day" />
+            <p>/</p>
+            <input type="number"  id="y2" class="dateInput" placeholder="Year" />
+        </div>
+
+    </div>
+
 
 
 
@@ -324,9 +342,10 @@
         </div>
 
     </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-    
-/* Sidebar */
+
+        /* Sidebar */
 
 
 
@@ -349,7 +368,7 @@
                 thumbnail[i].style.filter = "brightness(40%)";
             }
 
-            
+            $('#sifterWrapper').css("filter", "brightness(40%)");
             document.getElementById("footerWrapper").style.filter = "brightness(40%)";
 
 
@@ -362,7 +381,7 @@
             document.getElementById("headerWrapper").style.borderBottomColor = "gray";
             document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
 
-
+            
             document.getElementById("sifterWrapper").style.borderBottomColor = "gray";
 
 
@@ -372,12 +391,178 @@
             for (i = 0; i < thumbnail.length; i++) {
                 thumbnail[i].style.filter = "brightness(100%)";
             }
-            
+            $('#sifterWrapper').css("filter", "brightness(100%)");
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
 
+    //HEIGHTMATCH
+    $(document).ready(function () {
+        var spltvHeight = -0;
+        $('#sifterWrapper > *').each(function () {
+            spltvHeight = spltvHeight > $(this).height() ? spltvHeight : $(this).height();
+        });
        
+        
+        
+    });
+    var resizeId;
+    $(window).resize(function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(doneResizing, 1500);
+        
+    });
+    function doneResizing() {
+        var spltvHeight2 = 0;
+        $('#sifterWrapper > *').each(function () {
+            spltvHeight2 = spltvHeight2 > $(this).height() ? spltvHeight2 : $(this).height();
+        });
+        
+    }
+    //LENGTHSET
+    $(document).ready(function () {
+        
+        $('#dateSelector > input').each(function () {
+            var ph;
+            ph = $(this).attr('placeholder');
+            var cl;
+            cl = ph.length;
+
+            if (ph == 'Month') {
+                $(this).css("width", 1 + cl + 'ch');
+            }
+            if (ph == 'Day') {
+                $(this).css("width", 0.5 + cl + 'ch');
+            }
+            if (ph == 'Year') {
+                $(this).css("width", 0.2 + cl + 'ch');
+            }
+            
+        });  
+    });
+    //DYNAMIC LENGTH
+    $('.dateInput').on('input', function () {
+        var inp;
+        inp = $(this).val();
+        
+        inpl = inp.length;
+        if (inpl > 0) {
+            $(this).css("width", .1 + inpl + 'ch')
+        } else {
+            var ph1;
+            ph1 = $(this).attr('placeholder');
+            var cl1;
+            cl1 = ph1.length;
+            $(this).css("width", 0.75 + cl1 + 'ch');
+        };
+    });
+    //RESTRICT CHAR
+    $('.dateInput').keypress(function () {
+        var ph2;
+        ph2 = $(this).attr('placeholder');
+        var inpl2;
+        inpl2 = $(this).val().length;
+        if (ph2 == 'Month') {
+            
+            if (inpl2 == "2") {
+                return false;
+            };
+            
+            
+        };
+        if (ph2 == 'Day') {
+            if (inpl2 == "2") {
+                return false;
+            };
+        };
+        if (ph2 == 'Year') {
+             if (inpl2 == "4") {
+                return false;
+            };
+        };
+      
+    });
+    //SHOWBAD
+    $('.dateInput').on('input', function () {
+        var ph3;
+        ph3 = $(this).attr('placeholder');
+        var pval;
+        pval = $(this).val();
+        if (ph3 == 'Month') {
+            
+            if (pval > 12) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+            
+            
+        };
+        if (ph3 == 'Day') {
+            if (pval > 31) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
+        if (ph3 == 'Year') {
+             if (pval > 2029) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
+        
+    });
+    //dateInputFocu
+    $('#dateSelector').hover(function () {
+        $(this).css("backgroundPosition", "left bottom");
+        $(this).css("padding", ".5vw 0.2vw .5vw 0.35vw");
+        $(this).css("borderLeft", "0.5vw solid gray");
+    });
+     $('#dateSelector').mouseleave(function () {
+        $(this).css("backgroundPosition", "right bottom");
+        $(this).css("padding", "initial");
+        $(this).css("borderLeft", "0vw solid gray");
+    });
+
+        
+   
+
+
+    $(".dateInput").focusin(function () {
+        $(this).css("borderLeft", "0.25vw solid gray");
+        $(this).css
+        $(this).css("marginRight", "0.3vw");
+        $('#dateSelector').css("backgroundPosition", "left bottom");
+        $('#dateSelector').css("borderLeft", "0.5vw solid gray");
+        $(this).css("backgroundPosition", "left bottom");
+        
+    });
+
+    $("#y2").focusin(function () {
+        $('#dateSelector').css("paddingRight", "0vw");
+        $(this).css("marginRight", "0vw");
+    });
+    $("#y2").focusout(function () {
+        $('#dateSelector').css("paddingRight", "0.2vw");
+    });
     
+    $(".dateInput").focusout(function () {
+        $(this).css("borderLeft", "0vw solid gray");
+        $(this).css("padding", "0vw 0vw");
+        $('#dateSelector').css("backgroundPosition", "right bottom");
+        $('#dateSelector').css("borderLeft", "0vw solid gray");
+        $(this).css("backgroundPosition", "right bottom");
+        
+    });
+    
+
+
+
+
 
     </script>
 </body>
