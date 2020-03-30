@@ -2,7 +2,6 @@
 
 /* * { border: 1px solid red; }*/
 
-
 body {
     /* FONT */
     color: black;
@@ -499,136 +498,168 @@ input[type=number] {
 /*GALLERY\\ ONLY*/
 
 /*SIFTER*/
-#sifterWrapper{
+#sifterWrapper {
     /*SETUP*/
-    margin-top:2vw;
-  
-    display:flex;
-    flex-flow:row nowrap;
-    align-items:baseline;
-    justify-content: space-around;
+    display: inline-block;
     margin: 0% 13.85%;
     width: 72.3%;
+    text-align: center;
     overflow:hidden;
     
-    
+    /*VISUAL*/
+    font-family: inherit;
+    font-size: 1.4vw;
+   
     /*ANIMATION*/
-    transition:0.3s;
+    transition: 0.3s;
 }
 #sifterWrapper > *{
     /*SETUP*/
-    vertical-align:text-bottom;
-    margin: 0.45vw 0vw;
-    padding: 0.5vw 0vw;
-  
-    border:0;
-    outline:0;
-    /*VISUAL*/
-    font-size:1.4vw;
-    font-family: century-old-style-std, serif;
     background-clip:padding-box;
-    background-color:transparent;
-    /*ANIMATION*/
-    transition:0.3s;
-
-}
-#searchBar {
-    /*SETUP*/
-    border-left:0 solid gray;
-    margin-right:0;
+    margin: 0vw 1.5vw;
+    border: 0;
+    outline: 0;
+    display:inline-block;
     
+    /*VISUAL*/
+    -webkit-backface-visibility: hidden;
+    border-left: 0 solid gray;
+    font-family:inherit;
+    font-size:inherit;
+    /*ANIMATION*/
+    transition: 0.3s;
+    
+}
+#sifterWrapper > *:hover{
+    /*SETUP*/
+    margin-right:1.25vw;
+    /*VISUAL  */
+    border-left: 0.25vw solid gray;   
+}
+#sifterWrapper > *:focus{
+    /*SETUP*/
+    margin-right:1.25vw;
+    /*VISUAL  */
+    border-left: 0.25vw solid gray;   
+}
+#searchBar{
     /*VISUAL*/
     background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
     background-size: 300% 100%;
     background-position: right bottom;
-   
 }
 #searchBar:hover{
     /*SETUP*/
-    border-left:0.5vw solid gray;
-    margin-right:-0.5vw;
+    padding-left:0.25vw;
+    margin-right: 1vw;
     /*VISUAL*/
     background-position: center bottom;
 }
 #searchBar:focus{
     /*SETUP*/
-    border-left:0.5vw solid gray;
-    margin-right:-0.5vw;
+    padding-left:0.25vw;
+    margin-right: 1vw;
     /*VISUAL*/
     background-position: left bottom;
 }
 #typeSelector {
     /*SETUP*/
-    border-left: 0 solid gray;
-    margin-right: 0;
-    
     /*VISUAL*/
-    cursor: pointer;
+    cursor:pointer;
     background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+    
 }
 #typeSelector:hover{
     /*SETUP*/
-    padding-left:0.5vw;
-    padding-right:0.2vw;
-    
-    border-left:0.5vw solid gray;
-    margin-right:-1.2vw;
+    padding-left:0.25vw;
+    margin-right: 1.125vw;
+    margin-right: 1.375vw;
     /*VISUAL*/
-    background-position: left bottom;
+    background-position:left bottom;
+   
 }
 #dateSelector {
-    /*SETUP*/
-    border-left: 0 solid gray;
-    margin-right: 0;
-    display:flex;
-    align-items:baseline;
-    
-    
-    
+    font-size:0;
     /*VISUAL*/
     background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    
+    -webkit-backface-visibility: hidden;
 }
 #dateSelector:hover{
     /*SETUP*/
-    padding-left:0.5vw;
-    padding-right:0.2vw;
-    border-left:0.5vw solid gray;
-    margin-right:-1.2vw;
+    padding-left:0.25vw;
+    margin-left :1.25vw;
+    
+    background-position:left bottom;
+}
+#dsjv {
+    /*SETUP*/
+    padding-left: 0.25vw;
+    margin-right: 1vw;
+    text-align: center;
+    margin: 0vw 1.5vw;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    /*VISUAL*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    border-left: 0.25vw solid gray;
+    background-position: left bottom;
+    text-align: center;
+    font-family: inherit;
+    font-size: 0;
+    -webkit-backface-visibility: hidden;
+    /*ANIMATION*/
+    transition: 0.3s;
+}
+#dsjv > *{
+    /*SETUP*/
+    display:inline-block;
+    
+    /*ANIMATION*/
+    transition: 0.3s;
+}
+#dateSelector p, #dsjv p{
+    /*VISUAL*/
+    font-size:1.4vw;
+}
+#dateSelector > * {
+    /*SETUP*/
+    display:inline-block;
+    /*ANIMATION*/
+    transition: 0.3s;
+    
+
+}
+
+.DateInput {
+    /*SETUP*/
+    border: 0;
+    outline: 0;
+    margin: 0 0.2vw;
+    /*VISUAL*/
+    font-family: inherit;
+    font-size: 1.4vw;
+    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-backface-visibility: hidden;
+    /*ANIMATION*/
+    transition: 0.3s;
+}
+.DateInput:focus{
+    /*SETUP*/
+    border-left:0.2vw solid gray;
+    margin-right:0;
+    
+   
     /*VISUAL*/
     background-position: left bottom;
 }
-#dateSelector > *{
-    /*SETUP*/
-    
-    width:6ch;
-    padding:0;
-    margin: 0 0.2vw;
-    border:0;
-    outline:0;
-    /*VISUAL*/
-   
-    font-size:inherit;
-    font-family:inherit;
-    /*ANIMATION*/
-    transition:0.3s;
-}
-#dateSelector > p {
-    /*SETUP*/
-    width: auto;
-    margin: 0;
-}
-.dateInput {
-    /*VISUAL*/
-    background: linear-gradient(to right, #cccccc 25%, transparent 50%);
-    background-size: 400% 100%;
-    background-position: right bottom;
-}
-
 
   
 

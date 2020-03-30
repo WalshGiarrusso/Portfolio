@@ -72,25 +72,27 @@
 
 
     <!--SIFTER-->
-    <div id="sifterWrapper">
-        <input type="text" id="searchBar" placeholder="Search by Title" />
-        <button id="typeSelector">Select Type &#9662;</button>
-        <div id="dateSelector">
-            <p>From:</p>
-            <input type="number" id="m1"  class="dateInput" placeholder="Month" />
-            <p>/</p>
-            <input type="number"  id="d1" class="dateInput" placeholder="Day" />
-            <p>/</p>
-            <input type="number"  id="y1" class="dateInput" placeholder="Year" style="margin-right:0.5vw;" />
-            <p> To:</p>
-            <input type="number"  id="m2" class="dateInput" placeholder="Month" />
-            <p>/</p>
-            <input type="number" id="d2" class="dateInput" placeholder="Day" />
-            <p>/</p>
-            <input type="number"  id="y2" class="dateInput" placeholder="Year" />
-        </div>
+   <div id="sifterWrapper">
+       <input type="text" id="searchBar" placeholder="Search by Title"/>
+       <button id="typeSelector">
+           Select Type ▾
+       </button>
+       <div id="dateSelector">
+           <p>From:</p>
+           <input type="number" placeholder="Month" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Day" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Year" class="DateInput" />
+           <p>To:</p>
+           <input type="number" placeholder="Month" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Day" class="DateInput" />
+           <p>/</p>
+           <input type="number" placeholder="Year" class="DateInput">
+       </div>
 
-    </div>
+   </div>
 
 
 
@@ -394,31 +396,7 @@
             $('#sifterWrapper').css("filter", "brightness(100%)");
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
-
-    //HEIGHTMATCH
-    $(document).ready(function () {
-        var spltvHeight = -0;
-        $('#sifterWrapper > *').each(function () {
-            spltvHeight = spltvHeight > $(this).height() ? spltvHeight : $(this).height();
-        });
-       
-        
-        
-    });
-    var resizeId;
-    $(window).resize(function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(doneResizing, 1500);
-        
-    });
-    function doneResizing() {
-        var spltvHeight2 = 0;
-        $('#sifterWrapper > *').each(function () {
-            spltvHeight2 = spltvHeight2 > $(this).height() ? spltvHeight2 : $(this).height();
-        });
-        
-    }
-    //LENGTHSET
+     //LENGTHSET
     $(document).ready(function () {
         
         $('#dateSelector > input').each(function () {
@@ -440,7 +418,7 @@
         });  
     });
     //DYNAMIC LENGTH
-    $('.dateInput').on('input', function () {
+    $('.DateInput').on('input', function () {
         var inp;
         inp = $(this).val();
         
@@ -456,7 +434,7 @@
         };
     });
     //RESTRICT CHAR
-    $('.dateInput').keypress(function () {
+    $('.DateInput').keypress(function () {
         var ph2;
         ph2 = $(this).attr('placeholder');
         var inpl2;
@@ -482,7 +460,7 @@
       
     });
     //SHOWBAD
-    $('.dateInput').on('input', function () {
+    $('.DateInput').on('input', function () {
         var ph3;
         ph3 = $(this).attr('placeholder');
         var pval;
@@ -516,48 +494,15 @@
         };
         
     });
-    //dateInputFocu
-    $('#dateSelector').hover(function () {
-        $(this).css("backgroundPosition", "left bottom");
-        $(this).css("padding", ".5vw 0.2vw .5vw 0.35vw");
-        $(this).css("borderLeft", "0.5vw solid gray");
+    //FOCUS
+    $('.DateInput').focusin(function () {
+        $('#dateSelector').prop('id', 'dsjv')
     });
-     $('#dateSelector').mouseleave(function () {
-        $(this).css("backgroundPosition", "right bottom");
-        $(this).css("padding", "initial");
-        $(this).css("borderLeft", "0vw solid gray");
-    });
-
-        
-   
-
-
-    $(".dateInput").focusin(function () {
-        $(this).css("borderLeft", "0.25vw solid gray");
-        $(this).css
-        $(this).css("marginRight", "0.3vw");
-        $('#dateSelector').css("backgroundPosition", "left bottom");
-        $('#dateSelector').css("borderLeft", "0.5vw solid gray");
-        $(this).css("backgroundPosition", "left bottom");
-        
-    });
-
-    $("#y2").focusin(function () {
-        $('#dateSelector').css("paddingRight", "0vw");
-        $(this).css("marginRight", "0vw");
-    });
-    $("#y2").focusout(function () {
-        $('#dateSelector').css("paddingRight", "0.2vw");
+    $('.DateInput').focusout(function () {
+        $('#dsjv').prop('id', 'dateSelector')
     });
     
-    $(".dateInput").focusout(function () {
-        $(this).css("borderLeft", "0vw solid gray");
-        $(this).css("padding", "0vw 0vw");
-        $('#dateSelector').css("backgroundPosition", "right bottom");
-        $('#dateSelector').css("borderLeft", "0vw solid gray");
-        $(this).css("backgroundPosition", "right bottom");
-        
-    });
+
     
 
 
