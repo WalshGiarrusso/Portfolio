@@ -363,7 +363,7 @@
             document.getElementById("buttonWrapper").style.borderBottomColor = "black";
 
 
-            document.getElementById("sifterWrapper").style.borderBottomColor = "black";
+            
 
 
 
@@ -388,7 +388,7 @@
             document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
 
             
-            document.getElementById("sifterWrapper").style.borderBottomColor = "gray";
+           
 
 
             var thumbnail = document.getElementsByClassName("ContentThumbnail");
@@ -446,12 +446,9 @@
         var inpl2;
         inpl2 = $(this).val().length;
         if (ph2 == 'Month') {
-            
             if (inpl2 == "2") {
                 return false;
             };
-            
-            
         };
         if (ph2 == 'Day') {
             if (inpl2 == "2") {
@@ -508,7 +505,6 @@
             $(this).css('borderLeft', '0.25vw solid gray');
             $(this).css('backgroundPosition', 'center bottom');
         };
-        
     });
     $('#searchBarWrapper').mouseleave(function () {
         if (!$('#searchBar').is(":focus")) {
@@ -523,8 +519,6 @@
         $(this).css('backgroundPosition', 'left bottom');
     });
     $('#searchBarWrapper').focusout(function () {
-       
-        
         if (!$('#searchBar').is(":hover")) {
             $(this).css('paddingLeft', '0vw');
             $(this).css('backgroundPosition', 'right bottom');
