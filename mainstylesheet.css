@@ -498,170 +498,134 @@ input[type=number] {
 /*GALLERY\\ ONLY*/
 
 /*SIFTER*/
-#sifterWrapper {
+#sifterWrapper{
     /*SETUP*/
-    display: inline-block;
-    margin: 0% 13.85%;
-    width: 72.3%;
-    text-align: center;
-    overflow:hidden;    
-    margin-top: 20px;
+    margin:0% 13.85%;
+    width:72.3%;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+    align-items:center;
+    position:relative;
+    height:2vw;
+    overflow:hidden;
     /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
+    border-top: 1px solid gray;
+    border-bottom:1px solid gray;
     /*ANIMATION*/
-    transition: 0.3s;
+    transition: 0.5s;
+
 }
 #sifterWrapper > *{
     /*SETUP*/
-    background-clip:padding-box;
-    margin: 0vw 1.5vw;
-    border: 0;
-    outline: 0;
-    display:inline-block;
-    
-    /*VISUAL*/
-    -webkit-backface-visibility: hidden;
-    border-left: 0 solid gray;
-    font-family:inherit;
-    font-size:inherit;
-    /*ANIMATION*/
-    transition: 0.3s;
-    
-}
-#sifterWrapper > *:hover{
-    /*SETUP*/
-    margin-right:1.25vw;
-    /*VISUAL  */
-    border-left: 0.25vw solid gray;   
-}
-#sifterWrapper > *:focus{
-    /*SETUP*/
-    margin-right:1.25vw;
-    /*VISUAL  */
-    border-left: 0.25vw solid gray;   
-}
-#searchBar{
-    /*VISUAL*/
-    
-    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
-    background-size: 300% 100%;
-    background-position: right bottom;
-}
-#searchBar:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1vw;
-    /*VISUAL*/
-    background-position: center bottom;
-}
-#searchBar:focus{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1vw;
-    /*VISUAL*/
-    background-position: left bottom;
-}
-#typeSelector {
-    /*SETUP*/
-    /*VISUAL*/
-    cursor:pointer;
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    
-}
-#typeSelector:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1.125vw;
-    margin-right: 1.375vw;
-    /*VISUAL*/
-    background-position:left bottom;
-   
-}
-#dateSelector {
-    font-size:0;
-    /*VISUAL*/
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    -webkit-backface-visibility: hidden;
-}
-#dateSelector:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-left :1.25vw;
-   
-    
-    background-position:left bottom;
-}
-#dsjv {
-    /*SETUP*/
-    padding-left: 0.25vw;
-    margin-right: 1vw;
-    text-align: center;
-    margin: 0vw 1.5vw;
-    border: 0;
-    outline: 0;
-    display: inline-block;
-    /*VISUAL*/
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    border-left: 0.25vw solid gray;
-    background-position: left bottom;
-    text-align: center;
-    font-family: inherit;
-    font-size: 0;
-    -webkit-backface-visibility: hidden;
-    /*ANIMATION*/
-    transition: 0.3s;
-}
-#dsjv > *{
-    /*SETUP*/
-    display:inline-block;
-    
-    /*ANIMATION*/
-    transition: 0.3s;
-}
-#dateSelector p, #dsjv p{
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:0;
+
     /*VISUAL*/
     font-size:1.4vw;
-}
-#dateSelector > * {
-    /*SETUP*/
-    display:inline-block;
+    font-family:century-old-style-std, serif;
     /*ANIMATION*/
-    transition: 0.1s;
-    
-
+    transition: 0.5s;
 }
-
-.DateInput {
+#searchBarWrapper {
     /*SETUP*/
+    left: 5.3626%;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    /*ANIMATION*/
+    transition: 0.5s;
+}
+#searchBar {
+
+    /*SETUP*/
+    padding: 0;
+    margin: 0;
     border: 0;
     outline: 0;
-    margin: 0 0.2vw;
-    /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
-    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    -webkit-backface-visibility: hidden;
-    /*ANIMATION*/
-    transition: 0s;
-}
-.DateInput:focus{
-    /*SETUP*/
-    border-left:0.15vw solid gray;
-    margin:0.05vw;
     
-   
     /*VISUAL*/
-    background-position: left bottom;
+    font-size: 1.4vw;
+    font-family: century-old-style-std, serif;
+    background:transparent;
+
+   
+    /*ANIMATION*/
+    transition: 0.3s;
 }
 
+
+
+#typeSelector {
+    /*SETUP*/
+    left: 32.9595%;
+    /*VISUAL*/
+    cursor: pointer;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    /*ANIMATION*/
+    transition: 0.5s;
+}
+#typeSelector p{
+    
+    margin:0;
+    padding:0;
+    /*ANIMATION*/
+    transition: 0.3s;
+
+}
+#dateSelector {
+    /*SETUP*/
+    left: 50.5697%;
+    top: -7%;
+    display: flex;
+    align-items: baseline;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    /*ANIMATION*/
+    transition: 0.5s;
+}
+#dateSelector > *{
+    height:100%;
+    /*ANIMATION*/
+    transition: 0.5s;
+    background:transparent;
+}
+#dateSelector input{
+    /*SETUP*/
+    border:0;
+    outline:0;
+    
+    /*VISUAL*/
+    font-size:1.4vw;
+    font-family:century-old-style-std, serif;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size: 200% 500%;
+    background-position: right bottom;
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    /*ANIMATION*/
+    transition: 0.5s;
+}
+#dateSelector p{
+    /*SETUP*/
+    margin:0;
+    padding:0 0.3vw;
+}
   
 
 

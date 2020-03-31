@@ -15,8 +15,9 @@
 
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
+    <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
+
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
-    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 
 </head>
@@ -43,10 +44,10 @@
         </div>
     </div>
     <!--PLACEHOLDER-->
-    <div id="buttonWrapper">
+    <div id="buttonWrapper" style="border-bottom:none;">
         <div id="buttonContent">
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/" class="ButtonIcon">
+            <div class="HeaderButton" >
+                <a href="https://walshgiarrusso.com/" class="ButtonIcon" >
                     <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
                 </a>
             </div>
@@ -73,23 +74,26 @@
 
     <!--SIFTER-->
    <div id="sifterWrapper">
-       <input type="text" id="searchBar" placeholder="Search by Title"/>
-       <button id="typeSelector">
-           Select Type ▾
-       </button>
+       <div id="searchBarWrapper">
+           <input type="text" id="searchBar"  placeholder="Search by Title" />
+       </div>
+       
+       <div id="typeSelector">
+           <p>Select Type ▾</p>
+       </div>
        <div id="dateSelector">
-           <p>From:</p>
+           <p style="padding-left:0;">From:</p>
            <input type="number" placeholder="Month" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Year" class="DateInput" />
-           <p>To:<span style="visibility:hidden; font-size: 0.2vw;width:0.1vw;">a</span></p>
+           <p>To:</p>
            <input type="number" placeholder="Month" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
            <p>/</p>
-           <input type="number" placeholder="Year" class="DateInput">
+           <input type="number" placeholder="Year" class="DateInput" id="dateInputEnd">
        </div>
 
    </div>
@@ -401,7 +405,9 @@
             $('#sifterWrapper').css("filter", "brightness(100%)");
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
-     //LENGTHSET
+     
+      
+         //LENGTHSET
     $(document).ready(function () {
         
         $('#dateSelector > input').each(function () {
@@ -417,7 +423,7 @@
                 $(this).css("width", 0.5 + cl + 'ch');
             }
             if (ph == 'Year') {
-                $(this).css("width", 0.2 + cl + 'ch');
+                $(this).css("width", 0.1 + cl + 'ch');
             }
             
         });  
@@ -499,39 +505,86 @@
         };
         
     });
-    //FOCUS
+    //ANIMATION
+        
+    $('#searchBarWrapper').mouseenter(function () {
+        if (!$('#searchBar').is(":focus")) {
+            $(this).css('paddingLeft', '0.25vw');
+            $(this).css('borderLeft', '0.25vw solid gray');
+            $(this).css('backgroundPosition', 'center bottom');
+        };
+        
+    });
+    $('#searchBarWrapper').mouseleave(function () {
+        if (!$('#searchBar').is(":focus")) {
+            $(this).css('paddingLeft', '0vw');
+            $(this).css('borderLeft', '0vw solid gray');
+            $(this).css('backgroundPosition', 'right bottom');
+        };
+    });
+    $('#searchBarWrapper').focusin(function () {
+        $(this).css('paddingLeft', '0.5vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#searchBarWrapper').focusout(function () {
+       
+        
+        if (!$('#searchBar').is(":hover")) {
+            $(this).css('paddingLeft', '0vw');
+            $(this).css('backgroundPosition', 'right bottom');
+            $(this).css('borderLeft', '0vw solid gray');
+        };
+        if ($('#searchBar').is(":hover")) {
+            $(this).css('paddingLeft', '0.25vw');
+            $(this).css('backgroundPosition', 'center bottom');
+        };
+    });
+    $('#typeSelector').mouseenter(function () {
+        $(this).css('paddingLeft', '0.25vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#typeSelector').mouseleave(function () {
+        $(this).css('paddingLeft', '0vw');
+        $(this).css('borderLeft', '0vw solid gray');
+        $(this).css('backgroundPosition', 'right bottom');
+    });
+    $('#dateSelector').mouseenter(function () {
+        $(this).css('paddingLeft', '0.5vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#dateSelector').mouseleave(function () {
+        if (!$('.DateInput').is(":focus")) {
+            $(this).css('borderLeft', '0vw solid gray');
+            $(this).css('backgroundPosition', 'right bottom');
+        };
+    });
     $('.DateInput').focusin(function () {
-        $('#dateSelector').prop('id', 'dsjv')
+        $(this).css('margin', '0vw 0.5vw');
+        $(this).css('padding', '0vw 0.25vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
     });
     $('.DateInput').focusout(function () {
-        $('#dsjv').prop('id', 'dateSelector')
+        if (!$('#dateSelector').is(":hover")) {
+            $('#dateSelector').css('borderLeft', '0vw solid gray');
+            $('#dateSelector').css('backgroundPosition', 'right bottom');
+        };
+        $(this).css('padding', '0vw');
+        $(this).css('backgroundPosition', 'right bottom');
+        $(this).css('borderLeft', '0vw solid gray');
+        $(this).css('margin', '0vw');
+
     });
-
-    //HEIGHT
-    $(document).ready(function () {
-        var mxh;
-        mxh = $('#sifterWrapper').height();
-        $('#searchBar').height(mxh);
-        $('#typeSelector').height(mxh);
+    $('#dateInputEnd').focusin(function () {
+        $(this).css('marginRight', '0vw');
     });
-            var resizeId;
-    $(window).resize(function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(doneResizing, 500);
-    })
-    function doneResizing() {
-        var mxh;
-        mxh = $('#dateSelector').height();
-        $('#searchBar').height(mxh);
-        $('#typeSelector').height(mxh);
-      
-    }
-
-      
-
     
 
 
+       
 
 
 
