@@ -73,10 +73,13 @@
 
     <!--SIFTER-->
    <div id="sifterWrapper">
-       <input type="text" id="searchBar" placeholder="Search by Title"/>
-       <button id="typeSelector">
-           Select Type ▾
-       </button>
+       <div id="searchBarWrapper">
+           <input type="text" id="searchBar"  placeholder="Search by Title" />
+       </div>
+       
+       <div id="typeSelector">
+           <p>Select Type ▾</p>
+       </div>
        <div id="dateSelector">
            <p>From:</p>
            <input type="number" placeholder="Month" class="DateInput" />
@@ -398,8 +401,104 @@
         }
      
       
+         //LENGTHSET
+    $(document).ready(function () {
+        
+        $('#dateSelector > input').each(function () {
+            var ph;
+            ph = $(this).attr('placeholder');
+            var cl;
+            cl = ph.length;
 
-    
+            if (ph == 'Month') {
+                $(this).css("width", 1 + cl + 'ch');
+            }
+            if (ph == 'Day') {
+                $(this).css("width", 0.5 + cl + 'ch');
+            }
+            if (ph == 'Year') {
+                $(this).css("width", 0.2 + cl + 'ch');
+            }
+            
+        });  
+    });
+    //DYNAMIC LENGTH
+    $('.DateInput').on('input', function () {
+        var inp;
+        inp = $(this).val();
+        
+        inpl = inp.length;
+        if (inpl > 0) {
+            $(this).css("width", .1 + inpl + 'ch')
+        } else {
+            var ph1;
+            ph1 = $(this).attr('placeholder');
+            var cl1;
+            cl1 = ph1.length;
+            $(this).css("width", 0.75 + cl1 + 'ch');
+        };
+    });
+    //RESTRICT CHAR
+    $('.DateInput').keypress(function () {
+        var ph2;
+        ph2 = $(this).attr('placeholder');
+        var inpl2;
+        inpl2 = $(this).val().length;
+        if (ph2 == 'Month') {
+            
+            if (inpl2 == "2") {
+                return false;
+            };
+            
+            
+        };
+        if (ph2 == 'Day') {
+            if (inpl2 == "2") {
+                return false;
+            };
+        };
+        if (ph2 == 'Year') {
+             if (inpl2 == "4") {
+                return false;
+            };
+        };
+      
+    });
+    //SHOWBAD
+    $('.DateInput').on('input', function () {
+        var ph3;
+        ph3 = $(this).attr('placeholder');
+        var pval;
+        pval = $(this).val();
+        if (ph3 == 'Month') {
+            
+            if (pval > 12) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+            
+            
+        };
+        if (ph3 == 'Day') {
+            if (pval > 31) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
+        if (ph3 == 'Year') {
+             if (pval > 2029) {
+
+                $(this).css('color', 'red');
+            } else {
+                $(this).css('color', 'black');
+            };
+        };
+        
+    });
 
 
 
