@@ -498,170 +498,79 @@ input[type=number] {
 /*GALLERY\\ ONLY*/
 
 /*SIFTER*/
-#sifterWrapper {
+#sifterWrapper{
     /*SETUP*/
-    display: inline-block;
-    margin: 0% 13.85%;
-    width: 72.3%;
-    text-align: center;
-    overflow:hidden;    
-    margin-top: 20px;
+    margin:0% 13.85%;
+    width:72.3%;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+    align-items:center;
+    position:relative;
+
+    height:3vw;
+    
+    overflow:hidden;
+
+
     /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
-    /*ANIMATION*/
-    transition: 0.3s;
+    border-top: 1px solid gray;
+    border-bottom:1px solid gray;
+
 }
 #sifterWrapper > *{
     /*SETUP*/
-    background-clip:padding-box;
-    margin: 0vw 1.5vw;
-    border: 0;
-    outline: 0;
-    display:inline-block;
-    
-    /*VISUAL*/
-    -webkit-backface-visibility: hidden;
-    border-left: 0 solid gray;
-    font-family:inherit;
-    font-size:inherit;
-    /*ANIMATION*/
-    transition: 0.3s;
-    
-}
-#sifterWrapper > *:hover{
-    /*SETUP*/
-    margin-right:1.25vw;
-    /*VISUAL  */
-    border-left: 0.25vw solid gray;   
-}
-#sifterWrapper > *:focus{
-    /*SETUP*/
-    margin-right:1.25vw;
-    /*VISUAL  */
-    border-left: 0.25vw solid gray;   
-}
-#searchBar{
-    /*VISUAL*/
-    
-    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 66.666667%);
-    background-size: 300% 100%;
-    background-position: right bottom;
-}
-#searchBar:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1vw;
-    /*VISUAL*/
-    background-position: center bottom;
-}
-#searchBar:focus{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1vw;
-    /*VISUAL*/
-    background-position: left bottom;
-}
-#typeSelector {
-    /*SETUP*/
-    /*VISUAL*/
-    cursor:pointer;
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    
-}
-#typeSelector:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-right: 1.125vw;
-    margin-right: 1.375vw;
-    /*VISUAL*/
-    background-position:left bottom;
-   
-}
-#dateSelector {
-    font-size:0;
-    /*VISUAL*/
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    -webkit-backface-visibility: hidden;
-}
-#dateSelector:hover{
-    /*SETUP*/
-    padding-left:0.25vw;
-    margin-left :1.25vw;
-   
-    
-    background-position:left bottom;
-}
-#dsjv {
-    /*SETUP*/
-    padding-left: 0.25vw;
-    margin-right: 1vw;
-    text-align: center;
-    margin: 0vw 1.5vw;
-    border: 0;
-    outline: 0;
-    display: inline-block;
-    /*VISUAL*/
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
-    border-left: 0.25vw solid gray;
-    background-position: left bottom;
-    text-align: center;
-    font-family: inherit;
-    font-size: 0;
-    -webkit-backface-visibility: hidden;
-    /*ANIMATION*/
-    transition: 0.3s;
-}
-#dsjv > *{
-    /*SETUP*/
-    display:inline-block;
-    
-    /*ANIMATION*/
-    transition: 0.3s;
-}
-#dateSelector p, #dsjv p{
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:0;
+    height:3vw;
     /*VISUAL*/
     font-size:1.4vw;
+    font-family:century-old-style-std, serif;
 }
-#dateSelector > * {
+#searchBar{
     /*SETUP*/
-    display:inline-block;
-    /*ANIMATION*/
-    transition: 0.1s;
-    
+    left:2.5%;
+}
+#typeSelector{
+    /*SETUP*/
+    left:32.5%;
+}
+#dateSelector {
+    /*SETUP*/
+    right: 2.5%;
+    display:flex;
+    align-items:baseline;
 
-}
 
-.DateInput {
-    /*SETUP*/
-    border: 0;
-    outline: 0;
-    margin: 0 0.2vw;
-    /*VISUAL*/
-    font-family: inherit;
-    font-size: 1.4vw;
-    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    -webkit-backface-visibility: hidden;
-    /*ANIMATION*/
-    transition: 0s;
-}
-.DateInput:focus{
-    /*SETUP*/
-    border-left:0.15vw solid gray;
-    margin:0.05vw;
-    
    
-    /*VISUAL*/
-    background-position: left bottom;
+     
+     top:25%;
+    
+    
 }
+#dateSelector input{
+    /*SETUP*/
 
+
+
+    width:4vw;
+
+
+
+
+    border:0;
+    outline:0;
+}
+#dateSelector p{
+    /*SETUP*/
+    margin:0;
+    padding:0;
+}
   
 
 

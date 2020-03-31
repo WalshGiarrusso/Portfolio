@@ -43,10 +43,10 @@
         </div>
     </div>
     <!--PLACEHOLDER-->
-    <div id="buttonWrapper">
+    <div id="buttonWrapper" style="border-bottom:none;">
         <div id="buttonContent">
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/" class="ButtonIcon">
+            <div class="HeaderButton" >
+                <a href="https://walshgiarrusso.com/" class="ButtonIcon" >
                     <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
                 </a>
             </div>
@@ -84,7 +84,7 @@
            <input type="number" placeholder="Day" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Year" class="DateInput" />
-           <p>To:<span style="visibility:hidden; font-size: 0.2vw;width:0.1vw;">a</span></p>
+           <p>To:</p>
            <input type="number" placeholder="Month" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
@@ -396,132 +396,7 @@
             $('#sifterWrapper').css("filter", "brightness(100%)");
             document.getElementById("footerWrapper").style.filter = "brightness(100%)";
         }
-     //LENGTHSET
-    $(document).ready(function () {
-        
-        $('#dateSelector > input').each(function () {
-            var ph;
-            ph = $(this).attr('placeholder');
-            var cl;
-            cl = ph.length;
-
-            if (ph == 'Month') {
-                $(this).css("width", 1 + cl + 'ch');
-            }
-            if (ph == 'Day') {
-                $(this).css("width", 0.5 + cl + 'ch');
-            }
-            if (ph == 'Year') {
-                $(this).css("width", 0.2 + cl + 'ch');
-            }
-            
-        });  
-    });
-    //DYNAMIC LENGTH
-    $('.DateInput').on('input', function () {
-        var inp;
-        inp = $(this).val();
-        
-        inpl = inp.length;
-        if (inpl > 0) {
-            $(this).css("width", .1 + inpl + 'ch')
-        } else {
-            var ph1;
-            ph1 = $(this).attr('placeholder');
-            var cl1;
-            cl1 = ph1.length;
-            $(this).css("width", 0.75 + cl1 + 'ch');
-        };
-    });
-    //RESTRICT CHAR
-    $('.DateInput').keypress(function () {
-        var ph2;
-        ph2 = $(this).attr('placeholder');
-        var inpl2;
-        inpl2 = $(this).val().length;
-        if (ph2 == 'Month') {
-            
-            if (inpl2 == "2") {
-                return false;
-            };
-            
-            
-        };
-        if (ph2 == 'Day') {
-            if (inpl2 == "2") {
-                return false;
-            };
-        };
-        if (ph2 == 'Year') {
-             if (inpl2 == "4") {
-                return false;
-            };
-        };
-      
-    });
-    //SHOWBAD
-    $('.DateInput').on('input', function () {
-        var ph3;
-        ph3 = $(this).attr('placeholder');
-        var pval;
-        pval = $(this).val();
-        if (ph3 == 'Month') {
-            
-            if (pval > 12) {
-
-                $(this).css('color', 'red');
-            } else {
-                $(this).css('color', 'black');
-            };
-            
-            
-        };
-        if (ph3 == 'Day') {
-            if (pval > 31) {
-
-                $(this).css('color', 'red');
-            } else {
-                $(this).css('color', 'black');
-            };
-        };
-        if (ph3 == 'Year') {
-             if (pval > 2029) {
-
-                $(this).css('color', 'red');
-            } else {
-                $(this).css('color', 'black');
-            };
-        };
-        
-    });
-    //FOCUS
-    $('.DateInput').focusin(function () {
-        $('#dateSelector').prop('id', 'dsjv')
-    });
-    $('.DateInput').focusout(function () {
-        $('#dsjv').prop('id', 'dateSelector')
-    });
-
-    //HEIGHT
-    $(document).ready(function () {
-        var mxh;
-        mxh = $('#sifterWrapper').height();
-        $('#searchBar').height(mxh);
-        $('#typeSelector').height(mxh);
-    });
-            var resizeId;
-    $(window).resize(function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(doneResizing, 500);
-    })
-    function doneResizing() {
-        var mxh;
-        mxh = $('#dateSelector').height();
-        $('#searchBar').height(mxh);
-        $('#typeSelector').height(mxh);
-      
-    }
-
+     
       
 
     
