@@ -15,8 +15,9 @@
 
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
-    
-    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
+    <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
+
+    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
 
 </head>
@@ -81,7 +82,7 @@
            <p>Select Type ▾</p>
        </div>
        <div id="dateSelector">
-           <p>From:</p>
+           <p style="padding-left:0;">From:</p>
            <input type="number" placeholder="Month" class="DateInput" />
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
@@ -92,7 +93,7 @@
            <p>/</p>
            <input type="number" placeholder="Day" class="DateInput" />
            <p>/</p>
-           <input type="number" placeholder="Year" class="DateInput">
+           <input type="number" placeholder="Year" class="DateInput" id="dateInputEnd">
        </div>
 
    </div>
@@ -417,7 +418,7 @@
                 $(this).css("width", 0.5 + cl + 'ch');
             }
             if (ph == 'Year') {
-                $(this).css("width", 0.2 + cl + 'ch');
+                $(this).css("width", 0.1 + cl + 'ch');
             }
             
         });  
@@ -499,8 +500,86 @@
         };
         
     });
+    //ANIMATION
+        
+    $('#searchBarWrapper').mouseenter(function () {
+        if (!$('#searchBar').is(":focus")) {
+            $(this).css('paddingLeft', '0.25vw');
+            $(this).css('borderLeft', '0.25vw solid gray');
+            $(this).css('backgroundPosition', 'center bottom');
+        };
+        
+    });
+    $('#searchBarWrapper').mouseleave(function () {
+        if (!$('#searchBar').is(":focus")) {
+            $(this).css('paddingLeft', '0vw');
+            $(this).css('borderLeft', '0vw solid gray');
+            $(this).css('backgroundPosition', 'right bottom');
+        };
+    });
+    $('#searchBarWrapper').focusin(function () {
+        $(this).css('paddingLeft', '0.5vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#searchBarWrapper').focusout(function () {
+       
+        
+        if (!$('#searchBar').is(":hover")) {
+            $(this).css('paddingLeft', '0vw');
+            $(this).css('backgroundPosition', 'right bottom');
+            $(this).css('borderLeft', '0vw solid gray');
+        };
+        if ($('#searchBar').is(":hover")) {
+            $(this).css('paddingLeft', '0.25vw');
+            $(this).css('backgroundPosition', 'center bottom');
+        };
+    });
+    $('#typeSelector').mouseenter(function () {
+        $(this).css('paddingLeft', '0.25vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#typeSelector').mouseleave(function () {
+        $(this).css('paddingLeft', '0vw');
+        $(this).css('borderLeft', '0vw solid gray');
+        $(this).css('backgroundPosition', 'right bottom');
+    });
+    $('#dateSelector').mouseenter(function () {
+        $(this).css('paddingLeft', '0.5vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('#dateSelector').mouseleave(function () {
+        if (!$('.DateInput').is(":focus")) {
+            $(this).css('borderLeft', '0vw solid gray');
+            $(this).css('backgroundPosition', 'right bottom');
+        };
+    });
+    $('.DateInput').focusin(function () {
+        $(this).css('margin', '0vw 0.5vw');
+        $(this).css('padding', '0vw 0.25vw');
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
+    });
+    $('.DateInput').focusout(function () {
+        if (!$('#dateSelector').is(":hover")) {
+            $('#dateSelector').css('borderLeft', '0vw solid gray');
+            $('#dateSelector').css('backgroundPosition', 'right bottom');
+        };
+        $(this).css('padding', '0vw');
+        $(this).css('backgroundPosition', 'right bottom');
+        $(this).css('borderLeft', '0vw solid gray');
+        $(this).css('margin', '0vw');
+
+    });
+    $('#dateInputEnd').focusin(function () {
+        $(this).css('marginRight', '0vw');
+    });
+    
 
 
+       
 
 
 

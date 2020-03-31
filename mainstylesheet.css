@@ -512,6 +512,8 @@ input[type=number] {
     /*VISUAL*/
     border-top: 1px solid gray;
     border-bottom:1px solid gray;
+    /*ANIMATION*/
+    transition: 0.5s;
 
 }
 #sifterWrapper > *{
@@ -527,18 +529,19 @@ input[type=number] {
     /*VISUAL*/
     font-size:1.4vw;
     font-family:century-old-style-std, serif;
+    /*ANIMATION*/
+    transition: 0.5s;
 }
 #searchBarWrapper {
     /*SETUP*/
-    left: 2.5%;
+    left: 5.3626%;
     /*ANIMATION*/
-    transition: 0.3s;
-    border-left: 0 solid gray;
-
-}
-#searchBarWrapper:hover{
+    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
     /*ANIMATION*/
-    border-left:0.3vw solid gray;
+    transition: 0.5s;
 }
 #searchBar {
 
@@ -551,55 +554,77 @@ input[type=number] {
     /*VISUAL*/
     font-size: 1.4vw;
     font-family: century-old-style-std, serif;
+    background:transparent;
 
-
-    
+   
+    /*ANIMATION*/
+    transition: 0.3s;
 }
 
 
 
-#typeSelector{
+#typeSelector {
     /*SETUP*/
-    left:27.5%;
-   
-  
+    left: 32.9595%;
+    /*VISUAL*/
+    cursor: pointer;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    /*ANIMATION*/
+    transition: 0.5s;
 }
 #typeSelector p{
     
     margin:0;
     padding:0;
+    /*ANIMATION*/
+    transition: 0.3s;
 
 }
 #dateSelector {
     /*SETUP*/
+    left: 50.5697%;
     top: -7%;
-    right: 2.5%;
     display: flex;
     align-items: baseline;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    /*ANIMATION*/
+    transition: 0.5s;
 }
 #dateSelector > *{
-    height:2vw;
+    height:100%;
+    /*ANIMATION*/
+    transition: 0.5s;
+    background:transparent;
 }
 #dateSelector input{
     /*SETUP*/
-
-
-
-    width:4vw;
-
-
-
-    
     border:0;
     outline:0;
+    
     /*VISUAL*/
     font-size:1.4vw;
     font-family:century-old-style-std, serif;
+    /*ANIMATION*/
+    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size: 200% 500%;
+    background-position: right bottom;
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    /*ANIMATION*/
+    transition: 0.5s;
 }
 #dateSelector p{
     /*SETUP*/
     margin:0;
-    padding:0;
+    padding:0 0.3vw;
 }
   
 
