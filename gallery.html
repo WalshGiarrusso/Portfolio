@@ -166,15 +166,6 @@
            </a>
        </div>
 
-       <div class="ContentThumbnail">
-           <a href="   ">
-               <div class="ContentThumbnailCaption">
-                   <h3>Lorem</h3>
-                   <p>Ipsum</p>
-               </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
-           </a>
-       </div>
 
        <div class="ContentThumbnail">
            <a href="   ">
@@ -246,7 +237,17 @@
            </a>
        </div>
 
-      
+       <div class="ContentThumbnail">
+           <a href="   ">
+               <div class="ContentThumbnailCaption">
+                   <h3>Lorem</h3>
+                   <p>Ipsum</p>
+               </div>
+               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+           </a>
+       </div>
+
+
    </div>
 
 
@@ -544,14 +545,36 @@
         };
     });
     $('#typeSelector').mouseenter(function () {
+         if (!$(this).is('mousedown')) {
+            $(this).css('backgroundPosition', 'left bottom');
+        };
         $(this).css('paddingLeft', '0.25vw');
         $(this).css('borderLeft', '0.25vw solid gray');
-        $(this).css('backgroundPosition', 'left bottom');
     });
     $('#typeSelector').mouseleave(function () {
+
+        
+
+
         $(this).css('paddingLeft', '0vw');
         $(this).css('borderLeft', '0vw solid gray');
         $(this).css('backgroundPosition', 'right bottom');
+    });
+    $('#typeSelector').mousedown(function () {
+
+        
+        showTypes();
+
+        $(this).css('background', '#cccccc');
+    });
+    $('#typeSelector').mouseup(function () {
+        $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)');
+        $(this).css('backgroundSize', '200% 100%');
+        if ($(this).is(':hover')) {
+            $(this).css('backgroundPosition', 'left bottom');
+        } else {
+            $(this).css('backgroundPosition', 'right bottom');
+        };
     });
     $('#dateSelector').mouseenter(function () {
         $(this).css('paddingLeft', '0.5vw');
@@ -584,6 +607,18 @@
     $('#dateInputEnd').focusin(function () {
         $(this).css('marginRight', '0vw');
     });
+
+    //show/hide types
+
+    function showTypes() {
+        
+
+    };
+    
+    function hideTypes() {
+        alert("hiding types");
+
+    };
 
     //check incomplete end
     
