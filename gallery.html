@@ -532,23 +532,25 @@
             $(this).css('paddingLeft', '0.25vw');
             $(this).css('borderLeft', '0.25vw solid gray');
             $(this).css('backgroundPosition', 'center bottom');
-
-
         };
     });
+
+
     $('#searchBarWrapper').mouseleave(function () {
         if (!$('#searchBar').is(":focus")) {
             $(this).css('paddingLeft', '0vw');
             $(this).css('borderLeft', '0vw solid gray');
-            $(this).css('backgroundPosition', 'left bottom');
+            $(this).css('backgroundPosition', 'right bottom');
         };
     });
+
+
     $('#searchBarWrapper').focusin(function () {
+            $(this).css('paddingLeft', '0.5vw');
+            $(this).css('borderLeft', '0.25vw solid gray');
+            $(this).css('backgroundPosition', 'left bottom');
 
-
-        $(this).css('paddingLeft', '0.5vw');
-        $(this).css('borderLeft', '0.25vw solid gray');
-        $(this).css('backgroundPosition', 'left bottom');
+       
     });
     $('#searchBarWrapper').focusout(function () {
         if (!$('#searchBar').is(":hover")) {
@@ -559,6 +561,7 @@
 
             
         } else {
+
             $(this).css('paddingLeft', '0.25vw');
             $(this).css('backgroundPosition', 'center bottom');
         };
