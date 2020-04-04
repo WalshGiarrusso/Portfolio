@@ -81,6 +81,23 @@
        
        <div id="typeSelector">
            <p>Select Type ▾</p>
+           <div id="typeSelectorDropdown">
+               <div class="TSDButton">
+                   AAAAA
+               </div>
+               <div class="TSDButton">
+                   BBBBB
+               </div>
+               <div class="TSDButton">
+                   CCCCC
+               </div>
+               <div class="TSDButton">
+                   DDDDD
+               </div>
+           </div>
+
+
+
        </div>
        <div id="dateSelector">
            <p style="padding-left:0;">From:</p>
@@ -550,34 +567,51 @@
         };
         $(this).css('paddingLeft', '0.25vw');
         $(this).css('borderLeft', '0.25vw solid gray');
+
+
+       
+       
+        $('#typeSelectorDropdown').css('marginLeft', '-0.5vw');
+        $('#typeSelectorDropdown').css('width', '9.08916544656vw');
+         
+        
     });
     $('#typeSelector').mouseleave(function () {
 
+       
         
 
+        if ($('#typeSelectorDropdown').css('display') == 'none') {
+            $(this).css('paddingLeft', '0vw');
+            $(this).css('borderLeft', '0vw solid gray');
+            $(this).css('backgroundPosition', 'right bottom');
+            $('#typeSelectorDropdown').css('borderLeft', '0vw solid gray');
+       
+            $('#typeSelectorDropdown').css('marginLeft', '-0vw');
+            $('#typeSelectorDropdown').css('width', '8.58916544656vw');
+        };
+        
+        
+    });
+   
+   
+    $('.TSDButton').mouseenter(function () {
+        $(this).css('borderLeft', '0.25vw solid gray');
+        $(this).css('backgroundPosition', 'left bottom');
 
-        $(this).css('paddingLeft', '0vw');
-        $(this).css('borderLeft', '0vw solid gray');
+    });
+    $('.TSDButton').mouseleave(function () {
+         $(this).css('borderLeft', '0vw solid gray');
         $(this).css('backgroundPosition', 'right bottom');
     });
-    $('#typeSelector').mousedown(function () {
 
-        
-        showTypes();
 
-        $(this).css('background', '#cccccc');
-    });
-    $('#typeSelector').mouseup(function () {
-        $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)');
-        $(this).css('backgroundSize', '200% 100%');
-        if ($(this).is(':hover')) {
-            $(this).css('backgroundPosition', 'left bottom');
-        } else {
-            $(this).css('backgroundPosition', 'right bottom');
-        };
-    });
+
+
+
     $('#dateSelector').mouseenter(function () {
-        $(this).css('paddingLeft', '0.5vw');
+        $(this).css('padding', '0 0.5vw');
+       
         $(this).css('borderLeft', '0.25vw solid gray');
         $(this).css('backgroundPosition', 'left bottom');
     });
@@ -585,6 +619,8 @@
         if (!$('.DateInput').is(":focus")) {
             $(this).css('borderLeft', '0vw solid gray');
             $(this).css('backgroundPosition', 'right bottom');
+            $(this).css('padding', ' 0vw');
+            
         };
     });
     $('.DateInput').focusin(function () {
@@ -592,6 +628,11 @@
         $(this).css('padding', '0vw 0.25vw');
         $(this).css('borderLeft', '0.25vw solid gray');
         $(this).css('backgroundPosition', 'left bottom');
+
+    });
+    $('#dateInputEnd').focusin(function () {
+        $('#dateSelector').css('paddingRight', '0vw');
+        $(this).css('marginRight', '0');
     });
     $('.DateInput').focusout(function () {
         if (!$('#dateSelector').is(":hover")) {
@@ -609,16 +650,30 @@
     });
 
     //show/hide types
-
-    function showTypes() {
-        
-
-    };
     
-    function hideTypes() {
-        alert("hiding types");
 
-    };
+    $('#typeSelector').click( function(event) {
+
+        var trg = $(event.target);
+       
+        if ((!trg.is('#typeSelectorDropdown')) && (!trg.is('.TSDButton'))) {
+           
+            if ($('#typeSelectorDropdown').css('display') == 'none') {
+           
+            
+                $('#typeSelectorDropdown').css('display', 'block')
+       
+            
+            
+            } else {
+            
+                $('#typeSelectorDropdown').css('display', 'none');
+            };
+       
+        };
+        
+    });
+                    
 
     //check incomplete end
     
