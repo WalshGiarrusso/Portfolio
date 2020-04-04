@@ -615,7 +615,7 @@ input[type=number] {
     background-position: right bottom;
     background-repeat: no-repeat;
     /*ANIMATION*/
-    transition: 0.5s;
+    transition: 0.4s ease-in-out;
 }
 
 
