@@ -561,6 +561,8 @@ input[type=number] {
     /*SETUP*/
     z-index: 2;
     left: 32.9595%;
+    width: 8.58917vw;
+    
     /*VISUAL*/
     cursor: pointer;
     /*ANIMATION*/
@@ -573,6 +575,7 @@ input[type=number] {
 }
 #typeSelector p{
    /*SETUP*/
+   display:inline-block;
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
     -moz-user-select: none;
@@ -580,6 +583,7 @@ input[type=number] {
     user-select: none;
     margin:0;
     padding:0;
+    
     /*ANIMATION*/
     transition: 0.5s;
 
@@ -589,7 +593,7 @@ input[type=number] {
 
 #typeSelectorDropdown {
     /*SETUP*/
-    margin-top: 1px;
+    top:2vw;
     display: none;
     position: absolute;
     z-index: 2;
@@ -615,7 +619,7 @@ input[type=number] {
     background-position: right bottom;
     background-repeat: no-repeat;
     /*ANIMATION*/
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out, background 0s, background-position 0.4s ease-in-out;
 }
 
 
