@@ -20,7 +20,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+
 
 
 </head>
@@ -29,14 +29,14 @@
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
         <p> Walsh <br /> Giarrusso </p>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <a href="https://walshgiarrusso.com/">Home</a>
         <a href="https://walshgiarrusso.com/gallery">Gallery</a>
         <a href="#  ">About</a>
         <a href="#  ">Contact</a>
     </div>
 
-    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" onclick="openNav()">&#9776;</span>
+    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" id="openNavBox">&#9776;</span>
 
     <!--Header-->
     <div id="headerWrapper">
@@ -266,57 +266,16 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         /* Sidebar */
-        function openNav() {
-            document.getElementById("mainSidebar").style.width = "15%";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
-            document.getElementById("headerWrapper").style.borderBottomColor = "black";
-            document.getElementById("buttonWrapper").style.borderBottomColor = "black";
-            document.getElementById("partitionContent").style.borderBottomColor = "black";
-            document.getElementById("partitionText").style.borderBottomColor = "black";
-            document.getElementById("partitionImage").style.borderRightColor = "black";
-            document.getElementById("partitionImage").style.filter = "brightness(40%)";
-
-            var header = document.getElementsByClassName("Header");
-            var i;
-            for (i = 0; i < header.length; i++) {
-                header[i].style.borderBottomColor = "black";
-            }
-
-            document.getElementById("featuredWrapper").style.borderBottomColor = "black";
-            document.getElementById("featuredContentWrapper").style.filter = "brightness(40%)";
-
-
-
-            document.getElementById("footerWrapper").style.filter = "brightness(40%)";
-
-
-        }
-
-
-        function closeNav() {
-            document.getElementById("mainSidebar").style.width = "0";
-            document.body.style.backgroundColor = "white";
-            document.getElementById("headerWrapper").style.borderBottomColor = "gray";
-            document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
-            document.getElementById("partitionContent").style.borderBottomColor = "gray";
-            document.getElementById("partitionText").style.borderBottomColor = "gray";
-            document.getElementById("partitionImage").style.borderRightColor = "gray";
-            document.getElementById("partitionImage").style.filter = "brightness(100%)";
-
-            var header = document.getElementsByClassName("Header");
-            var i;
-            for (i = 0; i < header.length; i++) {
-                header[i].style.borderBottomColor = "gray";
-            }
-
-            document.getElementById("featuredWrapper").style.borderBottomColor = "gray";
-            document.getElementById("featuredContentWrapper").style.filter = "brightness(100%)";
-
-
-            document.getElementById("footerWrapper").style.filter = "brightness(100%)";
-
-
-        }
+        $('#openNavBox').click(function () {
+            $('#mainSidebar').css('width', '15%');
+            $('body').css('backgroundColor', 'rgba(0,0,0,0.6)');
+            $('body > div').not('.sidebar').css('filter', 'brightness(40%)');
+        });
+        $('.closebtn').click(function () {
+            $('#mainSidebar').css('width', '0');
+            $('body').css('backgroundColor', 'white');
+            $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
+        });
 
 
 

@@ -18,7 +18,7 @@
     <!---FIX THIS BEFORE LIVE-->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">         -->
 
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+    
     <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 </head>
@@ -27,14 +27,14 @@
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
         <p> Walsh <br /> Giarrusso </p>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <a href="https://walshgiarrusso.com/">Home</a>
         <a href="https://walshgiarrusso.com/gallery">Gallery</a>
         <a href="#  ">About</a>
         <a href="#  ">Contact</a>
     </div>
 
-    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" onclick="openNav()">&#9776;</span>
+    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" id="openNavBox">&#9776;</span>
 
     <!--Header-->
     <div id="headerWrapper">
@@ -381,62 +381,36 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
 
+        //INIT
+        $(document).ready(function () {
+
+        });
+
         /* Sidebar */
+        $('#openNavBox').click(function () {
+            $('#mainSidebar').css('width', '15%');
+            $('body').css('backgroundColor', 'rgba(0,0,0,0.6)');
+            $('body > div').not('.sidebar').css('filter', 'brightness(40%)');
+        });
+        $('.closebtn').click(function () {
+            $('#mainSidebar').css('width', '0');
+            $('body').css('backgroundColor', 'white');
+            $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
+        });
 
 
 
-
-        function openNav() {
-            document.getElementById("mainSidebar").style.width = "15%";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
-            document.getElementById("headerWrapper").style.borderBottomColor = "black";
-            document.getElementById("buttonWrapper").style.borderBottomColor = "black";
+     
 
 
-             
-
-
-
-            var thumbnail = document.getElementsByClassName("ContentThumbnail");
-
-            var i;
-            for (i = 0; i < thumbnail.length; i++) {
-                thumbnail[i].style.filter = "brightness(40%)";
-            }
-
-            $('#sifterWrapper').css("filter", "brightness(40%)");
-            $('#browserWrapper').css("filter", "brightness(40%)");
-            document.getElementById("footerWrapper").style.filter = "brightness(40%)";
-
-
-        }
-
-
-        function closeNav() {
-            document.getElementById("mainSidebar").style.width = "0";
-            document.body.style.backgroundColor = "white";
-            document.getElementById("headerWrapper").style.borderBottomColor = "gray";
-            document.getElementById("buttonWrapper").style.borderBottomColor = "gray";
-
-            
-           
-
-
-            var thumbnail = document.getElementsByClassName("ContentThumbnail");
-
-            var i;
-            for (i = 0; i < thumbnail.length; i++) {
-                thumbnail[i].style.filter = "brightness(100%)";
-            }
-            $('#sifterWrapper').css("filter", "brightness(100%)");
-            $('#browserWrapper').css("filter", "brightness(100%)");
-            document.getElementById("footerWrapper").style.filter = "brightness(100%)";
-        }
+        
      
       
          //LENGTHSET
     $(document).ready(function () {
-        
+
+
+       
         $('#dateSelector > input').each(function () {
             var ph;
             ph = $(this).attr('placeholder');
@@ -452,7 +426,11 @@
             if (ph == 'Year') {
                 $(this).css("width", 0.1 + cl + 'ch');
             }
-            
+
+
+
+         
+
         });  
     });
     //DYNAMIC LENGTH
@@ -562,9 +540,7 @@
         };
     });
     $('#typeSelector').mouseenter(function () {
-         if (!$(this).is('mousedown')) {
-            $(this).css('backgroundPosition', 'left bottom');
-        };
+         $(this).css('backgroundPosition', 'left bottom');
         $(this).css('paddingLeft', '0.25vw');
         $(this).css('borderLeft', '0.25vw solid gray');
 
@@ -581,7 +557,7 @@
        
         
 
-        if ($('#typeSelectorDropdown').css('display') == 'none') {
+        if ($('#typeSelectorDropdown').is(':hidden')) {
             $(this).css('paddingLeft', '0vw');
             $(this).css('borderLeft', '0vw solid gray');
             $(this).css('backgroundPosition', 'right bottom');
@@ -655,19 +631,25 @@
     $('#typeSelector').click( function(event) {
 
         var trg = $(event.target);
-       
+        var dd = $('#typeSelectorDropdown');
         if ((!trg.is('#typeSelectorDropdown')) && (!trg.is('.TSDButton'))) {
            
-            if ($('#typeSelectorDropdown').css('display') == 'none') {
-           
-            
-                $('#typeSelectorDropdown').css('display', 'block')
+            if ($(dd).is(":hidden")) {
+               
+                $(dd).show();
+                $(dd).animate({ height:'10vw'}, 500);
+                
        
             
             
             } else {
-            
-                $('#typeSelectorDropdown').css('display', 'none');
+                $(dd).animate({ height: '0px' }, 500, function() {
+                    
+                    $(dd).hide();
+                });
+                 
+
+
             };
        
         };
@@ -707,6 +689,11 @@
     };
     //
     $(document).ready(checkIncomplete());
+    //initialize
+    $(document).ready(function () {
+        $('#typeSelectorDropdown').height('0vw');
+        
+    });
     
 
 
