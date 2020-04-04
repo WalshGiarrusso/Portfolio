@@ -530,7 +530,7 @@ input[type=number] {
     /*SETUP*/
     left: 5.3626%;
     /*ANIMATION*/
-    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 50%);
+    background: linear-gradient(to right,  #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 50%);
     background-size: 300% 100%;
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -564,8 +564,8 @@ input[type=number] {
     /*VISUAL*/
     cursor: pointer;
     /*ANIMATION*/
-    background: linear-gradient(to right, #f2f2f2 50%, transparent 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, #cccccc 33.333333%, #f2f2f2 33.333334%, #f2f2f2 66.666666%, transparent 50%);
+    background-size: 300% 100%;
     background-position: right bottom;
     background-repeat: no-repeat;
     /*ANIMATION*/
@@ -599,6 +599,8 @@ input[type=number] {
     box-sizing: border-box;
     /*VISUAL*/
     background-color: white;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /*ANIMATION*/
     transition: 0.3s, height initial;
