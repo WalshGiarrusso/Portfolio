@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
 
-
+    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
 
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">    -->
     <!---FIX THIS BEFORE LIVE-->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">         -->
 
-    
+
     <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 </head>
@@ -382,21 +382,35 @@
     <script>
 
         //INIT
+
+        var FXLD = 0;
         $(document).ready(function () {
 
         });
 
         /* Sidebar */
         $('#openNavBox').click(function () {
+            FXLD = 1;
             $('#mainSidebar').css('width', '15%');
             $('body').css('backgroundColor', 'rgba(0,0,0,0.6)');
             $('body > div').not('.sidebar').css('filter', 'brightness(40%)');
         });
         $('.closebtn').click(function () {
+            FXLD = 0;
             $('#mainSidebar').css('width', '0');
             $('body').css('backgroundColor', 'white');
             $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
         });
+        //BUTTON
+        $('.ButtonIcon > img').mouseenter(function () {
+            $(this).css('backgroundColor', 'rgb(217, 217, 217)');
+            $(this).css('border-radius', '40%');
+        });
+        $('.ButtonIcon > img').mouseleave(function () {
+            $(this).css('backgroundColor', 'transparent');
+            $(this).css('border-radius', '40%');
+        });
+     
 
 
 
