@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
 
-    
+
 
 
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">    -->
     <!---FIX THIS BEFORE LIVE-->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">         -->
 
+
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
-    
+  
 
 </head>
 
@@ -126,7 +127,7 @@
                    <h3>Down To The Wire</h3>
                    <p>Design</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/1016/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -149,7 +150,7 @@
                    <h3>Goody Two Shoes</h3>
                    <p>Music</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/69/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -172,7 +173,7 @@
                    <h3>Keep On Trucking</h3>
                    <p>Writing</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/888/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -195,7 +196,7 @@
                    <h3>Beating a Dead Horse</h3>
                    <p>Drawing</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/544/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -218,7 +219,7 @@
                    <h3>Cry Over Spilt Milk</h3>
                    <p>Other</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/841/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -241,7 +242,7 @@
                    <h3>Back To the Drawing Board</h3>
                    <p>Music</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/257/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -264,7 +265,7 @@
                    <h3>Elvis Has Left The Building</h3>
                    <p>Drawing</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/779/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -287,7 +288,7 @@
                    <h3>In a Pickle</h3>
                    <p>Design</p>
                </div>
-               <img src="https://via.placeholder.com/200x300" class="ContentThumbnailImage" />
+               <img src="https://i.picsum.photos/id/111/200/300.jpg" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
@@ -413,37 +414,36 @@
         //FILTERS
             //TYPE
         $('.TSDButton').click(function () {
-            $('.ContentThumbnail').show();
-            var tstr = $('#typeSelector > p').text().trim();
-            var all = 'All';
-            $('.ContentThumbnail').each(function () {
-                var inf = $(this).children('.ContentInfo').children('.ContentType').text().trim();
-                if (!(tstr == inf)) {
-                    if ((tstr == all)) {
-                        $(this).show();
-                    };
-                    if (!(tstr == all)) {
-                        $(this).hide();
-                    };
-                    
-                };
-            });
-            checkIncomplete();
+            calcSimScore();
         });
+
+        function typeSim(element) {
+            var ret;
+            var tstr = $('#typeSelector > p').text().trim();
+    
+            var all = 'All';
+            
+            var inf = element.children('.ContentInfo').children('.ContentType').text().trim();
+        
+            if (!(tstr == inf)) {
+                if ((tstr == all)) {
+                    ret = 0;
+                } else {
+                        ret = -1;
+                };
+            } else {
+                ret =  1;
+            };
+       
+            return ret;
+        };
+
+
             //SEARCH
         $('#searchBar').keyup(function(){
             calcSimScore();
         });
-        function calcSimScore() {
-            $('.ContentThumbnail').each(function(){
-                var simScore = 1000000;
-                simScore -= searchSim($(this));
-               //simScore += typeSim($(this));
-                console.log(simScore);
-                checkIncomplete();
-                $(this).css('order', simScore);
-            });
-        };
+
         function findCommons(arr1, arr2) {
             var ret = [];
             ret = arr1.filter(value => arr2.includes(value));
@@ -473,14 +473,55 @@
                 return el != "";  
             });
 
-           var commons = findCommons(checkoutput, output);
-            var vcom = commons.length;
 
-            return vcom;
+            var commons = findCommons(checkoutput, output);
+
+            
+                 var vcom = commons.length;
+
+
+                return vcom;
+            
+
+           
         };
 
-        function typeSim(element) {
+        //DATE
+
+        $('.DateInput').keyup(function () {
+
+            calcSimScore();
+
+        });
+
+        function dateSimScore(element) {
+            var ret = 0;
+            //DATECALC
+            //STUFF
+            //SHOULD
+            //GO
+            //HERE
+
+            return ret;
         };
+
+
+        //CALC
+        function calcSimScore() {
+            $('.ContentThumbnail').each(function(){
+                var simScore = 1000000;
+                simScore -= searchSim($(this));
+                simScore -= typeSim($(this));      
+                simScore -= dateSimScore($(this));  
+
+                console.log(simScore);
+                checkIncomplete();
+                $(this).css('order', simScore);
+            });
+        };
+        
+
+        
 
    
 
@@ -496,6 +537,9 @@
         //INIT
         $(document).ready(function () {
             $('#typeSelectorDropdown').height('0vw');
+
+
+
 
           
         
