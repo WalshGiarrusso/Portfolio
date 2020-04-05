@@ -334,13 +334,23 @@ input[type=number] {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     /*VISUAL*/
     color: white;
     filter: opacity(0);
-    font-size: 2vw;
+  
+
+    text-align: center;
     /*ANIMATION*/
     transition: 0.5s;
+}
+
+.ContentThumbnailCaption > h3, .ContentThumbnailCaption > p{
+    /*SETUP*/
+      font-size: 2vw;
+    margin: 10% 5%
+
 }
 /*PRELUDE*/
 #preludeContentWrapper {
@@ -593,18 +603,17 @@ input[type=number] {
 
 #typeSelectorDropdown {
     /*SETUP*/
-    top:2vw;
+    top: 2vw;
+    border-top: 1px solid gray;
     display: none;
     position: absolute;
     z-index: 2;
-    height: 10vw;
+  
     overflow: hidden;
     width: 8.58916544656vw;
     box-sizing: border-box;
     /*VISUAL*/
     background-color: white;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /*ANIMATION*/
     transition: 0.3s, height initial;
@@ -684,7 +693,7 @@ input[type=number] {
     /*SETUP*/
     
     margin: 0 13.85%;
-    
+    min-height:100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content:space-around;
@@ -712,12 +721,16 @@ input[type=number] {
 }
 .Filler {
     /*SETUP*/
-    
+    order: 1000000000;
     width: 12vw;
     height: 18vw;
     /*VISUAL*/
     
     visibility:hidden;
+}
+.ContentInfo{
+    /*SETUP*/
+    display:none;
 }
 
 
@@ -743,5 +756,10 @@ input[type=number] {
 
     #partitionContent {
         height: auto;
+    }
+}
+@media only screen and (max-width: 2000px){
+    .ContentThumbnailCaption {
+        font-size: 36px;
     }
 }
