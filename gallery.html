@@ -18,7 +18,7 @@
     <!---FIX THIS BEFORE LIVE-->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">         -->
 
-    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
 
 
@@ -429,7 +429,7 @@
                 if ((tstr == all)) {
                     ret = 0;
                 } else {
-                        ret = -1;
+                    ret = -1;
                 };
             } else {
                 ret =  1;
@@ -476,11 +476,15 @@
 
             var commons = findCommons(checkoutput, output);
 
-            
-                 var vcom = commons.length;
+          //  console.log('Checkoutput length is: ' + checkoutput.length + 'vs. commons length: ' + commons.length);
+            //console.log(checkoutput.length == commons.length);
+            var vcom = commons.length;
+            if (checkoutput.length == commons.length) {
+                return ((5 * vcom) + 1);
+            }
 
 
-                return vcom;
+            return vcom;
             
 
            
@@ -500,24 +504,67 @@
             var coY =  parseInt(contentDate.children('.ContentYear').text().trim());
             var coD =  parseInt(contentDate.children('.ContentDay').text().trim());
             var coM =  parseInt(contentDate.children('.ContentMonth').text().trim());
-
-            alert(typeof coY);
-
- 
             var d1 = parseInt($('input[name="fromDay"]').val().trim());
             var d2 = parseInt($('input[name="toDay"]').val().trim());
             var m1 = parseInt($('input[name="fromMonth"]').val().trim());
             var m2 = parseInt($('input[name="toMonth"]').val().trim());
             var y1 = parseInt($('input[name="fromYear"]').val().trim());
             var y2 = parseInt($('input[name="toYear"]').val().trim());
-           
-            
 
-           
+          //  console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
+         //   console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
+         //   console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
 
-           
+            if ((coY > y2) || (coY < y1)) {
+                ret = 0;
+                return ret;
+            } else if (y2 > coY > y1) {
+                ret = 1;
+                return ret;
+            } else if ((coY == y1) && (coY < y2)) {
+                if (coM < m1) {
+                    ret = 0;
+                    return ret;
+                } else if (coM > m1) {
+                   ret = 1;
+                    return ret; 
+                } else if (coM == m1) {
+                    if (coD < d1) {
+                       ret = 0;
+                       return ret;
+                    } else {
+                       ret = 1;
+                       return ret;
+                    };
+                } else {
+                    ret = 0;
+                    return ret;
+                };
 
-            return ret;
+            } else if ((coY == y2) && (coY > y1)) {
+                if (coM < m2) {
+                    ret = 1;
+                    return ret;
+                } else if (coM > m2) {
+                    ret = 0;
+                    return ret;
+                } else if (coM == m2) {
+                    if (coD > d2) {
+                        ret = 0;
+                        return ret;
+                    } else {
+                        ret = 1;
+                        return ret;
+                    };
+
+                } else {
+                    ret = 0;
+                    return ret;
+                }
+            } else {
+                ret = 0;
+                return ret;
+            }
         };
 
 
@@ -529,7 +576,7 @@
                 simScore -= ( 3 * typeSim($(this)));      
                 simScore -= ( 2 * dateSimScore($(this)));  
 
-                //console.log(simScore);
+             //   console.log(simScore);
                 checkIncomplete();
                 $(this).css('order', simScore);
             });
