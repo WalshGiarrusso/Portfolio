@@ -414,7 +414,9 @@
         //FILTERS
             //TYPE
         $('.TSDButton').click(function () {
-            calcSimScore();
+              if (stopNewHides == 0) {
+                     calcSimScore();
+            };
         });
 
         function typeSim(element) {
@@ -441,7 +443,9 @@
 
             //SEARCH
         $('#searchBar').keyup(function(){
-            calcSimScore();
+              if (stopNewHides == 0) {
+                     calcSimScore();
+            };
         });
 
         function findCommons(arr1, arr2) {
@@ -493,8 +497,10 @@
         //DATE
 
         $('.DateInput').keyup(function () {
-
-            calcSimScore();
+            if (stopNewHides == 0) {
+                     calcSimScore();
+            };
+       
 
         });
 
@@ -578,10 +584,67 @@
 
              //   console.log(simScore);
                 checkIncomplete();
-                $(this).css('order', simScore);
+                console.log(stopNewHides);
+
+         
+                    
+                    asyncSwap($(this), simScore);
+               
+          
+               
+
+            
+
             });
         };
-        
+        async function asyncSwap(element, score) {
+            stopNewHides = 1;
+   
+            element.animate({opacity:0}, 250);
+
+            const waiter1 = await resolver1();
+             var simScore = 1000000;
+             score -= searchSim(element);
+             score -= ( 3 * typeSim(element));      
+             score -= (2 * dateSimScore(element));  
+             checkIncomplete();
+             element.css('order', score);
+             const waiter2 = await resolver2();
+            element.animate({ opacity: 100 }, 50);
+            const waiter3 = await resolver3();
+         
+             stopNewHides = 0;
+        }
+
+
+        function resolver1() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('resolved');
+                }, 450);
+
+
+            });
+        };
+                function resolver2() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('resolved');
+                }, 250);
+
+
+            });
+        };
+        function resolver3() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('resolved');
+                }, 50);
+
+
+            });
+        };
+      
 
         
 
@@ -595,10 +658,14 @@
 
 
 
-
+        
+        var stopNewHides;
         //INIT
         $(document).ready(function () {
+
+
             $('#typeSelectorDropdown').height('0vw');
+            stopNewHides = 0;
 
 
 
