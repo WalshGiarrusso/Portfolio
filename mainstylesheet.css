@@ -693,7 +693,7 @@ input[type=number] {
     /*SETUP*/
     
     margin: 0 13.85%;
-    min-height:100vh;
+   
     display: flex;
     flex-flow: row wrap;
     justify-content:space-around;

@@ -480,8 +480,8 @@
 
             var commons = findCommons(checkoutput, output);
 
-          //  console.log('Checkoutput length is: ' + checkoutput.length + 'vs. commons length: ' + commons.length);
-            //console.log(checkoutput.length == commons.length);
+            console.log('Checkoutput length is: ' + checkoutput.length + 'vs. commons length: ' + commons.length);
+            console.log(checkoutput.length == commons.length);
             var vcom = commons.length;
             if (checkoutput.length == commons.length) {
                 return ((5 * vcom) + 1);
@@ -517,9 +517,9 @@
             var y1 = parseInt($('input[name="fromYear"]').val().trim());
             var y2 = parseInt($('input[name="toYear"]').val().trim());
 
-          //  console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
-         //   console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
-         //   console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
+            console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
+            console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
+            console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
 
             if ((coY > y2) || (coY < y1)) {
                 ret = 0;
@@ -582,9 +582,9 @@
                 simScore -= ( 3 * typeSim($(this)));      
                 simScore -= ( 2 * dateSimScore($(this)));  
 
-             //   console.log(simScore);
+                console.log(simScore);
                 checkIncomplete();
-                console.log(stopNewHides);
+                
 
          
                     
