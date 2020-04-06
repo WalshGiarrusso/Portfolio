@@ -9,7 +9,7 @@ body {
     font-weight: 400; /*Bold is weight 700*/
     font-style: normal;
     /* SETUP */
-    padding: 3% 1.5% 0% 1.5%;
+    padding: 1% 1.5% 0% 1.5%;
     margin: 0;
     /* ANIMATION */
     transition: 0.3s;

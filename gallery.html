@@ -35,7 +35,7 @@
         <a href="#  ">Contact</a>
     </div>
 
-    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" id="openNavBox">&#9776;</span>
+    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%; top:3.5%;" id="openNavBox">&#9776;</span>
 
     <!--Header-->
     <div id="headerWrapper">
@@ -560,15 +560,15 @@
                     ret = 0;
                     return ret;
                 } else if (coM > m1) {
-                   ret = 1;
-                    return ret; 
+                    ret = 1;
+                    return ret;
                 } else if (coM == m1) {
                     if (coD < d1) {
-                       ret = 0;
-                       return ret;
+                        ret = 0;
+                        return ret;
                     } else {
-                       ret = 1;
-                       return ret;
+                        ret = 1;
+                        return ret;
                     };
                 } else {
                     ret = 0;
@@ -591,14 +591,54 @@
                         return ret;
                     };
 
-                } else {
+                } else { 
                     ret = 0;
                     return ret;
                 }
+            } else if ((coY == y2) && (coY == y1) ) {
+                if ((m2 > coM) && (coM > m1)) {
+                    ret = 1;
+                    return ret;
+                } else if ((coM < m1) || (coM > m2)) {
+                    ret = 0;
+                    return ret;
+                } else if ((coM == m1) && (coM < m2)) {
+                    if (coD < d1) {
+                        ret = 0;
+                        return ret;
+                    } else {
+                        ret = 1;
+                        return ret;
+                    };
+                } else if ((coM > m1) && (coM == m2)){
+                    if (coD > d2) {
+                        ret = 0;
+                        return ret;
+                    } else {
+                        ret = 1;
+                        return ret;
+                    };
+                }else if ((coM == m1) && (coM == m2)) {
+                    if ((coD >= d1) && (d2 >= coD)) {
+                        ret = 1;
+                        return ret;
+                    } else if ((coD == d1) && (coD == d2)) {
+                        ret = 1;
+                        return ret;
+                    }else {
+                        ret = 0;
+                        return ret;
+                    };
+                    
+                }else {
+                ret = 0;
+                return ret;
+                };
+
             } else {
                 ret = 0;
                 return ret;
-            }
+            };
         };
 
 
