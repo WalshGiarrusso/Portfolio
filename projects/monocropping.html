@@ -3,9 +3,88 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+
+
+    <title>Walsh Giarrusso—Monocropping</title>
+    <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
+
+
+
+
+    <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
+    <!---FIX THIS BEFORE LIVE-->
+    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
+
+
 </head>
 <body>
+    <!--Sidebar-->
+    <div class="sidebar" id="mainSidebar">
+        <p> Walsh <br /> Giarrusso </p>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <a href="https://walshgiarrusso.com/">Home</a>
+        <a href="https://walshgiarrusso.com/gallery">Gallery</a>
+        <a href="#  ">About</a>
+        <a href="#  ">Contact</a>
+    </div>
 
+    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;" id="openNavBox">&#9776;</span>
+
+    <!--Header-->
+    <div id="headerWrapper">
+        <div id="headerContent">
+            <p>
+                Monocropping
+            </p>
+        </div>
+    </div>
+    <!--PLACEHOLDER-->
+    <div id="buttonWrapper" style="border-bottom:none;">
+        <div id="buttonContent">
+            <div class="HeaderButton">
+                <a href="https://walshgiarrusso.com/" class="ButtonIcon">
+                    <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="https://walshgiarrusso.com/gallery" class="ButtonIcon">
+                    <img src="https://walshgiarrusso.com/Icons/Gallery/Gallery.svg  " />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="https://walshgiarrusso.com/Icons/About/About.svg " />
+                </a>
+            </div>
+            <div class="HeaderButton">
+                <a href="   " class="ButtonIcon">
+                    <img src="https://walshgiarrusso.com/Icons/Contact/Contact.svg   " />
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        /* Sidebar */
+        $('#openNavBox').click(function () {
+        
+            $('#mainSidebar').css('width', '15%');
+            $('body').css('backgroundColor', 'rgba(0,0,0,0.6)');
+            $('body > div').not('.sidebar').css('filter', 'brightness(40%)');
+        });
+        $('.closebtn').click(function () {
+         
+            $('#mainSidebar').css('width', '0');
+            $('body').css('backgroundColor', 'white');
+            $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
+        });
+    </script>
 </body>
 </html>
