@@ -765,10 +765,7 @@
     //SHOWBAD
         $('.DateInput').keyup(function () {
             var sBR = checkDayInput();
-
-                
                 if (sBR == 0) {
-   
                     $('input[name="fromDay"]').css('color', 'black');
                     $('input[name="toDay"]').css('color', 'black');
                 };
@@ -784,28 +781,19 @@
                     $('input[name="fromDay"]').css('color', 'red');
                     $('input[name="toDay"]').css('color', 'red');
             };
- 
         });
         $('.DateInput').on('input', function () {
-
-                
-       
-            
-
         var ph3;
         ph3 = $(this).attr('placeholder');
         var pval;
         pval = $(this).val();
         if (ph3 == 'Month') {
-            
             if (pval > 12) {
 
                 $(this).css('color', 'red');
             } else {
                 $(this).css('color', 'black');
             };
-            
-            
         };
             if (ph3 == 'Day') {
 
@@ -823,11 +811,7 @@
                 $(this).css('color', 'black');
             };
         };
-
-
-        
     });
-
     //checkdayinput
         function checkDayInput() {
             var d1 = parseInt($('input[name="fromDay"]').val().trim());
@@ -840,7 +824,6 @@
             var d1G = true;
             var d2G = true;
    
-
             if (d1 > 28) {
                 if (!(isNaN(y1))) {
                     if ((d1 == 29) && (m1 == 2) && (y1 > 999) && !((y1 % 4) == 0)) {
@@ -879,17 +862,12 @@
                         };
                 }                
             };
-
             if (d2 > 31) {
                 d2G = false;
             };
             if (d1 > 31) {
                 d1G = false;
             };
-
-
-            
-           
             if (d1G && d2G) {
                 return 0;
             };
