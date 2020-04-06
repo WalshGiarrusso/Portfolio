@@ -193,7 +193,7 @@
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
-                   <h3>Beating a Dead Horse</h3>
+                   <h3>Beating a <br /> Dead Horse</h3>
                    <p>Drawing</p>
                </div>
                <img src="https://i.picsum.photos/id/544/200/300.jpg" class="ContentThumbnailImage" />
@@ -216,7 +216,7 @@
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
-                   <h3>Cry Over Spilt Milk</h3>
+                   <h3>Cry Over <br /> Spilt Milk</h3>
                    <p>Other</p>
                </div>
                <img src="https://i.picsum.photos/id/841/200/300.jpg" class="ContentThumbnailImage" />
@@ -239,7 +239,7 @@
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
-                   <h3>Back To the Drawing Board</h3>
+                   <h3>Back To the Drawing <br />  Board</h3>
                    <p>Music</p>
                </div>
                <img src="https://i.picsum.photos/id/257/200/300.jpg" class="ContentThumbnailImage" />
@@ -313,11 +313,11 @@
                    <p>Design</p>
                    <p>March 2nd, 2020</p>
                </div>
-               <img src="https://i.picsum.photos/id/111/200/300.jpg" class="ContentThumbnailImage" />
+               <img src="https://walshgiarrusso.com/projects/monocropping/monocropping%20project%20wordless%20variant.png" class="ContentThumbnailImage" />
            </a>
            <div class="ContentInfo">
                <div class="ContentTitle">
-                   <p>Monocropping Project</p>
+                   <p>Monocropping</p>
                </div>
                <div class="ContentType">
                    <p>Design</p>
@@ -507,8 +507,9 @@
 
             var commons = findCommons(checkoutput, output);
 
-            console.log('Checkoutput length is: ' + checkoutput.length + 'vs. commons length: ' + commons.length);
-            console.log(checkoutput.length == commons.length);
+            //console.log('Checkoutput length is: ' + checkoutput.length + ' vs. commons length: ' + commons.length);
+          
+           // console.log(checkoutput.length == commons.length);
             var vcom = commons.length;
             if (checkoutput.length == commons.length) {
                 return ((5 * vcom) + 1);
@@ -544,9 +545,9 @@
             var y1 = parseInt($('input[name="fromYear"]').val().trim());
             var y2 = parseInt($('input[name="toYear"]').val().trim());
 
-            console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
-            console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
-            console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
+           // console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
+           // console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
+           // console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
 
             if ((coY > y2) || (coY < y1)) {
                 ret = 0;
@@ -609,7 +610,7 @@
                 simScore -= ( 3 * typeSim($(this)));      
                 simScore -= ( 2 * dateSimScore($(this)));  
 
-                console.log(simScore);
+                //console.log(simScore);
                 checkIncomplete();
                 
 

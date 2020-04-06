@@ -289,7 +289,7 @@ input[type=number] {
     margin: 0% 5% 0% 5%;
     max-width: 160px;
     max-height: 240px;
-    width: 12vw;
+    width: 13.8vw;
     height: 18vw;
     /*ANIMATION*/
     transition: 0.3s;
@@ -304,13 +304,14 @@ input[type=number] {
 
     .ContentThumbnail:hover .ContentThumbnailImage {
         /*SETUP*/
-        transform: scale(1.2);
+        transform: scale(1.15);
         /*VISUAL*/
         filter: brightness(50%);
     }
 
     .ContentThumbnail a {
         /*SETUP*/
+        width: 13.8vw;
         display: inline-block;
         position: relative;
         /*ANIMATION*/
@@ -321,20 +322,20 @@ input[type=number] {
     /*SETUP*/
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    max-width: 200px;
+    object-fit: cover;
+    width: 12vw;
+    height: 18vw;
     /*ANIMATION*/
     transition: transform .5s, filter .5s;
 }
 
 .ContentThumbnailCaption {
     /*SETUP*/
+    width:13.8vw;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    
     transform: translate(-50%, -50%);
     /*VISUAL*/
     color: white;
@@ -346,14 +347,32 @@ input[type=number] {
     transition: 0.5s;
 }
 
-.ContentThumbnailCaption > h3, .ContentThumbnailCaption > p{
+.ContentThumbnailCaption > h3{
     /*SETUP*/
-      font-size: 2vw;
-    margin: 10% 5%
+         width:13.8vw;
+      
+      margin: 0;
+      padding: 0;
+      /*VISUAL*/
+      font-size: 1.8vw;
+       font-weight:bolder;
+  
 
 }
-/*PRELUDE*/
-#preludeContentWrapper {
+.ContentThumbnailCaption > p {
+    /*SETUP*/
+     
+        width:13.8vw;
+   
+      margin: 0;
+      padding: 0;
+      /*VISUAL*/
+       font-size: 1.6vw;
+       font-weight:400;
+
+}
+        /*PRELUDE*/
+        #preludeContentWrapper {
     /*SETUP*/
     display: inline-block;
     margin-left: 13.85%;
@@ -708,25 +727,23 @@ input[type=number] {
 
 #browserWrapper > .ContentThumbnail, #browserWrapper > .Filler{
     /*SETUP*/
-  
+
+   
     margin: 1vw 0vw;
     text-align:center;
     
     max-width: none;
     max-height: none;
 }
-#browserWrapper > .ContentThumbnail:hover{
-    /*ANIMATION*/
-    transform: scale(.95);
-}
+
+
 .Filler {
     /*SETUP*/
-    order: 1000000000;
-    width: 12vw;
+    order: 1000000000000000;
+    width: 13.8vw;
     height: 18vw;
     /*VISUAL*/
-    
-    visibility:hidden;
+    visibility: hidden;
 }
 .ContentInfo{
     /*SETUP*/
