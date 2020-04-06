@@ -305,6 +305,31 @@
            </div>
        </div>
    </div>
+
+    <div class="ContentThumbnail">
+           <a href="   ">
+               <div class="ContentThumbnailCaption">
+                   <h3>Monocropping</h3>
+                   <p>Design</p>
+                   <p>March 2nd, 2020</p>
+               </div>
+               <img src="https://i.picsum.photos/id/111/200/300.jpg" class="ContentThumbnailImage" />
+           </a>
+           <div class="ContentInfo">
+               <div class="ContentTitle">
+                   <p>Monocropping Project</p>
+               </div>
+               <div class="ContentType">
+                   <p>Design</p>
+               </div>
+               <div class="ContentDate">
+                   <p class="ContentMonth"> 3    </p>
+                   <p class="ContentDay">    2   </p>
+                   <p class="ContentYear">  2020 </p>
+               </div>
+           </div>
+       </div>
+   
     <!--FOOTER-->
     <div id="footerWrapper">
         <div id="footerContent">
@@ -716,11 +741,6 @@
             if (ph == 'Year') {
                 $(this).css("width", 0.1 + cl + 'ch');
             }
-
-
-
-         
-
         });  
     });
     //DYNAMIC LENGTH
@@ -759,8 +779,7 @@
              if (inpl2 == "4") {
                 return false;
             };
-        };
-      
+        };      
     });
     //SHOWBAD
         $('.DateInput').keyup(function () {
