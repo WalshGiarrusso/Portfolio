@@ -3,25 +3,17 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
     <meta charset="utf-8" />
-
     <title>Walsh Giarrusso—Gallery</title>
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
-
-
-
 
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">    -->
     <!---FIX THIS BEFORE LIVE-->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">         -->
 
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
-
-
-
 </head>
 
 <body>
@@ -34,7 +26,6 @@
         <a href="#  ">About</a>
         <a href="#  ">Contact</a>
     </div>
-
     <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%; top:3.5%;" id="openNavBox">&#9776;</span>
 
     <!--Header-->
@@ -68,18 +59,13 @@
                     <img src="https://walshgiarrusso.com/Icons/Contact/Contact.svg   " />
                 </a>
             </div>
-
-
         </div>
     </div>
-
-
     <!--SIFTER-->
    <div id="sifterWrapper">
        <div id="searchBarWrapper">
            <input type="text" id="searchBar"  placeholder="Search by Title" />
        </div>
-       
        <div id="typeSelector">
            <p>Select Type</p><strong >▾</strong>
            <div id="typeSelectorDropdown">
@@ -118,9 +104,9 @@
            <input type="number" placeholder="Year" class="DateInput" id="dateInputEnd" name="toYear">
        </div>
    </div>
+
     <!--BROWSER-->
    <div id="browserWrapper">
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -143,7 +129,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -166,7 +151,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -189,7 +173,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -212,7 +195,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -235,7 +217,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -258,7 +239,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -281,7 +261,6 @@
                </div>
            </div>
        </div>
-
        <div class="ContentThumbnail">
            <a href="   ">
                <div class="ContentThumbnailCaption">
@@ -304,8 +283,6 @@
                </div>
            </div>
        </div>
-
-
        <div class="ContentThumbnail">
            <a href="https://walshgiarrusso.com/projects/monocropping">
                <div class="ContentThumbnailCaption">
@@ -330,7 +307,6 @@
            </div>
        </div>
    </div>
-
    
     <!--FOOTER-->
     <div id="footerWrapper">
@@ -339,7 +315,6 @@
                 <p>
                     Walsh Giarrusso
                 </p>
-
             </div>
             <div id="footerPartitionRight">
                 <div class="FooterDrop">
@@ -348,8 +323,6 @@
                             Home
                         </a>
                     </p>
-
-
                 </div>
                 <div class="FooterDrop">
                     <p>
@@ -407,9 +380,7 @@
                                 Dolor
                             </a>
                         </li>
-
                     </ul>
-
                 </div>
                 <div class="FooterDrop">
                     <p>
@@ -429,12 +400,9 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </div>
-
         </div>
-
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
@@ -449,24 +417,15 @@
         function typeSim(element) {
             var ret;
             var tstr = $('#typeSelector > p').text().trim();
-    
             var all = 'All';
-            
             var inf = element.children('.ContentInfo').children('.ContentType').text().trim();
-        
             if (!(tstr == inf)) {
-                if ((tstr == all)) {
-                    ret = 0;
-                } else {
-                    ret = -1;
-                };
+                ret = 0;
             } else {
                 ret =  1;
             };
-       
             return ret;
         };
-
 
             //SEARCH
         $('#searchBar').keyup(function(){
@@ -478,58 +437,54 @@
         function findCommons(arr1, arr2) {
             var ret = [];
             ret = arr1.filter(value => arr2.includes(value));
-            
+            var lastWord = arr2[arr2.length - 1];
+            for (i = 0; i < arr1.length; i++) {
+                if (arr1[i].includes(lastWord)) {
+                    if ((lastWord.length > 3) && arr2.length > 1) {
+                        if (arr1[i] == lastWord) {
+                        console.log('caught');
+                        return ret;
+                        };               
+                        ret.push(lastWord);
+                        return ret;
+                    };
+                   
+                };
+            };
             return ret;
         };
-
         function getCheckArray(element) {
             title = [];
             title = $(element).children('.ContentInfo').children('.ContentTitle').children('p').text().trim();
             return title;
         }
-
         function searchSim(element) {
                 var txv = $('#searchBar').val();
                 var alph = txv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
                 var upr = alph.toUpperCase();
                 var output = upr.split("-");
-
-
-            
             var checktxv = getCheckArray(element);
             var checkalph = checktxv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
             var checkupr = checkalph.toUpperCase();
             var checksplit = checkupr.split("-");
-            var checkoutput = checksplit.filter(function (el) {
-                return el != "";  
-            });
-
+                var checkoutput = checksplit.filter(function (el) {
+                    return el != "";  
+                });
 
             var commons = findCommons(checkoutput, output);
-
-            //console.log('Checkoutput length is: ' + checkoutput.length + ' vs. commons length: ' + commons.length);
-          
-           // console.log(checkoutput.length == commons.length);
+            console.log(commons);
             var vcom = commons.length;
-            if (checkoutput.length == commons.length) {
-                return ((5 * vcom) + 2);
-            }
-
-
-            return vcom;
-            
-
-           
+            if ((checkoutput.length == commons.length) && (commons.length > 0)) {
+                return ((7 * vcom));
+            };
+                return (vcom);
         };
 
         //DATE
-
         $('.DateInput').keyup(function () {
             if (stopNewHides == 0) {
                      calcSimScore();
             };
-       
-
         });
 
         function dateSimScore(element) {
@@ -544,11 +499,9 @@
             var m2 = parseInt($('input[name="toMonth"]').val().trim());
             var y1 = parseInt($('input[name="fromYear"]').val().trim());
             var y2 = parseInt($('input[name="toYear"]').val().trim());
-
            // console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
            // console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
            // console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
-
             if ((coY > y2) || (coY < y1)) {
                 ret = 0;
                 return ret;
@@ -574,7 +527,6 @@
                     ret = 0;
                     return ret;
                 };
-
             } else if ((coY == y2) && (coY > y1)) {
                 if (coM < m2) {
                     ret = 1;
@@ -590,7 +542,6 @@
                         ret = 1;
                         return ret;
                     };
-
                 } else { 
                     ret = 0;
                     return ret;
@@ -629,18 +580,15 @@
                         ret = 0;
                         return ret;
                     };
-                    
                 }else {
                 ret = 0;
                 return ret;
                 };
-
             } else {
                 ret = 0;
                 return ret;
             };
         };
-
 
         //CALC
         function calcSimScore() {
@@ -649,27 +597,14 @@
                 simScore -= searchSim($(this));
                 simScore -= ( 3 * typeSim($(this)));      
                 simScore -= ( 2 * dateSimScore($(this)));  
-
-                //console.log(simScore);
                 checkIncomplete();
-                
-
-         
-                    
+                console.log('title:' + $(this).children('.ContentInfo').children('.ContentTitle').text().trim() + '             search: ' + searchSim($(this)) + '         type: ' + (3 * typeSim($(this))) + '         date: ' + (2 * dateSimScore($(this))) + '         total: ' + simScore);
                     asyncSwap($(this), simScore);
-               
-          
-               
-
-            
-
             });
         };
         async function asyncSwap(element, score) {
             stopNewHides = 1;
-   
             element.animate({opacity:0}, 250);
-
             const waiter1 = await resolver1();
              var simScore = 1000000;
              score -= searchSim(element);
@@ -680,18 +615,13 @@
              const waiter2 = await resolver2();
             element.animate({ opacity: 100 }, 50);
             const waiter3 = await resolver3();
-         
              stopNewHides = 0;
         }
-
-
         function resolver1() {
             return new Promise(resolve => {
                 setTimeout(() => {
                     resolve('resolved');
                 }, 450);
-
-
             });
         };
                 function resolver2() {
@@ -700,7 +630,6 @@
                     resolve('resolved');
                 }, 250);
 
-
             });
         };
         function resolver3() {
@@ -708,38 +637,15 @@
                 setTimeout(() => {
                     resolve('resolved');
                 }, 50);
-
-
             });
         };
-      
-
-        
-
-   
-
-
-        
-
-
-
-
-
-
-        
         var stopNewHides;
+
         //INIT
         $(document).ready(function () {
 
-
             $('#typeSelectorDropdown').height('0vw');
             stopNewHides = 0;
-
-
-
-
-          
-        
         });
 
         /* Sidebar */
@@ -755,6 +661,7 @@
             $('body').css('backgroundColor', 'white');
             $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
         });
+
         //BUTTON
         $('.ButtonIcon > img').mouseenter(function () {
             $(this).css('backgroundColor', 'rgb(217, 217, 217)');
@@ -764,11 +671,9 @@
             $(this).css('backgroundColor', 'transparent');
             $(this).css('border-radius', '40%');
         });
+
          //LENGTHSET
     $(document).ready(function () {
-
-
-       
         $('#dateSelector > input').each(function () {
             var ph;
             ph = $(this).attr('placeholder');
@@ -786,6 +691,7 @@
             }
         });  
     });
+
     //DYNAMIC LENGTH
     $('.DateInput').on('input', function () {
         var inp;
@@ -802,6 +708,7 @@
             $(this).css("width", 0.75 + cl1 + 'ch');
         };
     });
+
     //RESTRICT CHAR
     $('.DateInput').keypress(function () {
         var ph2;
@@ -824,6 +731,7 @@
             };
         };      
     });
+
     //SHOWBAD
         $('.DateInput').keyup(function () {
             var sBR = checkDayInput();
@@ -873,7 +781,8 @@
                 $(this).css('color', 'black');
             };
         };
-    });
+        });
+
     //checkdayinput
         function checkDayInput() {
             var d1 = parseInt($('input[name="fromDay"]').val().trim());
@@ -882,10 +791,8 @@
             var m2 = parseInt($('input[name="toMonth"]').val().trim());
             var y1 = parseInt($('input[name="fromYear"]').val().trim());
             var y2 = parseInt($('input[name="toYear"]').val().trim());
-
             var d1G = true;
             var d2G = true;
-   
             if (d1 > 28) {
                 if (!(isNaN(y1))) {
                     if ((d1 == 29) && (m1 == 2) && (y1 > 999) && !((y1 % 4) == 0)) {
@@ -942,9 +849,6 @@
             if (!d1G && !d2G) {
                 return 3;
             };
-
-            
-
         }
 
     //ANIMATION
@@ -1030,7 +934,6 @@
             } else {
                 $(this).css('backgroundPosition', 'left bottom')
             };
-     
         });
 
     //DATESELECTOR
@@ -1069,7 +972,6 @@
         $(this).css('backgroundPosition', 'right bottom');
         $(this).css('borderLeft', '0vw solid gray');
         $(this).css('margin', '0vw');
-
     });
     $('#dateInputEnd').focusin(function () {
         $(this).css('marginRight', '0vw');
@@ -1077,7 +979,6 @@
 
     //show/hide types
     $('#typeSelector').click( function(event) {
-
         var trg = $(event.target);
         var dd = $('#typeSelectorDropdown');
         if ((!trg.is('#typeSelectorDropdown')) && (!trg.is('.TSDButton'))) {
@@ -1118,44 +1019,21 @@
         });
     //check incomplete end
     function checkIncomplete() {
-
         $('.Filler').detach();
-
         var nOTN;
-        
-      
         nOTN = $('#browserWrapper > .ContentThumbnail').not(':hidden').length;
-
-    
-
         var rNOTN = nOTN % 5;
-
-      
-
         var nFN = (5 - rNOTN);
-
         if (rNOTN > 0) {
-
             var i;
-
-     
-
             for (i = 0; i < nFN; i++) {
                 var appendage = document.createElement("div");
                 $(appendage).addClass("Filler");
-                $('#browserWrapper').append(appendage);
-               
+                $('#browserWrapper').append(appendage); 
             };
-
-       
         };
-
-
     };
-    //
     $(document).ready(checkIncomplete());
-
     </script>
 </body>
-
 </html>
