@@ -16,6 +16,11 @@ body {
     /*REMOVE SCROLLBAR*/
     -ms-overflow-style: none;
 }
+
+#pageContent{
+    /*SETUP*/
+    height:100vh;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
