@@ -16,7 +16,7 @@
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
-  
+
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
 </head>
@@ -68,35 +68,12 @@
     </div>
 
     <!--SHOWCASE-->
-
-    <div id="showCaseWrapper">
-        <div id="showCaseImageWrapper">
-            <img src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" class="ShowCaseImage"/>
-        </div>
+    <div id="showcaseWrapper">
+        <img id="showcaseImage" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png"/>
     </div>
+    
 
     <!--Variants-->
-    <div id="variantsWrapper">
-        <div id="varTextWrapper">
-            <p>Variants</p>
-            <p id="variantDescriptionContent"> </p>
-        </div>
-
-
-        <div id="variantContentWrapper">
-            <div class="Variant">
-                <img src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" class="VariantImage" />
-                <p class="VariantDescription">Image-Only Version</p>
-            </div>
-            <div class="Variant">
-                <img src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project.png" class="VariantImage" />
-                <p class="VariantDescription">Text Version</p>
-            </div>
-        </div>
-            
-       
-      
-    </div>
 
 
     <!--FOOTER-->
@@ -213,7 +190,7 @@
     <script>
 
 
-        var varientHeight;
+    
         /* Sidebar */
         $('#openNavBox').click(function () {
 
@@ -237,102 +214,48 @@
             $(this).css('backgroundColor', 'transparent');
             $(this).css('border-radius', '40%');
         });
-        //glbl VARs
-        var VTW = 0;
-        //VARIANT
-            //SIZES
-        $('.Variant').click(function () {
-            var descTextContent = $(this).children('.VariantDescription').text().trim();
-            $('#variantDescriptionContent').text(descTextContent);
 
-        });
 
         
-       
+        //MODAL
+        $('#showcaseImage').click(function () {
+            var src = $(this).attr('src');
+     
 
-
-        $(window).load(function () {
-
-            
-
-
-            $('.VariantDescription').each(function () {
-                var tC = $(this).text().trim();
-                $('#variantDescriptionContent').text(tC);
-                var compvTW = $('#varTextWrapper').width();
-
-                if (compvTW > VTW) {
-                    VTW = compvTW;
-                };
-
-            });
-            $('#varTextWrapper').width(VTW);
-            $('.VariantDescription').parent('.Variant').width(VTW);
-            var oVTW = $('#varTextWrapper').outerWidth(true);
-
-            var totalVWW = $('#variantsWrapper').width();
-                        //Porportionality
-            $('#variantContentWrapper').outerWidth(totalVWW - oVTW);
-             $('.VariantImage').each(function () {
-                var thisThing = $(this)
-                var aspRatio;
-
-              
-                var img = $(this);
-                $("<img>").attr("src", $(img).attr("src")).load(function () {
-                    var realWidth = this.width;
-                    var realHeight = this.height;
-                    aspRatio = ( (parseInt(realHeight)) / (parseInt(realWidth)));
-
-
-                    
-
-
-                    var varImgHeight;
-
-                    
-                  
-                    varImgHeight = (1.5 * VTW);
-       
-        
-         
-                    thisThing.height(varImgHeight / 1.25);
-                    thisThing.width(VTW / 1.25);
-              
-
-                    
-                });
-                
-               
-
-            })
-        });
-
-  
+            $('#modalAppendageImage').detach();
+            $('#modalAppendage').detach();
 
            
+            $('body').append('<div id="modalAppendage"></div>');
+        
+            $('#modalAppendage').append('<a target="_blank" style="display:contents" href="' + src + '"><img id="modalAppendageImage" src="' + src + '"/></a>');
+          
 
-            $(window).load(function () {
-            $('#variantDescriptionContent').text('Image-Only Version');
-        })
-        
-        
-            //ANIMATION
-        $('.Variant').mouseenter(function () {
-            
-            $(this).children('.VariantDescription').slideDown(250);
         });
-        $('.Variant').mouseleave(function () {
- 
-            $(this).children('.VariantDescription').slideUp(250);
-         });
-        $('.Variant').click(function () {
-            if ($(this).children('p').text().trim() == 'Text Version') {
-                $('.ShowCaseImage').attr('src', 'https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project.png');
-            } else {
-                 $('.ShowCaseImage').attr('src', 'https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png');
+        $(window).mousedown(function (event) {
+            var trg = $(event.target);
+            if ($('#modalAppendageImage').length) {
+             
+                if (!trg.is('#modalAppendageImage')) {
+         
+                      $('#modalAppendageImage').detach();
+                      $('#modalAppendage').detach();
+                    
+                };
             };
         });
+        $(document).keyup(function (event) {
+            if (event.key === "Escape") {
+                if ($('#modalAppendageImage').length) {
+                    $('#modalAppendageImage').detach();
+                      $('#modalAppendage').detach();
+             
+                
+                };
+            };
+        })
+
+       
 
     </script>
 </body>

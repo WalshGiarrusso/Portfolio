@@ -750,95 +750,43 @@ input[type=number] {
 }
 
 /*PROJECT PAGES*/
-    /*SHOWCASE*/
-#showCaseWrapper{
+ #showcaseWrapper{
+     /*SETUP*/
+     margin: 0vw 13.85%;
+     width:72.3%;
+     display:flex;
+     flex-flow:row nowrap;
+     justify-content:center;
+     align-items:center;
+     /*VISUAL*/
+     border-bottom: 1px solid gray;
+ }
+ #showcaseImage{
+     /*SETUP*/
+     margin: 1.5vw 0vw;
+     height:31vw;
+     /*VISUAL*/
+     cursor:pointer;
+ }
+#modalAppendage {
     /*SETUP*/
-    
-    margin: 0% 13.85%;
-    width: 72.3%;
-    /*VISUAL*/
-    border-bottom:1px solid gray;
-}
-#showCaseImageWrapper{
-    /*SETUP*/
-    margin: 2vw 0vw;
-    display:flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
     flex-flow: row nowrap;
-    justify-content:center;
-}
-.ShowCaseImage{
-    /*SETUP*/
-    height:80vh;
-}
-   /*VARIANTS*/
-#variantsWrapper {
-    /*SETUP*/
-    margin: 0vw 13.85%;
-    width: 72.3%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 1.5vw 0;
-    overflow: visible;
-    /*VISUAL*/
-    font-size: 2vw;
 }
-   #variantsWrapper > p{
-       /*SETUP*/
-       padding-bottom:4vw;
-   }
-   #varTextWrapper{
-       /*VISUAL*/
-
-  
-       text-align:center;
-       padding: 0vw 1vw;
-       margin-left: 2vw;
-       border-right: 1px solid gray;
-   }
-   #variantDescriptionContent{
-       /*SETUP*/
-       /*VISUAL*/
-       font-size:1.5vw;
-   }
-#variantContentWrapper {
+#modalAppendageImage{
     /*SETUP*/
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row nowrap;
-    overflow: visible;
+    height:42.5vw;
+    width:auto;
 }
-
-
-
-.Variant {
-    /*SETUP*/
-    margin: 0vw 1vw;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    text-align: center;
-    overflow: visible;
-    /*ANIMATION*/
-    transition: 0.25s;
-}
-.VariantImage {
-    /*SETUP*/
-
-    
-    /*VISUAL*/
-    cursor: pointer;
-    flex-basis: 0;
-}
-.VariantDescription {
-    /*SETUP*/
-    display: none;
-    font-size: 1.2vw;
-
-}
-
-
 
 
 
