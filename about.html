@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 
 
-    <title>Walsh Giarrusso—Monocropping</title>
+    <title>Walsh Giarrusso—About Me</title>
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
@@ -17,7 +17,7 @@
     <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
-
+   
 
 </head>
 <body>
@@ -27,23 +27,23 @@
         <a href="javascript:void(0)" class="closebtn">&times;</a>
         <a href="https://walshgiarrusso.com/">Home</a>
         <a href="https://walshgiarrusso.com/gallery">Gallery</a>
-        <a href="https://walshgiarrusso.com/about">About</a>
+        <a href="https://walshgiarrusso.com/gallery">About</a>
         <a href="https://walshgiarrusso.com/contact">Contact</a>
     </div>
 
     <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;top:3.5%;" id="openNavBox">&#9776;</span>
 <div id="pageContent">
-    <!--Header-->
-    <div id="headerWrapper">
-        <div id="headerContent">
-            <p>
-                Monocropping
-            </p>
+        <!--Header-->
+        <div id="headerWrapper">
+            <div id="headerContent">
+                <p>
+                    About Me
+                </p>
+            </div>
         </div>
-    </div>
-    <!--PLACEHOLDER-->
+        <!--PLACEHOLDER-->
     <div id="buttonWrapper">
-        <div id="buttonContent">
+         <div id="buttonContent">
             <div class="HeaderButton">
                 <a href="https://walshgiarrusso.com/" class="ButtonIcon">
                     <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
@@ -67,15 +67,6 @@
         </div>
     </div>
 
-
-
-    <!--SHOWCASE-->
-    <div id="showcaseWrapper">
-        <img id="showcaseImage" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png"/>
-    </div>
-    
-
-    <!--Variants-->
 
 </div>
     <!--FOOTER-->
@@ -145,7 +136,7 @@
                         </li>
                         <li>
                             <a href="   ">
-                                Ipsum
+                                Ispum
                             </a>
                         </li>
                         <li>
@@ -182,17 +173,8 @@
         </div>
 
     </div>
-
-
-
-
-
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-
-
-    
         /* Sidebar */
         $('#openNavBox').click(function () {
 
@@ -216,49 +198,6 @@
             $(this).css('backgroundColor', 'transparent');
             $(this).css('border-radius', '40%');
         });
-
-
-        
-        //MODAL
-        $('#showcaseImage').click(function () {
-            var src = $(this).attr('src');
-     
-
-            $('#modalAppendageImage').detach();
-            $('#modalAppendage').detach();
-
-           
-            $('body').append('<div id="modalAppendage"></div>');
-        
-            $('#modalAppendage').append('<a target="_blank" style="display:contents" href="' + src + '"><img id="modalAppendageImage" src="' + src + '"/></a>');
-          
-
-        });
-        $(window).mousedown(function (event) {
-            var trg = $(event.target);
-            if ($('#modalAppendageImage').length) {
-             
-                if (!trg.is('#modalAppendageImage')) {
-         
-                      $('#modalAppendageImage').detach();
-                      $('#modalAppendage').detach();
-                    
-                };
-            };
-        });
-        $(document).keyup(function (event) {
-            if (event.key === "Escape") {
-                if ($('#modalAppendageImage').length) {
-                    $('#modalAppendageImage').detach();
-                      $('#modalAppendage').detach();
-             
-                
-                };
-            };
-        })
-
-       
-
     </script>
 </body>
 </html>
