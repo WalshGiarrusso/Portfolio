@@ -35,12 +35,23 @@ input[type=number] {
         display: none;
     }
 /* SIDEBAR */
+
+#sidebarOVRLay {
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
 .sidebar {
     /* SETUP */
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     left: 0;
     overflow-x: hidden;
@@ -811,7 +822,7 @@ input[type=number] {
     z-index: 5;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.8);
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -868,8 +879,14 @@ input[type=number] {
   
     padding:.5vw 3vw;
     /*VISUAL*/
+    background:linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size:200% 100%;
+    background-position: right bottom;
+    background-repeat:no-repeat;
     cursor:pointer;
     border-right:1px solid gray;
+    /*ANIMATION*/
+    transition:0.3s;
 }
 
 .InfoBoxMenuBarItem > p {

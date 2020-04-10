@@ -20,7 +20,10 @@
 
 
 </head>
+
 <body>
+    <div id="sidebarOVRLay"></div>
+    
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
         <p> Walsh <br /> Giarrusso </p>
@@ -241,6 +244,10 @@
         var oldbd;
         var oldsrc;
        //INFO BOX
+        $('.InfoBoxMenuBarItem').click(function () {
+            $(this).css('backgroundPosition', 'left bottom');
+
+        });
 
  
      
@@ -252,20 +259,13 @@
         /* Sidebar */
         $('#openNavBox').click(function () {
             $('#mainSidebar').css('width', '15%');
-            $('body').css('backgroundColor', 'rgba(0,0,0,0.6)');
-            $('body > div').not('.sidebar').css('filter', 'brightness(40%)');
-            $('#showcaseImage').css('cursor', 'not-allowed');
-             
-           
-            
+            $('#sidebarOVRLay').fadeTo(200, 1);
         });
         $('.closebtn').click(function () {
-
             $('#mainSidebar').css('width', '0');
-            $('body').css('backgroundColor', 'white');
-            $('body > div').not('.sidebar').css('filter', 'brightness(100%)');
-            $('#showcaseImage').css('cursor', 'pointer');
-    
+            $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                $(this).hide();
+            }); 
         });
       
 
@@ -298,7 +298,7 @@
                     //detach body
                     oldsrc = $('#showcaseImage').attr('src');
                     oldbd = $('body').detach();
-                    $('html').append('<div id="fakeBody"> <div class="sidebar" id="mainSidebar"> <p> Walsh <br /> Giarrusso </p> <a href="javascript:void(0)" class="closebtn">&times;</a> <a href="https://walshgiarrusso.com/">Home</a> <a href="https://walshgiarrusso.com/gallery">Gallery</a> <a href="https://walshgiarrusso.com/about">About</a> <a href="https://walshgiarrusso.com/contact">Contact</a> </div> <span style="text-align:center; position:fixed;font-size:2.5vw;margin-left: 2.5%;top:3.5%;"> <span style="cursor:pointer; display:contents;" id="openNavBox">☰</span><br /><br /><span style="cursor:pointer; display:contents;" id="goBackArrow">&#8678;</span> </span> <div id="headerWrapper"> <div id="headerContent"> <p> Monocropping </p> </div> </div> <div id="fullViewWrapper"> <img id="fullViewImg" src="'+oldsrc+'" /> </div> <div id="footerWrapper"> <div id="footerContent"> <div id="footerPartitionLeft"> <p> Walsh Giarrusso </p> </div> <div id="footerPartitionRight"> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/"> Home </a> </p> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/gallery"> Gallery </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> <li> <a href="   "> Sit </a> </li> <li> <a href="   "> Amet </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/about"> About </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/contact"> Contact </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> </ul> </div> </div> </div> </div> </div> ');
+                    $('html').append('<div id="fakeBody"> <div id="sidebarOVRLay"></div> <div class="sidebar" id="mainSidebar"> <p> Walsh <br /> Giarrusso </p> <a href="javascript:void(0)" class="closebtn">&times;</a> <a href="https://walshgiarrusso.com/">Home</a> <a href="https://walshgiarrusso.com/gallery">Gallery</a> <a href="https://walshgiarrusso.com/about">About</a> <a href="https://walshgiarrusso.com/contact">Contact</a> </div> <span style="text-align:center; position:fixed;font-size:2.5vw;margin-left: 2.5%;top:3.5%;"> <span style="cursor:pointer; display:contents;" id="openNavBox">☰</span><br /><br /><span style="cursor:pointer; display:contents;" id="goBackArrow">&#8678;</span> </span> <div id="headerWrapper"> <div id="headerContent"> <p> Monocropping </p> </div> </div> <div id="fullViewWrapper"> <img id="fullViewImg" src="'+oldsrc+'" /> </div> <div id="footerWrapper"> <div id="footerContent"> <div id="footerPartitionLeft"> <p> Walsh Giarrusso </p> </div> <div id="footerPartitionRight"> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/"> Home </a> </p> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/gallery"> Gallery </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> <li> <a href="   "> Sit </a> </li> <li> <a href="   "> Amet </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/about"> About </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/contact"> Contact </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> </ul> </div> </div> </div> </div> </div> ');
                 };
             };
             //switch back to default view
@@ -312,7 +312,18 @@
             };
         });
         $(document).click(function (event) {
-                  var trg = $(event.target);
+            var trg = $(event.target);
+
+            //escape sidebar
+            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar')) ) && (!trg.is('#openNavBox'))) {
+                if ($('#sidebarOVRLay').length) {
+                    $('#mainSidebar').css('width', '0');
+
+                    $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                        $(this).hide();
+                    });         
+                }
+            };
             if ($('#fakeBody').length){
                     //global checks workaround sidebar
                 if (trg.is('#openNavBox')) {
@@ -330,6 +341,15 @@
         });
         $(document).keyup(function (event) {
             if (event.key === "Escape") {
+
+                //escape sidebar
+                if ($('#sidebarOVRLay').length) {
+                    $('#mainSidebar').css('width', '0');
+
+                    $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                        $(this).hide();
+                    });
+                };
                 //escape modal
                 if ($('#modalAppendageImage').length) {
                     $('#modalAppendageImage').detach();
