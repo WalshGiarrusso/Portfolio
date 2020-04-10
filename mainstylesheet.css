@@ -763,24 +763,45 @@ input[type=number] {
      width:72.3%;
      display:flex;
      flex-flow:row nowrap;
-     justify-content:center;
+     
      align-items:center;
      /*VISUAL*/
      border-bottom: 1px solid gray;
         /*ANIMATION*/
         transition:0.3s;
  }
+#showcaseImageWrapper {
+    /*SETUP*/
+
+    width:60%;
+    text-align:center;
+}
  #showcaseImage{
      /*SETUP*/
      margin: 1.5vw 0vw;
-     max-height:75vh;
-     
-     
+     max-height:35vw;
      /*VISUAL*/
      cursor:pointer;
-  
-     
  }
+#showcaseOverview {
+    /*SETUP*/
+    margin: 1.5vw 0vw;
+    padding-left:0.5vw;
+    width:40%;
+    
+    
+  
+    text-align: left;
+   
+    /*VISUAL*/
+    border-right:1px solid gray;
+}
+#showcaseOverview > p{
+    /*VISUAL*/
+    font-size:2vw;
+    font-weight:400;
+}
+
     /*MODAL*/
 #modalAppendage {
     /*SETUP*/
@@ -808,14 +829,14 @@ input[type=number] {
 #fullViewWrapper{
     /*SETUP*/
     max-width:100%;
-    margin: 0vw 5vw;
+    margin: 2vw 13.85%;
     text-align:center;
     /*ANIMATION*/
     transition:0.3s;
 }
 #fullViewImg {
     /*SETUP*/
-    margin: 2vw auto;
+   
     max-width:100%;
     /*ANIMATION*/
     transition:0.3s;
@@ -830,7 +851,43 @@ input[type=number] {
     /*SETUP*/
     margin: 0vw 13.85%;
     width: 72.3%;
-    height:15vw;
+    
+}
+#infoBoxContentWrapper {
+    /*SETUP*/
+    margin: 1.5vw 4vw;
+}
+#infoBoxMenuBar{
+    /*SETUP*/
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+}
+.InfoBoxMenuBarItem{
+    /*SETUP*/
+  
+    padding:.5vw 3vw;
+    /*VISUAL*/
+    cursor:pointer;
+    border-right:1px solid gray;
+}
+
+.InfoBoxMenuBarItem > p {
+        /*SETUP*/
+        margin: 0vw;
+        font-size:1.5vw;
+
+}
+#infoBoxPacketWrapper {
+    /*VISUAL*/
+    
+    /*background-color:#f2f2f2;*/
+}
+.InfoBoxPacket{
+    /*SETUP*/
+    
+    /*VISUAL*/
+    font-size:1.2vw;
 }
 
 

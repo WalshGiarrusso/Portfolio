@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 
 
-    <title>Walsh Giarrusso—Monocropping</title>
+    <title>Monocropping - Walsh Giarrusso</title>
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
@@ -14,7 +14,7 @@
 
 
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">        -->
-    <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">     -->
     <!---FIX THIS BEFORE LIVE-->
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
@@ -31,7 +31,7 @@
         <a href="https://walshgiarrusso.com/contact">Contact</a>
     </div>
 
-    <span style=" position:fixed;font-size:30px;cursor:pointer; margin-left: 2.5%;top:3.5%;" id="openNavBox">&#9776;</span>
+    <span style=" position:fixed;font-size:2.5vw;cursor:pointer; margin-left: 2.5%;top:3.5%;" id="openNavBox">&#9776;</span>
 
 
 
@@ -75,17 +75,63 @@
 
     <!--SHOWCASE-->
     <div id="showcaseWrapper">
-        <img id="showcaseImage" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png"/>
-    </div>
-    
+        <div id="showcaseOverview">
+            <p><b>Title</b>:<br />Monocropping</p>
+            <p><b>Type:</b><br />Design</p>
+            <p><b>Date:</b><br />March 2nd, 2020</p>
 
+        </div>
+        <div id="showcaseImageWrapper">
+            <img id="showcaseImage" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" />
+        </div>
+        
+
+    </div>
     <!--InfoBox-->
-
     <div id="infoBoxWrapper">
-        <p>AAA</p>
+
+        <div id="infoBoxContentWrapper">
+
+            <div id="infoBoxMenuBar">
+
+                <div class="InfoBoxMenuBarItem" >
+                    <p>Info▾</p>
+                </div>
+
+                <div class="InfoBoxMenuBarItem">
+                    <p>Methods▾</p>
+                </div>
+
+                   
+                <div class="InfoBoxMenuBarItem" style="border-right:none;">
+                    <p>Variants▾</p>
+                </div>
+
+            </div>
+
+            <div id="infoBoxPacketWrapper">
+
+                <div class="InfoBoxPacket" id="infoIBP">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum.
+                </div>
+
+                <div class="InfoBoxPacket" id="methodsIBP">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum
+                </div>
+
+                <div class="InfoBoxPacket" id="variantsIBP">
+
+                </div>
+
+            </div>
+            
+        </div>
+        
     </div>
-
-
     <!--FOOTER-->
     <div id="footerWrapper">
         <div id="footerContent">
@@ -190,17 +236,12 @@
         </div>
 
     </div>
-
-
-
-
-
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         var oldbd;
         var oldsrc;
-       
+       //INFO BOX
+
  
      
        
@@ -237,96 +278,73 @@
             $(this).css('backgroundColor', 'transparent');
             $(this).css('border-radius', '40%');
         });
-
-
-        
         //MODAL
         $('#showcaseImage').click(function () {
             var src = $(this).attr('src');
-     
-
             $('#modalAppendageImage').detach();
             $('#modalAppendage').detach();
-
             if ($('#mainSidebar').width() == 0) {
-                $('body').append('<div id="modalAppendage"></div>');
-        
+                $('body').append('<div id="modalAppendage"></div>');      
                 $('#modalAppendage').append('<img id="modalAppendageImage" src="' + src + '"/>');
-           
             };
-
-            
-          
-
         });
         $(window).mousedown(function (event) {
             var trg = $(event.target);
             if ($('#modalAppendageImage').length) {
-             
                 if (!trg.is('#modalAppendageImage')) {
-
                     $('#modalAppendageImage').detach();
                     $('#modalAppendage').detach();
-
                 } else {
                     //detach body
                     oldsrc = $('#showcaseImage').attr('src');
                     oldbd = $('body').detach();
-                    $('html').append('<div id="fakeBody"> <div class="sidebar" id="mainSidebar"> <p> Walsh <br /> Giarrusso </p> <a href="javascript:void(0)" class="closebtn">&times;</a> <a href="https://walshgiarrusso.com/">Home</a> <a href="https://walshgiarrusso.com/gallery">Gallery</a> <a href="https://walshgiarrusso.com/about">About</a> <a href="https://walshgiarrusso.com/contact">Contact</a> </div> <span style="text-align:center; position:fixed;font-size:30px;margin-left: 2.5%;top:3.5%;"> <span style="cursor:pointer; display:contents;" id="openNavBox">☰</span><br /><br /><span style="cursor:pointer; display:contents;" id="goBackArrow">⮜</span> </span> <div id="headerWrapper"> <div id="headerContent"> <p> Monocropping </p> </div> </div> <div id="fullViewWrapper"> <img id="fullViewImg" src="'+oldsrc+'" /> </div> <div id="footerWrapper"> <div id="footerContent"> <div id="footerPartitionLeft"> <p> Walsh Giarrusso </p> </div> <div id="footerPartitionRight"> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/"> Home </a> </p> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/gallery"> Gallery </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> <li> <a href="   "> Sit </a> </li> <li> <a href="   "> Amet </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/about"> About </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/contact"> Contact </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> </ul> </div> </div> </div> </div> </div> ');
-
-                    
-
+                    $('html').append('<div id="fakeBody"> <div class="sidebar" id="mainSidebar"> <p> Walsh <br /> Giarrusso </p> <a href="javascript:void(0)" class="closebtn">&times;</a> <a href="https://walshgiarrusso.com/">Home</a> <a href="https://walshgiarrusso.com/gallery">Gallery</a> <a href="https://walshgiarrusso.com/about">About</a> <a href="https://walshgiarrusso.com/contact">Contact</a> </div> <span style="text-align:center; position:fixed;font-size:2.5vw;margin-left: 2.5%;top:3.5%;"> <span style="cursor:pointer; display:contents;" id="openNavBox">☰</span><br /><br /><span style="cursor:pointer; display:contents;" id="goBackArrow">&#8678;</span> </span> <div id="headerWrapper"> <div id="headerContent"> <p> Monocropping </p> </div> </div> <div id="fullViewWrapper"> <img id="fullViewImg" src="'+oldsrc+'" /> </div> <div id="footerWrapper"> <div id="footerContent"> <div id="footerPartitionLeft"> <p> Walsh Giarrusso </p> </div> <div id="footerPartitionRight"> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/"> Home </a> </p> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/gallery"> Gallery </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> <li> <a href="   "> Sit </a> </li> <li> <a href="   "> Amet </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/about"> About </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> <li> <a href="   "> Dolor </a> </li> </ul> </div> <div class="FooterDrop"> <p> <a href="https://walshgiarrusso.com/contact"> Contact </a> </p> <ul> <li> <a href="   "> Lorem </a> </li> <li> <a href="   "> Ipsum </a> </li> </ul> </div> </div> </div> </div> </div> ');
                 };
             };
+            //switch back to default view
             if (trg.is('#goBackArrow')) {
+                    window.scrollTo(0, 0);
                     $('#fakeBody').detach();
                     $('html').append(oldbd);
                     $('#modalAppendageImage').detach();
-                    $('#modalAppendage').detach();
+                $('#modalAppendage').detach();
+                
             };
-               
-            
         });
         $(document).click(function (event) {
                   var trg = $(event.target);
             if ($('#fakeBody').length){
-                    //global checks workaround
-            
-                
+                    //global checks workaround sidebar
                 if (trg.is('#openNavBox')) {
                 $('#mainSidebar').css('width', '15%');
 
                     $('#fakeBody').css('backgroundColor', 'rgba(0,0,0,0.6)');
                     $('#fakeBody > *').not('#mainSidebar').css('filter', 'brightness(40%)');
-                
-                  
-               
-
                 };
                 if (trg.is('.closebtn')) {
                     $('#mainSidebar').css('width', '0%');
                     $('#fakeBody').css('backgroundColor', 'white');
                     $('#fakeBody > *').not('#mainSidebar').css('filter', 'brightness(100%)');
-                 
-                
-
                 };
             }
         });
         $(document).keyup(function (event) {
             if (event.key === "Escape") {
+                //escape modal
                 if ($('#modalAppendageImage').length) {
                     $('#modalAppendageImage').detach();
                       $('#modalAppendage').detach();
              
                 
                 };
-
+                //switch back to default view
                 if ($('#fullViewImg').length) {
-                        $('#fakeBody').detach();
+                    window.scrollTo(0, 0);
+                    $('#fakeBody').detach();
                     $('html').append(oldbd);
                     $('#modalAppendageImage').detach();
                     $('#modalAppendage').detach();
+                    
                 };
             };
         })
