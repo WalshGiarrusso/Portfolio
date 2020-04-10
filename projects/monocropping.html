@@ -16,8 +16,8 @@
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">        -->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">     -->
     <!---FIX THIS BEFORE LIVE-->
-
     <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+
 
 
 </head>
@@ -265,13 +265,6 @@
         $('#openNavBox').click(function () {
             $('#mainSidebar').css('width', '15%');
             $('#sidebarOVRLay').fadeTo(200, 1);
-
-            //retract outside focus
-            $('.InfoBoxMenuBarItem').each(function () {
-                $(this).css('backgroundPosition', 'right bottom');
-                $(this).css('paddingRight', '3vw');
-                $(this).css('borderLeft', '0vw solid gray');
-            })
         });
         $('.closebtn').click(function () {
             $('#mainSidebar').css('width', '0');
@@ -305,7 +298,6 @@
             var trg = $(event.target);
             if (!trg.is('#modalImage')) {
                 $('#modal').css('display', 'none');
-                
             };
         });
         //escape fullview(click)
@@ -363,35 +355,44 @@
             oldSrc = $(this).attr('src');
             $('#modal').css('display', 'flex');
             $('#modalImage').attr('src', oldSrc);
-
         });
-
-
-
         //MICRO STUFF
             //BUTTONS
         $('.InfoBoxMenuBarItem').click(function () {
-            
+
             $('.InfoBoxMenuBarItem').each(function () {
                 $(this).css('backgroundPosition', 'right bottom');
                 $(this).css('paddingRight', '3vw');
                 $(this).css('borderLeft', '0vw solid gray');
-                //hide packet
-                
-                
-
             })
+
             $(this).css('backgroundPosition', 'left bottom');
             $(this).css('borderLeft', '0.5vw solid gray');
             $(this).css('paddingRight', '2.5vw');
-            //display packet
-           
-            var IBP = $(this).children('.InfoBoxPacket');
-            $('#chosenIBP').html(IBP.html());
-            
-            
-        });
+            //replace packet
 
+            var IBP = $(this).children('.InfoBoxPacket');
+
+            $('#infoBoxPacketWrapper').css('backgroundPosition', 'right bottom');
+            $('#infoBoxPacketWrapper').css('paddingRight', '1vw');
+            $('#infoBoxPacketWrapper').css('borderLeft', '0vw solid gray');
+
+
+            $('#chosenIBP').slideUp(600, function () {
+                
+
+                $('#chosenIBP').html(IBP.html()).promise().done(function () {
+                    $('#chosenIBP').slideDown(400);
+                    $('#infoBoxPacketWrapper').css('backgroundPosition', 'left bottom');
+                    $('#infoBoxPacketWrapper').css('paddingRight', '0.5vw');
+                    $('#infoBoxPacketWrapper').css('borderLeft', '0.5vw solid gray');
+
+                });
+
+            });
+            
+           
+        });
     </script>
 </body>
 </html>

@@ -887,7 +887,7 @@ input[type=number] {
     cursor:pointer;
     border-right:1px solid gray;
     /*ANIMATION*/
-    transition:0.3s;
+    transition:0.6s;
 }
 
 .InfoBoxMenuBarItem > p {
@@ -897,9 +897,16 @@ input[type=number] {
 
 }
 #infoBoxPacketWrapper {
+    /*SETUP*/
+    padding: 0.5vw 1vw 0.5vw 1vw;
     /*VISUAL*/
-    /*background-color:#f2f2f2;*/
+    background: linear-gradient(to right, #cccccc 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
     font-size: 1.2vw;
+    /*ANIMATION*/
+    transition: 0.4s;
 }
 .InfoBoxPacket{
     /*SETUP*/
@@ -908,6 +915,8 @@ input[type=number] {
    
 }
 #chosenIBP {
+    /*SETUP*/
+    display: none;
 }
 
 
