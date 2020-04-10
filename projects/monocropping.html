@@ -289,6 +289,7 @@
             var trg = $(event.target);
             if (!trg.is('#modalImage')) {
                 $('#modal').css('display', 'none');
+                
             };
         });
         //escape fullview(click)
@@ -299,6 +300,7 @@
                 $('body').append(theDets);
                 $('body').append(detFooter);
                 $('#goBackArrow').css('display', 'none');
+                window.scrollTo(0, 0); 
             };
         });
 
@@ -315,6 +317,7 @@
                     //escape modal
                     if (!$('#modal').is(':hidden')) {
                         $('#modal').css('display', 'none');
+                        
                     };
                     //escape fullview
                     if (!$('#fullViewWrapper').is(':hidden')) {
@@ -323,6 +326,7 @@
                         $('body').append(theDets);
                         $('body').append(detFooter);
                         $('#goBackArrow').css('display', 'none');
+                        window.scrollTo(0, 0); 
                     };
                 };
 
