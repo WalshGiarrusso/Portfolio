@@ -2,7 +2,7 @@
 
 /* * { border: 1px solid red; }*/
 
-body, #fakeBody {
+body {
     /* FONT */
     color: black;
     font-family: century-old-style-std, serif;
@@ -814,8 +814,9 @@ input[type=number] {
 }
 
     /*MODAL*/
-#modalAppendage {
+#modal {
     /*SETUP*/
+    
     position: fixed;
     height: 100%;
     width: 100%;
@@ -828,7 +829,7 @@ input[type=number] {
     justify-content: center;
     align-items: center;
 }
-#modalAppendageImage{
+#modalImage{
     /*SETUP*/
     height:90vh;
     width:auto;
