@@ -16,7 +16,8 @@
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">        -->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">     -->
     <!---FIX THIS BEFORE LIVE-->
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+    
+    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
 
 </head>
@@ -99,36 +100,44 @@
 
                     <div class="InfoBoxMenuBarItem">
                         <p>Info▾</p>
+                        <div class="InfoBoxPacket">
+                            We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain 
+                            unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.--That to secure these rights, 
+                            Governments are instituted among Men, deriving their just powers from the consent of the governed, --That whenever any Form 
+                            of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute 
+                            new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most 
+                            likely to effect their Safety and Happiness.
+                        </div>
                     </div>
 
                     <div class="InfoBoxMenuBarItem">
                         <p>Methods▾</p>
+                        <div class="InfoBoxPacket">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum
+                        </div>
                     </div>
 
 
                     <div class="InfoBoxMenuBarItem" style="border-right:none;">
                         <p>Variants▾</p>
+                        <div class="InfoBoxPacket">
+
+                        </div>
                     </div>
 
                 </div>
 
                 <div id="infoBoxPacketWrapper">
 
-                    <div class="InfoBoxPacket" id="infoIBP">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum.
-                    </div>
+                    
 
-                    <div class="InfoBoxPacket" id="methodsIBP">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum
-                    </div>
-
-                    <div class="InfoBoxPacket" id="variantsIBP">
+                    <div id="chosenIBP">
 
                     </div>
+
+                   
 
                 </div>
 
@@ -256,6 +265,13 @@
         $('#openNavBox').click(function () {
             $('#mainSidebar').css('width', '15%');
             $('#sidebarOVRLay').fadeTo(200, 1);
+
+            //retract outside focus
+            $('.InfoBoxMenuBarItem').each(function () {
+                $(this).css('backgroundPosition', 'right bottom');
+                $(this).css('paddingRight', '3vw');
+                $(this).css('borderLeft', '0vw solid gray');
+            })
         });
         $('.closebtn').click(function () {
             $('#mainSidebar').css('width', '0');
@@ -303,8 +319,6 @@
                 window.scrollTo(0, 0); 
             };
         });
-
-
         $(document).keyup(function (event) {
             if (event.key === "Escape") {
                 //escape sidebar
@@ -329,7 +343,6 @@
                         window.scrollTo(0, 0); 
                     };
                 };
-
             };
         });
         //go to full image viewer
@@ -351,6 +364,32 @@
             $('#modal').css('display', 'flex');
             $('#modalImage').attr('src', oldSrc);
 
+        });
+
+
+
+        //MICRO STUFF
+            //BUTTONS
+        $('.InfoBoxMenuBarItem').click(function () {
+            
+            $('.InfoBoxMenuBarItem').each(function () {
+                $(this).css('backgroundPosition', 'right bottom');
+                $(this).css('paddingRight', '3vw');
+                $(this).css('borderLeft', '0vw solid gray');
+                //hide packet
+                
+                
+
+            })
+            $(this).css('backgroundPosition', 'left bottom');
+            $(this).css('borderLeft', '0.5vw solid gray');
+            $(this).css('paddingRight', '2.5vw');
+            //display packet
+           
+            var IBP = $(this).children('.InfoBoxPacket');
+            $('#chosenIBP').html(IBP.html());
+            
+            
         });
 
     </script>

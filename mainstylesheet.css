@@ -898,14 +898,16 @@ input[type=number] {
 }
 #infoBoxPacketWrapper {
     /*VISUAL*/
-    
     /*background-color:#f2f2f2;*/
+    font-size: 1.2vw;
 }
 .InfoBoxPacket{
     /*SETUP*/
+    display:none;
     
-    /*VISUAL*/
-    font-size:1.2vw;
+   
+}
+#chosenIBP {
 }
 
 
