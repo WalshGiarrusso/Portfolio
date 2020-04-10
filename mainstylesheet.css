@@ -2,7 +2,7 @@
 
 /* * { border: 1px solid red; }*/
 
-body {
+body, #fakeBody {
     /* FONT */
     color: black;
     font-family: century-old-style-std, serif;
@@ -15,12 +15,9 @@ body {
     transition: 0.3s;
     /*REMOVE SCROLLBAR*/
     -ms-overflow-style: none;
+    
 }
 
-#pageContent{
-    /*SETUP*/
-    min-height:100vh;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -31,6 +28,10 @@ input[type=number] {
 }
     /*REMOVE SCROLLBAR*/
     body::-webkit-scrollbar {
+        display: none;
+    }
+
+    html::-webkit-scrollbar {
         display: none;
     }
 /* SIDEBAR */
@@ -755,6 +756,7 @@ input[type=number] {
 }
 
 /*PROJECT PAGES*/
+    /*SHOWCASE*/
  #showcaseWrapper{
      /*SETUP*/
      margin: 0vw 13.85%;
@@ -765,14 +767,21 @@ input[type=number] {
      align-items:center;
      /*VISUAL*/
      border-bottom: 1px solid gray;
+        /*ANIMATION*/
+        transition:0.3s;
  }
  #showcaseImage{
      /*SETUP*/
      margin: 1.5vw 0vw;
-     height:31vw;
+     max-height:75vh;
+     
+     
      /*VISUAL*/
      cursor:pointer;
+  
+     
  }
+    /*MODAL*/
 #modalAppendage {
     /*SETUP*/
     position: fixed;
@@ -789,10 +798,40 @@ input[type=number] {
 }
 #modalAppendageImage{
     /*SETUP*/
-    height:42.5vw;
+    height:90vh;
     width:auto;
+    /*VISUAL*/
+    cursor:pointer;
 }
 
+
+#fullViewWrapper{
+    /*SETUP*/
+    max-width:100%;
+    margin: 0vw 5vw;
+    text-align:center;
+    /*ANIMATION*/
+    transition:0.3s;
+}
+#fullViewImg {
+    /*SETUP*/
+    margin: 2vw auto;
+    max-width:100%;
+    /*ANIMATION*/
+    transition:0.3s;
+    
+    
+}
+
+
+
+/*INFOBOX*/
+#infoBoxWrapper{
+    /*SETUP*/
+    margin: 0vw 13.85%;
+    width: 72.3%;
+    height:15vw;
+}
 
 
 
