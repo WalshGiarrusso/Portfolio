@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         //INIT BEFORE PAGE LOAD
         $(document).ready(function () {
@@ -25,24 +25,24 @@
                 var typeInitUser = sessionStorage.getItem("typeInit");
                 $('#typeSelector > p').text(typeInitUser);
                 calcSimScoreEarly();
-                sessionStorage.setItem("typeInit", "None" );
+                sessionStorage.setItem("typeInit", "None");
             };
-            
+
         });
         function calcSimScoreEarly() {
 
-             $('.ContentThumbnail').each(function () {
+            $('.ContentThumbnail').each(function () {
                 var simScore = 1000000;
-       
-             
+
+
                 simScore -= (3 * typeSim($(this)));
-               
+
                 checkIncomplete();
-              
+
                 $(this).css('order', simScore);
             });
         };
-        
+
     </script>
     <div id="sidebarOVRLay"></div>
     <!--Sidebar-->
@@ -433,7 +433,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
     <script>
         //FILTERS
         //TYPE
@@ -621,7 +621,7 @@
         function calcSimScore() {
             $('.ContentThumbnail').each(function () {
                 var simScore = 1000000;
-       
+
                 simScore -= searchSim($(this));
                 simScore -= (3 * typeSim($(this)));
                 simScore -= (2 * dateSimScore($(this)));
@@ -677,7 +677,7 @@
         });
 
         /* Sidebar */
-         $('#openNavBox').click(function () {
+        $('#openNavBox').click(function () {
             $('#mainSidebar').css('width', '15%');
             $('#sidebarOVRLay').fadeTo(200, 1);
         });
@@ -685,7 +685,7 @@
             $('#mainSidebar').css('width', '0');
             $('#sidebarOVRLay').fadeTo(200, 0, function () {
                 $(this).hide();
-            }); 
+            });
         });
 
         //BUTTON
@@ -1042,11 +1042,11 @@
                     $('#typeSelectorDropdown').hide();
                 });
             };
-          
+
             var trg = $(e.target);
 
             //escape sidebar
-            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar')) ) && (!trg.is('#openNavBox'))) {
+            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar'))) && (!trg.is('#openNavBox'))) {
                 if ($('#sidebarOVRLay').length) {
                     $('#mainSidebar').css('width', '0');
 
@@ -1055,7 +1055,7 @@
                     });
                 };
             };
-    
+
 
 
 
