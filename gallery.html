@@ -17,6 +17,31 @@
 </head>
 
 <body>
+
+    <script>
+        //INIT BEFORE PAGE LOAD
+        $(document).ready(function () {
+            var typeInitUser = sessionStorage.getItem("typeInit");
+            $('#typeSelector > p').text(typeInitUser);
+            calcSimScoreEarly();
+            sessionStorage.removeItem("typeInit");
+
+        });
+        function calcSimScoreEarly() {
+
+             $('.ContentThumbnail').each(function () {
+                var simScore = 1000000;
+       
+             
+                simScore -= (3 * typeSim($(this)));
+               
+                checkIncomplete();
+              
+                $(this).css('order', simScore);
+            });
+        };
+        
+    </script>
     <div id="sidebarOVRLay"></div>
     <!--Sidebar-->
     <div class="sidebar" id="mainSidebar">
@@ -594,6 +619,7 @@
         function calcSimScore() {
             $('.ContentThumbnail').each(function () {
                 var simScore = 1000000;
+       
                 simScore -= searchSim($(this));
                 simScore -= (3 * typeSim($(this)));
                 simScore -= (2 * dateSimScore($(this)));
@@ -646,11 +672,6 @@
 
             $('#typeSelectorDropdown').height('0vw');
             stopNewHides = 0;
-
-
-            var typeInitUser = sessionStorage.getItem('typeInit');
-            $('#typeSelector > p').text(typeInitUser);
-            calcSimScore();
         });
 
         /* Sidebar */
