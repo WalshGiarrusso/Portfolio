@@ -21,11 +21,13 @@
     <script>
         //INIT BEFORE PAGE LOAD
         $(document).ready(function () {
-            var typeInitUser = sessionStorage.getItem("typeInit");
-            $('#typeSelector > p').text(typeInitUser);
-            calcSimScoreEarly();
-            sessionStorage.removeItem("typeInit");
-
+            if (sessionStorage.getItem("typeInit") !== "None") {
+                var typeInitUser = sessionStorage.getItem("typeInit");
+                $('#typeSelector > p').text(typeInitUser);
+                calcSimScoreEarly();
+                sessionStorage.setItem("typeInit", "None" );
+            };
+            
         });
         function calcSimScoreEarly() {
 
