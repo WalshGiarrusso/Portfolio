@@ -16,8 +16,8 @@
     <!--        <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">        -->
     <!--    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">     -->
     <!---FIX THIS BEFORE LIVE-->
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
+    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
 
 
 </head>
@@ -123,6 +123,22 @@
                     <div class="InfoBoxMenuBarItem" style="border-right:none;">
                         <p>Variants▾</p>
                         <div class="InfoBoxPacket">
+                            <div id="variantWrapper">
+                                <div class="Variant">
+                                    <img class="VariantIMG" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" />
+                                    <div class="VariantTXT">
+                                        Image-Only Version
+                                    </div>
+                                </div>
+                                <div class="Variant">
+                                    <img class="VariantIMG" src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project.png" />
+                                    <div class="VariantTXT">
+                                        Text Version
+                                    </div>
+                                </div>
+                            </div>
+                            
+
 
                         </div>
                     </div>
@@ -390,8 +406,15 @@
                 });
 
             });
-            
-           
+        });
+
+        //switch SRC
+        $('#chosenIBP').click(function (event) {
+            var trg = $(event.target);
+            console.log(trg);
+            if (trg.is('.VariantIMG')) {
+                $('#showcaseImage').attr('src', trg.attr('src'));
+            };
         });
     </script>
 </body>

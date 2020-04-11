@@ -918,6 +918,33 @@ input[type=number] {
     /*SETUP*/
     display: none;
 }
+#variantWrapper{
+    /*SETUP*/
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    align-items:center;
+    padding: 1.5vw 0vw;
+
+
+
+    
+}
+.Variant {
+    /*SETUP*/
+    text-align:center;
+    padding-top: 1.2vw;
+    /*VISUAL*/
+    font-size:1.2vw;
+
+}
+.VariantIMG{
+    /*SETUP*/
+    width:10vw;
+    /*VISUAL*/
+    cursor:pointer;
+}
+
 
 
 
