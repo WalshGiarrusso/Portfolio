@@ -17,7 +17,7 @@
     <!--<link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">-->
     <!--<link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">-->
     <!---FIX THIS BEFORE LIVE-->
-    <link rel="stylesheet" type="text/css" href="https://walshgiarrusso.com/mainstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\Portfolio\mainstylesheet.css">
 
    
 
@@ -82,14 +82,14 @@
     <div id="partitionContent">
         <div id="partitionTextPadding">
             <div id="partitionText">
-                <p>Lorem!</p>
+                <p>Hey!</p>
 
                 <p>
-                    Ipsum dolor sit amet, consectetur.<br />
-                    Adipiscing elit, sed do eiusmod.<br />
-                    Tempor incididunt ut labore et dolore.<br />
-                    Magna aliqua, ut enim ad minim veniam, nostrud quis ullamco. <br />
-                    Laboris nisi ut aliquip! <br />
+                    Thanks for taking the time to check out my website.<br />
+                    My name is Walsh Anthony Giarrusso.<br />
+                    I'm a junior in high school.<br />
+                    I'm interested in graphic design, music production, coding, and more. <br />
+                    I've chosen to express those interests through this website.<br />
                 </p>
             </div>
         </div>
@@ -150,16 +150,18 @@
     <div id="preludeContentWrapper">
         <div id="preludeContent">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Over the last five years of my life, I have put a lot of time into teaching myself how to use
+                programs like Adobe Photoshop, Adobe Illustrator, Krita, FL Studio, Microsoft Visual Studio, and more.
+                I chose to teach myself how to code in HTML, CSS, and JavaScript in order to show people the end product
+                of that time investment. In addition to being a massive project in its own right, this website also serves
+                as a hub on which the rest of my projects can live.             
             </p>
             <div style="max-height:25px;">
                 <a href="https://walshgiarrusso.com/about">
                     More about me ›
                 </a>
             </div>
+
 
         </div>
 
@@ -182,7 +184,7 @@
                         </a>
                     </p>
                 </div>
-                <div class="FooterDrop">
+                <div class="FooterDrop" id="sSTS">
                     <p>
                         <a href="https://walshgiarrusso.com/gallery">
                             Gallery
@@ -190,28 +192,28 @@
                     </p>
                     <ul>
                         <li>
-                            <a href="   ">
-                                Lorem
+                            <a href="https://walshgiarrusso.com/gallery">
+                                Design
                             </a>
                         </li>
                         <li>
-                            <a href="   ">
-                                Ipsum
+                            <a href="https://walshgiarrusso.com/gallery">
+                                Music
                             </a>
                         </li>
                         <li>
-                            <a href="   ">
-                                Dolor
+                            <a href="https://walshgiarrusso.com/gallery">
+                                Writing
                             </a>
                         </li>
                         <li>
-                            <a href="   ">
-                                Sit
+                            <a href="https://walshgiarrusso.com/gallery">
+                                Drawing
                             </a>
                         </li>
                         <li>
-                            <a href="   ">
-                                Amet
+                            <a href="https://walshgiarrusso.com/gallery">
+                                Other
                             </a>
                         </li>
                     </ul>
@@ -269,7 +271,7 @@
     <script>
         //INIT
         $(window).load(function () {
-
+            
             alert("Hey! I'm glad you've taken the time to check out my website! Please keep in mind that it is still very much a work-in-progress.");
         });
 
@@ -316,6 +318,20 @@
                     $('#sidebarOVRLay').fadeTo(200, 0, function () {
                         $(this).hide();
                     });
+                };
+            };
+        });
+
+        //SessionStorage
+        $('.FooterDrop').find('a').mousedown(function () {
+            if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
+                console.log($(this).text().trim());
+                var typeInitSetter = $(this).text().trim();
+               
+                if (typeInitSetter == 'Gallery') {
+                    sessionStorage.setItem("typeInit", "All" );
+                } else {
+                    sessionStorage.setItem("typeInit", typeInitSetter);
                 };
             };
         });

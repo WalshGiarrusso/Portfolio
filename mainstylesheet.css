@@ -216,14 +216,14 @@ input[type=number] {
 #partitionTextPadding {
     /*SETUP*/
     display: inline-block;
-    padding: 5% 0% 2vw 5%;
-    max-width: 40vw;
+    padding: 5% 0% 0% 4vw;
+    max-width: 45vw;
 }
 
 #partitionText {
     /*SETUP*/
     display: inline-block;
-    padding: 0% 5% 0% 0%;
+
     width: 100%;
 }
 
@@ -402,7 +402,7 @@ input[type=number] {
 #preludeContent {
     /*SETUP*/
     text-align: center;
-    margin: 2% 5% 2% 5%;
+    margin: 2% 4vw;
     padding-bottom: 0.3vw;
 }
 
@@ -413,7 +413,7 @@ input[type=number] {
 
     #preludeContent a {
         /*VISUAL*/
-        font-family: lato, sans-serif;
+        
         font-size: 1.4vw;
         text-decoration: none;
         font-weight: 500;

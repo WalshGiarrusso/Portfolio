@@ -415,7 +415,6 @@
                 calcSimScore();
             };
         });
-
         function typeSim(element) {
             var ret;
             var tstr = $('#typeSelector > p').text().trim();
@@ -428,7 +427,6 @@
             };
             return ret;
         };
-
         //SEARCH
         $('#searchBar').keyup(function () {
             if (stopNewHides == 0) {
@@ -648,6 +646,11 @@
 
             $('#typeSelectorDropdown').height('0vw');
             stopNewHides = 0;
+
+
+            var typeInitUser = sessionStorage.getItem('typeInit');
+            $('#typeSelector > p').text(typeInitUser);
+            calcSimScore();
         });
 
         /* Sidebar */
