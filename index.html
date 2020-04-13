@@ -321,16 +321,16 @@
             };
         });
 
-        //SessionStorage
+        //localStorage
         $('.FooterDrop').find('a').mousedown(function () {
             if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
                 console.log($(this).text().trim());
                 var typeInitSetter = $(this).text().trim();
                
                 if (typeInitSetter == 'Gallery') {
-                    sessionStorage.setItem("typeInit", "None" );
+                    localStorage.setItem("typeInit", "None" );
                 } else {
-                    sessionStorage.setItem("typeInit", typeInitSetter);
+                    localStorage.setItem("typeInit", typeInitSetter);
                 };
             };
         });

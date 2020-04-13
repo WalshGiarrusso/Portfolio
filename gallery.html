@@ -23,14 +23,15 @@
     <script>
         //INIT BEFORE PAGE LOAD
         $(document).ready(function () {
-            if ((sessionStorage.getItem("typeInit") !== "None")) {
-                var typeInitUser = sessionStorage.getItem("typeInit");
+            if ((localStorage.getItem("typeInit") !== "None")) {
+                var typeInitUser = localStorage.getItem("typeInit");
                 $('#typeSelector > p').text(typeInitUser);
                 calcSimScoreEarly();
-                sessionStorage.setItem("typeInit", "None");
+                localStorage.setItem("typeInit", "None");
                
             };
-             if ($('#typeSelector > p').text() == 'null') {
+            if ($('#typeSelector > p').text() == 'null') {
+                localStorage.setItem("typeInit", "None");
                 $('#typeSelector > p').text('Select Type');
              };
 
@@ -1101,16 +1102,16 @@
             };
         });
 
-        //SessionStorage
+        //localStorage
         $('.FooterDrop').find('a').mousedown(function () {
             if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
                 console.log($(this).text().trim());
                 var typeInitSetter = $(this).text().trim();
                
                 if (typeInitSetter == 'Gallery') {
-                    sessionStorage.setItem("typeInit", "None" );
+                    localStorage.setItem("typeInit", "None" );
                 } else {
-                    sessionStorage.setItem("typeInit", typeInitSetter);
+                    localStorage.setItem("typeInit", typeInitSetter);
                 };
             };
         });
