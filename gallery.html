@@ -23,7 +23,7 @@
     <script>
         //INIT BEFORE PAGE LOAD
         $(document).ready(function () {
-            if (sessionStorage.getItem("typeInit") !== "None") {
+            if ((sessionStorage.getItem("typeInit") !== "None") && ((sessionStorage.getItem("typeInit") !== "null")) ) {
                 var typeInitUser = sessionStorage.getItem("typeInit");
                 $('#typeSelector > p').text(typeInitUser);
                 calcSimScoreEarly();
@@ -407,8 +407,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://walshgiarrusso.com/about#my-methods">
-                                My Methods
+                            <a href="https://walshgiarrusso.com/about#my-values">
+                                My Values
                             </a>
                         </li>
                     </ul>

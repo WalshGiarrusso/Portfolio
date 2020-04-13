@@ -480,18 +480,16 @@ input[type=number] {
 
 #footerPartitionRight {
     /*SETUP*/
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
     float: right;
     height: 100%;
-    padding-left: 7.5vw;
+    width:50vw;
+    box-sizing:border-box;
+    padding-left:7.5vw;
     /*VISUAL*/
     border-left: 1px solid white;
-}
-
-.FooterDrop {
-    /*SETUP*/
-    display: inline-grid;
-    margin-right: 4vw;
-    
 }
 
     .FooterDrop p {
@@ -510,8 +508,10 @@ input[type=number] {
 
     .FooterDrop ul {
         /*SEtup*/
-        padding-left: 1.5vw;
-        display:table-column;
+        padding-left: 1vw;
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content:flex-start;
         /*VISUAL*/
         list-style-type: none;
         margin: 0;
