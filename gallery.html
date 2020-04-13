@@ -23,7 +23,9 @@
     <script>
         //INIT BEFORE PAGE LOAD
         $(document).ready(function () {
+            console.log(localStorage.getItem("typeInit"));
             if ((localStorage.getItem("typeInit") !== "None")) {
+                
                 var typeInitUser = localStorage.getItem("typeInit");
                 $('#typeSelector > p').text(typeInitUser);
                 calcSimScoreEarly();
