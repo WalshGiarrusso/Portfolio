@@ -945,6 +945,20 @@ input[type=number] {
     cursor:pointer;
 }
 
+/*ABOUT PAGE*/
+.BasicTextContent{
+    /*SETUP*/
+    margin:0% 13.85%;
+    width:72.3%;
+    text-align:center;
+    /*VISUAL*/
+    font-size:1.4vw;
+    border-bottom: 1px solid gray;
+}
+.BasicTextContent > p{
+    /*SETUP*/
+    padding: 0vw 3vw;
+}
 
 
 
