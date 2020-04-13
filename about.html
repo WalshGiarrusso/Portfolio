@@ -72,31 +72,38 @@
 
     <!--CONTENT-->
     <!---ME-->
-    <div class="Header" id="myself">
+    <div class="BasicTextContent">
+        <p>
+            Overview lorem ipsum dolor sit amet urna fringilla malesuada vel vitae lacus. Vivamus blandit nisl vel eros congue, at euismod nisl feugiat. Aliquam sagittis ultrices ligula, id gravida.
+
+        </p>
+    </div>
+    <!--MY WORK-->
+    <div class="AbtHeader" id="myself">
         <p>
             Myself
         </p>
     </div>
     <div class="BasicTextContent">
         <p>
-            For 2019, The Atlanta Region's population is estimated to be around 4.6 million. The City of Atlanta, or "Atlanta Proper," has a much lower estimated population of only 470,500. [Source] The Atlanta Region contains 15 different counties, many of which have separate water management, and contain populations of people outside of Atlanta. For these reasons, the remainder of this analysis will focus on Atlanta Proper.
+            Cras non justo felis. Vivamus at pulvinar massa. Integer ultricies consequat vestibulum. Nullam pharetra tortor vel fringilla semper. Praesent eu neque eget mi tincidunt eleifend. Duis eget ipsum finibus, consectetur ipsum hendrerit, porttitor urna. Nunc dignissim magna ante. Suspendisse ut lorem quis lacus venenatis mattis ac eget orci. Sed ante felis, venenatis ut orci eu, accumsan mollis odio. Nulla facilisi.
         </p>
     </div>
     <!--MY WORK-->
-    <div class="Header" id="my-work">
+    <div class="AbtHeader" id="my-work">
         <p>
             My Work
         </p>
     </div>
     <!--MY METHODS-->
-    <div class="Header" id="my-values">
+    <div class="AbtHeader" id="my-values">
         <p>
             My Values
         </p>
     </div>
     <div class="BasicTextContent" style="border-bottom: none;">
         <p>
-            We hold these truths to be self-evident, that all men are created equal. Lorem ipsum dolor sit amet.
+            Mauris sit amet eros nec nisi pretium laoreet in non tortor. Phasellus et nunc in urna fringilla malesuada vel vitae lacus. Vivamus blandit nisl vel eros congue, at euismod nisl feugiat. Aliquam sagittis ultrices ligula, id gravida lorem sagittis ut. Phasellus elementum tempus leo, ut venenatis ante tincidunt eget. In fermentum, justo sed efficitur iaculis, nunc urna pretium sapien, quis finibus tortor nisl ut sem. Sed consequat ut massa ac consequat. Mauris accumsan, ipsum id semper finibus, neque massa pharetra odio, egestas pretium urna quam at ante. Sed sodales augue odio, non varius dolor semper quis. Duis lobortis iaculis lacinia. Integer urna mauris, sollicitudin non est sed, mattis tristique nibh. Etiam non lobortis mauris. Fusce purus arcu, feugiat a odio non, dapibus rutrum justo. Donec vel rhoncus ante. Vestibulum feugiat lorem at ullamcorper commodo.
         </p>
     </div>
     <!--FOOTER-->
@@ -259,9 +266,9 @@
             if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
                 console.log($(this).text().trim());
                 var typeInitSetter = $(this).text().trim();
-               
+
                 if (typeInitSetter == 'Gallery') {
-                    localStorage.setItem("typeInit", "None" );
+                    localStorage.setItem("typeInit", "None");
                 } else {
                     localStorage.setItem("typeInit", typeInitSetter);
                 };
