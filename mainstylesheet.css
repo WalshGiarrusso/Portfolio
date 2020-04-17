@@ -191,14 +191,11 @@ html::-webkit-scrollbar {
 
 #buttonContent {
 	/* SETUP */
-	display: inline-block;
     display:flex;
     flex-flow: row nowrap;
     justify-content:space-between;
     align-content:center;
     padding: 0vw 15vw;
-	
-	
 }
 
 .ButtonIcon img {
@@ -448,10 +445,10 @@ html::-webkit-scrollbar {
 	font-size: 1.7vw;
 }
     /*FOOTER*/
-#footerWrapper {
-	/*SETUP*/
+#footerWrapper{
+  /*SETUP*/
 	margin: 0% -1.55% 0% -1.55%;
-	padding: 0.5% 15.35%;
+	padding: 1vw 15.35vw;
 	overflow: auto;
 	/*VISUAL*/
 	background-color: #3b2e34;
@@ -460,54 +457,55 @@ html::-webkit-scrollbar {
 	transition: 0.3s;
 }
 
-#footerContent {
-	/*SETUP*/
-	padding: .5vw 0vw;
-	overflow: auto;
+#footerContent{
+  /*SETUP*/
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items:baseline;
+  padding: 0.75vw 0vw;
 }
 
-#footerPartitionLeft {
-	/*SETUP*/
-	float: left;
-	height: auto;
-	padding: .5vw 0vw .5vw .5vw;
-	/*VISUAL*/
-	font-size: 2vw;
+#footerPartitionLeft{
+  /*SETUP*/
+  box-sizing:border-box;
+  width:30%;
 }
 
-#footerPartitionLeft p {
-	/*SETUP*/
-	margin: 0;
-	margin-top: -0.5vw;
+#footerPartitionLeft p{
+  /*SETUP*/
+  margin:0;
+  /*VISUAL*/
+  font-size:2vw;
 }
 
-#footerPartitionRight {
-	/*SETUP*/
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	float: right;
-	height: 100%;
-	width: 50vw;
-	box-sizing: border-box;
-	padding-left: 7.5vw;
-	/*VISUAL*/
-	border-left: 1px solid white;
+#footerPartitionRight{
+  /*SETUP*/
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items:baseline;
+  box-sizing:border-box;
+  width:70%;
+  padding-left:5vw;
+  /*VISUAL*/
+  border-left: 1px solid white;
 }
 
-.FooterDrop {
-	/*VISUAL*/
-	text-align: center;
-}
-
-.FooterDrop p {
-	/*SETUP*/
-	margin: 0vw 0vw;
-	text-align: center;
+.FooterDrop{
+    /*SETUP*/
+    padding:0vw 1vw;
+  
+    /*VISUAL*/
+    font-size:2vw;
 }
 
 .FooterDrop a {
-	/*VISUAL*/
+    /*SETUP*/
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    /*VISUAL*/
 	text-decoration: none;
 	color: black;
 	font-size: 2vw;
@@ -515,19 +513,21 @@ html::-webkit-scrollbar {
 	color: white;
 }
 
-.FooterDrop ul {
-	/*SEtup*/
-	padding: 0vw;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	/*VISUAL*/
-	list-style-type: none;
-	margin: 0;
+.FooterDrop ul{
+  /*VISUAL*/
+  text-align:center;
+  list-style-type: none;
+  padding:0;
+  margin:0;
 }
 
-.FooterDrop li a {
-	/*VISUAL*/
+.FooterDrop li{
+    /*SETUP*/
+    display:contents;
+}
+
+.FooterDrop li a{
+  /*VISUAL*/
 	font-size: 1.5vw;
 	color: gray;
 	/*ANIMATION*/
