@@ -699,13 +699,14 @@ html::-webkit-scrollbar {
 }
     /*BROWSER*/
 #browserWrapper {
-	/*SETUP*/
-	margin: 0 13.85%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	/*ANIMATION*/
-	transition: 0.3s;
+    /*SETUP*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0% 13.85%;
+    padding: 2% 0%;
+    /*ANIMATION*/
+    transition: 0.3s;
 }
 
 #browserWrapper>.ContentThumbnail,
