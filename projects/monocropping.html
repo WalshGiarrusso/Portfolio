@@ -320,7 +320,7 @@
                 if (!$('#fullViewWrapper').is(':hidden')) {
                     $('#fullViewWrapper').css('display', 'none');
                     detFooter = $('#footerWrapper').detach();
-                    $('body').append(theDets);
+                    $('.PageContent').append(theDets);
                     $('body').append(detFooter);
                     $('#goBackArrow').css('display', 'none');
                     window.scrollTo(0, 0);
@@ -344,7 +344,7 @@
                         if (!$('#fullViewWrapper').is(':hidden')) {
                             $('#fullViewWrapper').css('display', 'none');
                             detFooter = $('#footerWrapper').detach();
-                            $('body').append(theDets);
+                            $('.PageContent').append(theDets);
                             $('body').append(detFooter);
                             $('#goBackArrow').css('display', 'none');
                             window.scrollTo(0, 0);
