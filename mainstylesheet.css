@@ -958,7 +958,7 @@ html::-webkit-scrollbar {
         font-size: 36px;
     }
 }
-@media only screen and (min-width: 700px){
+@media only screen and (max-width: 700px){
     .PageContent{
         margin:0;
     }
