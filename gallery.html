@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gallery - Walsh Giarrusso</title>
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
@@ -1092,21 +1092,32 @@
 
 
             });
+        $(window).on('resize', function () {
+            checkIncomplete();
+        });
             //check incomplete end
             function checkIncomplete() {
-                $('.Filler').detach();
-                var nOTN;
-                nOTN = $('#browserWrapper > .ContentThumbnail').not(':hidden').length;
-                var rNOTN = nOTN % 5;
-                var nFN = (5 - rNOTN);
-                if (rNOTN > 0) {
-                    var i;
-                    for (i = 0; i < nFN; i++) {
-                        var appendage = document.createElement("div");
-                        $(appendage).addClass("Filler");
-                        $('#browserWrapper').append(appendage);
+                console.log('checking');
+                var mQ = window.matchMedia("(max-width:700px)");
+                if (mQ.matches) {
+                    $('.Filler').detach();
+
+                } else {
+                    $('.Filler').detach();
+                    var nOTN;
+                    nOTN = $('#browserWrapper > .ContentThumbnail').not(':hidden').length;
+                    var rNOTN = nOTN % 5;
+                    var nFN = (5 - rNOTN);
+                    if (rNOTN > 0) {
+                        var i;
+                        for (i = 0; i < nFN; i++) {
+                            var appendage = document.createElement("div");
+                            $(appendage).addClass("Filler");
+                            $('#browserWrapper').append(appendage);
+                        };
                     };
                 };
+                
             };
             $(document).ready(checkIncomplete());
 

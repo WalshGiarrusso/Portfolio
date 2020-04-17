@@ -718,7 +718,7 @@ html::-webkit-scrollbar {
     /*SETUP*/
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0% 13.85%;
     padding: 2% 0%;
     /*ANIMATION*/
