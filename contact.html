@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 
 
-    <title>Contact me - Walsh Giarrusso</title>
+    <title>Contact Me - Walsh Giarrusso</title>
     <link rel="icon" href="https://walshgiarrusso.com/favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxh5btl.css">
@@ -32,7 +32,12 @@
         <a href="https://walshgiarrusso.com/contact">Contact</a>
     </div>
 
+
     <span style=" position:fixed;font-size:2.5vw;cursor:pointer; margin-left: 2.5%;top:2vw;" id="openNavBox">&#9776;</span>
+
+
+
+
 
     <!--Header-->
     <div id="headerWrapper">
@@ -66,6 +71,20 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <!--Page Content-->
+    <div class="Header" id="how-to-reach-out">
+        <p>
+            How to Reach Out
+        </p>
+    </div>
+
+
+    <div class="Header" id="reasons-to-reach-out">
+        <p>
+            Reasons to Reach Out
+        </p>
     </div>
 
 
@@ -155,13 +174,13 @@
                     </p>
                     <ul>
                         <li>
-                            <a href="   ">
-                                Lorem
+                            <a href="https://walshgiarrusso.com/contact#how-to-reach-out">
+                                How
                             </a>
                         </li>
                         <li>
-                            <a href="   ">
-                                Ipsum
+                            <a href="https://walshgiarrusso.com/contact#reasons-to-reach-out">
+                                Why
                             </a>
                         </li>
                     </ul>
@@ -175,7 +194,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         /* Sidebar */
-         $('#openNavBox').click(function () {
+        $('#openNavBox').click(function () {
             $('#mainSidebar').css('width', '15%');
             $('#sidebarOVRLay').fadeTo(200, 1);
         });
@@ -183,7 +202,7 @@
             $('#mainSidebar').css('width', '0');
             $('#sidebarOVRLay').fadeTo(200, 0, function () {
                 $(this).hide();
-            }); 
+            });
         });
         //BUTTONS
 
@@ -200,7 +219,7 @@
             var trg = $(event.target);
 
             //escape sidebar
-            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar')) ) && (!trg.is('#openNavBox'))) {
+            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar'))) && (!trg.is('#openNavBox'))) {
                 if ($('#sidebarOVRLay').length) {
                     $('#mainSidebar').css('width', '0');
 
@@ -230,9 +249,9 @@
             if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
                 console.log($(this).text().trim());
                 var typeInitSetter = $(this).text().trim();
-               
+
                 if (typeInitSetter == 'Gallery') {
-                    localStorage.setItem("typeInit", "None" );
+                    localStorage.setItem("typeInit", "None");
                 } else {
                     localStorage.setItem("typeInit", typeInitSetter);
                 };
