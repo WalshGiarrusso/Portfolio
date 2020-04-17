@@ -945,9 +945,8 @@
                 };
                 $(this).css('paddingLeft', '0.4vw');
                 $(this).css('borderLeft', '0.25vw solid gray');
-                $('#typeSelectorDropdown').css('marginLeft', '-0.5vw');
-                $('#typeSelectorDropdown').css('width', '9.08916544656vw');
-
+                $('#typeSelectorDropdown').css('marginLeft', '-0.65vw');
+                $('#typeSelectorDropdown').css('width', '9.23916544656vw');
             });
             $('#typeSelector').mouseleave(function () {
                 if ($('#typeSelectorDropdown').is(':hidden')) {
@@ -970,6 +969,7 @@
             $('.TSDButton').mouseleave(function () {
                 $(this).css('borderLeft', '0vw solid gray');
                 $(this).css('backgroundPosition', 'right bottom');
+               
             });
             //INPUT
             $('.TSDButton').mousedown(function () {
@@ -978,12 +978,12 @@
             });
             $('.TSDButton').mouseup(function () {
                 $('#typeSelector > p').text($(this).text())
-                $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)')
-                $(this).css('backgroundSize', '200% 100%')
+                $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)');
+                $(this).css('backgroundSize', '200% 100%');
                 if (!$(this).is(':hover')) {
-                    $(this).css('backgroundPosition', 'right bottom')
+                    $(this).css('backgroundPosition', 'right bottom');
                 } else {
-                    $(this).css('backgroundPosition', 'left bottom')
+                    $(this).css('backgroundPosition', 'left bottom');
                 };
             });
 
