@@ -192,8 +192,13 @@ html::-webkit-scrollbar {
 #buttonContent {
 	/* SETUP */
 	display: inline-block;
-	height: 3.8vw;
-	width: 72.3%;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-content:center;
+    padding: 0vw 15vw;
+	
+	
 }
 
 .ButtonIcon img {
@@ -215,7 +220,7 @@ html::-webkit-scrollbar {
 .HeaderButton {
 	/*SETUP*/
 	display: inline-block;
-	margin: 0 3vw 0 3vw;
+	
 }
     /* PARTITION */
 #partitionContent {
