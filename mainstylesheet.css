@@ -792,7 +792,7 @@ input[type=number] {
      margin: 1.5vw 0vw;
      max-height:35vw;
      /*VISUAL*/
-     cursor:pointer;
+     cursor:zoom-in;
  }
 #showcaseOverview {
     /*SETUP*/
@@ -806,7 +806,7 @@ input[type=number] {
    
     /*VISUAL*/
     border-right:1px solid gray;
-}
+}foo
 #showcaseOverview > p{
     /*VISUAL*/
     font-size:2vw;
@@ -834,7 +834,7 @@ input[type=number] {
     height:90vh;
     width:auto;
     /*VISUAL*/
-    cursor:pointer;
+    cursor:zoom-in;
 }
 
 
@@ -982,6 +982,8 @@ input[type=number] {
         transition: 0.3s;
 
 }
+
+/*Contact*/
 
 
 
