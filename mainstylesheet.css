@@ -131,11 +131,16 @@ html::-webkit-scrollbar {
 
 .Sidebar .ExitSidebar {
 	/* SETUP */
+    display: inline-block;
+	padding: 5% 2.5% 5% 20%;
 	position: absolute;
 	top: 0vw;
 	right: 1.5vw;
 	/* VISUAL */
+    color: #818181;
 	font-size: 3vw;
+    /* ANIMATION */
+	transition: 0.5s;
 }
 
 #openNavBox{
