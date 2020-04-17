@@ -2,6 +2,21 @@
 
 /* * { border: 1px solid red; }*/
 
+/*EXPERIMENTAL*/
+.PageContent > div {
+    /*SETUP*/
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width:100% !important;
+}
+.PageContent{
+    /*SETUP*/
+    margin: 0 13.85%;
+}
+
+
+
+
 body {
     /* FONT */
     color: black;
@@ -988,7 +1003,6 @@ input[type=number] {
 }
 
 /*Contact*/
-
 
 
 

@@ -26,17 +26,17 @@
         $(document).ready(function () {
             console.log(localStorage.getItem("typeInit"));
             if ((localStorage.getItem("typeInit") !== "None")) {
-                
+
                 var typeInitUser = localStorage.getItem("typeInit");
                 $('#typeSelector > p').text(typeInitUser);
                 calcSimScoreEarly();
                 localStorage.setItem("typeInit", "None");
-               
+
             };
             if ($('#typeSelector > p').text() == 'null') {
                 localStorage.setItem("typeInit", "None");
                 $('#typeSelector > p').text('Select Type');
-             };
+            };
 
         });
         function calcSimScoreEarly() {
@@ -65,289 +65,289 @@
         <a href="https://walshgiarrusso.com/contact">Contact</a>
     </div>
     <span style=" position:fixed;font-size:2.5vw;cursor:pointer; margin-left: 2.5%; top:2vw;" id="openNavBox">&#9776;</span>
+    <div class="PageContent">
+        <!--Header-->
+        <div id="headerWrapper">
+            <div id="headerContent">
+                <p>
+                    Gallery
+                </p>
+            </div>
+        </div>
+        <!--PLACEHOLDER-->
+        <div id="buttonWrapper" style="border-bottom:none;">
+            <div id="buttonContent">
+                <div class="HeaderButton">
+                    <a href="https://walshgiarrusso.com/" class="ButtonIcon">
+                        <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
+                    </a>
+                </div>
+                <div class="HeaderButton">
+                    <a href="https://walshgiarrusso.com/gallery" class="ButtonIcon">
+                        <img src="https://walshgiarrusso.com/Icons/Gallery/Gallery.svg  " />
+                    </a>
+                </div>
+                <div class="HeaderButton">
+                    <a href="https://walshgiarrusso.com/about" class="ButtonIcon">
+                        <img src="https://walshgiarrusso.com/Icons/About/About.svg " />
+                    </a>
+                </div>
+                <div class="HeaderButton">
+                    <a href="https://walshgiarrusso.com/contact" class="ButtonIcon">
+                        <img src="https://walshgiarrusso.com/Icons/Contact/Contact.svg   " />
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <!--Header-->
-    <div id="headerWrapper">
-        <div id="headerContent">
-            <p>
-                Gallery
-            </p>
+        <!--SIFTER-->
+        <div id="sifterWrapper">
+            <div id="searchBarWrapper">
+                <input type="text" id="searchBar" placeholder="Search by Title" />
+            </div>
+            <div id="typeSelector">
+                <p>Select Type</p><strong>▾</strong>
+                <div id="typeSelectorDropdown">
+                    <div class="TSDButton">
+                        All
+                    </div>
+                    <div class="TSDButton">
+                        Design
+                    </div>
+                    <div class="TSDButton">
+                        Music
+                    </div>
+                    <div class="TSDButton">
+                        Writing
+                    </div>
+                    <div class="TSDButton">
+                        Drawing
+                    </div>
+                    <div class="TSDButton">
+                        Other
+                    </div>
+                </div>
+            </div>
+            <div id="dateSelector">
+                <p style="padding-left:0;">From:</p>
+                <input type="number" placeholder="Month" class="DateInput" name="fromMonth" />
+                <p>/</p>
+                <input type="number" placeholder="Day" class="DateInput" name="fromDay" />
+                <p>/</p>
+                <input type="number" placeholder="Year" class="DateInput" name="fromYear" />
+                <p>To:</p>
+                <input type="number" placeholder="Month" class="DateInput" name="toMonth" />
+                <p>/</p>
+                <input type="number" placeholder="Day" class="DateInput" name="toDay" />
+                <p>/</p>
+                <input type="number" placeholder="Year" class="DateInput" id="dateInputEnd" name="toYear">
+            </div>
+        </div>
+
+        <!--BROWSER-->
+        <div id="browserWrapper">
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Down To The Wire</h3>
+                        <p>Design</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/1016/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Down To The Wire</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Design</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth">4     </p>
+                        <p class="ContentDay">18       </p>
+                        <p class="ContentYear">2019      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Goody Two Shoes</h3>
+                        <p>Music</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/69/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Goody Two Shoes</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Music</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth">  6   </p>
+                        <p class="ContentDay">     17  </p>
+                        <p class="ContentYear">      2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Keep On Trucking</h3>
+                        <p>Writing</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/888/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Keep On Truckin'</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Writing</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth"> 8    </p>
+                        <p class="ContentDay">    12   </p>
+                        <p class="ContentYear">     2029 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Beating a <br /> Dead Horse</h3>
+                        <p>Drawing</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/544/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Beating a Dead Horse</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Drawing</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth"> 8    </p>
+                        <p class="ContentDay">    31   </p>
+                        <p class="ContentYear">     2019 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Cry Over <br /> Spilt Milk</h3>
+                        <p>Other</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/841/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Cry Over Spilt Milk</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Other</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth">12     </p>
+                        <p class="ContentDay">    22   </p>
+                        <p class="ContentYear">     2019 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Back To the Drawing <br />  Board</h3>
+                        <p>Music</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/257/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Back To the Drawing Board</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Music</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth"> 3    </p>
+                        <p class="ContentDay">    21   </p>
+                        <p class="ContentYear">     2020 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Elvis Has Left The Building</h3>
+                        <p>Drawing</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/779/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Elvis Has Left The Building</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Drawing</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth">6     </p>
+                        <p class="ContentDay">   21    </p>
+                        <p class="ContentYear">    2020  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="   ">
+                    <div class="ContentThumbnailCaption">
+                        <h3>In a Pickle</h3>
+                        <p>Design</p>
+                    </div>
+                    <img src="https://i.picsum.photos/id/111/200/300.jpg" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>In a Pickle</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Design</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth"> 6    </p>
+                        <p class="ContentDay">    28   </p>
+                        <p class="ContentYear">     2020 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ContentThumbnail">
+                <a href="https://walshgiarrusso.com/projects/monocropping">
+                    <div class="ContentThumbnailCaption">
+                        <h3>Monocropping</h3>
+                        <p>Design</p>
+                        <p>March 2nd, 2020</p>
+                    </div>
+                    <img src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" class="ContentThumbnailImage" />
+                </a>
+                <div class="ContentInfo">
+                    <div class="ContentTitle">
+                        <p>Monocropping</p>
+                    </div>
+                    <div class="ContentType">
+                        <p>Design</p>
+                    </div>
+                    <div class="ContentDate">
+                        <p class="ContentMonth"> 3    </p>
+                        <p class="ContentDay">    2   </p>
+                        <p class="ContentYear">  2020 </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!--PLACEHOLDER-->
-    <div id="buttonWrapper" style="border-bottom:none;">
-        <div id="buttonContent">
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/" class="ButtonIcon">
-                    <img src="https://walshgiarrusso.com/Icons/Home/Home.svg" />
-                </a>
-            </div>
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/gallery" class="ButtonIcon">
-                    <img src="https://walshgiarrusso.com/Icons/Gallery/Gallery.svg  " />
-                </a>
-            </div>
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/about" class="ButtonIcon">
-                    <img src="https://walshgiarrusso.com/Icons/About/About.svg " />
-                </a>
-            </div>
-            <div class="HeaderButton">
-                <a href="https://walshgiarrusso.com/contact" class="ButtonIcon">
-                    <img src="https://walshgiarrusso.com/Icons/Contact/Contact.svg   " />
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!--SIFTER-->
-    <div id="sifterWrapper">
-        <div id="searchBarWrapper">
-            <input type="text" id="searchBar" placeholder="Search by Title" />
-        </div>
-        <div id="typeSelector">
-            <p>Select Type</p><strong>▾</strong>
-            <div id="typeSelectorDropdown">
-                <div class="TSDButton">
-                    All
-                </div>
-                <div class="TSDButton">
-                    Design
-                </div>
-                <div class="TSDButton">
-                    Music
-                </div>
-                <div class="TSDButton">
-                    Writing
-                </div>
-                <div class="TSDButton">
-                    Drawing
-                </div>
-                <div class="TSDButton">
-                    Other
-                </div>
-            </div>
-        </div>
-        <div id="dateSelector">
-            <p style="padding-left:0;">From:</p>
-            <input type="number" placeholder="Month" class="DateInput" name="fromMonth" />
-            <p>/</p>
-            <input type="number" placeholder="Day" class="DateInput" name="fromDay" />
-            <p>/</p>
-            <input type="number" placeholder="Year" class="DateInput" name="fromYear" />
-            <p>To:</p>
-            <input type="number" placeholder="Month" class="DateInput" name="toMonth" />
-            <p>/</p>
-            <input type="number" placeholder="Day" class="DateInput" name="toDay" />
-            <p>/</p>
-            <input type="number" placeholder="Year" class="DateInput" id="dateInputEnd" name="toYear">
-        </div>
-    </div>
-
-    <!--BROWSER-->
-    <div id="browserWrapper">
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Down To The Wire</h3>
-                    <p>Design</p>
-                </div>
-                <img src="https://i.picsum.photos/id/1016/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Down To The Wire</p>
-                </div>
-                <div class="ContentType">
-                    <p>Design</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth">4     </p>
-                    <p class="ContentDay">18       </p>
-                    <p class="ContentYear">2019      </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Goody Two Shoes</h3>
-                    <p>Music</p>
-                </div>
-                <img src="https://i.picsum.photos/id/69/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Goody Two Shoes</p>
-                </div>
-                <div class="ContentType">
-                    <p>Music</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth">  6   </p>
-                    <p class="ContentDay">     17  </p>
-                    <p class="ContentYear">      2019</p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Keep On Trucking</h3>
-                    <p>Writing</p>
-                </div>
-                <img src="https://i.picsum.photos/id/888/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Keep On Truckin'</p>
-                </div>
-                <div class="ContentType">
-                    <p>Writing</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth"> 8    </p>
-                    <p class="ContentDay">    12   </p>
-                    <p class="ContentYear">     2029 </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Beating a <br /> Dead Horse</h3>
-                    <p>Drawing</p>
-                </div>
-                <img src="https://i.picsum.photos/id/544/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Beating a Dead Horse</p>
-                </div>
-                <div class="ContentType">
-                    <p>Drawing</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth"> 8    </p>
-                    <p class="ContentDay">    31   </p>
-                    <p class="ContentYear">     2019 </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Cry Over <br /> Spilt Milk</h3>
-                    <p>Other</p>
-                </div>
-                <img src="https://i.picsum.photos/id/841/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Cry Over Spilt Milk</p>
-                </div>
-                <div class="ContentType">
-                    <p>Other</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth">12     </p>
-                    <p class="ContentDay">    22   </p>
-                    <p class="ContentYear">     2019 </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Back To the Drawing <br />  Board</h3>
-                    <p>Music</p>
-                </div>
-                <img src="https://i.picsum.photos/id/257/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Back To the Drawing Board</p>
-                </div>
-                <div class="ContentType">
-                    <p>Music</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth"> 3    </p>
-                    <p class="ContentDay">    21   </p>
-                    <p class="ContentYear">     2020 </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>Elvis Has Left The Building</h3>
-                    <p>Drawing</p>
-                </div>
-                <img src="https://i.picsum.photos/id/779/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Elvis Has Left The Building</p>
-                </div>
-                <div class="ContentType">
-                    <p>Drawing</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth">6     </p>
-                    <p class="ContentDay">   21    </p>
-                    <p class="ContentYear">    2020  </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="   ">
-                <div class="ContentThumbnailCaption">
-                    <h3>In a Pickle</h3>
-                    <p>Design</p>
-                </div>
-                <img src="https://i.picsum.photos/id/111/200/300.jpg" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>In a Pickle</p>
-                </div>
-                <div class="ContentType">
-                    <p>Design</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth"> 6    </p>
-                    <p class="ContentDay">    28   </p>
-                    <p class="ContentYear">     2020 </p>
-                </div>
-            </div>
-        </div>
-        <div class="ContentThumbnail">
-            <a href="https://walshgiarrusso.com/projects/monocropping">
-                <div class="ContentThumbnailCaption">
-                    <h3>Monocropping</h3>
-                    <p>Design</p>
-                    <p>March 2nd, 2020</p>
-                </div>
-                <img src="https://walshgiarrusso.com/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" class="ContentThumbnailImage" />
-            </a>
-            <div class="ContentInfo">
-                <div class="ContentTitle">
-                    <p>Monocropping</p>
-                </div>
-                <div class="ContentType">
-                    <p>Design</p>
-                </div>
-                <div class="ContentDate">
-                    <p class="ContentMonth"> 3    </p>
-                    <p class="ContentDay">    2   </p>
-                    <p class="ContentYear">  2020 </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--FOOTER-->
+        <!--FOOTER-->
     <div id="footerWrapper">
         <div id="footerContent">
             <div id="footerPartitionLeft">
@@ -446,174 +446,178 @@
     </div>
 
     <script>
-        //FILTERS
-        //TYPE
-        $('.TSDButton').click(function () {
-            if (stopNewHides == 0) {
-                calcSimScore();
+            //FILTERS
+            //TYPE
+            $('.TSDButton').click(function () {
+                if (stopNewHides == 0) {
+                    calcSimScore();
+                };
+            });
+            function typeSim(element) {
+                var ret;
+                var tstr = $('#typeSelector > p').text().trim();
+                var all = 'All';
+                var inf = element.children('.ContentInfo').children('.ContentType').text().trim();
+                if (!(tstr == inf)) {
+                    ret = 0;
+                } else {
+                    ret = 1;
+                };
+                return ret;
             };
-        });
-        function typeSim(element) {
-            var ret;
-            var tstr = $('#typeSelector > p').text().trim();
-            var all = 'All';
-            var inf = element.children('.ContentInfo').children('.ContentType').text().trim();
-            if (!(tstr == inf)) {
-                ret = 0;
-            } else {
-                ret = 1;
-            };
-            return ret;
-        };
-        //SEARCH
-        $('#searchBar').keyup(function () {
-            if (stopNewHides == 0) {
-                calcSimScore();
-            };
-        });
+            //SEARCH
+            $('#searchBar').keyup(function () {
+                if (stopNewHides == 0) {
+                    calcSimScore();
+                };
+            });
 
-        function findCommons(arr1, arr2) {
-            var ret = [];
-            ret = arr1.filter(value => arr2.includes(value));
-            var lastWord = arr2[arr2.length - 1];
-            for (i = 0; i < arr1.length; i++) {
-                if (arr1[i].includes(lastWord)) {
-                    if ((lastWord.length > 2)) {
-                        if (arr1[i] == lastWord) {
-                            console.log('caught');
+            function findCommons(arr1, arr2) {
+                var ret = [];
+                ret = arr1.filter(value => arr2.includes(value));
+                var lastWord = arr2[arr2.length - 1];
+                for (i = 0; i < arr1.length; i++) {
+                    if (arr1[i].includes(lastWord)) {
+                        if ((lastWord.length > 2)) {
+                            if (arr1[i] == lastWord) {
+                                console.log('caught');
+                                return ret;
+                            };
+                            ret.push(lastWord);
                             return ret;
                         };
-                        ret.push(lastWord);
-                        return ret;
-                    };
 
+                    };
                 };
+                return ret;
             };
-            return ret;
-        };
-        function getCheckArray(element) {
-            title = [];
-            title = $(element).children('.ContentInfo').children('.ContentTitle').children('p').text().trim();
-            return title;
-        }
-        function searchSim(element) {
-            var txv = $('#searchBar').val();
-            var alph = txv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
-            var upr = alph.toUpperCase();
-            var output = upr.split("-");
-            var checktxv = getCheckArray(element);
-            var checkalph = checktxv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
-            var checkupr = checkalph.toUpperCase();
-            var checksplit = checkupr.split("-");
-            var checkoutput = checksplit.filter(function (el) {
-                return el != "";
+            function getCheckArray(element) {
+                title = [];
+                title = $(element).children('.ContentInfo').children('.ContentTitle').children('p').text().trim();
+                return title;
+            }
+            function searchSim(element) {
+                var txv = $('#searchBar').val();
+                var alph = txv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+                var upr = alph.toUpperCase();
+                var output = upr.split("-");
+                var checktxv = getCheckArray(element);
+                var checkalph = checktxv.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+                var checkupr = checkalph.toUpperCase();
+                var checksplit = checkupr.split("-");
+                var checkoutput = checksplit.filter(function (el) {
+                    return el != "";
+                });
+
+                var commons = findCommons(checkoutput, output);
+                console.log(commons);
+                var vcom = commons.length;
+                if ((checkoutput.length == commons.length) && (commons.length > 0)) {
+                    return ((7 * vcom));
+                };
+                return (vcom);
+            };
+
+            //DATE
+            $('.DateInput').keyup(function () {
+                if (stopNewHides == 0) {
+                    calcSimScore();
+                };
             });
 
-            var commons = findCommons(checkoutput, output);
-            console.log(commons);
-            var vcom = commons.length;
-            if ((checkoutput.length == commons.length) && (commons.length > 0)) {
-                return ((7 * vcom));
-            };
-            return (vcom);
-        };
-
-        //DATE
-        $('.DateInput').keyup(function () {
-            if (stopNewHides == 0) {
-                calcSimScore();
-            };
-        });
-
-        function dateSimScore(element) {
-            var ret = 0;
-            var contentDate = element.children('.ContentInfo').children('.ContentDate');
-            var coY = parseInt(contentDate.children('.ContentYear').text().trim());
-            var coD = parseInt(contentDate.children('.ContentDay').text().trim());
-            var coM = parseInt(contentDate.children('.ContentMonth').text().trim());
-            var d1 = parseInt($('input[name="fromDay"]').val().trim());
-            var d2 = parseInt($('input[name="toDay"]').val().trim());
-            var m1 = parseInt($('input[name="fromMonth"]').val().trim());
-            var m2 = parseInt($('input[name="toMonth"]').val().trim());
-            var y1 = parseInt($('input[name="fromYear"]').val().trim());
-            var y2 = parseInt($('input[name="toYear"]').val().trim());
-            // console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
-            // console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
-            // console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
-            if ((coY > y2) || (coY < y1)) {
-                ret = 0;
-                return ret;
-            } else if (y2 > coY > y1) {
-                ret = 1;
-                return ret;
-            } else if ((coY == y1) && (coY < y2)) {
-                if (coM < m1) {
+            function dateSimScore(element) {
+                var ret = 0;
+                var contentDate = element.children('.ContentInfo').children('.ContentDate');
+                var coY = parseInt(contentDate.children('.ContentYear').text().trim());
+                var coD = parseInt(contentDate.children('.ContentDay').text().trim());
+                var coM = parseInt(contentDate.children('.ContentMonth').text().trim());
+                var d1 = parseInt($('input[name="fromDay"]').val().trim());
+                var d2 = parseInt($('input[name="toDay"]').val().trim());
+                var m1 = parseInt($('input[name="fromMonth"]').val().trim());
+                var m2 = parseInt($('input[name="toMonth"]').val().trim());
+                var y1 = parseInt($('input[name="fromYear"]').val().trim());
+                var y2 = parseInt($('input[name="toYear"]').val().trim());
+                // console.log('From: ' + m1 + ' / ' + d1 + ' / ' + y1);
+                // console.log('To: ' + m2 + ' / ' + d2 + ' / ' + y2);
+                // console.log('For: ' + coM + ' / ' + coD + ' / ' + coY);
+                if ((coY > y2) || (coY < y1)) {
                     ret = 0;
                     return ret;
-                } else if (coM > m1) {
+                } else if (y2 > coY > y1) {
                     ret = 1;
                     return ret;
-                } else if (coM == m1) {
-                    if (coD < d1) {
+                } else if ((coY == y1) && (coY < y2)) {
+                    if (coM < m1) {
                         ret = 0;
                         return ret;
-                    } else {
+                    } else if (coM > m1) {
                         ret = 1;
                         return ret;
-                    };
-                } else {
-                    ret = 0;
-                    return ret;
-                };
-            } else if ((coY == y2) && (coY > y1)) {
-                if (coM < m2) {
-                    ret = 1;
-                    return ret;
-                } else if (coM > m2) {
-                    ret = 0;
-                    return ret;
-                } else if (coM == m2) {
-                    if (coD > d2) {
+                    } else if (coM == m1) {
+                        if (coD < d1) {
+                            ret = 0;
+                            return ret;
+                        } else {
+                            ret = 1;
+                            return ret;
+                        };
+                    } else {
                         ret = 0;
                         return ret;
-                    } else {
+                    };
+                } else if ((coY == y2) && (coY > y1)) {
+                    if (coM < m2) {
                         ret = 1;
                         return ret;
-                    };
-                } else {
-                    ret = 0;
-                    return ret;
-                }
-            } else if ((coY == y2) && (coY == y1)) {
-                if ((m2 > coM) && (coM > m1)) {
-                    ret = 1;
-                    return ret;
-                } else if ((coM < m1) || (coM > m2)) {
-                    ret = 0;
-                    return ret;
-                } else if ((coM == m1) && (coM < m2)) {
-                    if (coD < d1) {
+                    } else if (coM > m2) {
                         ret = 0;
                         return ret;
+                    } else if (coM == m2) {
+                        if (coD > d2) {
+                            ret = 0;
+                            return ret;
+                        } else {
+                            ret = 1;
+                            return ret;
+                        };
                     } else {
-                        ret = 1;
-                        return ret;
-                    };
-                } else if ((coM > m1) && (coM == m2)) {
-                    if (coD > d2) {
                         ret = 0;
                         return ret;
-                    } else {
+                    }
+                } else if ((coY == y2) && (coY == y1)) {
+                    if ((m2 > coM) && (coM > m1)) {
                         ret = 1;
                         return ret;
-                    };
-                } else if ((coM == m1) && (coM == m2)) {
-                    if ((coD >= d1) && (d2 >= coD)) {
-                        ret = 1;
+                    } else if ((coM < m1) || (coM > m2)) {
+                        ret = 0;
                         return ret;
-                    } else if ((coD == d1) && (coD == d2)) {
-                        ret = 1;
-                        return ret;
+                    } else if ((coM == m1) && (coM < m2)) {
+                        if (coD < d1) {
+                            ret = 0;
+                            return ret;
+                        } else {
+                            ret = 1;
+                            return ret;
+                        };
+                    } else if ((coM > m1) && (coM == m2)) {
+                        if (coD > d2) {
+                            ret = 0;
+                            return ret;
+                        } else {
+                            ret = 1;
+                            return ret;
+                        };
+                    } else if ((coM == m1) && (coM == m2)) {
+                        if ((coD >= d1) && (d2 >= coD)) {
+                            ret = 1;
+                            return ret;
+                        } else if ((coD == d1) && (coD == d2)) {
+                            ret = 1;
+                            return ret;
+                        } else {
+                            ret = 0;
+                            return ret;
+                        };
                     } else {
                         ret = 0;
                         return ret;
@@ -622,218 +626,221 @@
                     ret = 0;
                     return ret;
                 };
-            } else {
-                ret = 0;
-                return ret;
             };
-        };
 
-        //CALC
-        function calcSimScore() {
-            $('.ContentThumbnail').each(function () {
+            //CALC
+            function calcSimScore() {
+                $('.ContentThumbnail').each(function () {
+                    var simScore = 1000000;
+
+                    simScore -= searchSim($(this));
+                    simScore -= (3 * typeSim($(this)));
+                    simScore -= (2 * dateSimScore($(this)));
+                    checkIncomplete();
+                    console.log('title:' + $(this).children('.ContentInfo').children('.ContentTitle').text().trim() + '             search: ' + searchSim($(this)) + '         type: ' + (3 * typeSim($(this))) + '         date: ' + (2 * dateSimScore($(this))) + '         total: ' + simScore);
+                    asyncSwap($(this), simScore);
+                });
+            };
+            async function asyncSwap(element, score) {
+                stopNewHides = 1;
+                element.animate({ opacity: 0 }, 250);
+                const waiter1 = await resolver1();
                 var simScore = 1000000;
-
-                simScore -= searchSim($(this));
-                simScore -= (3 * typeSim($(this)));
-                simScore -= (2 * dateSimScore($(this)));
+                score -= searchSim(element);
+                score -= (3 * typeSim(element));
+                score -= (2 * dateSimScore(element));
                 checkIncomplete();
-                console.log('title:' + $(this).children('.ContentInfo').children('.ContentTitle').text().trim() + '             search: ' + searchSim($(this)) + '         type: ' + (3 * typeSim($(this))) + '         date: ' + (2 * dateSimScore($(this))) + '         total: ' + simScore);
-                asyncSwap($(this), simScore);
+                element.css('order', score);
+                const waiter2 = await resolver2();
+                element.animate({ opacity: 100 }, 50);
+                const waiter3 = await resolver3();
+                stopNewHides = 0;
+            }
+            function resolver1() {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve('resolved');
+                    }, 450);
+                });
+            };
+            function resolver2() {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve('resolved');
+                    }, 250);
+
+                });
+            };
+            function resolver3() {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve('resolved');
+                    }, 50);
+                });
+            };
+            var stopNewHides;
+
+            //INIT
+            $(document).ready(function () {
+
+                $('#typeSelectorDropdown').height('0vw');
+                stopNewHides = 0;
             });
-        };
-        async function asyncSwap(element, score) {
-            stopNewHides = 1;
-            element.animate({ opacity: 0 }, 250);
-            const waiter1 = await resolver1();
-            var simScore = 1000000;
-            score -= searchSim(element);
-            score -= (3 * typeSim(element));
-            score -= (2 * dateSimScore(element));
-            checkIncomplete();
-            element.css('order', score);
-            const waiter2 = await resolver2();
-            element.animate({ opacity: 100 }, 50);
-            const waiter3 = await resolver3();
-            stopNewHides = 0;
-        }
-        function resolver1() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve('resolved');
-                }, 450);
+
+            /* Sidebar */
+            $('#openNavBox').click(function () {
+                $('#mainSidebar').css('width', '15%');
+                $('#sidebarOVRLay').fadeTo(200, 1);
             });
-        };
-        function resolver2() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve('resolved');
-                }, 250);
-
+            $('.closebtn').click(function () {
+                $('#mainSidebar').css('width', '0');
+                $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                    $(this).hide();
+                });
             });
-        };
-        function resolver3() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve('resolved');
-                }, 50);
+
+            //BUTTON
+            $('.ButtonIcon > img').mouseenter(function () {
+                $(this).css('backgroundColor', 'rgb(217, 217, 217)');
+                $(this).css('border-radius', '36%');
             });
-        };
-        var stopNewHides;
-
-        //INIT
-        $(document).ready(function () {
-
-            $('#typeSelectorDropdown').height('0vw');
-            stopNewHides = 0;
-        });
-
-        /* Sidebar */
-        $('#openNavBox').click(function () {
-            $('#mainSidebar').css('width', '15%');
-            $('#sidebarOVRLay').fadeTo(200, 1);
-        });
-        $('.closebtn').click(function () {
-            $('#mainSidebar').css('width', '0');
-            $('#sidebarOVRLay').fadeTo(200, 0, function () {
-                $(this).hide();
+            $('.ButtonIcon > img').mouseleave(function () {
+                $(this).css('backgroundColor', 'transparent');
+                $(this).css('border-radius', '36%');
             });
-        });
 
-        //BUTTON
-        $('.ButtonIcon > img').mouseenter(function () {
-            $(this).css('backgroundColor', 'rgb(217, 217, 217)');
-            $(this).css('border-radius', '36%');
-        });
-        $('.ButtonIcon > img').mouseleave(function () {
-            $(this).css('backgroundColor', 'transparent');
-            $(this).css('border-radius', '36%');
-        });
+            //LENGTHSET
+            $(document).ready(function () {
+                $('#dateSelector > input').each(function () {
+                    var ph;
+                    ph = $(this).attr('placeholder');
+                    var cl;
+                    cl = ph.length;
 
-        //LENGTHSET
-        $(document).ready(function () {
-            $('#dateSelector > input').each(function () {
-                var ph;
-                ph = $(this).attr('placeholder');
-                var cl;
-                cl = ph.length;
-
-                if (ph == 'Month') {
-                    $(this).css("width", 1 + cl + 'ch');
-                }
-                if (ph == 'Day') {
-                    $(this).css("width", 0.5 + cl + 'ch');
-                }
-                if (ph == 'Year') {
-                    $(this).css("width", 0.1 + cl + 'ch');
-                }
+                    if (ph == 'Month') {
+                        $(this).css("width", 1 + cl + 'ch');
+                    }
+                    if (ph == 'Day') {
+                        $(this).css("width", 0.5 + cl + 'ch');
+                    }
+                    if (ph == 'Year') {
+                        $(this).css("width", 0.1 + cl + 'ch');
+                    }
+                });
             });
-        });
 
-        //DYNAMIC LENGTH
-        $('.DateInput').on('input', function () {
-            var inp;
-            inp = $(this).val();
+            //DYNAMIC LENGTH
+            $('.DateInput').on('input', function () {
+                var inp;
+                inp = $(this).val();
 
-            inpl = inp.length;
-            if (inpl > 0) {
-                $(this).css("width", .1 + inpl + 'ch')
-            } else {
-                var ph1;
-                ph1 = $(this).attr('placeholder');
-                var cl1;
-                cl1 = ph1.length;
-                $(this).css("width", 0.75 + cl1 + 'ch');
-            };
-        });
-
-        //RESTRICT CHAR
-        $('.DateInput').keypress(function () {
-            var ph2;
-            ph2 = $(this).attr('placeholder');
-            var inpl2;
-            inpl2 = $(this).val().length;
-            if (ph2 == 'Month') {
-                if (inpl2 == "2") {
-                    return false;
-                };
-            };
-            if (ph2 == 'Day') {
-                if (inpl2 == "2") {
-                    return false;
-                };
-            };
-            if (ph2 == 'Year') {
-                if (inpl2 == "4") {
-                    return false;
-                };
-            };
-        });
-
-        //SHOWBAD
-        $('.DateInput').keyup(function () {
-            var sBR = checkDayInput();
-            if (sBR == 0) {
-                $('input[name="fromDay"]').css('color', 'black');
-                $('input[name="toDay"]').css('color', 'black');
-            };
-            if (sBR == 1) {
-                $('input[name="fromDay"]').css('color', 'red');
-                $('input[name="toDay"]').css('color', 'black');
-            };
-            if (sBR == 2) {
-                $('input[name="fromDay"]').css('color', 'black');
-                $('input[name="toDay"]').css('color', 'red');
-            };
-            if (sBR == 3) {
-                $('input[name="fromDay"]').css('color', 'red');
-                $('input[name="toDay"]').css('color', 'red');
-            };
-        });
-        $('.DateInput').on('input', function () {
-            var ph3;
-            ph3 = $(this).attr('placeholder');
-            var pval;
-            pval = $(this).val();
-            if (ph3 == 'Month') {
-                if (pval > 12) {
-
-                    $(this).css('color', 'red');
+                inpl = inp.length;
+                if (inpl > 0) {
+                    $(this).css("width", .1 + inpl + 'ch')
                 } else {
-                    $(this).css('color', 'black');
+                    var ph1;
+                    ph1 = $(this).attr('placeholder');
+                    var cl1;
+                    cl1 = ph1.length;
+                    $(this).css("width", 0.75 + cl1 + 'ch');
                 };
-            };
-            if (ph3 == 'Day') {
+            });
 
-                if (pval > 31) {
-
-                } else {
-                    $(this).css('color', 'black');
+            //RESTRICT CHAR
+            $('.DateInput').keypress(function () {
+                var ph2;
+                ph2 = $(this).attr('placeholder');
+                var inpl2;
+                inpl2 = $(this).val().length;
+                if (ph2 == 'Month') {
+                    if (inpl2 == "2") {
+                        return false;
+                    };
                 };
-            };
-            if (ph3 == 'Year') {
-                if (pval > 2029) {
-
-                    $(this).css('color', 'red');
-                } else {
-                    $(this).css('color', 'black');
+                if (ph2 == 'Day') {
+                    if (inpl2 == "2") {
+                        return false;
+                    };
                 };
-            };
-        });
+                if (ph2 == 'Year') {
+                    if (inpl2 == "4") {
+                        return false;
+                    };
+                };
+            });
 
-        //checkdayinput
-        function checkDayInput() {
-            var d1 = parseInt($('input[name="fromDay"]').val().trim());
-            var d2 = parseInt($('input[name="toDay"]').val().trim());
-            var m1 = parseInt($('input[name="fromMonth"]').val().trim());
-            var m2 = parseInt($('input[name="toMonth"]').val().trim());
-            var y1 = parseInt($('input[name="fromYear"]').val().trim());
-            var y2 = parseInt($('input[name="toYear"]').val().trim());
-            var d1G = true;
-            var d2G = true;
-            if (d1 > 28) {
-                if (!(isNaN(y1))) {
-                    if ((d1 == 29) && (m1 == 2) && (y1 > 999) && !((y1 % 4) == 0)) {
-                        d1G = false;
+            //SHOWBAD
+            $('.DateInput').keyup(function () {
+                var sBR = checkDayInput();
+                if (sBR == 0) {
+                    $('input[name="fromDay"]').css('color', 'black');
+                    $('input[name="toDay"]').css('color', 'black');
+                };
+                if (sBR == 1) {
+                    $('input[name="fromDay"]').css('color', 'red');
+                    $('input[name="toDay"]').css('color', 'black');
+                };
+                if (sBR == 2) {
+                    $('input[name="fromDay"]').css('color', 'black');
+                    $('input[name="toDay"]').css('color', 'red');
+                };
+                if (sBR == 3) {
+                    $('input[name="fromDay"]').css('color', 'red');
+                    $('input[name="toDay"]').css('color', 'red');
+                };
+            });
+            $('.DateInput').on('input', function () {
+                var ph3;
+                ph3 = $(this).attr('placeholder');
+                var pval;
+                pval = $(this).val();
+                if (ph3 == 'Month') {
+                    if (pval > 12) {
+
+                        $(this).css('color', 'red');
+                    } else {
+                        $(this).css('color', 'black');
+                    };
+                };
+                if (ph3 == 'Day') {
+
+                    if (pval > 31) {
+
+                    } else {
+                        $(this).css('color', 'black');
+                    };
+                };
+                if (ph3 == 'Year') {
+                    if (pval > 2029) {
+
+                        $(this).css('color', 'red');
+                    } else {
+                        $(this).css('color', 'black');
+                    };
+                };
+            });
+
+            //checkdayinput
+            function checkDayInput() {
+                var d1 = parseInt($('input[name="fromDay"]').val().trim());
+                var d2 = parseInt($('input[name="toDay"]').val().trim());
+                var m1 = parseInt($('input[name="fromMonth"]').val().trim());
+                var m2 = parseInt($('input[name="toMonth"]').val().trim());
+                var y1 = parseInt($('input[name="fromYear"]').val().trim());
+                var y2 = parseInt($('input[name="toYear"]').val().trim());
+                var d1G = true;
+                var d2G = true;
+                if (d1 > 28) {
+                    if (!(isNaN(y1))) {
+                        if ((d1 == 29) && (m1 == 2) && (y1 > 999) && !((y1 % 4) == 0)) {
+                            d1G = false;
+                        } else {
+                            if ((((m1 == 4) || (m1 == 6) || (m1 == 9) || (m1 == 11)) && (d1 > 30)) || ((m1 == 2) && (d1 > 29))) {
+                                d1G = false;
+                            } else {
+                                d1G = true;
+                            };
+                        };
                     } else {
                         if ((((m1 == 4) || (m1 == 6) || (m1 == 9) || (m1 == 11)) && (d1 > 30)) || ((m1 == 2) && (d1 > 29))) {
                             d1G = false;
@@ -841,192 +848,201 @@
                             d1G = true;
                         };
                     };
-                } else {
-                    if ((((m1 == 4) || (m1 == 6) || (m1 == 9) || (m1 == 11)) && (d1 > 30)) || ((m1 == 2) && (d1 > 29))) {
-                        d1G = false;
-                    } else {
-                        d1G = true;
-                    };
                 };
-            };
-            if (d2 > 28) {
-                if (!(isNaN(y2))) {
-                    if ((d2 == 29) && (m2 == 2) && (y2 > 999) && !((y2 % 4) == 0)) {
-                        d2G = false;
+                if (d2 > 28) {
+                    if (!(isNaN(y2))) {
+                        if ((d2 == 29) && (m2 == 2) && (y2 > 999) && !((y2 % 4) == 0)) {
+                            d2G = false;
+                        } else {
+                            if ((((m2 == 4) || (m2 == 6) || (m2 == 9) || (m2 == 11)) && (d2 > 30)) || ((m2 == 2) && (d2 > 29))) {
+                                d2G = false;
+                            } else {
+                                d2G = true;
+                            };
+                        };
                     } else {
                         if ((((m2 == 4) || (m2 == 6) || (m2 == 9) || (m2 == 11)) && (d2 > 30)) || ((m2 == 2) && (d2 > 29))) {
                             d2G = false;
                         } else {
                             d2G = true;
                         };
-                    };
+                    }
+                };
+                if (d2 > 31) {
+                    d2G = false;
+                };
+                if (d1 > 31) {
+                    d1G = false;
+                };
+                if (d1G && d2G) {
+                    return 0;
+                };
+                if (!d1G && d2G) {
+                    return 1;
+                };
+                if (d1G && !d2G) {
+                    return 2;
+                };
+                if (!d1G && !d2G) {
+                    return 3;
+                };
+            }
+
+            //ANIMATION
+            //SEARCHBAR
+            //HOVER
+            $('#searchBarWrapper').mouseenter(function () {
+                if (!$('#searchBar').is(":focus")) {
+                    $(this).css('paddingLeft', '0.25vw');
+                    $(this).css('borderLeft', '0.25vw solid gray');
+                    $(this).css('backgroundPosition', 'center bottom');
+                };
+            });
+            $('#searchBarWrapper').mouseleave(function () {
+                if (!$('#searchBar').is(":focus")) {
+                    $(this).css('paddingLeft', '0vw');
+                    $(this).css('borderLeft', '0vw solid gray');
+                    $(this).css('backgroundPosition', 'right bottom');
+                };
+            });
+            //FOCUS
+            $('#searchBarWrapper').focusin(function () {
+                $(this).css('paddingLeft', '0.5vw');
+                $(this).css('borderLeft', '0.25vw solid gray');
+                $(this).css('backgroundPosition', 'left bottom');
+            });
+            $('#searchBarWrapper').focusout(function () {
+                if (!$('#searchBar').is(":hover")) {
+                    $(this).css('paddingLeft', '0vw');
+                    $(this).css('borderLeft', '0vw solid gray');
+                    $(this).css('backgroundPosition', 'right bottom');
                 } else {
-                    if ((((m2 == 4) || (m2 == 6) || (m2 == 9) || (m2 == 11)) && (d2 > 30)) || ((m2 == 2) && (d2 > 29))) {
-                        d2G = false;
-                    } else {
-                        d2G = true;
-                    };
-                }
-            };
-            if (d2 > 31) {
-                d2G = false;
-            };
-            if (d1 > 31) {
-                d1G = false;
-            };
-            if (d1G && d2G) {
-                return 0;
-            };
-            if (!d1G && d2G) {
-                return 1;
-            };
-            if (d1G && !d2G) {
-                return 2;
-            };
-            if (!d1G && !d2G) {
-                return 3;
-            };
-        }
-
-        //ANIMATION
-        //SEARCHBAR
-        //HOVER
-        $('#searchBarWrapper').mouseenter(function () {
-            if (!$('#searchBar').is(":focus")) {
-                $(this).css('paddingLeft', '0.25vw');
+                    $(this).css('paddingLeft', '0.25vw');
+                    $(this).css('backgroundPosition', 'center bottom');
+                };
+            });
+            //TYPESELECTOR
+            //HOVER
+            $('#typeSelector').mouseenter(function () {
+                if ($('#typeSelectorDropdown').is(':hidden')) {
+                    $(this).css('backgroundPosition', 'center bottom');
+                } else {
+                    $(this).css('backgroundPosition', 'left bottom');
+                };
+                $(this).css('paddingLeft', '0.4vw');
                 $(this).css('borderLeft', '0.25vw solid gray');
-                $(this).css('backgroundPosition', 'center bottom');
-            };
-        });
-        $('#searchBarWrapper').mouseleave(function () {
-            if (!$('#searchBar').is(":focus")) {
-                $(this).css('paddingLeft', '0vw');
-                $(this).css('borderLeft', '0vw solid gray');
-                $(this).css('backgroundPosition', 'right bottom');
-            };
-        });
-        //FOCUS
-        $('#searchBarWrapper').focusin(function () {
-            $(this).css('paddingLeft', '0.5vw');
-            $(this).css('borderLeft', '0.25vw solid gray');
-            $(this).css('backgroundPosition', 'left bottom');
-        });
-        $('#searchBarWrapper').focusout(function () {
-            if (!$('#searchBar').is(":hover")) {
-                $(this).css('paddingLeft', '0vw');
-                $(this).css('borderLeft', '0vw solid gray');
-                $(this).css('backgroundPosition', 'right bottom');
-            } else {
-                $(this).css('paddingLeft', '0.25vw');
-                $(this).css('backgroundPosition', 'center bottom');
-            };
-        });
-        //TYPESELECTOR
-        //HOVER
-        $('#typeSelector').mouseenter(function () {
-            if ($('#typeSelectorDropdown').is(':hidden')) {
-                $(this).css('backgroundPosition', 'center bottom');
-            } else {
-                $(this).css('backgroundPosition', 'left bottom');
-            };
-            $(this).css('paddingLeft', '0.4vw');
-            $(this).css('borderLeft', '0.25vw solid gray');
-            $('#typeSelectorDropdown').css('marginLeft', '-0.5vw');
-            $('#typeSelectorDropdown').css('width', '9.08916544656vw');
+                $('#typeSelectorDropdown').css('marginLeft', '-0.5vw');
+                $('#typeSelectorDropdown').css('width', '9.08916544656vw');
 
-        });
-        $('#typeSelector').mouseleave(function () {
-            if ($('#typeSelectorDropdown').is(':hidden')) {
-                $(this).css('paddingLeft', '0vw');
-                $(this).css('borderLeft', '0vw solid gray');
-                $(this).css('backgroundPosition', 'right bottom');
-                $('#typeSelectorDropdown').css('borderLeft', '0vw solid gray');
-                $('#typeSelectorDropdown').css('marginLeft', '-0vw');
-                $('#typeSelectorDropdown').css('width', '8.58916544656vw');
-            } else {
-                $('#typeSelector').css('backgroundPosition', 'left bottom');
-            };
-        });
-        //BUTTON
-        //HOVER
-        $('.TSDButton').mouseenter(function () {
-            $(this).css('borderLeft', '0.25vw solid gray');
-            $(this).css('backgroundPosition', 'left bottom');
-        });
-        $('.TSDButton').mouseleave(function () {
-            $(this).css('borderLeft', '0vw solid gray');
-            $(this).css('backgroundPosition', 'right bottom');
-        });
-        //INPUT
-        $('.TSDButton').mousedown(function () {
-            $(this).css('background', '#cccccc');
-
-        });
-        $('.TSDButton').mouseup(function () {
-            $('#typeSelector > p').text($(this).text())
-            $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)')
-            $(this).css('backgroundSize', '200% 100%')
-            if (!$(this).is(':hover')) {
-                $(this).css('backgroundPosition', 'right bottom')
-            } else {
-                $(this).css('backgroundPosition', 'left bottom')
-            };
-        });
-
-        //DATESELECTOR
-        //HOVER
-        $('#dateSelector').mouseenter(function () {
-            if (!$('.DateInput').is(":focus")) {
-                $(this).css('padding', '0 0.5vw');
-                $(this).css('borderLeft', '0.25vw solid gray');
-                $(this).css('backgroundPosition', 'left bottom');
-            };
-        });
-        $('#dateSelector').mouseleave(function () {
-            if (!$('.DateInput').is(":focus")) {
-                $(this).css('borderLeft', '0vw solid gray');
-                $(this).css('backgroundPosition', 'right bottom');
-                $(this).css('padding', ' 0vw');
-            };
-        });
-        //FOCUS
-        $('.DateInput').focusin(function () {
-            $(this).css('margin', '0vw 0.5vw');
-            $(this).css('padding', '0vw 0.25vw');
-            $(this).css('borderLeft', '0.25vw solid gray');
-            $(this).css('backgroundPosition', 'left bottom');
-        });
-        $('#dateInputEnd').focusin(function () {
-            $('#dateSelector').css('paddingRight', '0vw');
-            $(this).css('marginRight', '0');
-        });
-        $('.DateInput').focusout(function () {
-            if (!$('#dateSelector').is(":hover")) {
-                $('#dateSelector').css('borderLeft', '0vw solid gray');
-                $('#dateSelector').css('backgroundPosition', 'right bottom');
-            };
-            $(this).css('padding', '0vw');
-            $(this).css('backgroundPosition', 'right bottom');
-            $(this).css('borderLeft', '0vw solid gray');
-            $(this).css('margin', '0vw');
-        });
-        $('#dateInputEnd').focusin(function () {
-            $(this).css('marginRight', '0vw');
-        });
-
-        //show/hide types
-        $('#typeSelector').click(function (event) {
-            var trg = $(event.target);
-            var dd = $('#typeSelectorDropdown');
-            if ((!trg.is('#typeSelectorDropdown')) && (!trg.is('.TSDButton'))) {
-
-                if ($(dd).is(":hidden")) {
+            });
+            $('#typeSelector').mouseleave(function () {
+                if ($('#typeSelectorDropdown').is(':hidden')) {
+                    $(this).css('paddingLeft', '0vw');
+                    $(this).css('borderLeft', '0vw solid gray');
+                    $(this).css('backgroundPosition', 'right bottom');
+                    $('#typeSelectorDropdown').css('borderLeft', '0vw solid gray');
+                    $('#typeSelectorDropdown').css('marginLeft', '-0vw');
+                    $('#typeSelectorDropdown').css('width', '8.58916544656vw');
+                } else {
                     $('#typeSelector').css('backgroundPosition', 'left bottom');
-                    $(dd).show();
+                };
+            });
+            //BUTTON
+            //HOVER
+            $('.TSDButton').mouseenter(function () {
+                $(this).css('borderLeft', '0.25vw solid gray');
+                $(this).css('backgroundPosition', 'left bottom');
+            });
+            $('.TSDButton').mouseleave(function () {
+                $(this).css('borderLeft', '0vw solid gray');
+                $(this).css('backgroundPosition', 'right bottom');
+            });
+            //INPUT
+            $('.TSDButton').mousedown(function () {
+                $(this).css('background', '#cccccc');
 
-                    $(dd).animate({ height: '590%' }, 300);
+            });
+            $('.TSDButton').mouseup(function () {
+                $('#typeSelector > p').text($(this).text())
+                $(this).css('background', 'linear-gradient(to right, #f2f2f2 50%, transparent 50%)')
+                $(this).css('backgroundSize', '200% 100%')
+                if (!$(this).is(':hover')) {
+                    $(this).css('backgroundPosition', 'right bottom')
                 } else {
-                    $(dd).animate({ height: '0px' }, 300, function () {
+                    $(this).css('backgroundPosition', 'left bottom')
+                };
+            });
+
+            //DATESELECTOR
+            //HOVER
+            $('#dateSelector').mouseenter(function () {
+                if (!$('.DateInput').is(":focus")) {
+                    $(this).css('padding', '0 0.5vw');
+                    $(this).css('borderLeft', '0.25vw solid gray');
+                    $(this).css('backgroundPosition', 'left bottom');
+                };
+            });
+            $('#dateSelector').mouseleave(function () {
+                if (!$('.DateInput').is(":focus")) {
+                    $(this).css('borderLeft', '0vw solid gray');
+                    $(this).css('backgroundPosition', 'right bottom');
+                    $(this).css('padding', ' 0vw');
+                };
+            });
+            //FOCUS
+            $('.DateInput').focusin(function () {
+                $(this).css('margin', '0vw 0.5vw');
+                $(this).css('padding', '0vw 0.25vw');
+                $(this).css('borderLeft', '0.25vw solid gray');
+                $(this).css('backgroundPosition', 'left bottom');
+            });
+            $('#dateInputEnd').focusin(function () {
+                $('#dateSelector').css('paddingRight', '0vw');
+                $(this).css('marginRight', '0');
+            });
+            $('.DateInput').focusout(function () {
+                if (!$('#dateSelector').is(":hover")) {
+                    $('#dateSelector').css('borderLeft', '0vw solid gray');
+                    $('#dateSelector').css('backgroundPosition', 'right bottom');
+                };
+                $(this).css('padding', '0vw');
+                $(this).css('backgroundPosition', 'right bottom');
+                $(this).css('borderLeft', '0vw solid gray');
+                $(this).css('margin', '0vw');
+            });
+            $('#dateInputEnd').focusin(function () {
+                $(this).css('marginRight', '0vw');
+            });
+
+            //show/hide types
+            $('#typeSelector').click(function (event) {
+                var trg = $(event.target);
+                var dd = $('#typeSelectorDropdown');
+                if ((!trg.is('#typeSelectorDropdown')) && (!trg.is('.TSDButton'))) {
+
+                    if ($(dd).is(":hidden")) {
+                        $('#typeSelector').css('backgroundPosition', 'left bottom');
+                        $(dd).show();
+
+                        $(dd).animate({ height: '590%' }, 300);
+                    } else {
+                        $(dd).animate({ height: '0px' }, 300, function () {
+                            if ($("#typeSelector").is(':hover')) {
+                                $('#typeSelector').css('backgroundPosition', 'center bottom');
+                            } else {
+                                $('#typeSelector').css('backgroundPosition', 'right bottom');
+                                $('#typeSelector').css('borderLeft', '0vw solid gray');
+                                $('#typeSelector').css('paddingLeft', '0vw');
+                            };
+                            $(dd).hide();
+                        });
+                    };
+                };
+            });
+            $(document).click(function (e) {
+                var prid = e.target.parentNode.id;
+                if ((!(prid == 'typeSelectorDropdown')) && (!$('#typeSelectorDropdown').is(':animated'))) {
+                    $('#typeSelectorDropdown').animate({ height: '0px' }, 500, function () {
                         if ($("#typeSelector").is(':hover')) {
                             $('#typeSelector').css('backgroundPosition', 'center bottom');
                         } else {
@@ -1034,95 +1050,79 @@
                             $('#typeSelector').css('borderLeft', '0vw solid gray');
                             $('#typeSelector').css('paddingLeft', '0vw');
                         };
-                        $(dd).hide();
+                        $('#typeSelectorDropdown').hide();
                     });
                 };
-            };
-        });
-        $(document).click(function (e) {
-            var prid = e.target.parentNode.id;
-            if ((!(prid == 'typeSelectorDropdown')) && (!$('#typeSelectorDropdown').is(':animated'))) {
-                $('#typeSelectorDropdown').animate({ height: '0px' }, 500, function () {
-                    if ($("#typeSelector").is(':hover')) {
-                        $('#typeSelector').css('backgroundPosition', 'center bottom');
-                    } else {
-                        $('#typeSelector').css('backgroundPosition', 'right bottom');
-                        $('#typeSelector').css('borderLeft', '0vw solid gray');
-                        $('#typeSelector').css('paddingLeft', '0vw');
-                    };
-                    $('#typeSelectorDropdown').hide();
-                });
-            };
 
-            var trg = $(e.target);
-
-            //escape sidebar
-            if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar'))) && (!trg.is('#openNavBox'))) {
-                if ($('#sidebarOVRLay').length) {
-                    $('#mainSidebar').css('width', '0');
-
-                    $('#sidebarOVRLay').fadeTo(200, 0, function () {
-                        $(this).hide();
-                    });
-                };
-            };
-
-
-
-
-
-
-        });
-        //check incomplete end
-        function checkIncomplete() {
-            $('.Filler').detach();
-            var nOTN;
-            nOTN = $('#browserWrapper > .ContentThumbnail').not(':hidden').length;
-            var rNOTN = nOTN % 5;
-            var nFN = (5 - rNOTN);
-            if (rNOTN > 0) {
-                var i;
-                for (i = 0; i < nFN; i++) {
-                    var appendage = document.createElement("div");
-                    $(appendage).addClass("Filler");
-                    $('#browserWrapper').append(appendage);
-                };
-            };
-        };
-        $(document).ready(checkIncomplete());
-
-
-        $(document).keyup(function (event) {
-            if (event.key === "Escape") {
+                var trg = $(e.target);
 
                 //escape sidebar
-                if ($('#sidebarOVRLay').length) {
-                    $('#mainSidebar').css('width', '0');
+                if (!((trg.is('.sidebar')) || (trg.parents().is('.sidebar'))) && (!trg.is('#openNavBox'))) {
+                    if ($('#sidebarOVRLay').length) {
+                        $('#mainSidebar').css('width', '0');
 
-                    $('#sidebarOVRLay').fadeTo(200, 0, function () {
-                        $(this).hide();
-                    });
+                        $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                            $(this).hide();
+                        });
+                    };
+                };
+
+
+
+
+
+
+            });
+            //check incomplete end
+            function checkIncomplete() {
+                $('.Filler').detach();
+                var nOTN;
+                nOTN = $('#browserWrapper > .ContentThumbnail').not(':hidden').length;
+                var rNOTN = nOTN % 5;
+                var nFN = (5 - rNOTN);
+                if (rNOTN > 0) {
+                    var i;
+                    for (i = 0; i < nFN; i++) {
+                        var appendage = document.createElement("div");
+                        $(appendage).addClass("Filler");
+                        $('#browserWrapper').append(appendage);
+                    };
                 };
             };
-        });
+            $(document).ready(checkIncomplete());
 
-        //localStorage
-        $('.FooterDrop').find('a').mousedown(function () {
-            if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
-                console.log($(this).text().trim());
-                var typeInitSetter = $(this).text().trim();
-               
-                if (typeInitSetter == 'Gallery') {
-                    localStorage.setItem("typeInit", "None" );
-                } else {
-                    localStorage.setItem("typeInit", typeInitSetter);
+
+            $(document).keyup(function (event) {
+                if (event.key === "Escape") {
+
+                    //escape sidebar
+                    if ($('#sidebarOVRLay').length) {
+                        $('#mainSidebar').css('width', '0');
+
+                        $('#sidebarOVRLay').fadeTo(200, 0, function () {
+                            $(this).hide();
+                        });
+                    };
                 };
-            };
-        });
+            });
+
+            //localStorage
+            $('.FooterDrop').find('a').mousedown(function () {
+                if ((typeof (Storage) !== "undefined") && ($(this).closest('div').prop("id") == "sSTS")) {
+                    console.log($(this).text().trim());
+                    var typeInitSetter = $(this).text().trim();
+
+                    if (typeInitSetter == 'Gallery') {
+                        localStorage.setItem("typeInit", "None");
+                    } else {
+                        localStorage.setItem("typeInit", typeInitSetter);
+                    };
+                };
+            });
 
 
 
 
-    </script>
+        </script>
 </body>
 </html>
