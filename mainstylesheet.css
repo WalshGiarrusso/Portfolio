@@ -492,11 +492,16 @@ input[type=number] {
     /*VISUAL*/
     border-left: 1px solid white;
 }
+.FooterDrop{
+    /*VISUAL*/
+    text-align:center;
+}
 
 
     .FooterDrop p {
         /*SETUP*/
         margin: 0vw 0vw;
+        text-align:center;
     }
 
     .FooterDrop a {
@@ -513,7 +518,7 @@ input[type=number] {
         padding:0vw;
         display:flex;
         flex-flow:column nowrap;
-        justify-content:cemter;
+        justify-content:center;
         /*VISUAL*/
         list-style-type: none;
         margin: 0;
