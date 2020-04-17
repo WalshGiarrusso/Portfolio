@@ -255,7 +255,7 @@
             var trg = $(event.target);
 
             //escape sidebar
-            if (!((trg.is('.Sidebar')) || (trg.parents().is('.Sidebar'))) && (!trg.is('#openNavBox'))) {
+            if ((!((trg.is('.Sidebar')) || (trg.parents().is('.Sidebar')) ) && (!trg.is('#openNavBox'))) || (trg.is('.Sidebar > a'))) {
                 if (!$('#sidebarOVRLay').is(':hidden')) {
                     $('.Sidebar').css('width', '0');
 
