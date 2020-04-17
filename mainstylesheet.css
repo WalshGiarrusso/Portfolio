@@ -491,6 +491,11 @@ html::-webkit-scrollbar {
   border-left: 1px solid white;
 }
 
+#footerPartitionRight p {
+    /*SETUP*/
+    margin:0;
+}
+
 .FooterDrop{
     /*SETUP*/
     padding:0vw 1vw;
