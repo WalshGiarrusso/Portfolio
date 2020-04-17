@@ -806,12 +806,9 @@ input[type=number] {
    
     /*VISUAL*/
     border-right:1px solid gray;
-}foo
-#showcaseOverview > p{
-    /*VISUAL*/
     font-size:2vw;
-    font-weight:400;
 }
+
 
     /*MODAL*/
 #modal {
