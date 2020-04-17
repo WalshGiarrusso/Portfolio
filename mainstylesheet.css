@@ -3,7 +3,7 @@
 
 /* * { border: 1px solid red; }*/
 /*EXPERIMENTAL*/
-.PageContent>div {
+.PageContent > div {
 	/*SETUP*/
 	margin-left: 0 !important;
 	margin-right: 0 !important;
@@ -125,7 +125,7 @@ html::-webkit-scrollbar {
 	transform-origin: 0% 50%;
 }
 
-.Sidebar a:hover {
+.Sidebar a:hover, .ExitSidebar:hover {
 	/* VISUAL */
 	color: #f1f1f1;
 }
@@ -138,6 +138,7 @@ html::-webkit-scrollbar {
 	top: 0vw;
 	right: 1.5vw;
 	/* VISUAL */
+    cursor:pointer;
     color: #818181;
 	font-size: 3vw;
     /* ANIMATION */
@@ -953,7 +954,12 @@ html::-webkit-scrollbar {
 /*HIDES*/
 
 @media only screen and (max-width: 2000px) {
-	.ContentThumbnailCaption {
-		font-size: 36px;
-	}
+    .ContentThumbnailCaption {
+        font-size: 36px;
+    }
+}
+@media only screen and (min-width: 700px){
+    .PageContent{
+        margin:0;
+    }
 }
