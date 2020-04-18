@@ -1,0 +1,122 @@
+﻿
+
+body {
+    font-family: century-old-style-std, serif;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar{
+    display:none;
+}
+
+body > *{
+    transition:0.5s ease-in-out;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style-type:none;
+}
+
+p{
+    margin:0;
+}
+
+.SidebarOverlay {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition:0s;
+}
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    overflow: hidden;
+    height: 100%;
+    background-color: #3b2e34;
+    width: 0%;
+    color: white;
+    font-size: 2vw;
+    padding-top: 2%;
+    
+}
+.Sidebar > *{
+    padding-left:10%;
+    transition: 0.3s;
+}
+
+.Icon {
+    cursor:pointer;
+    display:inline-block;
+    font-size:3vw;
+
+}
+
+#closeSidebar {
+    position: relative;
+    padding: 0%;
+    left: 75%;
+    color: #818181;
+    
+    
+}
+#closeSidebar:hover{
+    color:white;
+}
+
+#sidebarHeader{
+    color:white;
+    font-size:2.2vw;
+}
+
+.SidebarLinks{
+    display:flex;
+    flex-flow: column nowrap;
+    padding-top:5%;
+    margin-left:10%;
+}
+
+.SidebarNavLink {
+    margin-top:10%;
+    width: fit-content;
+    width: -moz-fit-content;
+    font-size: 1.8vw;
+    color: #818181;
+    transition: inherit;
+   
+}
+.SidebarNavLink:hover{
+    color:white;
+}
+
+.SidebarNavLink:after {
+    display: block;
+    content: '';
+    padding-top: 2px;
+    border-bottom: solid 2px #818181;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: 0.5s
+}
+.SidebarNavLink:hover:after{
+    transform: scaleX(1.05);
+    border-bottom-color:white;
+}
+
+#openSidebar{
+    position:fixed;
+    left:4vw;
+    top:2vw;   
+}
