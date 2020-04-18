@@ -283,14 +283,18 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         //INIT
+        
         $(window).load(function () {
+            checkMQ();
+            alert("Hey! I'm glad you've taken the time to check out my website! Please keep in mind that it is still very much a work-in-progress.");
             
-           alert("Hey! I'm glad you've taken the time to check out my website! Please keep in mind that it is still very much a work-in-progress.");
         });
+      
+        
 
         /* Sidebar */
          $('#openNavBox').click(function () {
-            $('.Sidebar').css('width', '15%');
+            $('.Sidebar').css('width', sbGrowTo );
             $('#sidebarOVRLay').fadeTo(200, 1);
         });
         $('.ExitSidebar').click(function () {
@@ -353,6 +357,38 @@
         });
 
 
+        //mediaQuery
+        var sbGrowTo;
+        $(document).ready(function () {
+            
+            sbGrowTo = '15%';
+        });
+        $(window).on('resize', function () {
+            checkMQ();
+        });
+        function checkMQ() {
+            if (window.matchMedia('(max-width:700px)').matches) {
+                $('.PageContent').css('margin', '0vw 4vh');
+                $('#openNavBox').css('fontSize', '3.5vh');
+                $('#openNavBox').css('marginLeft', '0');
+                sbGrowTo = '30%';
+                if ($('#sidebarOVRLay').is(':visible')) {
+                    $('.Sidebar').css('width', '30%');
+                };
+                $('.Sidebar > p').css('fontSize', '3vh');
+                $('.Sidebar > a').css('fontSize', '2.6vh');
+            } else {
+                $('.PageContent').css('margin', '0vw 13.85%');
+                $('#openNavBox').css('fontSize', '2.5vw');
+                $('#openNavBox').css('marginLeft', '2.5vw');
+                sbGrowTo = '15%';
+                if ($('#sidebarOVRLay').is(':visible')) {
+                    $('.Sidebar').css('width', '15%');
+                };
+                $('.Sidebar > p').css('fontSize', '2.2vw');
+                $('.Sidebar > a').css('fontSize', '1.8vw');
+            };
+        };
 
 
     </script>

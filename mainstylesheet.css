@@ -67,6 +67,8 @@ html::-webkit-scrollbar {
 .Sidebar {
 	/* SETUP */
 	position: fixed;
+    display:flex;
+    flex-flow:column nowrap;
 	height: 100%;
 	width: 0;
 	top: 0;
@@ -96,6 +98,7 @@ html::-webkit-scrollbar {
 	/* SETUP */
 	display: inline-block;
 	padding: 5% 2.5% 5% 20%;
+    width:fit-content;
 	/* ANIMATION */
 	transition: 0.5s;
 	/* VISUAL */
@@ -956,10 +959,5 @@ html::-webkit-scrollbar {
 @media only screen and (max-width: 2000px) {
     .ContentThumbnailCaption {
         font-size: 36px;
-    }
-}
-@media only screen and (max-width: 700px){
-    .PageContent{
-        margin:0;
     }
 }
