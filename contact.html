@@ -102,7 +102,7 @@
 
 
 
-   
+
 
 
 
@@ -117,20 +117,20 @@
             </div>
             <div id="footerPartitionRight">
                 <div class="FooterDrop">
-                
-                        <a href="https://walshgiarrusso.com/">
-                            Home
-                        </a>
-                    
+
+                    <a href="https://walshgiarrusso.com/">
+                        Home
+                    </a>
+
 
 
                 </div>
                 <div class="FooterDrop" id="sSTS">
-                
-                        <a href="https://walshgiarrusso.com/gallery">
-                            Gallery
-                        </a>
-                
+
+                    <a href="https://walshgiarrusso.com/gallery">
+                        Gallery
+                    </a>
+
                     <ul>
                         <li>
                             <a href="https://walshgiarrusso.com/gallery">
@@ -160,11 +160,11 @@
                     </ul>
                 </div>
                 <div class="FooterDrop">
-                  
-                        <a href="https://walshgiarrusso.com/about">
-                            About
-                        </a>
-                  
+
+                    <a href="https://walshgiarrusso.com/about">
+                        About
+                    </a>
+
                     <ul>
                         <li>
                             <a href="https://walshgiarrusso.com/about#myself">
@@ -184,11 +184,11 @@
                     </ul>
                 </div>
                 <div class="FooterDrop">
-          
-                        <a href="https://walshgiarrusso.com/contact">
-                            Contact
-                        </a>
-            
+
+                    <a href="https://walshgiarrusso.com/contact">
+                        Contact
+                    </a>
+
                     <ul>
                         <li>
                             <a href="https://walshgiarrusso.com/contact#how-to-reach-out">
@@ -208,6 +208,7 @@
         </div>
 
     </div>
+    <script type="text/javascript" src="https://walshgiarrusso.com/scripts/pace.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         /* Sidebar */
@@ -221,8 +222,8 @@
                 $(this).hide();
             });
         });
-        
-       
+
+
 
         //BUTTONS
         $('.ButtonIcon > img').mouseenter(function () {
@@ -236,7 +237,7 @@
         $(document).click(function (event) {
             var trg = $(event.target);
             //escape sidebar
-            if ((!((trg.is('.Sidebar')) || (trg.parents().is('.Sidebar')) ) && (!trg.is('#openNavBox')))) {
+            if ((!((trg.is('.Sidebar')) || (trg.parents().is('.Sidebar'))) && (!trg.is('#openNavBox')))) {
                 if (!$('#sidebarOVRLay').is(':hidden')) {
                     $('.Sidebar').css('width', '0');
 
@@ -275,7 +276,7 @@
         //mediaQuery
         var sbGrowTo;
         $(document).ready(function () {
-            
+
             sbGrowTo = '15%';
         });
         $(window).on('resize', function () {
