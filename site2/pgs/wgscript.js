@@ -15,8 +15,8 @@ lMQ.addListener(function () {
 
 function themeSwitch(theme) {
     if (theme == 'dark') {
-
+        $('body').css('background-color', '#35363A');
     } else {
-
-    }
+        $('body').css('background-color', 'white');
+    };
 };
