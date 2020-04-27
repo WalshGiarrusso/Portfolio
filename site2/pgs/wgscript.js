@@ -91,10 +91,10 @@ function mRC(rEQ) {
         };
         //Adjust sizing
         if (rEQ[3]) {
-            $('#navbar').css('padding', '0 ' + rEQ[4] + 'em');
-            $('#title').css('font-size', rEQ[5] + 'em');
-            $('#logo').css('height', rEQ[5] + 'em');
-            $('#openDrop').css('height', rEQ[5] + 'em');
+            $('#navbar').css('padding', '0 ' + rEQ[4] + 'rem');
+            $('#title').css('font-size', rEQ[5] + 'rem');
+            $('#logo').css('height', rEQ[5] + 'rem');
+            $('#openDrop').css('height', rEQ[5] + 'rem');
         } else {
             $('#navbar').css('padding', '');
             $('#title').css('font-size', '');
