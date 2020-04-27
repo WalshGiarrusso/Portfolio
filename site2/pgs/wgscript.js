@@ -60,7 +60,7 @@ function testQueries() {
         });
     };
     if (testMQ3.matches) {
-        $('#navbar').css('padding', ' 0');
+        $('#navbar').css('padding', '0.4rem 0');
         $('#title').css('font-size', '2.5rem');
         $('#logo').css({
             'height': '2.5rem',
@@ -70,8 +70,9 @@ function testQueries() {
             'padding': '0 2vw',
             'height': '14vw'
         });
-
+        $('.NavItem').css('padding-top:', '0');
     } else {
+        $('.NavItem').css('padding-top:', '0');
         $('#navbar').css('padding', '');
         $('#title').css('font-size', '');
         $('#logo').css({
