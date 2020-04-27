@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     determineTheme();
     cMQ();
-    $('#mobileNavMenu').slideUp(0);
+    $('#mobileNavMenu').css('display', 'none');
 });
 
 var cTheme = 'light';   //current theme
@@ -142,12 +142,12 @@ $(document).click(function (e) {
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
             $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
-            $('#mobileNavMenu').slideDown(400);
+            $('#mobileNavMenu').slideDown();
             break;
         case 1: //trg is closedrop
             $('#closeDrop').css('display', 'none');
             $('#openDrop').css('display', 'inline');
-            $('#mobileNavMenu').slideUp(400);
+            $('#mobileNavMenu').slideUp();
             break;
 
         default:
