@@ -92,12 +92,14 @@ function mRC(rEQ) {
         //Adjust sizing
         if (rEQ[3]) {
             $('#navbar').css('padding', '0 ' + rEQ[4] + 'em');
-            $('#title').children('p').css('font-size', reQ[5] + 'em');
+            $('#title').css('font-size', rEQ[5] + 'em');
             $('#logo').css('height', rEQ[5] + 'em');
+            $('#openDrop').css('height', rEQ[5] + 'em');
         } else {
             $('#navbar').css('padding', '');
-            $('#title').children('p').css('font-size', '');
-            $('#logo').css('height',    '');
+            $('#title').css('font-size', '');
+            $('#logo').css('height', '');
+            $('#openDrop').css('height', '');
         };
     };
     
