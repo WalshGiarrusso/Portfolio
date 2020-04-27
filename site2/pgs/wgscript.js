@@ -7,13 +7,29 @@ var rAL = ['white', 'black', 'gray', 'dark']
 var rAD = ['#35363A', 'white', '#C3C3C3', 'light'];
 if (dMQ.matches) {
     themeSwitch(rAD);
-}
+};
 dMQ.addListener(function () {
     themeSwitch(rAD);
 });
 lMQ.addListener(function () {
     themeSwitch(rAL);
 });
+//detect mobile re-entrance
+$(document).ready(function () {
+    if (dMQ.matches) {
+        themeSwitch(rAD);
+    } else if (lMQ.matches) {
+        themeSwitch(rAL);
+    };
+});
+$(document).on("pageshow", function () {
+    if (dMQ.matches) {
+        themeSwitch(rAD);
+    } else if (lMQ.matches) {
+        themeSwitch(rAL);
+    };
+});
+//swap
 function themeSwitch(pRA) {
     
     $('body').css({
