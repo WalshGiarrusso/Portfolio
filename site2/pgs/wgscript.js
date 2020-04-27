@@ -1,73 +1,77 @@
-// JavaScript source code
 //init
 $(document).ready(function () {
-    $('#dropDownMenu').slideUp(0);
+
+    determineTheme();
+    cMQ();
+    $('#mobileNavMenu').slideUp(0);
 });
 
-//Darkmode
-var dMQ = window.matchMedia("(prefers-color-scheme: dark)"); 
+var cTheme = 'light';   //current theme
+var dMQ = window.matchMedia("(prefers-color-scheme: dark)");
 var lMQ = window.matchMedia("(prefers-color-scheme: light)");
-var rAL = ['white', 'black', 'gray', 'dark']
-var rAD = ['#35363A', 'white', '#C3C3C3', 'light'];
-var cTheme;
-if (dMQ.matches) {
-    themeSwitch(rAD);
-};
+
+
+//Arrays
+//dark/light
+//makes browser light
+//        theme     bg        border    txt         img extension
+var rAL = ['light', 'white', 'gray', 'black',       'dark'];
+//makes browser dark
+var rAD = ['dark', '#35363A', '#C3C3C3', 'white',   'light'];
+//Dark Switching
+//Determine
+
+function determineTheme() {
+
+    if ((lMQ.matches) && (cTheme !== 'light')) {
+        themeSwitch(rAL);
+    } else if ((dMQ.matches) && (cTheme !== 'dark')) {
+        themeSwitch(rAD);
+    }
+}
+//det
 dMQ.addListener(function () {
-    themeSwitch(rAD);
+    if (cTheme !== 'dark') {
+        determineTheme();
+    }
 });
 lMQ.addListener(function () {
-    themeSwitch(rAL);
-});
-//detect mobile re-entrance
-$(document).ready(function () {
-    if (dMQ.matches) {
-        themeSwitch(rAD);
-    } else if (lMQ.matches) {
-        themeSwitch(rAL);
-    };
-});
-$(document).on("pageshow", function () {
-    if (dMQ.matches) {
-        themeSwitch(rAD);
-    } else if (lMQ.matches) {
-        themeSwitch(rAL);
-    };
-});
-//swap
-function themeSwitch(pRA) {
-    
-    $('body').css({
-        'backgroundColor': pRA[0],
-        'color': pRA[1]
-    });
-    $('#navbar').css({
-        'border-bottom-color': pRA[2],
-        'backgroundColor': pRA[0]
-    });
-    $('.CSwap').each(function() {
-        var link = $(this).attr('src').split('-');
-        $(this).attr('src', link[0] + '-' + pRA[3] + '.svg');
-    });
-    cTheme = pRA[3];
-};
-//Breakpoints
-//Vars in EM
+    if (cTheme !== 'light') {
+        determineTheme();
+    }
 
-var sHR0 = ['sHR0',     'none', true,   true, 0.25, 2.3];
-var sHR1 = ['sHR1',     'none', true,   true, 0.25, 2];
-var sHR2 = ['sHR2',     'none', true,   true, 0.25, 2.3];
-var sHR3 = ['sHR3',     'none', true,   false, NaN, NaN];
-var sHR4 = ['sHR4',     'none', false,  false, NaN, NaN];
-var sHR99 = ['sHR99',   'block',false,  false, NaN, NaN];
-var cSHR = [15, 20.63, 27.750, 49.875, 72];
-                
-var cDSP;
-//init
-$(document).ready(function () {
+});
+
+//execute
+function themeSwitch(pRA) {
+    cTheme = pRA[0];
+    console.log(cTheme);
+    $('body, #navbar').css('background-color', pRA[1]);
+    $('.BRDR').css('border-bottom-color', pRA[2]);
+    $('.F1, .F2').css('color', pRA[3]);
+    $('.SWP').each(function () {
+        var link = $(this).attr('src').split('-');
+    
+        $(this).attr('src', link[0] + '-' + pRA[4] + '.svg');
+    });
+}
+
+//media queries for breakpoints
+$(window).on('resize', function () {
     cMQ();
 });
-
+//vars
+var cDSP;
+            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fnt          hgt
+var sHR0 = ['sHR0',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];
+var sHR1 = ['sHR1',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];
+var sHR2 = ['sHR2',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];
+var sHR3 = ['sHR3',    'none',      'none',     'block',    'inline', false,    '',          ''];
+var sHR4 = ['sHR4',    'none',      'flex',     'none',      'none',  true,     '',          ''];
+var sHR99 = ['sHR99',  'block',     'flex',     'none',      'none',  true,     '',          ''];
+//cuts
+            //sHR0  SHR1    SHR2    SHR3    SHR4 
+var cSHR = [5,      20,     31.313,     48.375,     74.063]
 //Check media queries
 function cMQ() {
     switch (tMQ()) {
@@ -99,71 +103,61 @@ function tMQ() {
         };
     };
 };
-//make requested changes
+//execute
 function mRC(rEQ) {
-    console.log(rEQ[0]);
     if (cDSP !== rEQ[0]) {
-        cDSP = rEQ[0]
-        //hide icon labels
-        $('.NavItem > p').css('display', rEQ[1])
-        //collapse to dropdown
-        if (rEQ[2]) {
-            $('#navigation').css('display', 'none');
-            $('#dropDown').css('display', 'block');
-            if (!$('#closeDrop').is(':visible')) {
-                $('#openDrop').css('display', 'block');
-                $('#closeDrop').css('display', 'none');
-            };
-            
-        } else {
-            $('#navigation').css('display', 'flex');
-            $('#dropDown').css('display', 'none');
-            $('#openDrop').css('display', 'none');
+        cDSP = rEQ[0];
+        console.log(cDSP);
+        //tooltip display
+        $('.NavItem > p').css('display', rEQ[1]);
+        //nav display
+        $('#navigation').css('display', rEQ[2]);
+        //dropdown display
+        $('#dropDown').css('display', rEQ[3]);
+        //open button display
+        $('#openDrop').css('display', rEQ[4]);
+        //hide mobile
+        if (rEQ[5]) {
             $('#closeDrop').css('display', 'none');
-            $('#dropDownMenu').slideUp();
+            $('#mobileNavMenu').slideUp();
         };
-        //Adjust sizing
-        if (rEQ[3]) {
-            $('#navbarName').css('padding-left', rEQ[4] + 'rem');
-            $('#title').css('font-size', rEQ[5] + 'rem');
-            $('#logo').css('height', rEQ[5] + 'rem');
-            $('#dropDown > img').css('height', rEQ[5]+'rem');
-            $('#dropDown').css('padding-right', rEQ[4]+'rem');
-            
-        } else {
-            $('#navbarName').css('padding-left', '');
-            $('#title').css('font-size', '');
-            $('#logo').css('height', '');
-            $('#dropDown > img').css('height', '');
-            $('#dropDown').css('padding-right', '');
-        };
-        
+        //navbar font and image sizes
+        $('.RDUS').not('p').css('height', rEQ[7]);
+        $('.RDUS').not('img').css('font-size', rEQ[6]);
+
 
         
     };
-    
 };
 
-//input handler
-//resize
-$(window).on('resize', function () {
-    //Check mq
-    cMQ();
-});
+//input handling
 //click
+//target array
+var tRGRA = ['#openDrop', '#closeDrop'];
 $(document).click(function (e) {
-    trg = $(e.target);
-    //openDrop
-    if (trg.is('#openDrop')) {
-        $('#openDrop').css('display', 'none');
-        $('#closeDrop').css('display', 'block');
-        $('#dropDownMenu').css('margin-top', $('#navbar').height());
-        $('#dropDownMenu').slideDown();
-  
-    };
-    if (trg.is('#closeDrop')) {
-        $('#closeDrop').css('display', 'none');
-        $('#openDrop').css('display', 'block');
-        $('#dropDownMenu').slideUp();
+    var tar = $(e.target);
+    //hits
+    switch (clickReg(tar)) {
+        case 0: //trg is opendrop
+            $('#openDrop').css('display', 'none');
+            $('#closeDrop').css('display', 'inline');
+            $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
+            $('#mobileNavMenu').slideDown();
+            break;
+        case 1: //trg is closedrop
+            $('#closeDrop').css('display', 'none');
+            $('#openDrop').css('display', 'inline');
+            $('#mobileNavMenu').slideUp();
+            break;
+
+        default:
+            //do nothing
     };
 });
+function clickReg(tRG) {
+    for (i = 0; i < tRGRA.length; i++) {
+        if (tRG.is(tRGRA[i])) {
+            return i;
+        };
+    };
+};
