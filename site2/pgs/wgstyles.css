@@ -12,7 +12,7 @@ a, a > p{
    color:inherit;
 }
 #navbar {
-    border-bottom: .01rem solid gray;
+    border-bottom: 1px solid gray;
     padding: 0 2rem;
     
     display: flex;
@@ -65,5 +65,11 @@ a, a > p{
     justify-content:space-between;
 
     
+}
+#dropDown{
+    display:none;
+}
+#openDrop{
+    cursor:pointer;
 }
 

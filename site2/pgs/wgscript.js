@@ -21,67 +21,88 @@ function themeSwitch(pRA) {
         'color': pRA[1]
     });
     $('#navbar').css('border-bottom-color', pRA[2]);
-    $('#logo').attr('src', 'https://walshgiarrusso.com/site2/ic/logo-'+pRA[3]+'.svg')
-    $('.NavItem').children('img').each(function () {
+    $('.CSwap').each(function() {
         var link = $(this).attr('src').split('-');
-        $(this).attr('src', link[0]+'-'+pRA[3]+'.svg');
-        
+        $(this).attr('src', link[0] + '-' + pRA[3] + '.svg');
     });
 };
-//Navbar
-
 //Breakpoints
-var testMQ = window.matchMedia("(max-width:72em)");
-var testMQ2 = window.matchMedia("(max-width:47.125em)");
-var testMQ3 = window.matchMedia("(max-width:31.25em)");
-$(window).on('resize', function () {
-    testQueries();
-    
+//Vars in EM
+var sHR99 = ['sHR99', 'block',  false];
+var sHR0 = ['sHR0',     'none', true];
+var sHR1 = ['sHR1',     'none', true];
+var sHR2 = ['sHR2',     'none', true];
+var sHR3 = ['sHR3',     'none', true];
+var sHR4 = ['sHR4',     'none', false];
+var cSHR = [15, 20, 25, 49.875, 72];
+                
+var cDSP;
+//init
+$(document).ready(function () {
+    cMQ();
 });
-$(document).ready(function() {
-    testQueries();
-});
-function testQueries() {
-    if (testMQ.matches) {
-        $('.NavItem').children('p').css('display', 'none');
-    } else {
-        $('.NavItem').children('p').css('display', 'block');
-    };
-    if (testMQ2.matches) {
-        $('#navbar').css({
-            'justify-content': 'center',
-            'paddingBottom': '0.4rem',
-        });
 
-    } else {
-        $('#navbar').css({
-            'justify-content': '',
-            'paddingBottom': '',
-        });
-    };
-    if (testMQ3.matches) {
-        $('#navbar').css('padding', '0.4rem 0');
-        $('#title').css('font-size', '2.5rem');
-        $('#logo').css({
-            'height': '2.5rem',
-            'marginRight': '-0.5rem'
-        });
-        $('.NavItem > img').css({
-            'padding': '0.25rem 0.5rem',
-            'height': '3rem'
-        });
-        $('.NavItem').css('padding-top:', '0');
-    } else {
-        $('.NavItem').css('padding-top:', '');
-        $('#navbar').css('padding', '');
-        $('#title').css('font-size', '');
-        $('#logo').css({
-            'height': '',
-            'marginRight': ''
-        });
-        $('.NavItem > img').css({
-            'padding': '',
-            'height': ''
-        });
+//Check media queries
+function cMQ() {
+    switch (tMQ()) {
+        case 0:
+            mRC(sHR0);
+            break;
+        case 1:
+            mRC(sHR1);
+            break;
+        case 2:
+            mRC(sHR2);
+            break;
+        case 3:
+            mRC(sHR3);
+            break;
+        case 4:
+            mRC(sHR4);
+            break;
+        default:
+            mRC(sHR99)
     };
 };
+//test queries
+function tMQ() {
+    for (i = 0; i < cSHR.length; i++) {
+        if (window.matchMedia("(max-width:" + cSHR[i] + "em)").matches) {
+            var ret = i;
+            return ret;
+        };
+    };
+};
+//make requested changes
+function mRC(rEQ) {
+    console.log(rEQ[0]);
+    if (cDSP !== rEQ[0]) {
+        cDSP = rEQ[0]
+        //hide icon labels
+        $('.NavItem > p').css('display', rEQ[1])
+        //collapse to dropdown
+        if (rEQ[2]) {
+            $('#navigation').css('display', 'none');
+            $('#dropDown').css('display', 'block');
+        } else {
+            $('#navigation').css('display', '');
+            $('#dropDown').css('display', '');
+        };
+    };
+    
+};
+
+//input handler
+//resize
+$(window).on('resize', function () {
+    //Check mq
+    cMQ();
+});
+//click
+$(document).click(function (e) {
+    trg = $(e.target);
+    //openDrop
+    if (trg.is('#openDrop')) {
+        //do the drop
+    };
+});
