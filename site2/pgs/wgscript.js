@@ -31,8 +31,8 @@ function themeSwitch(pRA) {
 //Navbar
 
 //Breakpoints
-var testMQ = window.matchMedia("(max-width:78.250em)");
-var testMQ2 = window.matchMedia("(max-width:56.25em)");
+var testMQ = window.matchMedia("(max-width:72em)");
+var testMQ2 = window.matchMedia("(max-width:47.125em)");
 var testMQ3 = window.matchMedia("(max-width:31.25em)");
 $(window).on('resize', function () {
     testQueries();
@@ -67,12 +67,12 @@ function testQueries() {
             'marginRight': '-0.5rem'
         });
         $('.NavItem > img').css({
-            'padding': '0 2vw',
-            'height': '14vw'
+            'padding': '0.25rem 0.5rem',
+            'height': '3rem'
         });
         $('.NavItem').css('padding-top:', '0');
     } else {
-        $('.NavItem').css('padding-top:', '0');
+        $('.NavItem').css('padding-top:', '');
         $('#navbar').css('padding', '');
         $('#title').css('font-size', '');
         $('#logo').css({
