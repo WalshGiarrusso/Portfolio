@@ -60,7 +60,7 @@ function testQueries() {
         });
     };
     if (testMQ3.matches) {
-        
+        $('#navbar').css('padding', ' 0 1rem');
         $('#title').css('font-size', '3rem');
         $('#logo').css({
             'height': '3rem',
@@ -72,7 +72,7 @@ function testQueries() {
         });
 
     } else {
-        
+        $('#navbar').css('padding', '');
         $('#title').css('font-size', '');
         $('#logo').css({
             'height': '',
