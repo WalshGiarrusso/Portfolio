@@ -85,8 +85,8 @@ function mRC(rEQ) {
             $('#navigation').css('display', 'none');
             $('#dropDown').css('display', 'block');
         } else {
-            $('#navigation').css('display', '');
-            $('#dropDown').css('display', '');
+            $('#navigation').css('display', 'flex');
+            $('#dropDown').css('display', 'none');
         };
     };
     

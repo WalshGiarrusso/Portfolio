@@ -69,7 +69,9 @@ a, a > p{
 #dropDown{
     display:none;
 }
-#openDrop{
-    cursor:pointer;
+#openDrop {
+    padding-top:1rem;
+    cursor: pointer;
+    height: 2.75rem;
 }
 
