@@ -28,13 +28,14 @@ function themeSwitch(pRA) {
 };
 //Breakpoints
 //Vars in EM
-var sHR99 = ['sHR99', 'block',  false];
-var sHR0 = ['sHR0',     'none', true];
-var sHR1 = ['sHR1',     'none', true];
-var sHR2 = ['sHR2',     'none', true];
-var sHR3 = ['sHR3',     'none', true];
-var sHR4 = ['sHR4',     'none', false];
-var cSHR = [15, 20, 25, 49.875, 72];
+
+var sHR0 = ['sHR0',     'none', true,   true, 0.25, 2.3];
+var sHR1 = ['sHR1',     'none', true,   true, 0.25, 2.3];
+var sHR2 = ['sHR2',     'none', true,   true, 0.25, 2.3];
+var sHR3 = ['sHR3',     'none', true,   false, NaN, NaN];
+var sHR4 = ['sHR4',     'none', false,  false, NaN, NaN];
+var sHR99 = ['sHR99',   'block',false,  false, NaN, NaN];
+var cSHR = [15, 20, 26.125, 49.875, 72];
                 
 var cDSP;
 //init
@@ -87,6 +88,16 @@ function mRC(rEQ) {
         } else {
             $('#navigation').css('display', 'flex');
             $('#dropDown').css('display', 'none');
+        };
+        //Adjust sizing
+        if (rEQ[3]) {
+            $('#navbar').css('padding', '0 ' + rEQ[4] + 'em');
+            $('#title').children('p').css('font-size', reQ[5] + 'em');
+            $('#logo').css('height', rEQ[5] + 'em');
+        } else {
+            $('#navbar').css('padding', '');
+            $('#title').children('p').css('font-size', '');
+            $('#logo').css('height',    '');
         };
     };
     
