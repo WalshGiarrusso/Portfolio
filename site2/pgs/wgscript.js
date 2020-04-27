@@ -142,12 +142,12 @@ $(document).click(function (e) {
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
             $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
-            $('#mobileNavMenu').slideDown();
+            $('#mobileNavMenu').slideDown(400);
             break;
         case 1: //trg is closedrop
             $('#closeDrop').css('display', 'none');
             $('#openDrop').css('display', 'inline');
-            $('#mobileNavMenu').slideUp();
+            $('#mobileNavMenu').slideUp(400);
             break;
 
         default:
