@@ -60,10 +60,10 @@ function testQueries() {
         });
     };
     if (testMQ3.matches) {
-        $('#title > br').css('display', 'block');
-        $('#title').css('font-size', '20vw');
+        
+        $('#title').css('font-size', '3rem');
         $('#logo').css({
-            'height': '20vw',
+            'height': '3rem',
             'marginRight': '-.5vw'
         });
         $('.NavItem > img').css({
@@ -72,7 +72,7 @@ function testQueries() {
         });
 
     } else {
-        $('#title > br').css('display', 'none');
+        
         $('#title').css('font-size', '');
         $('#logo').css({
             'height': '',
