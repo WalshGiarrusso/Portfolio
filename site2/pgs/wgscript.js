@@ -60,11 +60,11 @@ function testQueries() {
         });
     };
     if (testMQ3.matches) {
-        $('#navbar').css('padding', ' 0 1rem');
-        $('#title').css('font-size', '3rem');
+        $('#navbar').css('padding', ' 0');
+        $('#title').css('font-size', '2.5rem');
         $('#logo').css({
-            'height': '3rem',
-            'marginRight': '-.5vw'
+            'height': '2.5rem',
+            'marginRight': '-0.5rem'
         });
         $('.NavItem > img').css({
             'padding': '0 2vw',
