@@ -4,6 +4,9 @@ $(document).ready(function () {
     determineTheme();
     cMQ();
     $('#mobileNavMenu').css('display', 'none');
+
+    $('#pageContent').css('padding-top', $('#navbar').outerHeight());
+    
 });
 
 var cTheme = 'light';   //current theme
@@ -91,7 +94,7 @@ function cMQ() {
             mRC(sHR4);
             break;
         default:
-            mRC(sHR99)
+            mRC(sHR99);
     };
 };
 //test queries
@@ -135,6 +138,7 @@ function mRC(rEQ) {
 //target array
 var tRGRA = ['#openDrop', '#closeDrop'];
 $(document).click(function (e) {
+    console.log($('#mobileNavMenu').queue().length);
     var tar = $(e.target);
     //hits
     switch (clickReg(tar)) {
@@ -142,12 +146,15 @@ $(document).click(function (e) {
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
             $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
-            $('#mobileNavMenu').slideDown();
+            $('#mobileNavMenu').slideDown(175);
+            if ($('#mobileNavMenu').queue().length > 2) {
+                $('#mobileNavMenu').clearQueue();
+            };
             break;
         case 1: //trg is closedrop
             $('#closeDrop').css('display', 'none');
             $('#openDrop').css('display', 'inline');
-            $('#mobileNavMenu').slideUp();
+            $('#mobileNavMenu').slideUp(175);
             break;
 
         default:
@@ -160,4 +167,40 @@ function clickReg(tRG) {
             return i;
         };
     };
+};
+//scroll
+var dSCRL;
+var oldTop = 0;
+var minSCRL = 5;
+var navbarHeight = $('#navbar').outerHeight();
+$(window).scroll(function(event) {
+    dSCRL = true;
+});
+setInterval(function () {
+    
+    if (dSCRL) {
+        console.log($('#navbar').queue().length);    
+        if ($('#navbar').queue().length > 2) {
+            $('#navbar').clearQueue();
+        };
+        handleSCRL();
+        dSCRL = false;
+    }
+}, 250);
+function handleSCRL() {
+    var pos = $(this).scrollTop();
+    if (Math.abs(oldTop - pos) <= minSCRL) {
+        return;
+    }
+    if ((pos > oldTop) && (pos > navbarHeight)) {
+        var shift = ((navbarHeight * -1) -1);
+        $('#navbar').animate({ 'top': shift }, 175);
+        
+    } else if (pos + $(window).height() < $(document).height()){
+        $('#navbar').animate({ 'top': 0 }, 175);
+        
+    };
+
+
+    oldTop = pos;
 };
