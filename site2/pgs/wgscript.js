@@ -108,9 +108,11 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
+    
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
+        
         //tooltip display
         $('.NavItem > p').css('display', rEQ[1]);
         //nav display
@@ -118,18 +120,19 @@ function mRC(rEQ) {
         //dropdown display
         $('#dropDown').css('display', rEQ[3]);
         //open button display
+        if(!$('#closeDrop').is(':visible'))
         $('#openDrop').css('display', rEQ[4]);
         //hide mobile
         if (rEQ[5]) {
-            $('#closeDrop').css('display', 'none');
-            $('#mobileNavMenu').slideUp();
+            collapseMobileDrop('none');
         };
         //navbar font and image sizes
         $('.RDUS').not('p').css('height', rEQ[7]);
         $('.RDUS').not('img').css('font-size', rEQ[6]);
 
 
-        
+        //check for expanded menu
+        $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
     };
 };
 
@@ -152,15 +155,19 @@ $(document).click(function (e) {
             };
             break;
         case 1: //trg is closedrop
-            $('#closeDrop').css('display', 'none');
-            $('#openDrop').css('display', 'inline');
-            $('#mobileNavMenu').slideUp(175);
+            collapseMobileDrop('inline');
             break;
 
         default:
             //do nothing
     };
 });
+function collapseMobileDrop(opDsp) {
+    $('#mobileNavMenu').slideUp(175);
+    $('#closeDrop').css('display', 'none');
+    $('#openDrop').css('display', opDsp);
+    
+};
 function clickReg(tRG) {
     for (i = 0; i < tRGRA.length; i++) {
         if (tRG.is(tRGRA[i])) {
@@ -177,14 +184,17 @@ $(window).scroll(function(event) {
     dSCRL = true;
 });
 setInterval(function () {
-    
     if (dSCRL) {
         console.log($('#navbar').queue().length);    
         if ($('#navbar').queue().length > 2) {
             $('#navbar').clearQueue();
         };
-        handleSCRL();
-        dSCRL = false;
+        if (!$('#closeDrop').is(':visible')) {
+            handleSCRL();
+            dSCRL = false;
+        }
+       
+       
     }
 }, 250);
 function handleSCRL() {
@@ -195,12 +205,8 @@ function handleSCRL() {
     if ((pos > oldTop) && (pos > navbarHeight)) {
         var shift = ((navbarHeight * -1) -1);
         $('#navbar').animate({ 'top': shift }, 175);
-        
     } else if (pos + $(window).height() < $(document).height()){
-        $('#navbar').animate({ 'top': 0 }, 175);
-        
+        $('#navbar').animate({ 'top': 0 }, 175);  
     };
-
-
     oldTop = pos;
 };

@@ -1,17 +1,20 @@
 ﻿/**{border: 1px solid red;}*/
 body {
     margin: 0;
-    font-family: century-old-style-std, serif;
+    font-family: kepler-std-display, serif;
+    font-weight: 500;
+    font-style: normal;
     min-height: 400vh;
 }
-
 p {
     margin: 0;
 }
-
 a, a > p {
     text-decoration: none;
     color: inherit;
+}
+ul{
+    margin:0;
 }
 
 .F1 {
@@ -20,6 +23,7 @@ a, a > p {
 .F2 {
     font-size: 1.5rem;
 }
+
 
 .I1 {
     height: 8rem;
@@ -34,6 +38,13 @@ a, a > p {
 .BTN{
     cursor:pointer;
 }
+.CNTR{
+    text-align:center;
+}
+
+
+
+
 
 
 
@@ -108,4 +119,14 @@ padding-left: 1rem;
     padding: 0.25rem 0;
 }
 
+#pageContent{
+    padding: 0 2rem;
+}
+#pageContent > p{
+    padding: 1rem 0;
+}
+#pageTitle{
+   
+
+}
 
