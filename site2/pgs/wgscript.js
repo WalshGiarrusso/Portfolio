@@ -210,21 +210,4 @@ function handleSCRL() {
     };
     oldTop = pos;
 };
-//rotation
-//rotation
-window.addEventListener("orientationchange", function () {
 
-    if (window.matchMedia("(orientation: portrait)").matches) {
-
-        if ($('#mobileNavMenu').hasClass("ROT")) {
-
-            $('#mobileNavMenu').removeClass("ROT");
-        };
-    } else if (window.matchMedia("(orientation: landscape)").matches) {
-
-        if (!$('#mobileNavMenu').hasClass("ROT")) {
-
-            $('#mobileNavMenu').addClass("ROT");
-        };
-    };
-});

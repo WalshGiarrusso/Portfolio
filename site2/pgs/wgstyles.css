@@ -109,9 +109,10 @@ padding-left: 1rem;
     box-sizing:border-box;
   
 }
-.ROT {
-    flex-flow: row nowrap !important;
-    
+@media only screen and (orientation: landscape) {
+    #mobileNavMenu{
+        flex-flow:row nowrap;
+    }
 }
 .MobileNavItem {
     display: flex;
