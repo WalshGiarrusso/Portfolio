@@ -107,9 +107,9 @@ padding-left: 1rem;
     background-color:inherit;
   
 }
-.ROT{
-    flex-flow: row nowrap;
-    justify-content:space-around;
+.ROT {
+    flex-flow: row nowrap !important;
+    justify-content: space-around   !important;
 }
 .MobileNavItem {
     display: flex;
