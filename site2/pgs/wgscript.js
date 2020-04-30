@@ -3,8 +3,8 @@ $(document).ready(function () {
 
     determineTheme();
     cMQ();
-    $('#mobileNavMenu').css('display', 'none');
-
+    $('#mobileNavMenu, #closeDrop').css('display', 'none');
+    
 
     navPaddingTop($('#pageContent'));
     
@@ -114,7 +114,7 @@ function tMQ() {
 //execute
 function mRC(rEQ) {
     //check for expanded menu
-    $('#mobileNavMenu').css('padding-top', parseInt($('#pageContent').css('padding-top')))
+    $('#mobileNavMenu').css('padding-top', parseInt($('#pageContent').css('padding-top')));
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
@@ -126,16 +126,16 @@ function mRC(rEQ) {
         //dropdown display
         $('#dropDown').css('display', rEQ[3]);
         //open button display
-        if(!$('#closeDrop').is(':visible'))
-        $('#openDrop').css('display', rEQ[4]);
+        if (!$('#closeDrop').is(':visible')) {
+            $('#openDrop').css('display', rEQ[4]);
+        };
         //hide mobile
         if (rEQ[5]) {
             collapseMobileDrop('none');
         };
         //navbar font and image sizes
-        $('.RDUS').not('p').css('height', rEQ[7]);
         $('.RDUS').not('img').css('font-size', rEQ[6]);
-
+        $('.RDUS').not('p, :header').css('height', rEQ[7]);
 
         
     };
