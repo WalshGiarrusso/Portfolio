@@ -5,7 +5,8 @@ $(document).ready(function () {
     cMQ();
     $('#mobileNavMenu').css('display', 'none');
 
-    $('#pageContent').css('padding-top', $('#navbar').outerHeight());
+
+    navPaddingTop($('#pageContent'));
     
 });
 
@@ -13,6 +14,10 @@ var cTheme = 'light';   //current theme
 var dMQ = window.matchMedia("(prefers-color-scheme: dark)");
 var lMQ = window.matchMedia("(prefers-color-scheme: light)");
 
+//FUNCTIONS COMMON REF
+function navPaddingTop(elem){
+    elem.css('padding-top', $('#navbar').outerHeight());
+};
 
 //Arrays
 //dark/light
@@ -109,7 +114,7 @@ function tMQ() {
 //execute
 function mRC(rEQ) {
     //check for expanded menu
-    $('#mobileNavMenu').css('padding-top', $('#navbar').outerHeight());
+    navPaddingTop($('#mobileNavMenu'));
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
@@ -148,7 +153,7 @@ $(document).click(function (e) {
         case 0: //trg is opendrop
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
-            $('#mobileNavMenu').css('padding-top', $('#navbar').outerHeight());
+            navPaddingTop($('#mobileNavMenu'));
             $('#mobileNavMenu').slideDown(175);
             if ($('#mobileNavMenu').queue().length > 2) {
                 $('#mobileNavMenu').clearQueue();
@@ -211,3 +216,6 @@ function handleSCRL() {
     oldTop = pos;
 };
 
+window.matchMedia('(orientation: landscape)').addListener{
+    navPaddingTop($('#mobileNavMenu'));
+};
