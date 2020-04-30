@@ -211,7 +211,7 @@ function handleSCRL() {
     oldTop = pos;
 };
 //rotation
-$(window).addEventListener("orientationchange", function () {
+window.addEventListener("orientationchange", function () {
     if (window.matchMedia("(orientation: portrait)").matches) {
         if ($('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible'))
             $('#mobileNavMenu').removeClass("ROT");
