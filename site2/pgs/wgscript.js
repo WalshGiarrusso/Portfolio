@@ -217,4 +217,7 @@ function handleSCRL() {
 };
 //fix padding issue
 
-window.matchMedia('(orientation: portrait)').addListener(navPaddingTop($('#mobileNavMenu')));
+window.matchMedia('(orientation: portrait)').addListener(function () {
+    $('#mobileNavMenu').css('padding-top', parseInt($('#pageContent').css('padding-top')))
+
+});
