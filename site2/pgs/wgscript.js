@@ -108,7 +108,8 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
-    
+    //check for expanded menu
+    $('#mobileNavMenu').css('padding-top', $('#navbar').outerHeight());
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
@@ -131,8 +132,7 @@ function mRC(rEQ) {
         $('.RDUS').not('img').css('font-size', rEQ[6]);
 
 
-        //check for expanded menu
-        $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
+        
     };
 };
 
@@ -148,7 +148,7 @@ $(document).click(function (e) {
         case 0: //trg is opendrop
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
-            $('#mobileNavMenu').css('top', $('#navbar').outerHeight());
+            $('#mobileNavMenu').css('padding-top', $('#navbar').outerHeight());
             $('#mobileNavMenu').slideDown(175);
             if ($('#mobileNavMenu').queue().length > 2) {
                 $('#mobileNavMenu').clearQueue();
@@ -210,3 +210,13 @@ function handleSCRL() {
     };
     oldTop = pos;
 };
+//rotation
+$(window).addEventListener("orientationchange", function () {
+    if (window.matchMedia("(orientation: portrait)").matches) {
+        if ($('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible'))
+            $('#mobileNavMenu').removeClass("ROT");
+    }else if (window.matchMedia("(orientation: landscape)").matches) {
+        if (!$('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible'))
+            $('#mobileNavMenu').addClass("ROT");
+    };
+});
