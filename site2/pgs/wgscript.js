@@ -114,7 +114,7 @@ function tMQ() {
 //execute
 function mRC(rEQ) {
     //check for expanded menu
-    navPaddingTop($('#mobileNavMenu'));
+    $('#mobileNavMenu').css('padding-top', parseInt($('#pageContent').css('padding-top')))
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
