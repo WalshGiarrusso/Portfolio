@@ -213,10 +213,12 @@ function handleSCRL() {
 //rotation
 window.addEventListener("orientationchange", function () {
     if (window.matchMedia("(orientation: portrait)").matches) {
-        if ($('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible'))
+        if ($('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible')) {
             $('#mobileNavMenu').removeClass("ROT");
+        };      
     }else if (window.matchMedia("(orientation: landscape)").matches) {
-        if (!$('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible'))
+        if (!$('#mobileNavMenu').hasClass("ROT") && $('#mobileNavMenu').is(':visible')) {
             $('#mobileNavMenu').addClass("ROT");
+        };
     };
 });
