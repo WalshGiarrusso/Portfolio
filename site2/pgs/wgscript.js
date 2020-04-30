@@ -215,6 +215,7 @@ function handleSCRL() {
     };
     oldTop = pos;
 };
-//fix padding issue
-window.matchMedia('(orientation: landscape)').addEventListener("change", navPaddingTop($('#mobileNavMenu')));
-window.matchMedia('(orientation: landscape)').addListener("change", navPaddingTop($('#mobileNavMenu'))  );
+
+window.matchMedia('(orientation: landscape)').addListener{
+    navPaddingTop($('#mobileNavMenu'));
+};
