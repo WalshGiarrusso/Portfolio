@@ -56,7 +56,8 @@ function themeSwitch(pRA) {
     console.log(cTheme);
     $('body, #navbar').css('background-color', pRA[1]);
     $('.BRDR').css('border-bottom-color', pRA[2]);
-    $('.F1, .F2').css('color', pRA[3]);
+    $('.BRDRT').css('border-top-color', pRA[2]);
+    $('.F0, .F1, .F1-1, .F2').css('color', pRA[3]);
     $('.SWP').each(function () {
         var link = $(this).attr('src').split('-');
     
@@ -70,7 +71,7 @@ $(window).on('resize', function () {
 });
 //vars
 var cDSP;
-            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fnt          hgt
+            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF1        hgt
 var sHR0 = ['sHR0',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];
 var sHR1 = ['sHR1',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];
 var sHR2 = ['sHR2',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem'];

@@ -19,8 +19,15 @@ ul{
     margin:0;
 }
 
+
+.F0{
+    font-size:4rem;
+}
 .F1 {
     font-size: 3rem;
+}
+.F1-1{
+    font-size:2.75rem;
 }
 .F2 {
     font-size: 1.5rem;
@@ -39,12 +46,33 @@ ul{
 .BRDR {
     border-bottom: 1px solid gray;
 }
+.BRDRT {
+    border-top: 1px solid gray;
+
+}
 .BTN{
     cursor:pointer;
 }
 .CNTR{
     text-align:center;
 }
+.TAB0-5{
+    padding-left:2.5rem;
+}
+.TAB{
+    padding-left:5rem;
+}
+.TAB2{
+    padding-left:10rem;
+}
+.SPC{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.MSPC{
+    margin: .5rem 0;
+}
+
 
 
 
@@ -132,9 +160,6 @@ padding-left: 1rem;
 
 #pageContent{
     padding: 0 2rem;
-}
-#pageContent > p{
-    padding: 1rem 0;
 }
 
 
