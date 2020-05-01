@@ -29,9 +29,11 @@ ul{
 
 .I1 {
     height: 8rem;
+    width:auto;
 }
 .I2 {
     height: 3rem;
+    width:auto;
 }
 
 .BRDR {
@@ -134,8 +136,5 @@ padding-left: 1rem;
 #pageContent > p{
     padding: 1rem 0;
 }
-#pageTitle{
-   padding-bottom:0.5rem;
 
-}
 
