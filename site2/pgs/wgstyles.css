@@ -18,6 +18,10 @@ a, a > p {
 ul{
     margin:0;
 }
+figure{
+    margin:0 0 0 0;
+
+}
 
 
 .F0{
@@ -69,10 +73,12 @@ ul{
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
-.MSPC{
-    margin: .5rem 0;
+.TSPC {
+    padding-top: .5rem;
 }
-
+.BSPC {
+    padding-bottom: .5rem;
+}
 
 
 
@@ -162,4 +168,9 @@ padding-left: 1rem;
     padding: 0 2rem;
 }
 
-
+.Partition{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
