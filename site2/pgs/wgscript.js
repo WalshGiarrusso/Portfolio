@@ -197,8 +197,6 @@ function collapseMobileDrop(opDsp) {
     $('#mobileNavMenu').slideUp(175);
     $('#closeDrop').css('display', 'none');
     $('#openDrop').css('display', opDsp);
-
-    
 };
 function clickReg(tRG) {
     for (i = 0; i < tRGRA.length; i++) {
@@ -252,13 +250,11 @@ oRYP.addListener(function () {
         determineOrientation(true);
 
     };
-    
 });
 oRYL.addListener(function () {
     if (oRYL.matches) {
         determineOrientation(true);
     };
-    
 });
 //mobile handler
 function determineOrientation(proceed) {
