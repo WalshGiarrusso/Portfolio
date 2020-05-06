@@ -2,13 +2,13 @@
 $(document).ready(function () {
     $(this).scrollTop(0);
     determineTheme(false);
-   
-    
+
+
     cMQ();
-   
+
     $('#mobileNavMenu, #closeDrop').css('display', 'none');
     handleSCRL();
-    
+
 });
 
 var cORY;
