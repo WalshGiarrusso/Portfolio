@@ -17,31 +17,24 @@ a, a > p {
 }
 ul{
     margin:0;
+    list-style-type:none;
+    padding:0;
 }
-figure{
-    margin:0 0 0 0;
+li{
+    display:block;
+}
 
-}
 
 
-.F0{
-    font-size:4rem;
-}
-.F1 {
-    font-size: 3rem;
-}
-.F1-1{
-    font-size:2.75rem;
-}
+
 .F2 {
     font-size: 1.5rem;
 }
-
-
-.I1 {
-    height: 8rem;
-    width:auto;
+.FA{
+    font-size:1.1rem;
 }
+
+
 .I2 {
     height: 3rem;
     width:auto;
@@ -50,43 +43,38 @@ figure{
 .BRDR {
     border-bottom: 1px solid gray;
 }
-.BRDRT {
-    border-top: 1px solid gray;
-
-}
 .BTN{
     cursor:pointer;
 }
 .CNTR{
     text-align:center;
 }
-.TAB0-5{
-    padding-left:2.5rem;
+
+
+
+
+
+
+
+
+#accessOptions {
+    padding: 0.25rem 0;
+    margin: 0 0.25rem;
+    background-color: #bceac7;
+    position:fixed;
+    width:100%;
 }
-.TAB{
-    padding-left:5rem;
+#accessOptions > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
 }
-.TAB2{
-    padding-left:10rem;
+#accessOptions > ul > li{
+    padding: 0rem 1rem;
 }
-.SPC{
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+.LIBRD{
+    border-left: 1px solid gray;
 }
-.TSPC {
-    padding-top: .5rem;
-}
-.BSPC {
-    padding-bottom: .5rem;
-}
-
-
-
-
-
-
-
-
 #navbar {
     display: flex;
     flex-flow: row wrap;
@@ -96,6 +84,9 @@ figure{
     padding: 0.75rem 2rem 0.15rem 2rem;
     box-sizing: border-box;
     z-index:4;
+    top:0;
+ 
+ 
   
 }
 
@@ -125,6 +116,7 @@ figure{
     height: intrinsic;
     height: -moz-max-content;
     height: -webkit-max-content;
+
 }
 
 .NavItem p {
@@ -144,7 +136,7 @@ padding-left: 1rem;
     width:100%;
     height:100%;
     background-color:inherit;
-    box-sizing:border-box;
+ 
   
 }
 @media only screen and (orientation: landscape) {
@@ -168,9 +160,3 @@ padding-left: 1rem;
     padding: 0 2rem;
 }
 
-.Partition{
-    display:flex;
-    flex-flow:row nowrap;
-    justify-content:space-between;
-    align-items:center;
-}
