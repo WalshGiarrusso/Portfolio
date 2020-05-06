@@ -126,8 +126,7 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
-    //change padding
-    determineOrientation(true);
+    
 
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
@@ -156,7 +155,8 @@ function mRC(rEQ) {
         $('.MinHeight').css('min-height', rEQ[8]);
         
     };
-    
+    //change padding
+    determineOrientation(true);
 };
 
 //input handling
@@ -222,38 +222,30 @@ function handleSCRL() {
         $('#navbar').clearQueue();
     };
     var pos = $(this).scrollTop();
-    if (pos <= 50) {
+    if (pos <= 100) {
         if ($('#navbar').is(':visible')) {
 
             $('#accessOptions').show(0);
             $('#navbar').animate({
                 "marginTop": $('#accessOptions').outerHeight(),
-            }, 175);
+            }, 175)
         } else {
-
             $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 0, function () {
 
                 $('#accessOptions, #navbar').slideDown(175);
             });
         };
-    } else {
+    };
+    if (pos > oldTop) {
 
-    
-        if (pos > oldTop) {
+        $('#accessOptions, #navbar').slideUp(175, function () {
+            $('#navbar').css('margin-top', 0);
+        });
+    } else if (pos > 100) {
 
-            $('#accessOptions, #navbar').slideUp(175, function () {
-                $('#navbar').css('margin-top', 0);
-            });
-
-        } else {
-            $('#navbar').slideDown(175);
-        };
-
-    }
-    
-    console.log(pos - oldTop);
+        $('#navbar').slideDown(175);
+    };
     oldTop = pos;
- 
 
 };
 //orientation
