@@ -157,8 +157,13 @@ function mRC(rEQ, init) {
         };
         //navbar font and image sizes
         RD.filter('.F2').css('font-size', rEQ[6]);
-        RD.filter('.FA').css('font-size', rEQ[9]);
 
+        RD.filter('.FA').css('font-size', rEQ[9]);
+        if (rEQ[9]) {
+            $('#accessOptions').css('padding', 0);
+        } else {
+            $('#accessOptions').css('padding', '');
+        };
         RD.filter('.I2').css('height', rEQ[7]);
         //nav minheight
         $('.MinHeight').css('min-height', rEQ[8]);
