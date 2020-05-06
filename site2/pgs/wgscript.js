@@ -250,7 +250,7 @@ setInterval(function () {
                 });
             };
         };
-        if (pos > oldTop) {
+        if (pos > oldTop && pos >= 100) {
 
             $('#accessOptions, #navbar').slideUp(175, function () {
                 $('#navbar').css('margin-top', 0);
