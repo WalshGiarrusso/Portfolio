@@ -83,13 +83,13 @@ $(window).on('resize', function () {
 });
 //vars
 var cDSP;
-            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF2        hgt        navMH
-var sHR0 = ['sHR0',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem'];
-var sHR1 = ['sHR1',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem'];
-var sHR2 = ['sHR2',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem'];
-var sHR3 = ['sHR3',    'none',      'none',     'block',    'inline', false,    '',          '',        '3.375rem'];
-var sHR4 = ['sHR4',    'none',      'flex',     'none',      'none',  true,     '',          '',        '3.375rem'];
-var sHR99 = ['sHR99',  'block',     'flex',     'none',      'none',  true,     '',          '',        '3.375rem'];
+            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF2        hgt        navMH       FMT FA
+var sHR0 = ['sHR0',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
+var sHR1 = ['sHR1',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
+var sHR2 = ['sHR2',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
+var sHR3 = ['sHR3',    'none',      'none',     'block',    'inline', false,    '',          '',        '3.375rem', ''];
+var sHR4 = ['sHR4',    'none',      'flex',     'none',      'none',  true,     '',          '',        '3.375rem', ''];
+var sHR99 = ['sHR99',  'block',     'flex',     'none',      'none',  true,     '',          '',        '3.375rem', ''];
 //cuts
             //sHR0  SHR1    SHR2    SHR3    SHR4 
 var cSHR = [5,      20,     31.313,     48.375,     74.063]
@@ -126,10 +126,7 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
-    //check for expanded menu
-
-
-   
+    
 
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
@@ -150,13 +147,16 @@ function mRC(rEQ) {
             collapseMobileDrop('none');
         };
         //navbar font and image sizes
-        RD.filter('.F2').css('font-size', rEQ[6])
+        RD.filter('.F2').css('font-size', rEQ[6]);
+        RD.filter('.FA').css('font-size', rEQ[9]);
 
-        RD.filter('.I2').css('height', rEQ[7])
+        RD.filter('.I2').css('height', rEQ[7]);
         //nav minheight
         $('.MinHeight').css('min-height', rEQ[8]);
         
     };
+    //change padding
+    determineOrientation(true);
 };
 
 //input handling
@@ -217,7 +217,7 @@ setInterval(function () {
             $('#navbar').clearQueue();
         };
         var pos = $(this).scrollTop();
-        if (pos == 0) {
+        if (pos < 100) {
             if ($('#navbar').is(':visible')) {
               
                 $('#accessOptions').show(0);
@@ -236,7 +236,7 @@ setInterval(function () {
             $('#accessOptions, #navbar').slideUp(175, function () {
                 $('#navbar').css('margin-top', 0);
             });  
-        } else if (pos !== 0) { 
+        } else if (pos >= 100) { 
       
             $('#navbar').slideDown(175);
         };

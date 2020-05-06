@@ -70,7 +70,8 @@ li{
     justify-content: flex-end;
 }
 #accessOptions > ul > li{
-    margin: 0rem 1rem;
+
+    padding:0 1rem
 }
 .LIBRD{
     border-left: 1px solid gray;
