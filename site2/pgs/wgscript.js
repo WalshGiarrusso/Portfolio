@@ -2,10 +2,14 @@
 $(document).ready(function () {
     $(this).scrollTop(0);
     determineTheme(false);
-    $('#navbar').css('margin-top', $('#accessOptions').outerHeight());
+    
 
-    cMQ();
-    determineOrientation(true);
+
+
+   
+
+    cMQ(true);
+
     $('#mobileNavMenu, #closeDrop').css('display', 'none');
 
 
@@ -79,40 +83,40 @@ function themeSwitch(pRA) {
 
 //media queries for breakpoints
 $(window).on('resize', function () {
-    cMQ();
+    cMQ(false);
 });
 //vars
 var cDSP;
-//name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF2        hgt        navMH       FMT FA
-var sHR0 = ['sHR0', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
-var sHR1 = ['sHR1', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
-var sHR2 = ['sHR2', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
-var sHR3 = ['sHR3', 'none', 'none', 'block', 'inline', false, '', '', '3.375rem', ''];
-var sHR4 = ['sHR4', 'none', 'flex', 'none', 'none', true, '', '', '3.375rem', ''];
-var sHR99 = ['sHR99', 'block', 'flex', 'none', 'none', true, '', '', '3.375rem', ''];
+//name     tt-dsp   nvItmds navdsp  drpdsp      btn         ?hideMB  fntF2      hgt         navMH       FMT FA      
+var sHR0 = ['sHR0', 'none', 'none', 'block',    'inline',   false,  '1.8rem',   '1.8rem',   '0rem',     '.7rem'];
+var sHR1 = ['sHR1', 'none', 'none', 'block',    'inline',   false,  '1.8rem',   '1.8rem',   '0rem',     '.7rem'];
+var sHR2 = ['sHR2', 'none', 'none', 'block',    'inline',   false,  '1.8rem',   '1.8rem',   '0rem',     '.7rem'];
+var sHR3 = ['sHR3', 'none', 'none', 'block',    'inline',   false,  '',         '',         '3.375rem',     ''];
+var sHR4 = ['sHR4', 'none', 'flex', 'none',     'none',     true,   '',         '',         '3.375rem',     ''];
+var sHR99 =['sHR99','block','flex', 'none',     'none',     true,   '',         '',         '3.375rem',     ''];
 //cuts
 //sHR0  SHR1    SHR2    SHR3    SHR4 
 var cSHR = [5, 20, 31.313, 48.375, 74.063]
 //Check media queries
-function cMQ() {
+function cMQ(init) {
     switch (tMQ()) {
         case 0:
-            mRC(sHR0);
+            mRC(sHR0, init);
             break;
         case 1:
-            mRC(sHR1);
+            mRC(sHR1, init);
             break;
         case 2:
-            mRC(sHR2);
+            mRC(sHR2, init);
             break;
         case 3:
-            mRC(sHR3);
+            mRC(sHR3, init);
             break;
         case 4:
-            mRC(sHR4);
+            mRC(sHR4, init);
             break;
         default:
-            mRC(sHR99);
+            mRC(sHR99, init);
     };
 };
 //test queries
@@ -125,8 +129,13 @@ function tMQ() {
     };
 };
 //execute
-function mRC(rEQ) {
-
+function mRC(rEQ, init) {
+    console.log(init);
+    if (init) {
+        RD.filter('.FA').css('font-size', rEQ[9]);
+        $('#navbar').css('margin-top', $('#accessOptions').outerHeight());
+    };
+   
 
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
@@ -155,8 +164,8 @@ function mRC(rEQ) {
         $('.MinHeight').css('min-height', rEQ[8]);
 
     };
-    //change padding
-    determineOrientation(true);
+    
+ 
 };
 
 //input handling
@@ -169,18 +178,24 @@ $(document).click(function (e) {
     //hits
     switch (clickReg(tar)) {
         case 0: //trg is opendrop
-            $('#navbar').animate({ "marginTop": 0 }, 175);
-            $('#openDrop').css('display', 'none');
-            $('#closeDrop').css('display', 'inline');
+
+            $('#navbar').animate({ "marginTop": 0 }, 175, function () {
+
+               
+                $('#openDrop').css('display', 'none');
+                $('#closeDrop').css('display', 'inline');
 
 
 
 
-            $('#mobileNavMenu').slideDown(175);
+                $('#mobileNavMenu').slideDown(175);
+
+                if ($('#mobileNavMenu').queue().length > 2) {
+                    $('#mobileNavMenu').clearQueue();
+                };
+            });
+
             determineOrientation(true);
-            if ($('#mobileNavMenu').queue().length > 2) {
-                $('#mobileNavMenu').clearQueue();
-            };
             break;
         case 1: //trg is closedrop
             collapseMobileDrop('inline');
@@ -191,12 +206,14 @@ $(document).click(function (e) {
     };
 });
 function collapseMobileDrop(opDsp) {
-    if ($(window).scrollTop() == 0) {
-        $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 175);
-    };
-    $('#mobileNavMenu').slideUp(175);
     $('#closeDrop').css('display', 'none');
     $('#openDrop').css('display', opDsp);
+
+    $('#mobileNavMenu').slideUp(175, function () {
+        if ($(window).scrollTop() == 0) {
+            $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 175);
+        };
+    });
 };
 function clickReg(tRG) {
     for (i = 0; i < tRGRA.length; i++) {
@@ -212,6 +229,8 @@ $(window).scroll(function (event) {
     dSCRL = true;
 });
 setInterval(function () {
+
+
     if (dSCRL && !$('#closeDrop').is(':visible')) {
         if ($('#navbar').queue().length > 2) {
             $('#navbar').clearQueue();
@@ -243,6 +262,8 @@ setInterval(function () {
         oldTop = pos;
         dSCRL = false;
     };
+
+
 }, 400);
 //orientation
 oRYP.addListener(function () {
@@ -258,16 +279,18 @@ oRYL.addListener(function () {
 });
 //mobile handler
 function determineOrientation(proceed) {
+    cORY = '';
     if (oRYP.matches) {
-        cORY = 'Portrait'
+        cORY = 'Portrait';
     } else {
-        cORY = 'Landscape'
+        cORY = 'Landscape';
     };
     if (proceed) {
         handleOrientation(cORY);
     };
 };
 function handleOrientation(oRYDATA) {
+    console.log(oRYDATA)
     if (oRYDATA == 'Portrait') {
         console.log('proc');
         setTimeout(function () {
