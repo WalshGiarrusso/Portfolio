@@ -2,18 +2,12 @@
 body {
     margin: 0;
     font-family: 'Times New Roman';
+
+
     min-height: 400vh;
 
-    
-}
-html, body {
-    /*
+    /*override mobile inertia scrolling*/
     -webkit-overflow-scrolling: auto;
-         overscroll-behavior-y: none;
-    */
-    overscroll-behavior-y: none;
-    position: fixed;
-    overflow: hidden;
 }
 p, h1, h2, h3, h4, h5, h6{
     font-size: inherit;
