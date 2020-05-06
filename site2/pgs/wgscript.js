@@ -126,7 +126,8 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
-    
+    //change padding
+    determineOrientation(true);
 
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
@@ -155,8 +156,7 @@ function mRC(rEQ) {
         $('.MinHeight').css('min-height', rEQ[8]);
         
     };
-    //change padding
-    determineOrientation(true);
+    
 };
 
 //input handling
