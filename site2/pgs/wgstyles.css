@@ -82,9 +82,11 @@ li{
 
     padding:0 1rem
 }
+
 .LIBRD{
     border-left: 1px solid gray;
 }
+
 #navbar {
     display: flex;
     flex-flow: row wrap;
@@ -95,23 +97,12 @@ li{
     box-sizing: border-box;
     z-index:4;
     top:0;
+    overflow:auto;
  
  
   
 }
 
-#navbarName {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: baseline;
-    height: intrinsic;
-    height: -moz-max-content;
-    height: -webkit-max-content;
-}
-
-#navbarName p {
-    flex: none;
-}
 
 #navigation {
     display: flex;
