@@ -2,12 +2,12 @@
 $(document).ready(function () {
     $(this).scrollTop(0);
     determineTheme(false);
-    $('#navbar').css('margin-top', $('#accessOptions').outerHeight());
+   
     
     cMQ();
-    determineOrientation(true);
+   
     $('#mobileNavMenu, #closeDrop').css('display', 'none');
-  
+    handleSCRL();
     
 });
 
@@ -213,37 +213,40 @@ $(window).scroll(function (event) {
 });
 setInterval(function () {
     if (dSCRL && !$('#closeDrop').is(':visible')) {
-        if ($('#navbar').queue().length > 2) {
-            $('#navbar').clearQueue();
-        };
-        var pos = $(this).scrollTop();
-        if (pos < 100) {
-            if ($('#navbar').is(':visible')) {
-              
-                $('#accessOptions').show(0);
-                $('#navbar').animate({
-                    "marginTop": $('#accessOptions').outerHeight(),
-                }, 175)
-            } else {
-                $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 0, function () {
-        
-                    $('#accessOptions, #navbar').slideDown(175);
-                });
-            };         
-        };
-        if (pos > oldTop) {
-        
-            $('#accessOptions, #navbar').slideUp(175, function () {
-                $('#navbar').css('margin-top', 0);
-            });  
-        } else if (pos >= 100) { 
-      
-            $('#navbar').slideDown(175);
-        };
-        oldTop = pos;
-        dSCRL = false;
+        handleSCRL();
     };
 }, 400);
+function handleSCRL() {
+    if ($('#navbar').queue().length > 2) {
+        $('#navbar').clearQueue();
+    };
+    var pos = $(this).scrollTop();
+    if (pos <= 100) {
+        if ($('#navbar').is(':visible')) {
+
+            $('#accessOptions').show(0);
+            $('#navbar').animate({
+                "marginTop": $('#accessOptions').outerHeight(),
+            }, 175)
+        } else {
+            $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 0, function () {
+
+                $('#accessOptions, #navbar').slideDown(175);
+            });
+        };
+    };
+    if (pos > oldTop) {
+
+        $('#accessOptions, #navbar').slideUp(175, function () {
+            $('#navbar').css('margin-top', 0);
+        });
+    } else if (pos > 100) {
+
+        $('#navbar').slideDown(175);
+    };
+    oldTop = pos;
+    dSCRL = false;
+};
 //orientation
 oRYP.addListener(function () {
     if (oRYP.matches) {
