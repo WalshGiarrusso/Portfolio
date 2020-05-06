@@ -245,6 +245,7 @@ function handleSCRL() {
         $('#navbar').slideDown(175);
     };
     oldTop = pos;
+    console.log(pos - oldTop);
     dSCRL = false;
 };
 //orientation
