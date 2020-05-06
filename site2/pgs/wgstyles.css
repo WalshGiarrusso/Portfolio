@@ -1,27 +1,29 @@
-﻿/**{border: 1px solid red;}*/
+﻿﻿ /**{border: 1px solid red;}*/
 body {
     margin: 0;
     font-family: 'Times New Roman';
-
-    
     min-height: 400vh;
 }
-p, h1, h2, h3, h4, h5, h6{
+
+p, h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
-    font-weight:inherit;
+    font-weight: inherit;
     margin: 0;
 }
+
 a, a > p {
     text-decoration: none;
     color: inherit;
 }
-ul{
-    margin:0;
-    list-style-type:none;
-    padding:0;
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
 }
-li{
-    display:block;
+
+li {
+    display: block;
 }
 
 
@@ -30,24 +32,27 @@ li{
 .F2 {
     font-size: 1.5rem;
 }
-.FA{
-    font-size:1.1rem;
+
+.FA {
+    font-size: 1.1rem;
 }
 
 
 .I2 {
     height: 3rem;
-    width:auto;
+    width: auto;
 }
 
 .BRDR {
     border-bottom: 1px solid gray;
 }
-.BTN{
-    cursor:pointer;
+
+.BTN {
+    cursor: pointer;
 }
-.CNTR{
-    text-align:center;
+
+.CNTR {
+    text-align: center;
 }
 
 
@@ -59,23 +64,25 @@ li{
 
 #accessOptions {
     padding: 0.25rem 0;
-   
     background-color: #bceac7;
-    position:fixed;
-    width:100%;
+    position: fixed;
+    width: 100%;
 }
-#accessOptions > ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-}
-#accessOptions > ul > li{
 
-    padding:0 1rem
-}
-.LIBRD{
+    #accessOptions > ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }
+
+        #accessOptions > ul > li {
+            padding: 0 1rem
+        }
+
+.LIBRD {
     border-left: 1px solid gray;
 }
+
 #navbar {
     display: flex;
     flex-flow: row wrap;
@@ -84,11 +91,8 @@ li{
     width: 100%;
     padding: 0.75rem 2rem 0.15rem 2rem;
     box-sizing: border-box;
-    z-index:4;
-    top:0;
- 
- 
-  
+    z-index: 4;
+    top: 0;
 }
 
 #navbarName {
@@ -100,9 +104,9 @@ li{
     height: -webkit-max-content;
 }
 
-#navbarName p {
-    flex: none;
-}
+    #navbarName p {
+        flex: none;
+    }
 
 #navigation {
     display: flex;
@@ -117,34 +121,34 @@ li{
     height: intrinsic;
     height: -moz-max-content;
     height: -webkit-max-content;
-
 }
 
-.NavItem p {
-padding-left: 1rem;
-}
+    .NavItem p {
+        padding-left: 1rem;
+    }
 
 #dropDown, #dropDown > img {
     display: none;
 }
+
 #mobileNavMenu {
-    position:fixed;
-    overflow:hidden;
+    position: fixed;
+    overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-    width:100%;
-    height:100%;
-    background-color:inherit;
- 
-  
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
 }
+
 @media only screen and (orientation: landscape) {
-    #mobileNavMenu{
-        flex-flow:row nowrap;
+    #mobileNavMenu {
+        flex-flow: row nowrap;
     }
 }
+
 .MobileNavItem {
     display: flex;
     flex-flow: column nowrap;
@@ -153,11 +157,11 @@ padding-left: 1rem;
     width: -moz-max-content;
     width: -webkit-max-content;
 }
-.MobileNavItem > *{
-    padding: 0.25rem 0;
-}
 
-#pageContent{
+    .MobileNavItem > * {
+        padding: 0.25rem 0;
+    }
+
+#pageContent {
     padding: 0 2rem;
 }
-

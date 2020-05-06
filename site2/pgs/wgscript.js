@@ -3,12 +3,12 @@ $(document).ready(function () {
     $(this).scrollTop(0);
     determineTheme(false);
     $('#navbar').css('margin-top', $('#accessOptions').outerHeight());
-    
+
     cMQ();
     determineOrientation(true);
     $('#mobileNavMenu, #closeDrop').css('display', 'none');
-  
-    
+
+
 });
 
 var cORY;
@@ -28,14 +28,14 @@ var RD = $('.RDUS');
 //dark/light
 //makes browser light
 //        theme     bg        border    txt         imgext  OptionsBG
-var rAL = ['light', 'white',  'gray',    'black',   'dark', '#99c2ff'];
+var rAL = ['light', 'white', 'gray', 'black', 'dark', '#99c2ff'];
 //makes browser dark
-var rAD = ['dark', '#35363A', '#C3C3C3', 'white',   'light','#0047B3'];
+var rAD = ['dark', '#35363A', '#C3C3C3', 'white', 'light', '#0047B3'];
 //Dark Switching
 //Determine
 
 function determineTheme(DMC) {
-    
+
     if ((lMQ.matches)) {
         if (!DMC || (DMC && (cTheme !== 'light'))) {
             themeSwitch(rAL);
@@ -49,12 +49,12 @@ function determineTheme(DMC) {
 //det
 dMQ.addListener(function () {
     //if (cTheme !== 'dark') {
-        determineTheme(true);
+    determineTheme(true);
     //}
 });
 lMQ.addListener(function () {
     //if (cTheme !== 'light') {
-        determineTheme(true);
+    determineTheme(true);
     //}
 
 });
@@ -65,13 +65,13 @@ function themeSwitch(pRA) {
     console.log(cTheme);
     $('.BG').css('background-color', pRA[1]);
     $('.BRDR, .LIBRD').css('border-color', pRA[2]);
- 
+
 
     $('.F2, .FA').css('color', pRA[3]);
 
     $('.SWP').each(function () {
         var link = $(this).attr('src').split('-');
-    
+
         $(this).attr('src', link[0] + '-' + pRA[4] + '.svg');
     });
     $('#accessOptions').css('background-color', pRA[5]);
@@ -83,16 +83,16 @@ $(window).on('resize', function () {
 });
 //vars
 var cDSP;
-            //name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF2        hgt        navMH       FMT FA
-var sHR0 = ['sHR0',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
-var sHR1 = ['sHR1',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
-var sHR2 = ['sHR2',    'none',      'none',     'block',    'inline', false,    '1.8rem',    '1.8rem',  '0rem',     '.7rem'];
-var sHR3 = ['sHR3',    'none',      'none',     'block',    'inline', false,    '',          '',        '3.375rem', ''];
-var sHR4 = ['sHR4',    'none',      'flex',     'none',      'none',  true,     '',          '',        '3.375rem', ''];
-var sHR99 = ['sHR99',  'block',     'flex',     'none',      'none',  true,     '',          '',        '3.375rem', ''];
+//name  tooltip dsp     navitemdsp  dropdsp     btn       ?hideMB   fntF2        hgt        navMH       FMT FA
+var sHR0 = ['sHR0', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
+var sHR1 = ['sHR1', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
+var sHR2 = ['sHR2', 'none', 'none', 'block', 'inline', false, '1.8rem', '1.8rem', '0rem', '.7rem'];
+var sHR3 = ['sHR3', 'none', 'none', 'block', 'inline', false, '', '', '3.375rem', ''];
+var sHR4 = ['sHR4', 'none', 'flex', 'none', 'none', true, '', '', '3.375rem', ''];
+var sHR99 = ['sHR99', 'block', 'flex', 'none', 'none', true, '', '', '3.375rem', ''];
 //cuts
-            //sHR0  SHR1    SHR2    SHR3    SHR4 
-var cSHR = [5,      20,     31.313,     48.375,     74.063]
+//sHR0  SHR1    SHR2    SHR3    SHR4 
+var cSHR = [5, 20, 31.313, 48.375, 74.063]
 //Check media queries
 function cMQ() {
     switch (tMQ()) {
@@ -126,12 +126,12 @@ function tMQ() {
 };
 //execute
 function mRC(rEQ) {
-    
+
 
     if (cDSP !== rEQ[0]) {
         cDSP = rEQ[0];
         console.log(cDSP);
-        
+
         //tooltip display
         $('.NavItem > p').css('display', rEQ[1]);
         //nav display
@@ -153,7 +153,7 @@ function mRC(rEQ) {
         RD.filter('.I2').css('height', rEQ[7]);
         //nav minheight
         $('.MinHeight').css('min-height', rEQ[8]);
-        
+
     };
     //change padding
     determineOrientation(true);
@@ -164,18 +164,18 @@ function mRC(rEQ) {
 //target array
 var tRGRA = ['#openDrop', '#closeDrop'];
 $(document).click(function (e) {
-   
+
     var tar = $(e.target);
     //hits
     switch (clickReg(tar)) {
         case 0: //trg is opendrop
-            $('#navbar').animate({"marginTop":0}, 175);
+            $('#navbar').animate({ "marginTop": 0 }, 175);
             $('#openDrop').css('display', 'none');
             $('#closeDrop').css('display', 'inline');
 
 
 
-            
+
             $('#mobileNavMenu').slideDown(175);
             determineOrientation(true);
             if ($('#mobileNavMenu').queue().length > 2) {
@@ -187,7 +187,7 @@ $(document).click(function (e) {
             break;
 
         default:
-            //do nothing
+        //do nothing
     };
 });
 function collapseMobileDrop(opDsp) {
@@ -219,25 +219,25 @@ setInterval(function () {
         var pos = $(this).scrollTop();
         if (pos < 100) {
             if ($('#navbar').is(':visible')) {
-              
+
                 $('#accessOptions').show(0);
                 $('#navbar').animate({
                     "marginTop": $('#accessOptions').outerHeight(),
                 }, 175)
             } else {
                 $('#navbar').animate({ "marginTop": $('#accessOptions').outerHeight() }, 0, function () {
-        
+
                     $('#accessOptions, #navbar').slideDown(175);
                 });
-            };         
+            };
         };
         if (pos > oldTop) {
-        
+
             $('#accessOptions, #navbar').slideUp(175, function () {
                 $('#navbar').css('margin-top', 0);
-            });  
-        } else if (pos >= 100) { 
-      
+            });
+        } else if (pos >= 100) {
+
             $('#navbar').slideDown(175);
         };
         oldTop = pos;
@@ -274,7 +274,7 @@ function handleOrientation(oRYDATA) {
             $('#mobileNavMenu').css('padding-top', $('#navbar').outerHeight());
             $('#mobileNavMenu').css('height', $(window).height() - $('#navbar').height());
         }, 10);
-        
+
     } else {
         $('#mobileNavMenu').css('padding-top', 0);
         $('#mobileNavMenu').css('height', '100%');
