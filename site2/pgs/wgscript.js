@@ -214,7 +214,6 @@ $(window).scroll(function (event) {
 setInterval(function () {
     if (dSCRL && !$('#closeDrop').is(':visible')) {
         handleSCRL();
-        dSCRL = false;
     };
 }, 400);
 function handleSCRL() {
@@ -247,7 +246,7 @@ function handleSCRL() {
     };
     oldTop = pos;
     console.log(pos - oldTop);
-
+    dSCRL = false;
 };
 //orientation
 oRYP.addListener(function () {
