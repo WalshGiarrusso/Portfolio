@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 256 256">
+  <defs/>
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h256v256H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <mask id="b">
+      <circle cx="128" cy="128" r="128" fill="#fff"/>
+    </mask>
+    <circle cx="128" cy="128" r="128" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="24" mask="url(#b)"/>
+    <circle cx="128" cy="128" r="128" fill="none"/>
+    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="12" d="M64 64h128M64 128h128M64 192h128"/>
+  </g>
+</svg>

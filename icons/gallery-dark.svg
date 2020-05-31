@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 256 256">
+  <defs/>
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h256v256H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <mask id="b">
+      <path fill="#fff" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z"/>
+    </mask>
+    <path fill="none" stroke="#000" stroke-linecap="square" stroke-miterlimit="3" stroke-width="16" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z" mask="url(#b)"/>
+    <path fill="none" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" stroke-width="8" d="M65 252h0l47-66 46-66 47 66 42 60h0M7 247h0l24-38 27-44 30 49"/>
+    <circle cx="130" cy="55" r="26" fill="none" stroke="#000" stroke-linecap="square" stroke-miterlimit="3" stroke-width="8"/>
+  </g>
+</svg>

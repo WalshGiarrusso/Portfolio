@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 256 256">
+  <defs/>
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h256v256H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <mask id="b">
+      <path fill="#fff" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z"/>
+    </mask>
+    <path fill="none" stroke="#000" stroke-linecap="square" stroke-miterlimit="3" stroke-width="16" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z" mask="url(#b)"/>
+    <path fill="none" d="M15 0h226c8 0 15 7 15 15v226c0 8-7 15-15 15H15c-8 0-15-7-15-15V15C0 7 7 0 15 0z"/>
+    <mask id="c">
+      <path fill="#fff" d="M52 48h16c6 0 12 6 12 12v16c0 6-6 12-12 12H52c-6 0-12-6-12-12V60c0-6 6-12 12-12z"/>
+    </mask>
+    <path fill="none" stroke="#000" stroke-linecap="square" stroke-miterlimit="3" stroke-width="16" d="M52 48h16c6 0 12 6 12 12v16c0 6-6 12-12 12H52c-6 0-12-6-12-12V60c0-6 6-12 12-12z" mask="url(#c)"/>
+    <path fill="none" d="M52 48h16c6 0 12 6 12 12v16c0 6-6 12-12 12H52c-6 0-12-6-12-12V60c0-6 6-12 12-12z"/>
+    <path stroke="#000" stroke-linecap="round" stroke-miterlimit="3" stroke-width="8" d="M88 52h128M88 72h40M80 128h136M40 168h176M40 208h176"/>
+  </g>
+</svg>
