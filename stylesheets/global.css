@@ -1,3 +1,105 @@
 ﻿body
 {
+    margin:0;
+    font-family: trade-gothic-next, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+ul{
+    list-style-type: none;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+
+    /*will need to be later removed*/
+    color:black;
+}
+
+small{
+    font-size:100%;
+}
+
+address{
+    font-style:normal;
+}
+
+
+button{
+    border:0;
+    font-size:100%;
+    font-family:inherit;
+    background-color:transparent;
+    cursor:pointer;
+    padding:0;
+
+}
+/*Superbars*/
+    /*Accessibility Options*/
+#optionsBar{
+    margin:0;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+}
+    /*Header*/
+#mainHeaderBar{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:baseline;
+}
+        /*Logo*/
+#logoImage{
+    width:6rem;
+}
+        /*Navbar*/
+#headerNavigation{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.Icon{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items:center;
+    padding: 0rem .5rem;
+}
+
+.Icon img{
+    width:4rem;
+    padding-right:0.5rem;
+}
+
+    /*Breadcrumb Bar*/
+#breadcrumbBar{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+        /*Breadcrumb Menu*/
+#breadcrumbMenu{
+    display:flex;
+    flex-flow:row nowrap;
+    margin:0;
+}
+
+/*Footer*/
+
+#mainFooter{
+    display:flex;
+    flex-flow:row wrap;
+}
+
+#footerNavigation, #footerNavigation ul, #footerContact, #footerDetails{
+    width:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+
 }

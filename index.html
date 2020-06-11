@@ -43,7 +43,7 @@
 <!--Superbars-->
     <!--Accessibility Options-->
     <nav aria-label="Skip Link and Accessibility Options">
-        <ul>
+        <ul id="optionsBar">
             <li>
                 <a href="index.html#main">
                     Skip to Main Content
@@ -67,39 +67,39 @@
         </ul>
     </nav>
     <!--Header-->
-    <header>
+    <header id="mainHeaderBar">
         <!--Logo-->
-        <img src="  " alt=" ">
+        <img id="logoImage" src="icons/logo-dark.svg" alt=" ">
         <!--Navbar-->
         <nav aria-label="Primary Navigation">
-            <ul>
+            <ul id="headerNavigation">
                 <li>
-                    <a href="   ">
-                        <img src="  " alt=" ">
+                    <a class="Icon" href="   ">
+                        <img src="icons/home-dark.svg" alt=" ">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="   ">
-                        <img src="  " alt=" ">
+                    <a class="Icon" href="   ">
+                        <img src="icons/gallery-dark.svg" alt=" ">
                         Gallery
                     </a>
                 </li>
                 <li>
-                    <a href="   ">
-                        <img src="  " alt=" ">
+                    <a class="Icon" href="   ">
+                        <img src="icons/blog-dark.svg" alt=" ">
                         Blog
                     </a>
                 </li>
                 <li>
-                    <a href="   ">
-                        <img src="  " alt=" ">
+                    <a class="Icon" href="   ">
+                        <img src="icons/about-dark.svg" alt=" ">
                         About Me
                     </a>
                 </li>
                 <li>
-                    <a href="   ">
-                        <img src="  " alt=" ">
+                    <a class="Icon" href="   ">
+                        <img src="icons/contact-dark.svg" alt=" ">
                         Contact
                     </a>
                 </li>
@@ -107,24 +107,28 @@
         </nav>
     </header>
     <!--Breadcrumb-->
-    <nav aria-label="Breadcrumb Menu">
-        <ul>
+    <nav id="breadcrumbBar" aria-label="Breadcrumb Menu and Sitemap Link">
+        <ul id="breadcrumbMenu">
             <li>
-                <a href="   ">walshgiarrusso.com</a><span> / </span>
+                <a href="   ">walshgiarrusso.com</a>
             </li>
+            <span>
+                &nbsp;
+                /
+                &nbsp;
+            </span>
             <li>
                 <a href="   ">
                     home
                 </a>
             </li>
-
         </ul>
-        
-    </nav>
         <!--Sitemap Link-->
-    <a href="   ">
-        View Sitemap
-    </a>
+        <a href="   ">
+            View Sitemap
+        </a>
+    </nav>
+        
 
 <!--Content-->
 <main id="main">
@@ -205,9 +209,9 @@
 </main>
 
 <!--Footer-->
-<footer>
+<footer id="mainFooter">
     <!--Important Links-->
-    <nav>
+    <nav id="footerNavigation" aria-label="Back to Top and View Sitemap Links">
         <ul>
             <li>
                 <a href="   ">
@@ -221,28 +225,38 @@
             </li>
         </ul>
     </nav>
-    <!--Branding-->
-    <img src="  " alt=" ">
-    <!--Contact-->
-    <p>
-        Walsh Anthony Giarrusso
-        <br>
-        walshgiarrusso@gmail.com
-    </p>
-    <!--Accesibility Statement-->
-    <p>
-        Text Content. 
-        <a href="   ">
-            See the full accesibility statement here.
-        </a>
-    </p>
-    <!--Conformance Claim-->
-    <p>
-        Text Content for Conformance Claim.
-    </p>
-    <!--Copyright-->
-    Copyright © 2020 Walsh Giarrusso. All Rights Reserved.
 
+    <!--Contact-->
+    <address id="footerContact">
+        <p>
+            Walsh Anthony Giarrusso
+        </p>
+        <p>
+            walshgiarrusso@gmail.com
+        </p>
+        <p>
+            973-202-0158
+        </p>
+    </address>
+    
+    <!--Info-->
+    <small id="footerDetails">
+        <!--Accesibility Statement-->
+        <p>
+            Accesibility Statement.
+            <a href="   ">
+                See the Full Accesibility Statement Here.
+            </a>
+        </p>
+        <!--Conformance Claim-->
+        <p>
+            Conformance Claim Text Content.
+        </p>
+        <!--Copyright-->
+        <p>
+            Copyright © 2020 Walsh Giarrusso. All Rights Reserved.
+        </p>
+    </small>
 </footer>
 
 </body>
