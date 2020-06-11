@@ -42,7 +42,7 @@
 
 <!--Superbars-->
     <!--Accessibility Options-->
-    <nav aria-label="Skip Link and Accessibility Options">
+    <nav class="BottomBorder" aria-label="Skip Link and Accessibility Options">
         <ul id="optionsBar">
             <li>
                 <a href="index.html#main">
@@ -67,7 +67,7 @@
         </ul>
     </nav>
     <!--Header-->
-    <header id="mainHeaderBar">
+    <header class="BottomBorder" id="top">
         <!--Logo-->
         <img id="logoImage" src="icons/logo-dark.svg" alt=" ">
         <!--Navbar-->
@@ -107,7 +107,7 @@
         </nav>
     </header>
     <!--Breadcrumb-->
-    <nav id="breadcrumbBar" aria-label="Breadcrumb Menu and Sitemap Link">
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb Menu and Sitemap Link">
         <ul id="breadcrumbMenu">
             <li>
                 <a href="   ">walshgiarrusso.com</a>
@@ -211,25 +211,25 @@
 <!--Footer-->
 <footer id="mainFooter">
     <!--Important Links-->
-    <nav id="footerLinks">
+    <nav class="BottomBorder" id="footerLinks">
        <ul>
            <li>
-               <a href="    ">
+               <a href="index.html#top">
                     Back to Top
                </a>
            </li>
            <li>
-                <a href="   ">
+                <a href="sitemap.html">
                     View Sitemap
                 </a>
            </li>
        </ul>
    </nav>
    <!--Footer Navigation-->
-   <nav id="footerNavigation">
+   <nav class="BottomBorder" id="footerNavigation">
        <ul>
            <li>
-               <a href="    ">
+               <a href="index.html">
                     Home
                </a>
            </li>
@@ -256,7 +256,7 @@
        </ul>
    </nav>
    <!--Accessibility Information-->
-   <ul id="accessibilityInformation">
+   <ul class="BottomBorder" id="accessibilityInformation">
        <li>
            <strong>
                 Accessibility Statement
@@ -280,22 +280,32 @@
 
    <!--Extra Info-->
    <ul id="footerInfo">
-        <small id="copyrightInfo">
-            <p>
-                Copyright © 2020 Walsh Giarrusso. All Rights Reserved.
-            </p>
-       </small>
-       <address id="contactInfo">
+        <li id="copyrightInfo">
+            <small>
+                <p>
+                    Copyright © 2020 Walsh Giarrusso. All Rights Reserved.
+                </p>
+            </small>
+        </li>
+        <li class="ContactInfo">
             <p>
                 Walsh Anthony Giarrusso
             </p>
-            <a href="mailto:walshgiarrusso@gmail.com">
-                walshgiarrusso@gmail.com
-            </a>
-            <a href="tel:+1973-202-0158">
-                973-202-0158
-            </a>
-        </address>
+        </li>
+        <li class="ContactInfo">
+            <address>
+                <a href="mailto:walshgiarrusso@gmail.com">
+                    walshgiarrusso@gmail.com
+                </a>
+            </address>
+        </li class="ContactInfo">
+        <li>
+            <address>
+                <a href="tel:+1973-202-0158">
+                    973-202-0158
+                </a>
+            </address>
+        </li>
     </ul>
 </footer>
 
