@@ -31,6 +31,9 @@ address{
     font-style:normal;
 }
 
+#main{
+    min-height:100vh;
+}
 
 button{
     border:0;
