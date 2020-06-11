@@ -1,5 +1,4 @@
-﻿body
-{
+﻿body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
@@ -10,6 +9,7 @@
 ul{
     list-style-type: none;
     padding:0;
+    margin:0;
 }
 
 a{
@@ -17,6 +17,10 @@ a{
 
     /*will need to be later removed*/
     color:black;
+}
+
+p{
+    margin:0;
 }
 
 small{
@@ -40,13 +44,14 @@ button{
 /*Superbars*/
     /*Accessibility Options*/
 #optionsBar{
-    margin:0;
+    padding: 0.5rem 0rem;
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-around;
 }
     /*Header*/
 #mainHeaderBar{
+    padding: 0.5rem 0rem;
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-between;
@@ -61,7 +66,7 @@ button{
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-around;
-    margin: 0;
+    
 }
 
 .Icon{
@@ -78,6 +83,7 @@ button{
 
     /*Breadcrumb Bar*/
 #breadcrumbBar{
+    padding: 0.5rem 0rem;
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-between;
@@ -86,20 +92,81 @@ button{
 #breadcrumbMenu{
     display:flex;
     flex-flow:row nowrap;
-    margin:0;
+    
 }
 
 /*Footer*/
-
 #mainFooter{
     display:flex;
     flex-flow:row wrap;
+    padding:0rem 2rem;
 }
 
-#footerNavigation, #footerNavigation ul, #footerContact, #footerDetails{
+    /*Important Links*/
+#footerLinks{
+    width:100%;
+    padding: 1rem 0rem;
+}
+
+#footerLinks ul {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight:bold;   
+}
+#footerLinks ul li{
+    width:20%;
+}
+
+
+    /*Footer Navigation*/
+#footerNavigation{
+    width:100%;
+    padding: 1rem 0rem;
+}
+#footerNavigation ul{
+    display:flex;
+    flex-flow:row nowrap;
+    font-weight:bold;
+}
+#footerNavigation ul li{
+    width:20%;
+}
+
+
+
+    /*Extra Info*/
+#footerInfo{
+    display:flex;
+    flex-flow:row nowrap;
+    padding: 1rem 0rem;
+    width:100%;
+}
+
+#copyrightInfo{
+    width:40%;
+}
+
+#contactInfo{
+    display:flex;
+    flex-flow:row nowrap;
+    
+    width:60%;
+}
+
+#contactInfo p, #contactInfo a{
+    
+    width:33.3333%;
+   
+}
+/*Accessibility Information*/
+#accessibilityInformation{
     width:100%;
     display:flex;
     flex-flow:row nowrap;
-    justify-content:space-around;
+    padding: 1rem 0rem;
 
+}
+#accessibilityInformation li{
+    width: 30%;
+    margin-right:10%;
 }
