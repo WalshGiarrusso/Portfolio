@@ -1,4 +1,5 @@
-﻿body{
+﻿
+body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
@@ -57,7 +58,7 @@ button{
 }
 #optionsBar li{
     padding: 0.25rem 0;
-    width:20%;
+    width:15%;
     margin-right:5%;
 }
     /*Header*/
@@ -127,11 +128,11 @@ button{
 #footerLinks ul {
     display: flex;
     flex-flow: row wrap;
-    font-weight:bold;   
+       
 }
 #footerLinks ul li{
     width:15%;
-    margin-right:5%
+    margin-right:5%;
 }
 
 
@@ -144,7 +145,7 @@ button{
 #footerNavigation ul{
     display:flex;
     flex-flow:row nowrap;
-    font-weight:bold;
+
 }
 #footerNavigation ul li{
     width:15%;
@@ -169,13 +170,14 @@ button{
 #footerInfo{
     display:flex;
     flex-flow:row wrap;
-    padding: 1rem 0rem;
+    padding: .5rem 0rem;
     width:100%;
 
 }
 
 #footerInfo li{
-    margin-right:2.5%
+    margin-right:2.5%;
+    padding:0.5rem 0;
 }
 
 #copyrightInfo{
@@ -189,4 +191,17 @@ button{
 /*General*/
 .BottomBorder{
     border-bottom: 1px solid black;
+    transition:0.25s;
+}
+
+.Bold{
+    font-weight:bold;
+}
+
+.Left{
+    text-align:left;
+}
+
+.Hidden{
+    display:none;
 }

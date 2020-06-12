@@ -22,7 +22,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self">
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -34,15 +34,12 @@
     <link rel="stylesheet" href="stylesheets/global.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
-        <!--Scripts-->
-    <script src="scripts/universal.js"></script>
-
 </head>
 <body>
 
 <!--Superbars-->
     <!--Accessibility Options-->
-    <nav class="BottomBorder" aria-label="Skip Link, Options, and Languages/Idiomas">
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link, Options, and Languages/Idiomas">
         <ul id="optionsBar">
             <li>
                 <a href="#main">
@@ -60,8 +57,18 @@
                 </a>
             </li>
             <li>
-                <button>
-                    Hide Options
+                <button class="Left" id="hideHeaderOptions">
+                    Hide Header Options
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left" id="hideHOByDefault">
+                    Don't Show Again
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left" id="showHOByDefault">
+                    Show by Default
                 </button>
             </li>
         </ul>
@@ -214,20 +221,25 @@
     <nav class="BottomBorder" id="footerLinks">
        <ul>
            <li>
-               <a href="#top">
+               <a class="Bold" href="#top">
                     Back to Top
                </a>
            </li>
            <li>
-                <a href="sitemap">
+                <a class="Bold" href="sitemap">
                     View Sitemap
                 </a>
            </li>
+           <li>
+                <button class="Bold Left" id="showHeaderOptions">
+                    Show Header Options
+                </button>
+            </li>
        </ul>
    </nav>
    <!--Footer Navigation-->
    <nav class="BottomBorder" id="footerNavigation">
-       <ul>
+       <ul class="Bold">
            <li>
                <a href="">
                     Home
@@ -309,5 +321,7 @@
     </ul>
 </footer>
 
+<!--Scripts-->
+<script src="scripts/universal.js"></script>
 </body>
 </html>
