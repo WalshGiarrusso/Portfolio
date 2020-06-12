@@ -1,5 +1,4 @@
-﻿
-body{
+﻿body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
@@ -175,17 +174,24 @@ button{
 
 }
 
-#footerInfo li{
-    margin-right:2.5%;
+
+#footerInfoNumber{
+    width: 35%;
+    margin-right:5%;
+    padding:0.5rem 0;
+}
+#footerInfoEmail{
+    width:40%;
+    
     padding:0.5rem 0;
 }
 
-#copyrightInfo{
-    width:37.5%;
-}
 
-.ContactInfo{
-    width:17.5%;
+
+
+#copyrightInfo{
+    width:100%;
+    padding: 1rem 0;
 }
 
 /*General*/
