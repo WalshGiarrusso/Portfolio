@@ -19,7 +19,7 @@ a{
     color:black;
 }
 
-p, h1{
+p, h1, h2, h3, h4, h5, h6{
     margin:0;
 }
 
@@ -96,15 +96,18 @@ button{
 #breadcrumbBar{
     padding: 0.5rem 5%;
     display:flex;
+    align-items: baseline;
     flex-flow:row wrap;
+    
     
 }
         /*Breadcrumb Menu*/
 #breadcrumbMenu{
     display:flex;
     flex-flow:row nowrap;
+    align-items: baseline;
     width:50%;
-    margin-right:25%;
+    margin-right:30%;
     
 }
 
@@ -210,4 +213,43 @@ button{
 
 .Hidden{
     display:none;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 50.438em){
+    #headerNavigation li a span{
+        display:none;
+    }
+}
+@media only screen and (max-width: 36.250em){
+    a, button, span, p, section h4{
+        font-size:0.75rem;
+    }
+    #logoImage{
+        width:4rem;
+    }
+    .Icon img{
+        width: 2.6666rem;
+    }
+    h1{
+        font-size:1.5rem;
+    }
+    h2{
+        font-size:1.125rem;
+    }
+    h3{
+        font-size:0.8775rem;
+    }
+    
+
+
+    h5{
+        font-size:.6225rem;
+    }
+    h6{
+        font-size:.5025rem;
+    }
+
+
 }
