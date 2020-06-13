@@ -25,7 +25,7 @@ p, h1, h2, h3, h4, h5, h6{
 
 
 small{
-    font-size:100%;
+    font-size:1rem;
 }
 
 address{
@@ -39,7 +39,7 @@ address{
 
 button{
     border:0;
-    font-size:100%;
+    font-size:1rem;
     font-family:inherit;
     background-color:transparent;
     cursor:pointer;
@@ -52,13 +52,15 @@ button{
     padding: 0.25rem 5%;
     display:flex;
     flex-flow:row wrap;
+    justify-content:space-around;
+    
+
     
     
 }
 #optionsBar li{
-    padding: 0.25rem 0;
-    width:15%;
-    margin-right:5%;
+    
+    margin: 0 2%;
 }
     /*Header*/
 #top{
@@ -96,106 +98,60 @@ button{
 #breadcrumbBar{
     padding: 0.5rem 5%;
     display:flex;
+    justify-content: space-between;
     align-items: baseline;
     flex-flow:row wrap;
     
     
 }
+
         /*Breadcrumb Menu*/
 #breadcrumbMenu{
     display:flex;
     flex-flow:row nowrap;
     align-items: baseline;
-    width:50%;
-    margin-right:30%;
+    
     
 }
 
 /*Footer*/
 #mainFooter{
-    display:flex;
-    flex-flow:row wrap;
+    border-top:1px solid black;
     padding: 0 5%;
-    margin-top:1rem;
-    border-top: 1px solid black;
-}
-
-    /*Important Links*/
-#footerLinks{
-    width:100%;
-    padding: 1rem 0rem;
-   
-}
-
-#footerLinks ul {
-    display: flex;
-    flex-flow: row wrap;
-       
-}
-#footerLinks ul li{
-    width:15%;
-    margin-right:5%;
-}
-
-
-    /*Footer Navigation*/
-#footerNavigation{
-    width:100%;
-    padding: 1rem 0rem;
-    
-}
-#footerNavigation ul{
+  }
+  
+  #footerLinks ul, #footerNavigation ul, #footerInfo{
     display:flex;
-    flex-flow:row nowrap;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    padding:.25rem 0;
+  }
+  #footerLinks ul li, #footerNavigation ul li, #accessibilityInformation li, #footerInfo li{
+    margin: 0 3%;
+    padding: .25rem 0;
+  }
+  
 
-}
-#footerNavigation ul li{
-    width:15%;
-    margin-right:5%
-}
-
-/*Accessibility Information*/
 #accessibilityInformation{
-    width:100%;
+    padding-left: 5%;
+    padding-right:5%;
     display:flex;
     flex-flow:row wrap;
-    padding: 1rem 0rem;
+    justify-content:space-around;
    
-
 }
-#accessibilityInformation li{
-    width: 30%;
-    margin-right:10%;
-}
+  #accessibilityInformation li{
+    width:44%;
+   
+   
+  }
 
-    /*Extra Info*/
-#footerInfo{
-    display:flex;
-    flex-flow:row wrap;
-    padding: .5rem 0rem;
-    width:100%;
-
-}
-
-
-#footerInfoNumber{
-    width: 35%;
-    margin-right:5%;
-    padding:0.5rem 0;
-}
-#footerInfoEmail{
-    width:40%;
-    
-    padding:0.5rem 0;
-}
-
-
-
-
-#copyrightInfo{
-    width:100%;
-    padding: 1rem 0;
-}
+  
+  #copyrightInfo p{
+    text-align:center;
+    padding: .5rem 0;
+  }
+  
 
 /*General*/
 .BottomBorder{
@@ -223,32 +179,42 @@ button{
     }
 }
 @media only screen and (max-width: 36.250em){
+  
+
+  
     a, button, span, p, section h4{
-        font-size:0.75rem;
+        font-size:.85rem
     }
     #logoImage{
-        width:4rem;
+        width:5rem;
     }
     .Icon img{
-        width: 2.6666rem;
+        width: 3.2rem;
     }
     h1{
-        font-size:1.5rem;
+        font-size:1.7rem;
     }
     h2{
-        font-size:1.125rem;
+        font-size:1.275rem;
     }
     h3{
-        font-size:0.8775rem;
-    }
+        font-size:0.9945rem;
+            }
     
 
 
     h5{
-        font-size:.6225rem;
+        font-size:.7055rem;
     }
     h6{
-        font-size:.5025rem;
+        font-size:.5695rem;
+    }
+
+    #footerLinks ul{
+        justify-content: center;
+    }
+    #footerLinks ul li{
+        width:auto;
     }
 
 
