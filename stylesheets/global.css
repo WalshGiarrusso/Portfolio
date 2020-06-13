@@ -1,4 +1,8 @@
-﻿body{
+﻿*{
+    word-wrap: wrap break-word;
+    overflow-wrap: break-word;
+}
+body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
@@ -181,7 +185,7 @@ button{
 @media only screen and (max-width: 36.250em){
   
 
-  
+    /*
     a, button, span, p, section h4{
         font-size:.85rem
     }
@@ -199,23 +203,15 @@ button{
     }
     h3{
         font-size:0.9945rem;
-            }
-    
-
-
+    }
     h5{
         font-size:.7055rem;
     }
     h6{
         font-size:.5695rem;
     }
-
-    #footerLinks ul{
-        justify-content: center;
-    }
-    #footerLinks ul li{
-        width:auto;
-    }
+    */
+   
 
 
 }
