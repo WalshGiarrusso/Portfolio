@@ -57,26 +57,30 @@ button{
     display:flex;
     flex-flow:row wrap;
     justify-content:space-around;
-    
-
-    
-    
 }
-#optionsBar li{
+#optionsBar li, #mobileOptionsBar li{
     
     margin: 0 2%;
 }
+#mobileOptionsBar{
+    display:none;
+}
+
+
+
     /*Header*/
 #top{
     padding: 0.5rem 5%;
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-between;
-    align-items:baseline;
+    align-items:center;
+    font-weight:bold;
 }
+
         /*Logo*/
 #logoImage{
-    width:6rem;
+    width:4rem;
 }
         /*Navbar*/
 #headerNavigation{
@@ -87,17 +91,17 @@ button{
 }
 
 .Icon{
-    display:flex;
-    flex-flow: row nowrap;
-    align-items:center;
     padding: 0rem .5rem;
 }
 
-.Icon img{
-    width:4rem;
-    padding-right:0.5rem;
+/*Mobile Nav*/
+#openMobileMenu, #closeMobileMenu{
+    display:none;
 }
-
+#openMobileMenu img,  #closeMobileMenu img{
+    margin-right:0.5rem;
+    width:3rem;
+}
     /*Breadcrumb Bar*/
 #breadcrumbBar{
     padding: 0.5rem 5%;
@@ -148,8 +152,13 @@ button{
     width:44%;
    
    
-  }
-
+}
+#footerAccessStatement, #footerConformanceClaim{
+    display:none;
+}
+#footerAccessStatement a, #footerConformanceClaim a{
+    font-weight:700;
+}
   
   #copyrightInfo p{
     text-align:center;
@@ -177,40 +186,39 @@ button{
 
 /*Media Queries*/
 
-@media only screen and (max-width: 50.438em){
-    #headerNavigation li a span{
+@media only screen and (max-width: 35.750em){
+    #optionsBar{
         display:none;
     }
-}
-@media only screen and (max-width: 36.250em){
-  
+    #mobileOptionsBar{
+        padding: 0.25rem 5%;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-around;
 
-    /*
-    a, button, span, p, section h4{
-        font-size:.85rem
     }
-    #logoImage{
-        width:5rem;
+    #accessibilityInformation li{
+        width: inherit;
     }
-    .Icon img{
-        width: 3.2rem;
+    .FooterInfoHide{
+        display:none;
     }
-    h1{
-        font-size:1.7rem;
+    #footerConformanceClaim, #footerAccessStatement{
+        display:block;
     }
-    h2{
-        font-size:1.275rem;
+}
+@media only screen and (max-width: 30em){
+    #headerNavigation{
+        display:none;
     }
-    h3{
-        font-size:0.9945rem;
+    #openMobileMenu{
+        display:flex;
+        flex-flow: row nowrap;
+        align-items: center;
     }
-    h5{
-        font-size:.7055rem;
+    #siteMapLink {
+        display:none;
     }
-    h6{
-        font-size:.5695rem;
-    }
-    */
    
 
 

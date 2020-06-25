@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self"> 
+    <base href="https://walshgiarrusso.com/" target="_self">  
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -44,34 +44,46 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a href="#main">
+                <a class="Bold" href="#main">
                     Skip to Main Content
                 </a>
             </li>
             <li>
-                <a href="options">
+                <a class="Bold" href="options">
                     Accessibility Options
                 </a>
             </li>
             <li>
-                <a href="languages">
+                <a class="Bold" href="languages">
                     Translation Options &#127758;&#xFE0E;
                 </a>
             </li>
             <li>
-                <button class="Left" id="hideHeaderOptions">
+                <button class="Left Bold" id="hideHeaderOptions">
                     Hide Header Options
                 </button>
             </li>
             <li id="hideHOList">
-                <button class="Left" id="hideHOByDefault">
+                <button class="Left Bold" id="hideHOByDefault">
                     Don't Show Again
                 </button>
             </li>
             <li id="showHOList" class="Hidden">
-                <button class="Left" id="showHOByDefault">
+                <button class="Left Bold" id="showHOByDefault">
                     Show by Default
                 </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="#main">
+                    Skip to Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Options
+                </a>
             </li>
         </ul>
     </nav>
@@ -84,36 +96,42 @@
             <ul id="headerNavigation">
                 <li>
                     <a class="Icon" href="">
-                        <img src="icons/home-dark.svg" alt="An image link to the home page.">
-                        <span>Home</span>
+                        Home
                     </a>
                 </li>
                 <li>
                     <a class="Icon" href="gallery">
-                        <img src="icons/gallery-dark.svg" alt="An image link to the gallery page.">
-                        <span>Gallery</span>
+                        Gallery
                     </a>
                 </li>
                 <li>
                     <a class="Icon" href="blog">
-                        <img src="icons/blog-dark.svg" alt="An image link to the blog page.">
-                        <span>Blog</span>
+                        Blog
                     </a>
                 </li>
                 <li>
                     <a class="Icon" href="about">
-                        <img src="icons/about-dark.svg" alt="An image link to the about page.">
-                        <span>About Me</span>
+                        About Me
                     </a>
                 </li>
                 <li>
                     <a class="Icon" href="contact">
-                        <img src="icons/contact-dark.svg" alt="An image link to the contact page.">
-                        <span>Contact</span>
+                        Contact
                     </a>
                 </li>
             </ul>
+            <!--Mobile Menu-->
+            <button class="Bold" id="openMobileMenu" title="Open Menu">
+                <img src="icons/open-dark.svg" alt="Button to Open Mobile Menu">
+                Open Menu
+            </button>
+            <!--Mobile Menu-->
+            <button class="Bold" id="closeMobileMenu" title="Close Menu">
+                <img src="icons/close-dark.svg" alt="Button to Close Mobile Menu">
+                Close Menu
+            </button>
         </nav>
+        
     </header>
     <!--Breadcrumb-->
     <nav class="BottomBorder" id="breadcrumbBar">
@@ -135,7 +153,7 @@
             </li>
         </ul>
         <!--Sitemap Link-->
-        <a href="sitemap">
+        <a id="siteMapLink" class="Bold" href="sitemap">
             View Sitemap
         </a>
     </nav>
@@ -273,7 +291,7 @@
    </nav>
    <!--Accessibility Information-->
    <ul class="BottomBorder" id="accessibilityInformation">
-       <li>
+       <li class="FooterInfoHide">
            <section>
                 <h4>
                     Accessibility Statement
@@ -286,7 +304,12 @@
                </p>
            </section>
        </li>
-       <li>
+       <li id="footerAccessStatement">
+            <a href="accessibility">
+                Accessibility Statement >
+            </a>
+       </li>
+       <li class="FooterInfoHide">
            <section>
                 <h4>
                     Conformance Claim
@@ -296,6 +319,11 @@
                 </p>
            </section>
         </li>
+        <li id="footerConformanceClaim">
+            <a href="accessibility#conformanceClaim">
+                Conformance Claim >
+            </a>
+       </li>
    </ul>
 
    <!--Extra Info-->
