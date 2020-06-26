@@ -71,7 +71,7 @@ $('#errorOverride').click(function(){
 
 });
 function storeColors(bKC, tXC, bDC, iCC){
-  
+    console.log(iCC);
     lclStorage.setItem('hasPrefs', 'true');
     $('#errorOverride').hide();
     $('#errorBox').empty();
@@ -142,4 +142,3 @@ function clRGB(s) {
 function clLum(a, b, c){
     return (0.2126 * a) + (0.7152 * b) + (0.0722 * c);
 }
-

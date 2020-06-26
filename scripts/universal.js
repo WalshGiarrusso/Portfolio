@@ -131,19 +131,13 @@ function targetColors(useCustoms){
     var colorSends;
     if(useCustoms){
         colorSends = [ lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
-        
-    };
-    if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+    }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
         colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
-       
-      
     }else{
-        
+        console.log('1');
         colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
-        
-      
     };
-    changeColors(colorSends);
+    changeColors(colorSends)
 };
 function changeColors(targets){
     $(document.body).css({ 
