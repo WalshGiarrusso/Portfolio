@@ -5,7 +5,7 @@ $('#maxContrastButton').click(function(){
     lclStorage.setItem('txtColor', '#000000');
     lclStorage.setItem('bdrColor', '#000000');
     lclStorage.setItem('icnColor', 'dark');
-    checkColors();
+    targetColors(true);
 });
 $('#submitSiteColors').click(function(){
     

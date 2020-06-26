@@ -121,7 +121,8 @@ mqC2.addListener(function(){
     targetColors(false); 
 });
 function checkColors(){
-    if(lclStorage.getItem('hasPrefs' == true)){
+    console.log('has prefs:' + lclStorage.getItem('hasPrefs') );
+    if(lclStorage.getItem('hasPrefs') == true){
         targetColors(true);
 
     }else{ 
