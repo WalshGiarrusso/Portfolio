@@ -43,17 +43,18 @@ function checkErrors(bKC, tXC, bDC, iCC){
     }else{
         $('#errorOverride').show();
         if (bkgQtxt < 7){
-            $('#errorBox').append("<span class='MarginIndent' >Warning: text and background have a low contrast ratio ("+bkgQtxt+") </span><br>")
+            $('#errorBox').append("<span class='MarginIndent' >Warning: the text color and the background color have a low contrast ratio ("+bkgQtxt.toFixed(3)+") </span><br>");
      
         };
         if(bkgQbdr < 7){
-            $('#errorBox').append("<span class='MarginIndent'>Warning: borders and background have a low contrast ratio ("+bkgQbdr+")<br> </span>")
+            $('#errorBox').append("<span class='MarginIndent'>Warning: the border color and the background color have a low contrast ratio ("+bkgQbdr.toFixed(3)+")<br> </span>");
             
         };
         if(bkgQicn < 3){
-            $('#errorBox').append("<span class='MarginIndent'>Warning: icons and background have a low contrast ratio ("+bkgQicn+")<br> </span>")
+            $('#errorBox').append("<span class='MarginIndent'>Warning: the icon color and the background color have a low contrast ratio ("+bkgQicn.toFixed(3)+")<br> </span>");
          
         };
+        $('#errorBox').append("<span class='MarginIndent'>Try making one color brighter and the other color darker.<br><br></span>");
         return false;
     };
 };
