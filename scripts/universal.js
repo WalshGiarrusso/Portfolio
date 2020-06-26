@@ -7,7 +7,12 @@ $(document).ready(function (){
 
     checkHODO();
 
-
+    if(lclStorage.getItem('hasPreferences')){
+        checkColors(false);
+    }else{
+        checkColors(true);
+    };
+    
 });
 
 //Input Handling
@@ -85,14 +90,14 @@ function checkHODO(){
 $('#mobileMenuButton').click(function(){
     if($('#mobileMenu').is(':visible')){
         $('#mobileMenu').hide();
-        $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
+        $('#mobileMenuButton > img').attr("src", "icons/open-light.svg");
         $('#mobileMenuButton > span').text('Open Menu');
         $('#mobileMenuButton').attr('title', 'Open Menu');
 
 
     }else{
         $('#mobileMenu ').show();
-        $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
+        $('#mobileMenuButton > img').attr("src", "icons/close-light.svg");
         $('#mobileMenuButton > span').text('Close Menu');
         $('#mobileMenuButton').attr('title', 'Close Menu');
     };
@@ -103,6 +108,22 @@ mqMM = window.matchMedia('(min-width:30em)');
 mqMM.addListener(function(){
     $('#mobileMenuButton').attr('title', 'Open Menu');
     $('#mobileMenu').hide();
-    $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
+    $('#mobileMenuButton > img').attr("src", "icons/open-light.svg");
     $('#mobileMenuButton > span').text('Open Menu');
 });
+
+//color
+function checkColors(checkBrowser){
+    if(checkBrowser){
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+            //dark mode
+            console.log('dark');
+
+        }else{
+            //light mode
+            console.log('light');
+        };
+    }else{
+        //custom colors
+    };
+};

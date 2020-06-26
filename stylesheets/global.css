@@ -1,13 +1,14 @@
 ﻿*{
     word-wrap: wrap break-word;
     overflow-wrap: break-word;
+    color:inherit;
 }
 body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
     font-style: normal;
-
+    color:black;
 }
 
 ul{
@@ -19,11 +20,9 @@ ul{
 a{
     text-decoration:none;
 
-    /*will need to be later removed*/
-    color:black;
 }
 
-p, h1, h2, h3, h4, h5, h6{
+.FooterInfoHide section h4, .FooterInfoHide section p, small p{
     margin:0;
 }
 
@@ -191,6 +190,19 @@ button{
 
 .Hidden{
     display:none;
+}
+.Indent{
+    padding-left:5%;
+}
+.MarginIndent{
+    margin-left: 5%;
+}
+
+.TrueButton{
+    padding:.75rem;
+    background-color:black;
+    color:white;
+    border-radius:1.5rem;
 }
 
 /*Media Queries*/
