@@ -124,7 +124,7 @@ function targetColors(){
     console.log(lclStorage.getItem('bkgColor')+  lclStorage.getItem('txtColor') + lclStorage.getItem('bdrColor')+ lclStorage.getItem('icnColor'));
     console.log(lclStorage.getItem('bkgColor') == 'undefned') + (lclStorage.getItem('txtColor') == 'undefined') + (lclStorage.getItem('bdrColor') == 'undefined') + (lclStorage.getItem('icnColor') == 'undefined');
     var colorSends = [];
-    if((lclStorage.getItem('bkgColor') == 'undefned') && (lclStorage.getItem('txtColor') == 'undefined') && (lclStorage.getItem('bdrColor') == 'undefined') && (lclStorage.getItem('icnColor') == 'undefined') ){
+    if((lclStorage.getItem('bkgColor') == 'null') && (lclStorage.getItem('txtColor') == 'null') && (lclStorage.getItem('bdrColor') == 'null') && (lclStorage.getItem('icnColor') == 'null') ){
         if(window.matchMedia('(prefers-color-scheme:dark)').matches){
             colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
             changeColors(colorSends);
