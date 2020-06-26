@@ -1,6 +1,6 @@
 lclStorage = window.localStorage;
 $('#maxContrastButton').click(function(){
-    lclStorage.removeItem('hasPrefs');
+    lclStorage.setItem('hasPrefs','false');
     lclStorage.setItem('bkgColor', '#ffffff');
     lclStorage.setItem('txtColor', '#000000');
     lclStorage.setItem('bdrColor', '#000000');

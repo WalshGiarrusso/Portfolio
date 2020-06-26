@@ -121,8 +121,9 @@ mqC2.addListener(function(){
     targetColors(false); 
 });
 function checkColors(){
-    if(lclStorage.getItem('hasPrefs')){
+    if(lclStorage.getItem('hasPrefs' == true)){
         targetColors(true);
+
     }else{ 
         targetColors(false);
     };
@@ -130,7 +131,7 @@ function checkColors(){
 function targetColors(useCustoms){
     var colorSends;
     if(useCustoms){
-        colorSends = [ lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
+        colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
     }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
         colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
     }else{
@@ -140,6 +141,8 @@ function targetColors(useCustoms){
     changeColors(colorSends)
 };
 function changeColors(targets){
+    console.log(targets);
+
     $(document.body).css({ 
         //background color
         "background-color": targets[0],
