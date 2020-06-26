@@ -7,7 +7,7 @@ $(document).ready(function (){
 
     checkHODO();
 
-    checkColors();
+    targetColors();
 
     
     
@@ -115,36 +115,27 @@ mqMM.addListener(function(){
 mqC1 = window.matchMedia('(prefers-color-scheme:dark)');
 mqC2 = window.matchMedia('(prefers-color-scheme:light)');
 mqC1.addListener(function(){
-    targetColors(false);
+    targetColors();
 });
 mqC2.addListener(function(){
-    targetColors(false); 
+    targetColors(); 
 });
-function checkColors(){
-    console.log('has prefs:' + lclStorage.getItem('hasPrefs') );
-    if(lclStorage.getItem('hasPrefs') == true){
-        targetColors(true);
-
-    }else{ 
-        targetColors(false);
-    };
-};
-function targetColors(useCustoms){
-    console.log('usecustoms: '+useCustoms)
+function targetColors(){
     var colorSends = [];
-    if(useCustoms){
-        colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
-        changeColors(colorSends);
-        return;
-    };
-    
-    if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-        //colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
+    if((lclStorage.getItem('bkgColor') == 'null') && (lclStorage.getItem('txtColor') == 'null') && (lclStorage.getItem('bdrColor') == 'null') && (lclStorage.getItem('icnColor') == 'null') ){
+        if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+            colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
+            changeColors(colorSends);
+        }else{
+            console.log('1');
+            colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
+            changeColors(colorSends);
+        };
     }else{
-        console.log('1');
-        //colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
+        colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
+        console.log(colorSends);
+        changeColors(colorSends);
     };
-    changeColors(colorSends);
 };
 function changeColors(targets){
     console.log(targets);

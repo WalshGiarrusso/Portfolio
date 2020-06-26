@@ -1,11 +1,11 @@
 lclStorage = window.localStorage;
 $('#maxContrastButton').click(function(){
-    lclStorage.setItem('hasPrefs','false');
-    lclStorage.setItem('bkgColor', '#ffffff');
-    lclStorage.setItem('txtColor', '#000000');
-    lclStorage.setItem('bdrColor', '#000000');
-    lclStorage.setItem('icnColor', 'dark');
-    targetColors(true);
+    
+    lclStorage.removeItem('bkgColor');
+    lclStorage.removeItem('txtColor');
+    lclStorage.removeItem('bdrColor');
+    lclStorage.removeItem('icnColor');
+    targetColors();
 });
 $('#submitSiteColors').click(function(){
     
@@ -72,7 +72,7 @@ $('#errorOverride').click(function(){
 });
 function storeColors(bKC, tXC, bDC, iCC){
     console.log(iCC);
-    lclStorage.setItem('hasPrefs', 'true');
+    
     $('#errorOverride').hide();
     $('#errorBox').empty();
     lclStorage.setItem('bkgColor', bKC);
@@ -80,7 +80,7 @@ function storeColors(bKC, tXC, bDC, iCC){
     lclStorage.setItem('bdrColor', bDC);
     lclStorage.setItem('icnColor', iCC);
     console.log(lclStorage.getItem('bkgColor')+ lclStorage.getItem('txtColor')+ lclStorage.getItem('bdrColor')+ lclStorage.getItem('icnColor'))
-    checkColors();
+    targetColors();
 };
 function checkContrast(c1, c2){
 
