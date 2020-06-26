@@ -1,5 +1,6 @@
 lclStorage = window.localStorage;
 $('#submitSiteColors').click(function(e){
+    
     var bkgColor = $('#backgroundColorInput').val();
     var txtColor = $('#textColorInput').val();
     var bdrColor = $('#borderColorInput').val();
@@ -11,7 +12,7 @@ $('#submitSiteColors').click(function(e){
     if(checkErrors(bkgColor, txtColor, bdrColor, icnColor)){
         storeColors(bkgColor, txtColor, bdrColor, icnColor);
     };
-    e.preventDefault();
+    
 });
 function checkErrors(bKC, tXC, bDC, iCC){
     $('#errorBox').empty();
