@@ -10,14 +10,18 @@ input[type=color]{
     margin:.5rem 0;
     height:2rem;
     width:2rem;
-
+    box-sizing:content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    
+    
 }
 input[type=color]::-webkit-color-swatch-wrapper{
     padding:0;
 }
 input[type=color]::-webkit-color-swatch{
-   border:2px solid black;
-   border-radius:1rem;
+    border-radius:1rem;
+    border:2px solid;
 }
 input{
     cursor:pointer;
@@ -31,9 +35,7 @@ input[type=radio]{
     height:1.5rem;
     width:1.5rem;
     vertical-align:bottom;
-    
-    
-    
+    background:white;
 }
 input[type=radio]:checked{
     
@@ -45,4 +47,7 @@ input[type=radio]:checked{
 input[type=radio]::-ms-check{
     appearance: none;
     border-radius:0;
+}
+#errorOverride{
+   display:none;
 }

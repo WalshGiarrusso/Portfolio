@@ -7,6 +7,8 @@ $(document).ready(function (){
 
     checkHODO();
 
+    checkColors();
+
     
     
 });
@@ -109,4 +111,53 @@ mqMM.addListener(function(){
 });
 
 
-
+//colors
+mqC1 = window.matchMedia('(prefers-color-scheme:dark)');
+mqC2 = window.matchMedia('(prefers-color-scheme:light)');
+mqC1.addListener(function(){
+    targetColors(false);
+});
+mqC2.addListener(function(){
+    targetColors(false); 
+});
+function checkColors(){
+    if(lclStorage.getItem('hasPrefs')){
+        targetColors(true);
+    }else{ 
+        targetColors(false);
+    };
+};
+function targetColors(useCustoms){
+    var colorSends;
+    if(useCustoms){
+        colorSends = [ lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
+    }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+        colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
+    }else{
+        console.log('1');
+        colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
+    };
+    changeColors(colorSends)
+};
+function changeColors(targets){
+    $(document.body).css({ 
+        //background color
+        "background-color": targets[0],
+        //text color
+        "color": targets[1]
+    });
+    //border color
+    $('.BottomBorder, .TopBorder, input[type=color], input[type=radio]').css('border-color', targets[2])
+    //button colors
+    $('.TrueButton').css({
+        "background-color": targets[1],
+        "color": targets[0]
+    });
+    //icon colors
+    $('.Swap').each(function(){
+        var link = $(this).attr('src').split('-');
+        $(this).attr('src', link[0] + '-'+ targets[3] +'.svg');
+    });
+    //focus indicator
+    $('*:focus, *').css('outline-color', targets[2]);
+}

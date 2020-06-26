@@ -4,9 +4,11 @@
     color:inherit;
 }
 *:focus{
-    outline: 2px solid black;
-    outline-offset:.25rem;
+    outline-color: black;
+    outline: 2px solid;
+    outline-offset:.35rem;
 }
+
 body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
@@ -244,13 +246,16 @@ button{
     padding:.75rem;
     background-color:black;
     color:white;
+    outline-color:black;
     border:none;
     border-radius:1.5rem;
     transition:150ms;
     cursor:pointer;
 }
+
 .TrueButton:hover, .TrueButton:focus{
     transform:scale(1.1);
+   
 }
 
 /*Media Queries*/
