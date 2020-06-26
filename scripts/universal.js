@@ -121,8 +121,7 @@ mqC2.addListener(function(){
     targetColors(false); 
 });
 function checkColors(){
-    console.log(lclStorage.getItem('hasPrefs'))
-    if(!lclStorage.getItem('hasPrefs') == 'null'){
+    if(lclStorage.getItem('hasPrefs')){
         targetColors(true);
     }else{ 
         targetColors(false);
@@ -132,19 +131,18 @@ function targetColors(useCustoms){
     var colorSends;
     if(useCustoms){
         colorSends = [ lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
-
         changeColors(colorSends);
         return;
-    }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+    };
+    if(window.matchMedia('(prefers-color-scheme:dark)').matches){
         colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
         changeColors(colorSends);
         return;
     }else{
-        console.log('1');
+        
         colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
         changeColors(colorSends);
         return;
-
     };
     
 };
