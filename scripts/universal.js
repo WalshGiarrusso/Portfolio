@@ -60,7 +60,7 @@ function checkTarget(target){
     for(i = 0 ; i < targetsArr.length; i++){
         //check target, and return if a match
         if($(target).is(targetsArr[i])){
-            console.log(targetsArr[i])
+           // console.log(targetsArr[i])
             return i;
         };
     };
@@ -70,7 +70,7 @@ function checkTarget(target){
 //Check Header Options Draw On/Off
 function checkHODO(){
     var dHO = lclStorage.getItem('drawHO'); 
-    console.log(dHO);
+
     if(dHO == 'false'){
         $('#hideHOList').addClass("Hidden");
         $('#showHOList').removeClass("Hidden");
@@ -121,26 +121,26 @@ mqC2.addListener(function(){
     targetColors(); 
 });
 function targetColors(){
-    console.log(lclStorage.getItem('bkgColor')+  lclStorage.getItem('txtColor') + lclStorage.getItem('bdrColor')+ lclStorage.getItem('icnColor'));
-    console.log(lclStorage.getItem('bkgColor') == 'undefned') + (lclStorage.getItem('txtColor') == 'undefined') + (lclStorage.getItem('bdrColor') == 'undefined') + (lclStorage.getItem('icnColor') == 'undefined');
+    
     var colorSends = [];
-    if((lclStorage.getItem('bkgColor') == 'null') || (lclStorage.getItem('txtColor') == 'null') || (lclStorage.getItem('bdrColor') == 'null') || (lclStorage.getItem('icnColor') == 'null') ){
+  
+    if( (lclStorage.getItem('icnColor') === null) || ((lclStorage.getItem('bkgColor') === null)) || ((lclStorage.getItem('txtColor') === null)) || ((lclStorage.getItem('bdrColor') === null))){
         if(window.matchMedia('(prefers-color-scheme:dark)').matches){
             colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
             changeColors(colorSends);
         }else{
-            console.log('1');
+        
             colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
             changeColors(colorSends);
         };
     }else{
         colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
-        console.log(colorSends);
+      
         changeColors(colorSends);
     };
 };
 function changeColors(targets){
-    console.log(targets);
+  
 
     $(document.body).css({ 
         //background color
