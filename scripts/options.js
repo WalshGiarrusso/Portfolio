@@ -18,7 +18,7 @@ $('#submitSiteColors').click(function(){
         var icnColor = 'dark';
     };
 
-    console.log(icnColor)
+    
     if(checkErrors(bkgColor, txtColor, bdrColor, icnColor)){
         storeColors(bkgColor, txtColor, bdrColor, icnColor);
     };
@@ -44,15 +44,15 @@ function checkErrors(bKC, tXC, bDC, iCC){
         $('#errorOverride').show();
         if (bkgQtxt < 7){
             $('#errorBox').append("<span class='MarginIndent' >Warning: text and background have a low contrast ratio ("+bkgQtxt+") </span><br>")
-            console.log('checkdown1');
+           
         };
         if(bkgQbdr < 7){
             $('#errorBox').append("<span class='MarginIndent'>Warning: borders and background have a low contrast ratio ("+bkgQbdr+")<br> </span>")
-            console.log('checkdown2');
+      
         };
         if(bkgQicn < 3){
             $('#errorBox').append("<span class='MarginIndent'>Warning: icons and background have a low contrast ratio ("+bkgQicn+")<br> </span>")
-            console.log('checkdown3');
+          
         };
         return false;
     };
@@ -71,7 +71,7 @@ $('#errorOverride').click(function(){
 
 });
 function storeColors(bKC, tXC, bDC, iCC){
-    console.log(iCC);
+  
     lclStorage.setItem('hasPrefs', 'true');
     $('#errorOverride').hide();
     $('#errorBox').empty();
