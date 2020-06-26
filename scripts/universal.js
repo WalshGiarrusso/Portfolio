@@ -130,7 +130,8 @@ function checkColors(){
     };
 };
 function targetColors(useCustoms){
-    var colorSends;
+    console.log('usecustoms: '+useCustoms)
+    var colorSends = [];
     if(useCustoms){
         colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
         changeColors(colorSends);
