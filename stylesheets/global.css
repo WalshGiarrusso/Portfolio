@@ -227,6 +227,12 @@ button{
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
+    #showHeaderOptions{
+        display:none;
+    }
+    #footerNavigation ul li{
+        margin:0;
+    }
 }
 @media only screen and (max-width: 30em){
     #headerNavigation{
@@ -237,8 +243,8 @@ button{
         flex-flow:row nowrap;
         align-items: center;
     }
-    
     #siteMapLink {
         display:none;
     }
+    
 }
