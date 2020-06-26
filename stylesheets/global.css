@@ -227,7 +227,7 @@ button{
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
-    #showHeaderOptions{
+    #sHOParent{
         display:none;
     }
     #footerNavigation ul li{
