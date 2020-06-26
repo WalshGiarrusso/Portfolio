@@ -209,7 +209,7 @@
         </button>
     
             <h3>Customize</h3>
-        <form  id="customColorsForm">
+        <form  id="customColorsForm" onsubmit="return false">
             <h4 class="MarginIndent">
                 Site Colors
             </h4>
@@ -240,7 +240,7 @@
                 <label for="darkIcons">Dark Icons</label>
             </section>
             <br>
-            <button class="TrueButton Bold" id="submitSiteColors">Submit</button>
+            <input type="submit" class="TrueButton Bold" id="submitSiteColors">
             <strong id="errorBox">
                
             </strong>
