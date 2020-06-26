@@ -51,6 +51,11 @@ input[type=radio]::-ms-check{
 #errorOverride, #submitSiteColors{
     width:6rem;
 }
+#submitSiteColors{
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;;
+}
 #errorOverride{
     display:none;
 }
