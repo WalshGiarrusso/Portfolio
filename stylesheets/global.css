@@ -95,12 +95,19 @@ button{
 }
 
 /*Mobile Nav*/
-#openMobileMenu, #closeMobileMenu{
+#mobileMenuButton, #mobileMenu{
     display:none;
 }
-#openMobileMenu img,  #closeMobileMenu img{
+#mobileMenuButton img{
     margin-right:0.5rem;
     width:3rem;
+}
+#mobileMenu ul{
+    text-align:center;
+    padding: .25rem 0;
+}
+#mobileMenu ul li{
+    padding: .25rem 0;
 }
     /*Breadcrumb Bar*/
 #breadcrumbBar{
@@ -112,6 +119,7 @@ button{
     
     
 }
+
 
         /*Breadcrumb Menu*/
 #breadcrumbMenu{
@@ -211,15 +219,13 @@ button{
     #headerNavigation{
         display:none;
     }
-    #openMobileMenu{
+    #mobileMenuButton{
         display:flex;
-        flex-flow: row nowrap;
+        flex-flow:row nowrap;
         align-items: center;
     }
+    
     #siteMapLink {
         display:none;
     }
-   
-
-
 }

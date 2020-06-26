@@ -35,13 +35,25 @@ $(document).click(function(e){
                 lclStorage.setItem('drawHO', 'false');
                 checkHODO();
             });
-          
-            
             break;
         case 3:
             //show the header options by default
             lclStorage.setItem('drawHO', 'true');
             checkHODO();
+            break;
+        case 4:
+            //open the mobile menu
+            if($('#mobileMenu').is(':visible')){
+                $('#mobileMenu').hide();
+                $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
+                $('#mobileMenuButton > span').text('Open Menu');
+
+
+            }else{
+                $('#mobileMenu ').show();
+                $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
+                $('#mobileMenuButton > span').text('Close Menu');
+            };
             break;
         default:
             //
@@ -49,7 +61,7 @@ $(document).click(function(e){
     };
 });
 //array list of targets for checktarget function
-var targetsArr = ["#hideHeaderOptions", "#showHeaderOptions", "#hideHOByDefault", "#showHOByDefault"]
+var targetsArr = ["#hideHeaderOptions", "#showHeaderOptions", "#hideHOByDefault", "#showHOByDefault", "#mobileMenuButton"]
 
 function checkTarget(target){
     for(i = 0 ; i < targetsArr.length; i++){
@@ -77,3 +89,11 @@ function checkHODO(){
     }
 };
 
+
+//Hide MobileMenu
+mqMM = window.matchMedia('(min-width:30em)');
+mqMM.addListener(function(){
+    $('#mobileMenu').hide();
+    $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
+    $('#mobileMenuButton > span').text('Open Menu');
+});
