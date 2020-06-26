@@ -138,10 +138,10 @@ function targetColors(useCustoms){
     };
     
     if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-        colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
+        //colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
     }else{
         console.log('1');
-        colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
+        //colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
     };
     changeColors(colorSends);
 };
