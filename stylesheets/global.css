@@ -29,7 +29,7 @@ p, h1, h2, h3, h4, h5, h6{
 
 
 small{
-    font-size:medium;
+    font-size:1rem;
 }
 
 address{
@@ -168,10 +168,11 @@ button{
     font-weight:700;
 }
   
-  #copyrightInfo p{
+#copyrightInfo p{
     text-align:center;
     padding: .5rem 0;
-  }
+    font-size:1rem;
+}
   
 
 /*General*/
