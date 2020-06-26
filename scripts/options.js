@@ -1,5 +1,13 @@
 lclStorage = window.localStorage;
-$('#submitSiteColors').click(function(e){
+$('#maxContrastButton').click(function(){
+    lclStorage.removeItem('hasPrefs');
+    lclStorage.setItem('bkgColor', '#ffffff');
+    lclStorage.setItem('txtColor', '#000000');
+    lclStorage.setItem('bdrColor', '#000000');
+    lclStorage.setItem('icnColor', 'dark');
+    checkColors();
+});
+$('#submitSiteColors').click(function(){
     
     var bkgColor = $('#backgroundColorInput').val();
     var txtColor = $('#textColorInput').val();
@@ -9,6 +17,8 @@ $('#submitSiteColors').click(function(e){
     }else{
         var icnColor = 'dark';
     };
+
+    console.log(icnColor)
     if(checkErrors(bkgColor, txtColor, bdrColor, icnColor)){
         storeColors(bkgColor, txtColor, bdrColor, icnColor);
     };
@@ -26,23 +36,28 @@ function checkErrors(bKC, tXC, bDC, iCC){
         tIC = '#000000';
     }
     var bkgQicn = checkContrast(bKC, tIC);
+
+    
     if((bkgQtxt >= 7 )&&(bkgQbdr >= 7)&&(bkgQicn >= 3)){
         return true;
     }else{
         $('#errorOverride').show();
         if (bkgQtxt < 7){
-            $('#errorBox').append("<p>Warning: text and background have a low contrast ratio ("+bkgQtxt+") </p>")
+            $('#errorBox').append("<span class='MarginIndent' >Warning: text and background have a low contrast ratio ("+bkgQtxt+") </span><br>")
+            console.log('checkdown1');
         };
         if(bkgQbdr < 7){
-            $('#errorBox').append("<p>Warning: borders and background have a low contrast ratio ("+bkgQbdr+") </p>")
+            $('#errorBox').append("<span class='MarginIndent'>Warning: borders and background have a low contrast ratio ("+bkgQbdr+")<br> </span>")
+            console.log('checkdown2');
         };
         if(bkgQicn < 3){
-            $('#errorBox').append("<p>Warning: icons and background have a low contrast ratio ("+bkgQicn+") </p>")
+            $('#errorBox').append("<span class='MarginIndent'>Warning: icons and background have a low contrast ratio ("+bkgQicn+")<br> </span>")
+            console.log('checkdown3');
         };
         return false;
     };
 };
-$('#errorOverride').click(function{
+$('#errorOverride').click(function(){
     var bkgColor = $('#backgroundColorInput').val();
     var txtColor = $('#textColorInput').val();
     var bdrColor = $('#borderColorInput').val();
@@ -56,24 +71,46 @@ $('#errorOverride').click(function{
 
 });
 function storeColors(bKC, tXC, bDC, iCC){
+    console.log(iCC);
     lclStorage.setItem('hasPrefs', 'true');
     $('#errorOverride').hide();
     $('#errorBox').empty();
     lclStorage.setItem('bkgColor', bKC);
     lclStorage.setItem('txtColor', tXC);
     lclStorage.setItem('bdrColor', bDC);
-    lclStorage.setItem('iCNColor', iCC);
+    lclStorage.setItem('icnColor', iCC);
+    console.log(lclStorage.getItem('bkgColor')+ lclStorage.getItem('txtColor')+ lclStorage.getItem('bdrColor')+ lclStorage.getItem('icnColor'))
     checkColors();
 };
 function checkContrast(c1, c2){
 
-    var r1 = clRGB((parseInt(c1.substr(0,2), 16))/255);
-    var g1 = clRGB((parseInt(c1.substr(2,2), 16))/255);
-    var b1 = clRGB((parseInt(c1.substr(4,2), 16))/255);
+    
 
-    var r2 = clRGB((parseInt(c2.substr(0,2), 16))/255);
-    var g2 = clRGB((parseInt(c2.substr(2,2), 16))/255);
-    var b2 = clRGB((parseInt(c2.substr(4,2), 16))/255);
+    var r81 = parseInt(c1.substr(1,2), 16);
+    var g81 = parseInt(c1.substr(3,2), 16);
+    var b81 = parseInt(c1.substr(5,2), 16);
+
+
+
+    var r82 = parseInt(c2.substr(1,2), 16);
+    var g82 = parseInt(c2.substr(3,2), 16);
+    var b82 = parseInt(c2.substr(5,2), 16);
+
+    var rs1 = (r81/255)
+    var gs1 = (g81/255)
+    var bs1 = (b81/255)
+
+    var rs2 = (r82/255)
+    var gs2 = (g82/255)
+    var bs2 = (b82/255)
+
+    var r1 = clRGB(rs1);
+    var g1 = clRGB(gs1);
+    var b1 = clRGB(bs1);
+
+    var r2 = clRGB(rs2);
+    var g2 = clRGB(gs2);
+    var b2 = clRGB(bs2);
 
     //luminosity
     var lum1 = clLum(r1,g1,b1);
@@ -89,7 +126,7 @@ function checkContrast(c1, c2){
         l1 = lum2;
         l2 = lum1;
     }
-    var cr = ( L1 + 0.05 ) / ( L2 + 0.05 );
+    var cr = ( l1 + 0.05 ) / ( l2 + 0.05 );
     return cr;
 };
 function clRGB(s) {
