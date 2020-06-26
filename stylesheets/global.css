@@ -168,10 +168,9 @@ button{
     font-weight:700;
 }
   
-#copyrightInfo p{
+#copyrightInfo {
     text-align:center;
     padding: .5rem 0;
-    font-size:1rem;
 }
   
 
