@@ -90,14 +90,14 @@ function checkHODO(){
 $('#mobileMenuButton').click(function(){
     if($('#mobileMenu').is(':visible')){
         $('#mobileMenu').hide();
-        $('#mobileMenuButton > img').attr("src", "icons/open-light.svg");
+        $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
         $('#mobileMenuButton > span').text('Open Menu');
         $('#mobileMenuButton').attr('title', 'Open Menu');
 
 
     }else{
         $('#mobileMenu ').show();
-        $('#mobileMenuButton > img').attr("src", "icons/close-light.svg");
+        $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
         $('#mobileMenuButton > span').text('Close Menu');
         $('#mobileMenuButton').attr('title', 'Close Menu');
     };
@@ -108,7 +108,7 @@ mqMM = window.matchMedia('(min-width:30em)');
 mqMM.addListener(function(){
     $('#mobileMenuButton').attr('title', 'Open Menu');
     $('#mobileMenu').hide();
-    $('#mobileMenuButton > img').attr("src", "icons/open-light.svg");
+    $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
     $('#mobileMenuButton > span').text('Open Menu');
 });
 
