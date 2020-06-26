@@ -192,10 +192,10 @@ button{
     display:none;
 }
 .Indent{
-    padding-left:5%;
+    padding-left:.5rem;
 }
 .MarginIndent{
-    margin-left: 5%;
+    margin-left: .5rem;
 }
 
 .TrueButton{
@@ -248,3 +248,4 @@ button{
     }
     
 }
+
