@@ -7,11 +7,7 @@ $(document).ready(function (){
 
     checkHODO();
 
-    if(lclStorage.getItem('hasPreferences')){
-        checkColors(false);
-    }else{
-        checkColors(true);
-    };
+    
     
 });
 
@@ -112,18 +108,5 @@ mqMM.addListener(function(){
     $('#mobileMenuButton > span').text('Open Menu');
 });
 
-//color
-function checkColors(checkBrowser){
-    if(checkBrowser){
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-            //dark mode
-            console.log('dark');
 
-        }else{
-            //light mode
-            console.log('light');
-        };
-    }else{
-        //custom colors
-    };
-};
+

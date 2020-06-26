@@ -1,9 +1,48 @@
 #submitSiteColors{
-    border:none;
     font-size:1rem;
     font-family: trade-gothic-next, sans-serif;
     
 }
-#customHeader{
-    font-size:1.4rem;
+
+input[type=color]{
+    border:none;
+    background-color:transparent;
+    margin:.5rem 0;
+    height:2rem;
+    width:2rem;
+
+}
+input[type=color]::-webkit-color-swatch-wrapper{
+    padding:0;
+}
+input[type=color]::-webkit-color-swatch{
+   border:2px solid black;
+   border-radius:1rem;
+}
+input{
+    cursor:pointer;
+}
+input[type=radio]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:2px solid black;
+    border-radius:.25rem;
+    height:1.5rem;
+    width:1.5rem;
+    vertical-align:bottom;
+    
+    
+    
+}
+input[type=radio]:checked{
+    
+    background:black;
+    background-clip:padding-box;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+}
+input[type=radio]::-ms-check{
+    appearance: none;
+    border-radius:0;
 }

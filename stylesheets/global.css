@@ -3,6 +3,10 @@
     overflow-wrap: break-word;
     color:inherit;
 }
+*:focus{
+    outline: 2px solid black;
+    outline-offset:.25rem;
+}
 body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
@@ -19,6 +23,37 @@ ul{
 
 a{
     text-decoration:none;
+
+}
+h1{
+    font-size:2.25rem;
+    margin-block-start: 0.335rem;
+    margin-block-end: 0.335rem;
+}
+h2{
+    font-size:2rem;
+    margin-block-start: 0.415rem;
+    margin-block-end: 0.415rem;
+}
+h3{
+    font-size:1.75rem;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+h4{
+    font-size:1.5rem;
+    margin-block-start: 0.665rem;
+    margin-block-end: 0.665rem;
+}
+h5{
+    font-size:1.25rem;
+    margin-block-start: 0.835rem;
+    margin-block-end: 0.835rem;
+}
+h6{
+    font-size:1.1rem;
+    margin-block-start: 1.165rem;
+    margin-block-end: 1.165rem;
 
 }
 
@@ -131,7 +166,7 @@ button{
 
 /*Footer*/
 #mainFooter{
-    border-top:1px solid black;
+   
     padding: 0 5%;
   }
   
@@ -179,6 +214,10 @@ button{
     border-bottom: 1px solid black;
     transition:0.25s;
 }
+.TopBorder{
+    border-top: 1px solid black;
+    transition:0.25s;
+}
 
 .Bold{
     font-weight:bold;
@@ -192,17 +231,26 @@ button{
     display:none;
 }
 .Indent{
-    padding-left:.5rem;
+    padding-left:2rem;
 }
 .MarginIndent{
-    margin-left: .5rem;
+    margin-left: 2rem;
+}
+.DoubleIndentM{
+    margin-left:4rem;
 }
 
 .TrueButton{
     padding:.75rem;
     background-color:black;
     color:white;
+    border:none;
     border-radius:1.5rem;
+    transition:150ms;
+    cursor:pointer;
+}
+.TrueButton:hover, .TrueButton:focus{
+    transform:scale(1.1);
 }
 
 /*Media Queries*/

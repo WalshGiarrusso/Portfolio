@@ -24,14 +24,16 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">   
+    <base href="https://walshgiarrusso.com/" target="_self">    
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
     <!--Externals-->
         <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
             <!--Fonts-->
@@ -74,7 +76,7 @@
                 </button>
             </li>
         </ul>
-        <ul class="BottomBorder" id="mobileOptionsBar">
+        <ul id="mobileOptionsBar">
             <li>
                 <a class="Bold" href="#main">
                     Skip to Content
@@ -90,7 +92,7 @@
     <!--Header-->
     <header class="BottomBorder" id="top">
         <!--Logo-->
-        <img id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
         <!--Navbar-->
         <nav aria-label="Primary Navigation">
             <ul id="headerNavigation">
@@ -264,7 +266,7 @@
 </main>
 
 <!--Footer-->
-<footer id="mainFooter">
+<footer class="TopBorder" id="mainFooter">
     <!--Important Links-->
     <nav class="BottomBorder" id="footerLinks">
        <ul>
