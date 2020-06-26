@@ -12,6 +12,7 @@ $('#submitSiteColors').click(function(e){
     if(checkErrors(bkgColor, txtColor, bdrColor, icnColor)){
         storeColors(bkgColor, txtColor, bdrColor, icnColor);
     };
+    return false;
     
 });
 function checkErrors(bKC, tXC, bDC, iCC){
@@ -51,6 +52,7 @@ $('#errorOverride').click(function{
         var icnColor = 'dark';
     };
     storeColors(bkgColor, txtColor, bdrColor, icnColor);
+    return false;
 
 });
 function storeColors(bKC, tXC, bDC, iCC){
