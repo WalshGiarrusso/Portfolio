@@ -15,6 +15,7 @@ $(document).ready(function (){
 
 $(document).click(function(e){
     var trg = e.target;
+
     //passes event target through a function to figure out what to do
     switch(checkTarget(trg)){
         case 0:
@@ -42,18 +43,7 @@ $(document).click(function(e){
             checkHODO();
             break;
         case 4:
-            //open the mobile menu
-            if($('#mobileMenu').is(':visible')){
-                $('#mobileMenu').hide();
-                $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
-                $('#mobileMenuButton > span').text('Open Menu');
-
-
-            }else{
-                $('#mobileMenu ').show();
-                $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
-                $('#mobileMenuButton > span').text('Close Menu');
-            };
+            //
             break;
         default:
             //
@@ -91,8 +81,27 @@ function checkHODO(){
 
 
 //Hide MobileMenu
+
+$('#mobileMenuButton').click(function(){
+    if($('#mobileMenu').is(':visible')){
+        $('#mobileMenu').hide();
+        $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
+        $('#mobileMenuButton > span').text('Open Menu');
+        $('#mobileMenuButton').attr('title', 'Open Menu');
+
+
+    }else{
+        $('#mobileMenu ').show();
+        $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
+        $('#mobileMenuButton > span').text('Close Menu');
+        $('#mobileMenuButton').attr('title', 'Close Menu');
+    };
+});
+    
+
 mqMM = window.matchMedia('(min-width:30em)');
 mqMM.addListener(function(){
+    $('#mobileMenuButton').attr('title', 'Open Menu');
     $('#mobileMenu').hide();
     $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
     $('#mobileMenuButton > span').text('Open Menu');
