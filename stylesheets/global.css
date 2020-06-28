@@ -9,6 +9,36 @@
     outline: 2px solid;
     outline-offset:.35rem;
 }
+a, button, input{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display:-moz-inline-box;
+    display:inline-block;
+    min-width: 44px;
+    min-height:44px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+p a{
+    min-width:0;
+    min-height:0;
+    display:inline;
+}
+input[type=submit], button{
+    justify-content:center;
+}
+input[type=radio]{
+    display:inline-block;
+
+}
+label{
+    display:inline-block;
+}
+
+
+
 
 body{
     margin:0;
@@ -20,7 +50,7 @@ body{
     word-spacing: 0.16em;
 }
 
-button{
+button, input{
     letter-spacing: 0.12em; 
     word-spacing: 0.16em;
 }
@@ -142,11 +172,14 @@ button{
     width:3rem;
 }
 #mobileMenu ul{
-    text-align:center;
+   
     padding: .25rem 0;
 }
 #mobileMenu ul li{
     padding: .25rem 0;
+}
+#mobileMenu ul li a{
+    justify-content: center;
 }
     /*Breadcrumb Bar*/
 #breadcrumbBar{
@@ -237,13 +270,13 @@ button{
     display:none;
 }
 .Indent{
-    padding-left:2rem;
+    padding-left:1.25rem;
 }
 .MarginIndent{
-    margin-left: 2rem;
+    margin-left: 1.25rem;
 }
 .DoubleIndentM{
-    margin-left:4rem;
+    margin-left:2.5rem;
 }
 
 .TrueButton{
