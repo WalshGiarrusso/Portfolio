@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">      
+    <base href="https://walshgiarrusso.com/" target="_self">   
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -95,7 +95,7 @@
         <!--Logo-->
         <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
         <!--Navbar-->
-        <nav aria-label="Primary Navigation">
+        <nav aria-label="Main" role="navigation">
             <ul id="headerNavigation">
                 <li>
                     <a class="Icon" href="">
@@ -187,7 +187,7 @@
         
 
     <!--Content-->
-    <main id="main">
+    <main id="main" tabindex="-1">
         
         <h1>
             Accessibility Options
@@ -196,58 +196,59 @@
             <u>Langauge Options ></u>
         </a>
 
-        <h2>
-            Site Colors
-        </h2>
+        
         <section class="MarginIndent">
+            <h2>
+                Site Colors
+            </h2>
 
         
             <button class="TrueButton TrueButton_Hover Bold" name="Max Contrast" id="maxContrastButton">
                 Max Contrast
             </button>
         
-                <h3>
-                    Customize
-                </h3>
+            <h3>
+                Customize
+            </h3>
+
 
             <form  id="customColorsForm" onsubmit="return false">
-
-                <h4 class="MarginIndent">
-                    Colors
-                </h4>
                 
-                <section class="DoubleIndentM">
+              
+                <fieldset class="DoubleIndentM">
+                    <legend>
+                        Colors
+                    </legend>
                     <label for="textColorInput">Text Color</label>
-                    <br>
+                  
                     <input type="color" name="Text Color" id="textColorInput" value="#000000"> 
-                    <br>
+                  
                     <label for="backgroundColorInput">Background Color</label>
-                    <br> 
+                  
                     <input type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
-                    <br>
+              
                     <label for="borderColorInput">Border/Focus Color</label>
-                    <br>
+                
                     <input type="color" name="Border Color" id="borderColorInput" value="#000000">
 
-                </section>
-            
-                <h4 class="MarginIndent">
-                    Icon Styles
-                </h4>
+                </fieldset>
 
-                <section class="DoubleIndentM">
+                
+                <fieldset class="DoubleIndentM">
+                    <legend>
+                        Icon Styles
+                    </legend>
             
                     <input type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIcons">
-                    <label for="lightIcons">Light Icons</label><br>
+                    <label for="lightIcons">Light Icons</label>
             
                     <input type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIcons" checked="true">
                     <label for="darkIcons">Dark Icons</label>
 
-                </section>
-                <br>
+                </fieldset>
+        
                 <input type="submit" class="TrueButton TrueButton_Hover Bold" id="submitSiteColors" value="Submit">
-                <br>
-                <br>
+               
                 <strong id="errorBox">
                 
                 </strong>
@@ -288,8 +289,8 @@
     <!--Footer-->
     <footer class="TopBorder" id="mainFooter">
         <!--Important Links-->
-        <nav class="BottomBorder" id="footerLinks">
-        <ul>
+
+        <ul class="BottomBorder" id="footerLinks" role="navigation" aria-label="Miscellaneous Links">
             <li>
                 <a class="Bold" href="#top">
                         Back to Top
@@ -306,37 +307,37 @@
                     </button>
                 </li>
         </ul>
-    </nav>
+
     <!--Footer Navigation-->
-    <nav class="BottomBorder" id="footerNavigation" aria-label="Footer Redudant Navigation">
-        <ul class="Bold">
-            <li>
-                <a href="">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="gallery">
-                    Gallery
-                </a>
-            </li>
-            <li>
-                <a href="blog">
-                    Blog
-                </a>
-            </li>
-            <li>
-                <a href="about">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="contact">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </nav>
+
+    <ul class="Bold BottomBorder" id="footerNavigation" role="navigation" aria-label="Footer Redundant">
+        <li>
+            <a href="">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="gallery">
+                Gallery
+            </a>
+        </li>
+        <li>
+            <a href="blog">
+                Blog
+            </a>
+        </li>
+        <li>
+            <a href="about">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="contact">
+                Contact
+            </a>
+        </li>
+    </ul>
+  
     <!--Accessibility Information-->
         <section role="contentinfo">
             <ul class="BottomBorder" id="accessibilityInformation">
@@ -354,7 +355,7 @@
                     </section>
                 </li>
                 <li id="footerAccessStatement">
-                    <a href="accessibility">
+                    <a href="accessibility" class="NoWrap">
                         Accessibility Statement >
                     </a>
                 </li>
@@ -369,36 +370,32 @@
                     </section>
                 </li>
                 <li id="footerConformanceClaim">
-                    <a href="accessibility#conformanceClaim">
+                    <a href="accessibility#conformanceClaim" class="NoWrap">
                         Conformance Claim >
                     </a>
                 </li>
             </ul>
     
             <!--Extra Info-->
-            <ul class="BottomBorder" id="footerInfo">
-            
-                <li id="footerInfoNumber">
-                    <address>
-                        <a href="tel:+1973-202-0158">
-                            973-202-0158
-                        </a>
-                    </address>
-                </li>
-                <li id="footerInfoEmail">
-                    <address>
-                        <a href="mailto:walshgiarrusso@gmail.com">
-                            walshgiarrusso@gmail.com
-                        </a>
-                    </address>
-                </li>
-            </ul>
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
 
-            <small id="copyrightInfo">
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
             
-                Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
-        
-            </small>
+                    Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+            
+                </small>
+            </p>
+            
         </section>
     
     </footer>
