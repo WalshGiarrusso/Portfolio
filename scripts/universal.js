@@ -146,7 +146,7 @@ function targetColors(){
 function changeColors(targets){
     lclStorage.setItem('icnColor', targets[3]);
 
-    $(document.body).not('.ContainsFormStyling').add('.FormStyling').css({ 
+    $(document.body).not('.ContainsFormStyling').add('.ContainsFormStyling.FormStyling').css({ 
         //background color
         "background-color": targets[0],
         //text color
