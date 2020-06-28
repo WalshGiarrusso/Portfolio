@@ -196,6 +196,7 @@ function checkFormStyling(){
             "color":""
         });
         $('.ContainsFormStyling').removeClass('FormStyling');
+        targetColors();
         
     }else{
         $('.ContainsFormStyling').not('.FormStyling').addClass('FormStyling');
