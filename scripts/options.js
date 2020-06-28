@@ -1,4 +1,45 @@
 lclStorage = window.localStorage;
+
+$(document).ready(function(){
+    //Initialize Site Colors
+    if((lclStorage.getItem('bkgColor')) && (lclStorage.getItem('txtColor')) && (lclStorage.getItem('bdrColor')) && (lclStorage.getItem('icnColor'))){
+            $('#backgroundColorInput').val(lclStorage.getItem('bkgColor'));
+            $('#textColorInput').val(lclStorage.getItem('txtColor'));
+            $('#borderColorInput').val(lclStorage.getItem('bdrColor'));
+            if(lclStorage.getItem('icnColor') === 'dark'){
+                $('#lightIconsCheckbox').prop("checked", false);
+            }else{
+                $('#darkIconsCheckbox').prop("checked", true);
+            };
+    }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+        $('#backgroundColorInput').val('#121212');
+        $('#textColorInput').val('#ffffff');
+        $('#borderColorInput').val('#ffffff');
+        $('#lightIconsCheckbox').prop("checked", true);
+        $('#darkIconsCheckbox').prop("checked", false);
+       
+    }else{
+        $('#backgroundColorInput').val('#ffffff');
+        $('#textColorInput').val('#000000');
+        $('#borderColorInput').val('#000000');
+        $('#lightIconsCheckbox').prop("checked", false);
+        $('#darkIconsCheckbox').prop("checked", true);
+    };
+    //Initialize interactivity checkboxes
+    if(lclStorage.getItem('reduceMotion') === 'true'){
+        $('#reduceMotionCheckbox').prop('checked', true);
+    }else{
+        $('#reduceMotionCheckbox').prop('checked', false);
+    };
+        //form styling
+    if(lclStorage.getItem('disableFormStyling') === 'true'){
+        $('#formStylingCheckbox').prop('checked', true);
+    }else{
+        $('#formStylingCheckbox').prop('checked', false);
+    };
+
+
+});
 $('#maxContrastButton').click(function(){
     
     lclStorage.removeItem('bkgColor');
@@ -7,8 +48,9 @@ $('#maxContrastButton').click(function(){
     lclStorage.removeItem('icnColor');
     targetColors();
 });
+//handle site colors submission
 $('#submitSiteColors').click(function(){
-    
+    //retrieve colors
     var bkgColor = $('#backgroundColorInput').val();
     var txtColor = $('#textColorInput').val();
     var bdrColor = $('#borderColorInput').val();
@@ -18,7 +60,7 @@ $('#submitSiteColors').click(function(){
         var icnColor = 'dark';
     };
 
- 
+    //check for errors
     if(checkErrors(bkgColor, txtColor, bdrColor, icnColor)){
         storeColors(bkgColor, txtColor, bdrColor, icnColor);
     };
@@ -83,6 +125,8 @@ function storeColors(bKC, tXC, bDC, iCC){
    
     targetColors();
 };
+
+//calculate contrasts
 function checkContrast(c1, c2){
 
     
@@ -142,4 +186,38 @@ function clRGB(s) {
 };
 function clLum(a, b, c){
     return (0.2126 * a) + (0.7152 * b) + (0.0722 * c);
-}
+};
+
+//handle submit site interactivity
+$('#submitSiteInteractivity').click(function(){
+    //Reduce Motion
+    if($('#reduceMotionCheckbox').is(':checked')){
+        
+        reduceMotion();     
+    }else{
+        lclStorage.setItem('reduceMotion', 'false');
+    }
+    //disable form styling
+    if($('#formStylingCheckbox').is(':checked')){
+
+        lclStorage.setItem('disableFormStyling', 'true');
+
+        checkFormStyling();
+    }else{
+        lclStorage.setItem('disableFormStyling', 'false');
+        
+        checkFormStyling();
+    }
+});
+//reduce motion
+function reduceMotion(){
+    lclStorage.setItem('reduceMotion', 'true');
+    
+    removeMotionClasses();
+    
+};
+
+
+
+
+

@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self"> 
 
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
@@ -63,17 +63,17 @@
                 </a>
             </li>
             <li>
-                <button class="Left Bold" id="hideHeaderOptions">
+                <button class="Left FreeButton Bold" id="hideHeaderOptions">
                     Hide Header Options
                 </button>
             </li>
             <li id="hideHOList">
-                <button class="Left Bold" id="hideHOByDefault">
+                <button class="Left FreeButton Bold" id="hideHOByDefault">
                     Don't Show Again
                 </button>
             </li>
             <li id="showHOList" class="Hidden">
-                <button class="Left Bold" id="showHOByDefault">
+                <button class="Left FreeButton Bold" id="showHOByDefault">
                     Show by Default
                 </button>
             </li>
@@ -125,7 +125,7 @@
                 </li>
             </ul>
             <!--Mobile Menu-->
-            <button class="Bold" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+            <button class="Bold FreeButton" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
                 <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
                 <span id="mobileMenuLabel">
                     Open Menu
@@ -193,7 +193,7 @@
         <h1>
             Accessibility Options
         </h1>
-        <a class="Bold NoWrap" href="languages">
+        <a class="Bold NoWrap ILB" href="languages">
             Langauge Options >
         </a>
 
@@ -204,7 +204,7 @@
             </h2>
 
         
-            <button class="TrueButton TrueButton_Hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
+            <button class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
                 Max Contrast
             </button>
         
@@ -216,63 +216,80 @@
             <form class="MarginIndent" id="customColorsForm" onsubmit="return false">
                 
               
-                <fieldset class="MarginIndent">
+                <fieldset class="ContainsFormStyling MarginIndent FormStyling">
                     <legend>
                         Colors
                     </legend>
                     <label class="MarginIndent" for="textColorInput">Text Color</label>
                   
-                    <input class="MarginIndent" type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Text Color" id="textColorInput" value="#000000"> 
                   
                     <label class="MarginIndent" for="backgroundColorInput">Background Color</label>
                   
-                    <input class="MarginIndent" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
               
                     <label class="MarginIndent" for="borderColorInput">Border/Focus Color</label>
                 
-                    <input class="MarginIndent" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Border Color" id="borderColorInput" value="#000000">
 
                 </fieldset>
 
                 
-                <fieldset class="MarginIndent">
+                <fieldset class="MarginIndent FormStyling ContainsFormStyling">
                     <legend>
                         Icon Styles
                     </legend>
                     <div class="MarginIndent">
-                        <input type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIconsCheckbox">
+                        <input class="FormStyling ContainsFormStyling" type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIconsCheckbox">
                         <label for="lightIconsCheckbox">Light Icons</label>
                     </div>
                     
                     <div class="MarginIndent">
-                        <input type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
+                        <input class="FormStyling ContainsFormStyling" type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
                         <label for="darkIconsCheckbox">Dark Icons</label>
                     </div>
                     
 
                 </fieldset>
         
-                <input type="submit" class="TrueButton TrueButton_Hover Bold MarginIndent" id="submitSiteColors" value="Submit">
+                <input type="submit" class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" id="submitSiteColors" value="Submit">
                 
                 <p id="errorBox" class="MarginIndent">
                     
                 </p>
             
-                <button class=" TrueButton TrueButton_Hover Bold MarginIndent" name="Proceed" id="errorOverride">
+                <button class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" name="Proceed" id="errorOverride">
                     Proceed
                 </button>
             </form>
 
         </section>
         
-        
         <section class="MarginIndent">
             <h2>
                 Site Interactivity
             </h2>
-            <form>
+            
+            <form class="MarginIndent" id="interactivityOptions" onsubmit="return false">
+                <fieldset class="MarginIndent ContainsFormStyling FormStyling">
+                    <legend>
+                        Visual
+                    </legend>
+                    <div class="MarginIndent">
+                        <input class="FormStyling ContainsFormStyling" type="checkbox" name="reduceMotion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
+                        <label for="reduceMotionCheckbox">Reduce Motion (Animations on Hover)</label>
+                    </div>
+                    <div class="MarginIndent">
+                        <input class="FormStyling ContainsFormStyling" type="checkbox" name="formStyling" id="formStylingCheckbox" value="formStylingCheckbox">
+                        <label for="formStylingCheckbox">Disable Form Styling</label>
+                    </div>
+                </fieldset>
+                
 
+                <input type="submit" class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" id="submitSiteInteractivity" value="Submit">
             </form>
+
+            
         </section>
 
 
@@ -307,7 +324,7 @@
                         </a>
                 </li>
                 <li id="sHOParent">
-                        <button class="Bold Left" id="showHeaderOptions">
+                        <button class="Bold FreeButton Left" id="showHeaderOptions">
                             Show Header Options
                         </button>
                     </li>

@@ -1,10 +1,10 @@
-#submitSiteColors{
+#submitSiteColors, #submitSiteInteractivity{
     font-size:1rem;
     font-family: trade-gothic-next, sans-serif;
     
 }
 
-fieldset{
+fieldset.FormStyling{
     padding:none;
     margin:none;
     min-inline-size: 0;
@@ -20,8 +20,7 @@ legend{
 }
 
 input[type=color]{
-    border:none;
-    background-color:transparent;
+    
     margin-top:.5rem;
     margin-bottom:.5rem;
     height:2.75rem;
@@ -32,29 +31,38 @@ input[type=color]{
     display:block;
     
 }
-input[type=color]::-webkit-color-swatch-wrapper{
+input[type=color].FormStyling{
+    border:none;
+    background-color:transparent;
+
+}
+input[type=color].FormStyling::-webkit-color-swatch-wrapper{
     padding:0;
 }
-input[type=color]::-webkit-color-swatch{
+input[type=color].FormStyling::-webkit-color-swatch{
     border-radius:2.75rem;
     border:2px solid;
 }
 input{
     cursor:pointer;
 }
-input[type=radio]{
+input[type=radio], input[type=checkbox]{
+    
+    height:2.75rem;
+    width:2.75rem;
+    
+}
+input[type=radio].FormStyling, input[type=checkbox].FormStyling{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border:2px solid black;
     border-radius: .75rem;
-    height:2.75rem;
-    width:2.75rem;
     vertical-align:bottom;
     background:white;
     
 }
-input[type=radio]:checked{
+input[type=radio]:checked, input[type=checkbox]:checked{
     
     background:black;
     background-clip:padding-box;
@@ -62,12 +70,21 @@ input[type=radio]:checked{
     -webkit-background-clip: padding-box;
     
 }
-input[type=radio]::-ms-check{
+input[type=radio]::-ms-check, input[type=checkbox]::-ms-check{
     appearance: none;
     border-radius:0;
 
 }
-#errorOverride, #submitSiteColors{
+input[type=checkbox]{
+    display:inline-block;
+}
+input[type=submit].FormStyling{
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+
+}
+#errorOverride, #submitSiteColors, #submitSiteInteractivity{
     width:6rem;
     margin-top: 1rem;
     margin-bottom:1rem;    
@@ -81,12 +98,7 @@ input[type=radio]::-ms-check{
     margin-top:1rem;
     margin-bottom:1rem;
 }
-#submitSiteColors{
-    -webkit-appearance: none;
-    appearance: none;
-    -moz-appearance: none;;
-    
-}
+
 #errorOverride{
     display:none;
 }

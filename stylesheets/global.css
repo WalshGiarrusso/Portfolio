@@ -111,12 +111,12 @@ address{
 }
 
 button{
-    border:0;
+ 
     font-size:1rem;
     font-family:inherit;
-    background-color:transparent;
+   
     cursor:pointer;
-    padding:0;
+    
 
 }
 /*Superbars*/
@@ -278,19 +278,29 @@ button{
 .DoubleIndentM{
     margin-left:2.5rem;
 }
+.FreeButton{
+    border:none;
+    background-color:transparent;
+    padding:0;
+}
 
 .TrueButton{
     padding:.75rem;
+    transition:150ms;
+    cursor:pointer;
+}
+
+.TrueButton.FormStyling{
+
+    
     background-color:black;
     color:white;
     outline-color:black;
     border:none;
     border-radius:1.5rem;
-    transition:150ms;
-    cursor:pointer;
+    
 }
-
-.TrueButton_Hover:hover, .TrueButton_Hover:focus{
+.TrueButton_hover:hover, .TrueButton_hover:focus{
     transform:scale(1.1);
 }
 
@@ -301,6 +311,9 @@ button{
 }
 .NoWrap{
     white-space: nowrap;
+}
+.ILB{
+    display:inline-block;
 }
 
 .ScreenReader-Only{
@@ -314,6 +327,7 @@ button{
     white-space:nowrap;
     border:0;
 }
+
 
 /*Media Queries*/
 

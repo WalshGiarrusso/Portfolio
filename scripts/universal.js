@@ -9,6 +9,10 @@ $(document).ready(function (){
 
     targetColors();
 
+    removeMotionClasses();
+
+    checkFormStyling();
+
     
     
 });
@@ -142,7 +146,7 @@ function targetColors(){
 function changeColors(targets){
     lclStorage.setItem('icnColor', targets[3]);
 
-    $(document.body).css({ 
+    $(document.body).not('.ContainsFormStyling').add('.FormStyling').css({ 
         //background color
         "background-color": targets[0],
         //text color
@@ -151,7 +155,7 @@ function changeColors(targets){
     //border color
     $('.BottomBorder, .TopBorder, input[type=color], input[type=radio]').css('border-color', targets[2])
     //button colors
-    $('.TrueButton').css({
+    $('.TrueButton.FormStyling').css({
         "background-color": targets[1],
         "color": targets[0]
     });
@@ -163,3 +167,38 @@ function changeColors(targets){
     //focus indicator
     $('*:focus, *').css('outline-color', targets[2]);
 }
+//Reduce Motion
+
+function removeMotionClasses(){
+    
+    if(lclStorage.getItem('reduceMotion') === "true"){
+     
+        $('[class*="_hover"]').each(function(){
+          
+            var remElem = $(this); 
+            var remCand= $(this).attr('class').split(/\s+/);
+            for(i = 0; i < remCand.length ;i++){
+               
+                if(/\w*_hover/gm.test(remCand[i])){
+                   $(remElem).removeClass(remCand[i]);
+                
+                  
+                };
+            };
+        });
+    };
+};
+//form styling
+function checkFormStyling(){
+    if(lclStorage.getItem('disableFormStyling') === "true"){
+        $('.FormStyling').css({
+            "background-color":"",
+            "color":""
+        });
+        $('.ContainsFormStyling').removeClass('FormStyling');
+        
+    }else{
+        $('.ContainsFormStyling').not('.FormStyling').addClass('FormStyling');
+    };
+
+};
