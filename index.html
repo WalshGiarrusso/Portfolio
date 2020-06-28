@@ -94,7 +94,7 @@
         <!--Logo-->
         <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
         <!--Navbar-->
-        <nav  aria-label="Main" role="navigation">
+        <nav aria-label="Main">
             <ul id="headerNavigation">
                 <li>
                     <a class="Icon" href="">
@@ -134,7 +134,7 @@
 
     </header>
     <!--Mobile Menu-->
-    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Primary Navigation">
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Main">
         <ul>
             <li>
                 <a class="Bold" href="">
@@ -164,8 +164,8 @@
         </ul>
     </nav>
     <!--Breadcrumb-->
-    <nav class="BottomBorder" id="breadcrumbBar">
-        <ul id="breadcrumbMenu" aria-label="Breadcrumb">
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb">
+        <ul id="breadcrumbMenu">
             <li>
                 <a href="">walshgiarrusso.com</a>
             </li>
@@ -266,26 +266,30 @@
     <!--Footer-->
     <footer class="TopBorder" id="mainFooter">
         <!--Important Links-->
-        <ul class="BottomBorder" id="footerLinks" role="navigation" aria-label="Miscellaneous Links">
-            <li>
-                <a class="Bold" href="#top">
-                        Back to Top
-                </a>
-            </li>
-            <li>
-                    <a class="Bold" href="sitemap">
-                        View Sitemap
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="#top">
+                            Back to Top
                     </a>
-            </li>
-            <li id="sHOParent">
-                    <button class="Bold Left" id="showHeaderOptions">
-                        Show Header Options
-                    </button>
                 </li>
-        </ul>
+                <li>
+                        <a class="Bold" href="sitemap">
+                            View Sitemap
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold Left" id="showHeaderOptions">
+                            Show Header Options
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
 
-        <!--Footer Navigation-->
-        <ul class="Bold BottomBorder" id="footerNavigation" role="navigation" aria-label="Footer Redundant">
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
             <li>
                 <a href="">
                     <span class="ScreenReader-Only">Current Page: </span>Home
@@ -312,8 +316,11 @@
                 </a>
             </li>
         </ul>
-        <!--Accessibility Information-->
-        <section role="contentinfo">
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
             <ul class="BottomBorder" id="accessibilityInformation">
                 <li class="FooterInfoHide">
                     <section>
@@ -362,9 +369,7 @@
 
             </address>
 
-
-
-            <p  id="copyrightInfo">
+            <p id="copyrightInfo">
                 <small>
             
                     Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
@@ -372,7 +377,7 @@
                 </small>
             </p>
             
-        </section>
+        </div>
     
     </footer>
 
