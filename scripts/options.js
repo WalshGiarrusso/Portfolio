@@ -43,18 +43,18 @@ function checkErrors(bKC, tXC, bDC, iCC){
     }else{
         $('#errorOverride').show();
         if (bkgQtxt < 7){
-            $('#errorBox').append("<span class='MarginIndent' >Warning: the text color and the background color have a low contrast ratio ("+bkgQtxt.toFixed(3)+") </span><br>");
+            $('#errorBox').append("<strong class='MarginIndent' >Warning: the text color and the background color have a low contrast ratio ("+bkgQtxt.toFixed(3)+") </strong>");
      
         };
         if(bkgQbdr < 7){
-            $('#errorBox').append("<span class='MarginIndent'>Warning: the border color and the background color have a low contrast ratio ("+bkgQbdr.toFixed(3)+")<br> </span>");
+            $('#errorBox').append("<strong class='MarginIndent'>Warning: the border color and the background color have a low contrast ratio ("+bkgQbdr.toFixed(3)+")</strong>");
             
         };
         if(bkgQicn < 3){
-            $('#errorBox').append("<span class='MarginIndent'>Warning: the icon color and the background color have a low contrast ratio ("+bkgQicn.toFixed(3)+")<br> </span>");
+            $('#errorBox').append("<strong class='MarginIndent'>Warning: the icon color and the background color have a low contrast ratio ("+bkgQicn.toFixed(3)+")</strong>");
          
         };
-        $('#errorBox').append("<span class='MarginIndent'>Try making one color brighter and the other color darker.<br><br></span>");
+        $('#errorBox').append("<strong class='MarginIndent'>Try making one color brighter and the other color darker.</strong>");
         return false;
     };
 };

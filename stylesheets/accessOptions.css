@@ -4,16 +4,32 @@
     
 }
 
+fieldset{
+    padding:none;
+    margin:none;
+    min-inline-size: 0;
+    border:none;
+    
+}
+legend{
+    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
+    margin-bottom:1rem;
+    font-size:1.5rem;
+    font-weight:bold;
+
+}
+
 input[type=color]{
     border:none;
     background-color:transparent;
-    margin:.5rem 0;
+    margin-top:.5rem;
+    margin-bottom:.5rem;
     height:2rem;
     width:2rem;
     box-sizing:content-box;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
-    
+    display:block;
     
 }
 input[type=color]::-webkit-color-swatch-wrapper{
@@ -36,6 +52,7 @@ input[type=radio]{
     width:1.5rem;
     vertical-align:bottom;
     background:white;
+    
 }
 input[type=radio]:checked{
     
@@ -43,19 +60,34 @@ input[type=radio]:checked{
     background-clip:padding-box;
     -moz-background-clip: padding-box;
     -webkit-background-clip: padding-box;
+    
 }
 input[type=radio]::-ms-check{
     appearance: none;
     border-radius:0;
+
 }
 #errorOverride, #submitSiteColors{
     width:6rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;    
+}
+#errorBox{
+    margin-top: 1rem;
+    margin-bottom:1rem;  
+}
+#errorBox strong{
+    display:block;
+    margin-top:1rem;
+    margin-bottom:1rem;
 }
 #submitSiteColors{
     -webkit-appearance: none;
     appearance: none;
     -moz-appearance: none;;
+    
 }
 #errorOverride{
     display:none;
 }
+
