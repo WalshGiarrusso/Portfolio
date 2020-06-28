@@ -153,9 +153,9 @@ function changeColors(targets){
         "color": targets[1]
     });
     //border color
-    $('.BottomBorder, .TopBorder, input[type=color], input[type=radio]').css('border-color', targets[2])
+    $('.BottomBorder, .TopBorder, input[type=color], input[type=radio], input[type=checkbox]').css('border-color', targets[2])
     //button colors
-    $('.TrueButton.FormStyling, .FormStyling').css({
+    $('.TrueButton.FormStyling').css({
         "background-color": targets[1],
         "color": targets[0]
     });
