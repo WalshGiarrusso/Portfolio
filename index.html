@@ -98,7 +98,7 @@
             <ul id="headerNavigation">
                 <li>
                     <a class="Icon" href="">
-                        Home
+                        <span class="ScreenReader-Only">Current Page: </span>Home
                     </a>
                 </li>
                 <li>
@@ -123,20 +123,22 @@
                 </li>
             </ul>
             <!--Mobile Menu-->
-            <button class="Bold" id="mobileMenuButton" title="Open Menu">
+            <button class="Bold" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
                 <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
-                <span>Open Menu</span>
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
             </button>
         </nav>
         
 
     </header>
     <!--Mobile Menu-->
-    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Menu Navigation">
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Primary Navigation">
         <ul>
             <li>
                 <a class="Bold" href="">
-                    Home
+                    <span class="ScreenReader-Only">Current Page: </span>Home
                 </a>
             </li>
             <li>
@@ -163,20 +165,16 @@
     </nav>
     <!--Breadcrumb-->
     <nav class="BottomBorder" id="breadcrumbBar">
-        <ul id="breadcrumbMenu" aria-label="Breadcrumb Menu">
+        <ul id="breadcrumbMenu" aria-label="Breadcrumb">
             <li>
                 <a href="">walshgiarrusso.com</a>
             </li>
-            <li>
-                <span>
-                    &nbsp;
-                    /
-                    &nbsp;
-                </span>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="">
-                    home
+                <a href="options">
+                    <span class="ScreenReader-Only">Current Page: </span>home
                 </a>
             </li>
         </ul>
@@ -187,200 +185,203 @@
     </nav>
         
 
-<!--Content-->
-<main id="main">
-    <!--Web Accessibility-->
-    <h1>
-        The internet is humanity's greatest achievement.
-        <br>
-        I believe everybody has a right to share in its benefits.
-    </h1>
-    <h2>
-        The internet has enabled me to better myself my entire life.
-    </h2>
-    
-    <p>
-        I've used the internet to teach myself everything from coding to graphic design, and that ability to self-teach has itself become a major life skill.
-        It would be hard to overstate the positive impact the internet has had on my life.
-        It has been transformative, both for me as a person and for my self-confidence.
-    </p>
-    <h2>
-        Now, I'm returning the favor by designing smarter, more accessible websites.
-    </h2>
-    <p>
-        The internet's positive impact on my life led me to the same conclusion as the United Nations: that <a class="Bold" href="https://www.article19.org/data/files/Internet_Statement_Adopted.pdf" target="_blank">access to the internet is a human right.</a>
-        Using the self-starting attitude instilled in me by the internet, I began to wonder what I could do as an individual to improve people's access to the internet and its benefits.
-        While it's true that developing countries contain the largest concentrations of people without internet access, it's very unlikely that I could make an impact on that front as an individual.
-        I decided that I could make an impact by trying to make the internet more accessible for people with disabilities.
-        In order improve internet accessibility for people with disabilities, I am now actively engaged in promoting and practicing accessible web design.
-    </p>
-    <a href="about#accessibility">
-        More About Web Accessibility
-    </a>
-    <!--Featured Works-->
-    <h2>
-        My Work
-    </h2>
-    <h3>
-        Featured
-    </h3>
-    <ul>
-        <li>
-            <a href="   ">
-
-            </a>
-        </li>
-        <li>
-            <a href="   ">
-
-            </a>
-        </li>
-        <li>
-            <a href="   ">
-
-            </a>
-        </li>
-    </ul>
-    <a href="gallery">
-        More of My Work
-    </a>
-    <!--About Me-->
-    <h2>
-        Myself
-    </h2>
-    <h3>
-        My name is Walsh Giarrusso.
-    </h3>
-    <p>
-        Text Content
-    </p>
-    <h3>
-        The work I do is directed and motivated by my values.
-    </h3>
-    <p>
-        Text Content
-    </p>
-    <a href="about">
-        More About Me
-    </a>
-</main>
-
-<!--Footer-->
-<footer class="TopBorder" id="mainFooter">
-    <!--Important Links-->
-    <nav class="BottomBorder" id="footerLinks">
-       <ul>
-           <li>
-               <a class="Bold" href="#top">
-                    Back to Top
-               </a>
-           </li>
-           <li>
-                <a class="Bold" href="sitemap">
-                    View Sitemap
-                </a>
-           </li>
-           <li id="sHOParent">
-                <button class="Bold Left" id="showHeaderOptions">
-                    Show Header Options
-                </button>
-            </li>
-       </ul>
-   </nav>
-   <!--Footer Navigation-->
-   <nav class="BottomBorder" id="footerNavigation">
-       <ul class="Bold">
-           <li>
-               <a href="">
-                    Home
-               </a>
-           </li>
-           <li>
-                <a href="gallery">
-                    Gallery
-                </a>
-            </li>
-            <li>
-                <a href="blog">
-                    Blog
-                </a>
-            </li>
-            <li>
-                <a href="about">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="contact">
-                    Contact
-                </a>
-            </li>
-       </ul>
-   </nav>
-   <!--Accessibility Information-->
-   <ul class="BottomBorder" id="accessibilityInformation">
-       <li class="FooterInfoHide">
-           <section>
-                <h4>
-                    Accessibility Statement
-               </h4>
-               <p>
-                    Text content for accessibility statement.
-                    <a href="accessibility">
-                        View full accessibility statement here.
-                    </a>
-               </p>
-           </section>
-       </li>
-       <li id="footerAccessStatement">
-            <a href="accessibility">
-                Accessibility Statement >
-            </a>
-       </li>
-       <li class="FooterInfoHide">
-           <section>
-                <h4>
-                    Conformance Claim
-                </h4>
-                <p>
-                    All of the text content for the conformance claim goes here.
-                </p>
-           </section>
-        </li>
-        <li id="footerConformanceClaim">
-            <a href="accessibility#conformanceClaim">
-                Conformance Claim >
-            </a>
-       </li>
-   </ul>
-
-   <!--Extra Info-->
-   <ul class="BottomBorder" id="footerInfo" role="contentinfo">
-       
-        <li id="footerInfoNumber">
-            <address>
-                <a href="tel:+1973-202-0158">
-                    973-202-0158
-                </a>
-            </address>
-        </li>
-        <li id="footerInfoEmail">
-            <address>
-                <a href="mailto:walshgiarrusso@gmail.com">
-                    walshgiarrusso@gmail.com
-                </a>
-            </address>
-        </li>
-    </ul>
-
-    <small id="copyrightInfo">
+    <!--Content-->
+    <main id="main" tabindex="-1">
+        <!--Web Accessibility-->
+        <h1>
+            The internet is humanity's greatest achievement.
+            <br>
+            I believe everybody has a right to share in its benefits.
+        </h1>
+        <h2>
+            The internet has enabled me to better myself my entire life.
+        </h2>
+        
         <p>
-            Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+            I've used the internet to teach myself everything from coding to graphic design, and that ability to self-teach has itself become a major life skill.
+            It would be hard to overstate the positive impact the internet has had on my life.
+            It has been transformative, both for me as a person and for my self-confidence.
         </p>
-    </small>
-</footer>
+        <h2>
+            Now, I'm returning the favor by designing smarter, more accessible websites.
+        </h2>
+        <p>
+            The internet's positive impact on my life led me to the same conclusion as the United Nations: that <a class="Bold" href="https://www.article19.org/data/files/Internet_Statement_Adopted.pdf" target="_blank">access to the internet is a human right.</a>
+            Using the self-starting attitude instilled in me by the internet, I began to wonder what I could do as an individual to improve people's access to the internet and its benefits.
+            While it's true that developing countries contain the largest concentrations of people without internet access, it's very unlikely that I could make an impact on that front as an individual.
+            I decided that I could make an impact by trying to make the internet more accessible for people with disabilities.
+            In order improve internet accessibility for people with disabilities, I am now actively engaged in promoting and practicing accessible web design.
+        </p>
+        <a href="about#accessibility">
+            More About Web Accessibility
+        </a>
+        <!--Featured Works-->
+        <h2>
+            My Work
+        </h2>
+        <h3>
+            Featured
+        </h3>
+        <ul>
+            <li>
+                <a href="   ">
 
-<!--Scripts-->
-<script src="scripts/universal.js"></script>
+                </a>
+            </li>
+            <li>
+                <a href="   ">
+
+                </a>
+            </li>
+            <li>
+                <a href="   ">
+
+                </a>
+            </li>
+        </ul>
+        <a href="gallery">
+            More of My Work
+        </a>
+        <!--About Me-->
+        <h2>
+            Myself
+        </h2>
+        <h3>
+            My name is Walsh Giarrusso.
+        </h3>
+        <p>
+            Text Content
+        </p>
+        <h3>
+            The work I do is directed and motivated by my values.
+        </h3>
+        <p>
+            Text Content
+        </p>
+        <a href="about">
+            More About Me
+        </a>
+    </main>
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <nav class="BottomBorder" id="footerLinks">
+        <ul>
+            <li>
+                <a class="Bold" href="#top">
+                        Back to Top
+                </a>
+            </li>
+            <li>
+                    <a class="Bold" href="sitemap">
+                        View Sitemap
+                    </a>
+            </li>
+            <li id="sHOParent">
+                    <button class="Bold Left" id="showHeaderOptions">
+                        Show Header Options
+                    </button>
+                </li>
+        </ul>
+    </nav>
+    <!--Footer Navigation-->
+    <nav class="BottomBorder" id="footerNavigation" aria-label="Footer Redudant Navigation">
+        <ul class="Bold">
+            <li>
+                <a href="">
+                        <span class="ScreenReader-Only">Current Page: </span>Home
+                </a>
+            </li>
+            <li>
+                    <a href="gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="about">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="contact">
+                        Contact
+                    </a>
+                </li>
+        </ul>
+    </nav>
+    <!--Accessibility Information-->
+        <section role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h4>
+                            Accessibility Statement
+                        </h4>
+                        <p>
+                            Text content for accessibility statement.
+                            <a href="accessibility">
+                                View full accessibility statement here.
+                            </a>
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="accessibility">
+                        Accessibility Statement >
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h4>
+                            Conformance Claim
+                        </h4>
+                        <p>
+                            All of the text content for the conformance claim goes here.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim >
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <ul class="BottomBorder" id="footerInfo">
+            
+                <li id="footerInfoNumber">
+                    <address>
+                        <a href="tel:+1973-202-0158">
+                            973-202-0158
+                        </a>
+                    </address>
+                </li>
+                <li id="footerInfoEmail">
+                    <address>
+                        <a href="mailto:walshgiarrusso@gmail.com">
+                            walshgiarrusso@gmail.com
+                        </a>
+                    </address>
+                </li>
+            </ul>
+
+            <small id="copyrightInfo">
+            
+                Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+        
+            </small>
+        </section>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
 </body>
 </html>

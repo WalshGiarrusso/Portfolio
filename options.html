@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self">      
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -35,7 +35,7 @@
     <script src="polyfills/spectrum/spectrum.js"></script>
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
-    <link rel="stylesheet" href="stylesheets/global.css"> 
+    <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/accessOptions.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
@@ -53,7 +53,7 @@
             </li>
             <li>
                 <a class="Bold" href="options">
-                    Accessibility Options
+                    <span class="ScreenReader-Only">Current Page: </span>Accessibility Options
                 </a>
             </li>
             <li>
@@ -85,7 +85,7 @@
             </li>
             <li>
                 <a class="Bold" href="options">
-                    Options
+                    <span class="ScreenReader-Only">Current Page: </span>Options
                 </a>
             </li>
         </ul>
@@ -93,7 +93,7 @@
     <!--Header-->
     <header class="BottomBorder" id="top">
         <!--Logo-->
-        <img class="Swap" id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
         <!--Navbar-->
         <nav aria-label="Primary Navigation">
             <ul id="headerNavigation">
@@ -124,16 +124,18 @@
                 </li>
             </ul>
             <!--Mobile Menu-->
-            <button class="Bold" id="mobileMenuButton" title="Open Menu">
+            <button class="Bold" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
                 <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
-                <span>Open Menu</span>
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
             </button>
         </nav>
         
 
     </header>
     <!--Mobile Menu-->
-    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Menu Navigation">
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Primary Navigation">
         <ul>
             <li>
                 <a class="Bold" href="">
@@ -164,20 +166,16 @@
     </nav>
     <!--Breadcrumb-->
     <nav class="BottomBorder" id="breadcrumbBar">
-        <ul id="breadcrumbMenu" aria-label="Breadcrumb Menu">
+        <ul id="breadcrumbMenu" aria-label="Breadcrumb">
             <li>
                 <a href="">walshgiarrusso.com</a>
             </li>
-            <li>
-                <span>
-                    &nbsp;
-                    /
-                    &nbsp;
-                </span>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
                 <a href="">
-                    options
+                    <span class="ScreenReader-Only">Current Page: </span>options
                 </a>
             </li>
         </ul>
@@ -188,117 +186,136 @@
     </nav>
         
 
-<!--Content-->
-<main id="main">
-    
-    <h1>
-        Accessibility Options
-    </h1>
-    <a class="Bold" href="languages">
-        <u>Langauge Options ></u>
-    </a>
-
-    <h2>
-        Site Colors
-    </h2>
-    <section class="MarginIndent">
-
-    
-        <button class="TrueButton Bold" name="Max Contrast" id="maxContrastButton">
-            Max Contrast
-        </button>
-    
-            <h3>Customize</h3>
-        <form  id="customColorsForm" onsubmit="return false">
-            <h4 class="MarginIndent">
-                Site Colors
-            </h4>
-            <section class="DoubleIndentM">
-                <label for="textColorInput">Text Color</label>
-                <br>
-                <input type="color" name="Text Color" id="textColorInput" value="#000000"> 
-                <br>
-                <label for="backgroundColorInput">Background Color</label>
-                <br> 
-                <input type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
-                <br>
-                <label for="borderColorInput">Border Color (Focus Indicator)</label>
-                <br>
-                <input type="color" name="Border Color" id="borderColorInput" value="#000000"> 
-            </section>
+    <!--Content-->
+    <main id="main">
         
-            <h4 class="MarginIndent">
-                Icon Styles
-            </h4>
-            <section class="DoubleIndentM">
+        <h1>
+            Accessibility Options
+        </h1>
+        <a class="Bold" href="languages">
+            <u>Langauge Options ></u>
+        </a>
+
+        <h2>
+            Site Colors
+        </h2>
+        <section class="MarginIndent">
 
         
-                <input type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIcons">
-                <label for="lightIcons">Light Icons</label><br>
-        
-                <input type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIcons" checked="true">
-                <label for="darkIcons">Dark Icons</label>
-            </section>
-            <br>
-            <input type="submit" class="TrueButton Bold" id="submitSiteColors">
-            <br>
-            <br>
-            <strong id="errorBox">
-              
-            </strong>
-    
-           
-        
-            <button class=" TrueButton Bold" name="Proceed" id="errorOverride">
-                Proceed
+            <button class="TrueButton TrueButton_Hover Bold" name="Max Contrast" id="maxContrastButton">
+                Max Contrast
             </button>
-        </form>
+        
+                <h3>
+                    Customize
+                </h3>
 
-    </section>
+            <form  id="customColorsForm" onsubmit="return false">
 
-   
-    <h2>
-        Text Size
-    </h2>
+                <h4 class="MarginIndent">
+                    Colors
+                </h4>
+                
+                <section class="DoubleIndentM">
+                    <label for="textColorInput">Text Color</label>
+                    <br>
+                    <input type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                    <br>
+                    <label for="backgroundColorInput">Background Color</label>
+                    <br> 
+                    <input type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                    <br>
+                    <label for="borderColorInput">Border/Focus Color</label>
+                    <br>
+                    <input type="color" name="Border Color" id="borderColorInput" value="#000000">
 
-    <h2>
-        Text Content
-    </h2>
+                </section>
+            
+                <h4 class="MarginIndent">
+                    Icon Styles
+                </h4>
 
+                <section class="DoubleIndentM">
+            
+                    <input type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIcons">
+                    <label for="lightIcons">Light Icons</label><br>
+            
+                    <input type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIcons" checked="true">
+                    <label for="darkIcons">Dark Icons</label>
 
-
-</main>
-<!--Footer-->
-<footer class="TopBorder" id="mainFooter">
-    <!--Important Links-->
-    <nav class="BottomBorder" id="footerLinks">
-       <ul>
-           <li>
-               <a class="Bold" href="#top">
-                    Back to Top
-               </a>
-           </li>
-           <li>
-                <a class="Bold" href="sitemap">
-                    View Sitemap
-                </a>
-           </li>
-           <li id="sHOParent">
-                <button class="Bold Left" id="showHeaderOptions">
-                    Show Header Options
+                </section>
+                <br>
+                <input type="submit" class="TrueButton TrueButton_Hover Bold" id="submitSiteColors" value="Submit">
+                <br>
+                <br>
+                <strong id="errorBox">
+                
+                </strong>
+            
+                <button class=" TrueButton TrueButton_Hover Bold" name="Proceed" id="errorOverride">
+                    Proceed
                 </button>
+            </form>
+
+        </section>
+        
+        <h2>
+            Site Interactivity
+        </h2>
+        <section class="MarginIndent">
+                
+            <form>
+
+            </form>
+        </section>
+
+
+        <h2>
+            Text Size
+        </h2>
+
+        <h2>
+            Text Content
+        </h2>
+
+
+
+    </main>
+
+
+
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <nav class="BottomBorder" id="footerLinks">
+        <ul>
+            <li>
+                <a class="Bold" href="#top">
+                        Back to Top
+                </a>
             </li>
-       </ul>
-   </nav>
-   <!--Footer Navigation-->
-   <nav class="BottomBorder" id="footerNavigation">
-       <ul class="Bold">
-           <li>
-               <a href="">
+            <li>
+                    <a class="Bold" href="sitemap">
+                        View Sitemap
+                    </a>
+            </li>
+            <li id="sHOParent">
+                    <button class="Bold Left" id="showHeaderOptions">
+                        Show Header Options
+                    </button>
+                </li>
+        </ul>
+    </nav>
+    <!--Footer Navigation-->
+    <nav class="BottomBorder" id="footerNavigation" aria-label="Footer Redudant Navigation">
+        <ul class="Bold">
+            <li>
+                <a href="">
                     Home
-               </a>
-           </li>
-           <li>
+                </a>
+            </li>
+            <li>
                 <a href="gallery">
                     Gallery
                 </a>
@@ -318,74 +335,76 @@
                     Contact
                 </a>
             </li>
-       </ul>
-   </nav>
-   <!--Accessibility Information-->
-   <ul class="BottomBorder" id="accessibilityInformation">
-       <li class="FooterInfoHide">
-           <section>
-                <h4>
-                    Accessibility Statement
-               </h4>
-               <p>
-                    Text content for accessibility statement.
+        </ul>
+    </nav>
+    <!--Accessibility Information-->
+        <section role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h4>
+                            Accessibility Statement
+                        </h4>
+                        <p>
+                            Text content for accessibility statement.
+                            <a href="accessibility">
+                                View full accessibility statement here.
+                            </a>
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
                     <a href="accessibility">
-                        View full accessibility statement here.
+                        Accessibility Statement >
                     </a>
-               </p>
-           </section>
-       </li>
-       <li id="footerAccessStatement">
-            <a href="accessibility">
-                Accessibility Statement >
-            </a>
-       </li>
-       <li class="FooterInfoHide">
-           <section>
-                <h4>
-                    Conformance Claim
-                </h4>
-                <p>
-                    All of the text content for the conformance claim goes here.
-                </p>
-           </section>
-        </li>
-        <li id="footerConformanceClaim">
-            <a href="accessibility#conformanceClaim">
-                Conformance Claim >
-            </a>
-       </li>
-   </ul>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h4>
+                            Conformance Claim
+                        </h4>
+                        <p>
+                            All of the text content for the conformance claim goes here.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim >
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <ul class="BottomBorder" id="footerInfo">
+            
+                <li id="footerInfoNumber">
+                    <address>
+                        <a href="tel:+1973-202-0158">
+                            973-202-0158
+                        </a>
+                    </address>
+                </li>
+                <li id="footerInfoEmail">
+                    <address>
+                        <a href="mailto:walshgiarrusso@gmail.com">
+                            walshgiarrusso@gmail.com
+                        </a>
+                    </address>
+                </li>
+            </ul>
 
-   <!--Extra Info-->
-   <ul class="BottomBorder" id="footerInfo" role="contentinfo">
-       
-        <li id="footerInfoNumber">
-            <address>
-                <a href="tel:+1973-202-0158">
-                    973-202-0158
-                </a>
-            </address>
-        </li>
-        <li id="footerInfoEmail">
-            <address>
-                <a href="mailto:walshgiarrusso@gmail.com">
-                    walshgiarrusso@gmail.com
-                </a>
-            </address>
-        </li>
-    </ul>
+            <small id="copyrightInfo">
+            
+                Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+        
+            </small>
+        </section>
+    
+    </footer>
 
-    <small id="copyrightInfo">
-        <p>
-            Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
-        </p>
-    </small>
-</footer>
-
-<!--Scripts-->
-<script src="scripts/universal.js"></script>
-<script src="scripts/options.js"></script>
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+    <script src="scripts/options.js"></script>
 </body>
 </html>
-

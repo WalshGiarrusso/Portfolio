@@ -23,14 +23,16 @@ $(document).click(function(e){
     switch(checkTarget(trg)){
         case 0:
             //hide the header options
-            $('#optionsBar').slideUp(250);
-            $('#optionsBarWrapper').css('border-bottom', 'none');
+            $('#optionsBar').slideUp(250, function(){
+                $('#optionsBarWrapper').css('border-bottom-style', 'none');
+            });
+            
             break;
         case 1:
             //show the header options
         
             $('#optionsBar').slideDown(250);
-            $('#optionsBarWrapper').css('border-bottom', '1px solid black');
+            $('#optionsBarWrapper').css({"border-bottom-style": "solid", "border-bottom-width":"1px"});
             break;
         case 2:
             //hide the header options by default
@@ -88,26 +90,26 @@ function checkHODO(){
 $('#mobileMenuButton').click(function(){
     if($('#mobileMenu').is(':visible')){
         $('#mobileMenu').hide();
-        $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
-        $('#mobileMenuButton > span').text('Open Menu');
+        $('#mobileMenuButton > img').attr("src", "icons/open-"+lclStorage.getItem('icnColor')+".svg");
+        $('#mobileMenuLabel').text('Open Menu');
         $('#mobileMenuButton').attr('title', 'Open Menu');
 
 
     }else{
         $('#mobileMenu ').show();
-        $('#mobileMenuButton > img').attr("src", "icons/close-dark.svg");
-        $('#mobileMenuButton > span').text('Close Menu');
+        $('#mobileMenuButton > img').attr("src", "icons/close-"+lclStorage.getItem('icnColor')+".svg");
+        $('#mobileMenuLabel').text('Close Menu');
         $('#mobileMenuButton').attr('title', 'Close Menu');
     };
 });
     
 
-mqMM = window.matchMedia('(min-width:30em)');
+mqMM = window.matchMedia('(min-width:32.250em)');
 mqMM.addListener(function(){
     $('#mobileMenuButton').attr('title', 'Open Menu');
     $('#mobileMenu').hide();
-    $('#mobileMenuButton > img').attr("src", "icons/open-dark.svg");
-    $('#mobileMenuButton > span').text('Open Menu');
+    $('#mobileMenuButton > img').attr("src", "icons/open-"+lclStorage.getItem('icnColor')+".svg");
+    $('#mobileMenuLabel').text('Open Menu');
 });
 
 
@@ -127,20 +129,18 @@ function targetColors(){
     if( (lclStorage.getItem('icnColor') === null) || ((lclStorage.getItem('bkgColor') === null)) || ((lclStorage.getItem('txtColor') === null)) || ((lclStorage.getItem('bdrColor') === null))){
         if(window.matchMedia('(prefers-color-scheme:dark)').matches){
             colorSends = ['#121212', '#ffffff', '#ffffff', 'light'];
-            changeColors(colorSends);
         }else{
-        
             colorSends = ['#ffffff', '#000000', '#000000', 'dark'];
-            changeColors(colorSends);
+
         };
     }else{
         colorSends = [lclStorage.getItem('bkgColor'), lclStorage.getItem('txtColor'), lclStorage.getItem('bdrColor'), lclStorage.getItem('icnColor')];
-      
-        changeColors(colorSends);
+
     };
+    changeColors(colorSends);
 };
 function changeColors(targets){
-  
+    lclStorage.setItem('icnColor', targets[3]);
 
     $(document.body).css({ 
         //background color
