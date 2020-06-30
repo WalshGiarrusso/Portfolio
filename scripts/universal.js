@@ -9,9 +9,10 @@ $(document).ready(function (){
 
     targetColors();
 
-    removeMotionClasses();
+    checkMotionClasses();
 
     checkFormStyling();
+   
 
     
     
@@ -153,9 +154,9 @@ function changeColors(targets){
         "color": targets[1]
     });
     //border color
-    $('.BottomBorder, .TopBorder, input[type=color], input[type=radio], input[type=checkbox], .TrueButton').css('border-color', targets[2])
+    $('.BottomBorder, .TopBorder, .TB').css('border-color', targets[2])
     //button colors
-    $('.TrueButton.FormStyling').css({
+    $('.TB').css({
         "background-color": targets[1],
         "color": targets[0]
     });
@@ -169,12 +170,9 @@ function changeColors(targets){
 }
 //Reduce Motion
 
-function removeMotionClasses(){
-    
-    if(lclStorage.getItem('reduceMotion') === "true"){
-     
+function checkMotionClasses(){
+    if(lclStorage.getItem('reduceMotion') === "true"){ 
         $('[class*="_hover"]').each(function(){
-          
             var remElem = $(this); 
             var remCand= $(this).attr('class').split(/\s+/);
             for(i = 0; i < remCand.length ;i++){
@@ -188,19 +186,12 @@ function removeMotionClasses(){
         });
     };
 };
-//form styling
 function checkFormStyling(){
-    if(lclStorage.getItem('disableFormStyling') === "true"){
-        $('.FormStyling').css({
-            "background-color":"",
-            "color":""
-        });
-        $('.ContainsFormStyling').removeClass('FormStyling');
-        targetColors();
-        
+    if(lclStorage.getItem('disableFS') === 'true'){
+        $('.CFS').removeClass("FS");
+        $('.CFS.TB, input[type=submit].CFS').css({"background":"", "color":"", "border":""});
     }else{
-        $('.ContainsFormStyling').not('.FormStyling').addClass('FormStyling');
+        $('.CFS').addClass("FS");
         targetColors();
     };
-
 };

@@ -9,37 +9,14 @@
     outline: 2px solid;
     outline-offset:.35rem;
 }
-a, button, input{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    display:-moz-inline-box;
-    display:inline-block;
-    min-width: 44px;
-    min-height:44px;
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-}
 p a{
     min-width:0;
     min-height:0;
     display:inline;
 }
-input[type=submit], button{
-    justify-content:center;
-}
-input[type=radio]{
-    display:inline-block;
-
-}
 label{
     display:inline-block;
 }
-
-
-
-
 body{
     margin:0;
     font-family: trade-gothic-next, sans-serif;
@@ -50,10 +27,30 @@ body{
     word-spacing: 0.16em;
 }
 
-button, input{
+a, button, input{
+    box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    -webkit-box-sizing: padding-box;
+    display:-moz-inline-box;
+    display:inline-block;
+    min-width: 44px;
+    min-height:44px;
+    
     letter-spacing: 0.12em; 
     word-spacing: 0.16em;
+
+    font-size:1rem;
+    font-family:inherit;
+    cursor:pointer;
 }
+a, button{
+    display: flex;
+    align-items: center;
+}
+button{
+    justify-content:center;
+}
+
 
 
 ul, ol{
@@ -61,22 +58,18 @@ ul, ol{
     padding:0;
     margin:0;
 }
-
 a{
     text-decoration:none;
-
+    justify-content:flex-start;
 }
 h1{
-    font-size:2.25rem;
-    
+    font-size:2.25rem;    
 }
 h2{
-    font-size:2rem;
-  
+    font-size:2rem;  
 }
 h3{
     font-size:1.75rem;
-    
 }
 h4{
     font-size:1.5rem;
@@ -90,13 +83,10 @@ h6{
 p, h1, h2, h3, h4, h5, h6{
     margin-bottom: 2em;
 }
-
 .FooterInfoHide section h4, .FooterInfoHide section p, small p{
     margin:0;
     font-size:1rem;
 }
-
-
 small{
     font-size:1rem;
 }
@@ -104,20 +94,10 @@ small{
 address{
     font-style:normal;
 }
-
 #main{
-    min-height:50vh;
     padding: 1rem 5%;
-}
-
-button{
- 
-    font-size:1rem;
-    font-family:inherit;
-   
-    cursor:pointer;
-    
-
+                    /*REMOVE EVENTUALLY*/
+    min-height:50vh;
 }
 /*Superbars*/
     /*Accessibility Options*/
@@ -134,9 +114,6 @@ button{
 #mobileOptionsBar{
     display:none;
 }
-
-
-
     /*Header*/
 #top{
     padding: 0.5rem 5%;
@@ -146,7 +123,6 @@ button{
     align-items:center;
     font-weight:bold;
 }
-
         /*Logo*/
 #logoImage{
     width:4rem;
@@ -155,8 +131,7 @@ button{
 #headerNavigation{
     display:flex;
     flex-flow:row nowrap;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
 
 .Icon{
@@ -188,8 +163,6 @@ button{
     justify-content: space-between;
     align-items: baseline;
     flex-flow:row wrap;
-    
-    
 }
 
 
@@ -198,8 +171,6 @@ button{
     display:flex;
     flex-flow:row nowrap;
     align-items: baseline;
-    
-    
 }
 
 /*Footer*/
@@ -257,15 +228,12 @@ button{
     border-top: 1px solid black;
     transition:0.25s;
 }
-
 .Bold{
     font-weight:bold;
 }
-
 .Left{
     text-align:left;
 }
-
 .Hidden{
     display:none;
 }
@@ -277,31 +245,6 @@ button{
 }
 .DoubleIndentM{
     margin-left:2.5rem;
-}
-.FreeButton{
-    border:none;
-    background-color:transparent;
-    padding:0;
-}
-
-.TrueButton{
-    padding:.75rem;
-    transition:150ms;
-    cursor:pointer;
-}
-
-.TrueButton.FormStyling{
-
-    
-    background-color:black;
-    color:white;
-    outline-color:black;
-    border:none;
-    border-radius:1.5rem;
-    
-}
-.TrueButton_hover:hover, .TrueButton_hover:focus{
-    transform:scale(1.1);
 }
 
 .NoBreak{
@@ -315,7 +258,6 @@ button{
 .ILB{
     display:inline-block;
 }
-
 .ScreenReader-Only{
     position: absolute;
     width:1px;
@@ -328,11 +270,30 @@ button{
     border:0;
 }
 
+/*Button Styling*/
+.FB{
+    border:none;
+    background-color:transparent;
+    padding:0;
+}
+.TB.FS{
+    border-radius: 1.5rem;
+    border:none;
+    padding: 0 1rem;
+}
+.TB_hover{
+    transition: 250ms;
+}
+.TB_hover:hover, .TB_hover:focus{
+    transform:scale(1.1);
+}
+
+
 
 /*Media Queries*/
 
 @media only screen and (max-width: 47.063em){
-    #optionsBar{
+    #optionsBar, #sHOParent, .FooterInfoHide{
         display:none;
     }
     #mobileOptionsBar{
@@ -340,24 +301,16 @@ button{
         display:flex;
         flex-flow:row wrap;
         justify-content:space-around;
-
     }
     #accessibilityInformation li{
         width: inherit;
     }
-    .FooterInfoHide{
-        display:none;
-    }
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
-    #sHOParent{
-        display:none;
-    }
-    
 }
 @media only screen and (max-width: 32.250em){
-    #headerNavigation{
+    #headerNavigation, #siteMapLink{
         display:none;
     }
     #mobileMenuButton{
@@ -365,8 +318,4 @@ button{
         flex-flow:row nowrap;
         align-items: center;
     }
-    #siteMapLink {
-        display:none;
-    }
-    
 }  

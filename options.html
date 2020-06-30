@@ -63,17 +63,17 @@
                 </a>
             </li>
             <li>
-                <button class="Left FreeButton Bold" id="hideHeaderOptions">
+                <button class="Left FB Bold" id="hideHeaderOptions">
                     Hide Header Options
                 </button>
             </li>
             <li id="hideHOList">
-                <button class="Left FreeButton Bold" id="hideHOByDefault">
+                <button class="Left FB Bold" id="hideHOByDefault">
                     Don't Show Again
                 </button>
             </li>
             <li id="showHOList" class="Hidden">
-                <button class="Left FreeButton Bold" id="showHOByDefault">
+                <button class="Left FB Bold" id="showHOByDefault">
                     Show by Default
                 </button>
             </li>
@@ -125,7 +125,7 @@
                 </li>
             </ul>
             <!--Mobile Menu-->
-            <button class="Bold FreeButton" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
                 <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
                 <span id="mobileMenuLabel">
                     Open Menu
@@ -204,7 +204,7 @@
             </h2>
 
         
-            <button class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
+            <button class="CFS FS TB TB_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
                 Max Contrast
             </button>
         
@@ -216,49 +216,49 @@
             <form class="MarginIndent" id="customColorsForm" onsubmit="return false">
                 
               
-                <fieldset class="ContainsFormStyling MarginIndent FormStyling">
+                <fieldset class="CFS MarginIndent FS">
                     <legend>
                         Colors
                     </legend>
                     <label class="MarginIndent" for="textColorInput">Text Color</label>
                   
-                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                    <input class="MarginIndent FS CFS" type="color" name="Text Color" id="textColorInput" value="#000000"> 
                   
                     <label class="MarginIndent" for="backgroundColorInput">Background Color</label>
                   
-                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                    <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
               
                     <label class="MarginIndent" for="borderColorInput">Border/Focus Color</label>
                 
-                    <input class="MarginIndent FormStyling ContainsFormStyling" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                    <input class="MarginIndent FS CFS" type="color" name="Border Color" id="borderColorInput" value="#000000">
 
                 </fieldset>
 
                 
-                <fieldset class="MarginIndent FormStyling ContainsFormStyling">
+                <fieldset class="MarginIndent FS CFS">
                     <legend>
                         Icon Styles
                     </legend>
                     <div class="MarginIndent">
-                        <input class="FormStyling ContainsFormStyling" type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIconsCheckbox">
+                        <input class="FS CFS" type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIconsCheckbox">
                         <label for="lightIconsCheckbox">Light Icons</label>
                     </div>
                     
                     <div class="MarginIndent">
-                        <input class="FormStyling ContainsFormStyling" type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
+                        <input class="FS CFS" type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
                         <label for="darkIconsCheckbox">Dark Icons</label>
                     </div>
                     
 
                 </fieldset>
         
-                <input type="submit" class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" id="submitSiteColors" value="Submit">
+                <input type="submit" class="CFS FS TB TB_hover Bold MarginIndent" id="submitSiteColors" value="Submit">
                 
                 <p id="errorBox" class="MarginIndent">
                     
                 </p>
             
-                <button class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" name="Proceed" id="errorOverride">
+                <button class="CFS FS TB TB_hover Bold MarginIndent" name="Proceed" id="errorOverride">
                     Proceed
                 </button>
             </form>
@@ -271,22 +271,22 @@
             </h2>
             
             <form class="MarginIndent" id="interactivityOptions" onsubmit="return false">
-                <fieldset class="MarginIndent ContainsFormStyling FormStyling">
+                <fieldset class="MarginIndent CFS FS">
                     <legend>
                         Visual
                     </legend>
                     <div class="MarginIndent">
-                        <input class="FormStyling ContainsFormStyling" type="checkbox" name="reduceMotion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
+                        <input class="FS CFS" type="checkbox" name="reduceMotion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
                         <label for="reduceMotionCheckbox">Reduce Motion (Animations on Hover)</label>
                     </div>
                     <div class="MarginIndent">
-                        <input class="FormStyling ContainsFormStyling" type="checkbox" name="formStyling" id="formStylingCheckbox" value="formStylingCheckbox">
-                        <label for="formStylingCheckbox">Disable Form Styling</label>
+                        <input class="FS CFS" type="checkbox" name="FS" id="fSCheckbox" value="fSCheckbox">
+                        <label for="fSCheckbox">Disable Form Styling</label>
                     </div>
                 </fieldset>
                 
 
-                <input type="submit" class="FormStyling ContainsFormStyling TrueButton TrueButton_hover Bold MarginIndent" id="submitSiteInteractivity" value="Submit">
+                <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" id="submitSiteInteractivity" value="Submit">
             </form>
 
             
@@ -324,7 +324,7 @@
                         </a>
                 </li>
                 <li id="sHOParent">
-                        <button class="Bold FreeButton Left" id="showHeaderOptions">
+                        <button class="Bold FB Left" id="showHeaderOptions">
                             Show Header Options
                         </button>
                     </li>

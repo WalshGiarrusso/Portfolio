@@ -31,13 +31,13 @@ $(document).ready(function(){
     }else{
         $('#reduceMotionCheckbox').prop('checked', false);
     };
-        //form styling
-    if(lclStorage.getItem('disableFormStyling') === 'true'){
-        $('#formStylingCheckbox').prop('checked', true);
+        //Formstyling
+    if(lclStorage.getItem('disableFS') === 'true'){
+        $('#fSCheckbox').prop('checked', true);
     }else{
-        $('#formStylingCheckbox').prop('checked', false);
+        $('#fSCheckbox').prop('checked', false);
     };
-
+      
 
 });
 $('#maxContrastButton').click(function(){
@@ -187,35 +187,26 @@ function clRGB(s) {
 function clLum(a, b, c){
     return (0.2126 * a) + (0.7152 * b) + (0.0722 * c);
 };
-
 //handle submit site interactivity
 $('#submitSiteInteractivity').click(function(){
     //Reduce Motion
     if($('#reduceMotionCheckbox').is(':checked')){
-        
-        reduceMotion();     
+        lclStorage.setItem('reduceMotion', 'true');
+    
+        checkMotionClasses();
+       
     }else{
         lclStorage.setItem('reduceMotion', 'false');
-    }
-    //disable form styling
-    if($('#formStylingCheckbox').is(':checked')){
-
-        lclStorage.setItem('disableFormStyling', 'true');
-
+    };
+    if($('#fSCheckbox').is(':checked')){
+        lclStorage.setItem('disableFS', 'true');
         checkFormStyling();
     }else{
-        lclStorage.setItem('disableFormStyling', 'false');
-        
+        lclStorage.setItem('disableFS', 'false');
         checkFormStyling();
-    }
+    };
+    
 });
-//reduce motion
-function reduceMotion(){
-    lclStorage.setItem('reduceMotion', 'true');
-    
-    removeMotionClasses();
-    
-};
 
 
 

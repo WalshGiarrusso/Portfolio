@@ -1,105 +1,67 @@
-#submitSiteColors, #submitSiteInteractivity{
-    font-size:1rem;
-    font-family: trade-gothic-next, sans-serif;
+input[type=radio].FS, input[type=checkbox].FS{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border:2px solid black;
+    background:white;
+    border-radius: .75rem;
+    display:inline-block;
+    vertical-align:bottom;
     
 }
-
-fieldset.FormStyling{
-    padding:none;
-    margin:none;
-    min-inline-size: 0;
+input[type=radio].FS:checked, input[type=checkbox].FS:checked{
+    background:black;
+}
+input[type=color]{
+    display: block;   
+}
+input[type=color].FS{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    outline:none;
     border:none;
-    
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+input[type=color].FS::-webkit-color-swatch-wrapper{
+    padding:0;
+}
+input[type=color].FS::-webkit-color-swatch{
+    border:2px solid black;
+    border-radius:100%;
+}
+input[type=submit].FS, #errorOverride.FS{
+    width:6.5rem;
+}
+label{
+   line-height: 100%;
+}
+fieldset{
+    margin-bottom:1rem;
+}
+fieldset.FS{
+    border:none;
+}
+#errorOverride{
+    display: none;
+}
+#errorBox{
+    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
+    margin-top: 1rem;
+    margin-bottom:1rem;  
+}
+#errorBox strong{
+    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
+    display:block;
+    margin-top:1rem;
+    margin-bottom:1rem;
 }
 legend{
     /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
     margin-bottom:1rem;
     font-size:1.5rem;
     font-weight:bold;
-
-}
-
-input[type=color]{
-    
-    margin-top:.5rem;
-    margin-bottom:.5rem;
-    height:2.75rem;
-    width:2.75rem;
-    box-sizing:content-box;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    display:block;
-    
-}
-input[type=color].FormStyling{
-    border:none;
-    background-color:transparent;
-
-}
-input[type=color].FormStyling::-webkit-color-swatch-wrapper{
-    padding:0;
-}
-input[type=color].FormStyling::-webkit-color-swatch{
-    border-radius:2.75rem;
-    border:2px solid;
-}
-input{
-    cursor:pointer;
-}
-input[type=radio], input[type=checkbox]{
-    
-    height:2.75rem;
-    width:2.75rem;
-    
-}
-input[type=radio].FormStyling, input[type=checkbox].FormStyling{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border:2px solid black;
-    border-radius: .75rem;
-    vertical-align:bottom;
-    background:white;
-    
-}
-input[type=radio]:checked, input[type=checkbox]:checked{
-    
-    background:black;
-    background-clip:padding-box;
-    -moz-background-clip: padding-box;
-    -webkit-background-clip: padding-box;
-    
-}
-input[type=radio]::-ms-check, input[type=checkbox]::-ms-check{
-    appearance: none;
-    border-radius:0;
-
-}
-input[type=checkbox]{
-    display:inline-block;
-}
-input[type=submit].FormStyling{
-    -webkit-appearance: none;
-    appearance: none;
-    -moz-appearance: none;
-
-}
-#errorOverride, #submitSiteColors, #submitSiteInteractivity{
-    width:6rem;
-    margin-top: 1rem;
-    margin-bottom:1rem;    
-}
-#errorBox{
-    margin-top: 1rem;
-    margin-bottom:1rem;  
-}
-#errorBox strong{
-    display:block;
-    margin-top:1rem;
-    margin-bottom:1rem;
-}
-
-#errorOverride{
-    display:none;
 }
 
