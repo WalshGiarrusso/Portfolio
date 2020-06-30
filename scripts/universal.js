@@ -171,8 +171,8 @@ function changeColors(targets){
     $('*:focus, *').css('outline-color', targets[2]);
 
     $(".TB.CFS:not(.FS)").css({
-        "border-color":"-internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));",
-        "background-color":"-internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));",
+        "border-color":"rgb(132, 132, 132)",
+        "background-color":"rgb(239, 239, 239)",
         "color":"black"
     });
 };
@@ -187,8 +187,6 @@ function checkMotionClasses(){
                
                 if(/\w*_hover/gm.test(remCand[i])){
                    $(remElem).removeClass(remCand[i]);
-                
-                  
                 };
             };
         });
@@ -198,9 +196,23 @@ function checkFormStyling(){
     
     if(lclStorage.getItem('disableFS') === 'true'){
         $('.CFS').removeClass("FS");
-        $('.CFS.TB, input[type=submit].CFS').css({"background":"", "color":"", "border":""});
+        $(".TB.CFS:not(.FS)").css({
+            "border-width":"1px",
+            "border-color":"rgb(132, 132, 132)",
+            "background-color":"rgb(239, 239, 239)",
+            "color":"black"
+        });
+       
     }else{
         $('.CFS').addClass("FS");
         targetColors();
     };
 };
+function aaaaa(){
+    $(".TB.CFS:not(.FS)").css({
+        "border-width":"1px",
+        "border-color":"-internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));",
+        "background-color":"-internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));",
+        "color":"black"
+    });
+}

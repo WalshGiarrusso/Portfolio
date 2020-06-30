@@ -246,7 +246,6 @@ address{
 .DoubleIndentM{
     margin-left:2.5rem;
 }
-
 .NoBreak{
     overflow-wrap: normal;
     word-wrap: normal;
@@ -275,6 +274,9 @@ address{
     border:none;
     background-color:transparent;
     padding:0;
+}
+.TB:not(.FS){
+    color:black;
 }
 .TB.FS{
     border-radius: 1.5rem;
