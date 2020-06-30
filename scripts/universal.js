@@ -7,11 +7,13 @@ $(document).ready(function (){
 
     checkHODO();
 
+    checkFormStyling();
+
     targetColors();
 
     checkMotionClasses();
 
-    checkFormStyling();
+    
    
 
     
@@ -154,9 +156,9 @@ function changeColors(targets){
         "color": targets[1]
     });
     //border color
-    $('.BottomBorder, .TopBorder, .TB').css('border-color', targets[2])
+    $('.BottomBorder, .TopBorder, .TB.FS').css('border-color', targets[2])
     //button colors
-    $('.TB').css({
+    $('.TB.FS').css({
         "background-color": targets[1],
         "color": targets[0]
     });
@@ -167,7 +169,13 @@ function changeColors(targets){
     });
     //focus indicator
     $('*:focus, *').css('outline-color', targets[2]);
-}
+
+    $(".TB.CFS:not(.FS)").css({
+        "border-color":"-internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));",
+        "background-color":"-internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));",
+        "color":"black"
+    });
+};
 //Reduce Motion
 
 function checkMotionClasses(){
@@ -187,6 +195,7 @@ function checkMotionClasses(){
     };
 };
 function checkFormStyling(){
+    
     if(lclStorage.getItem('disableFS') === 'true'){
         $('.CFS').removeClass("FS");
         $('.CFS.TB, input[type=submit].CFS').css({"background":"", "color":"", "border":""});
