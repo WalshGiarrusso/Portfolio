@@ -19,19 +19,28 @@ input[type=color].FS{
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: transparent;
-    outline:none;
-    border:none;
+    background: white;
+    border:2px solid black;
     margin-top:.5rem;
     margin-bottom:.5rem;
+    padding:.1rem;
+    border-radius:100%;
 }
-input[type=color].FS::-webkit-color-swatch-wrapper{
+input[type=color].FS::-webkit-color-swatch-wrapper {
     padding:0;
 }
+
+/*This looks redundant, but using a comma selector here breaks the psuedoclass for Chrome.*/
 input[type=color].FS::-webkit-color-swatch{
     border:2px solid black;
     border-radius:100%;
 }
+input[type=color].FS::-moz-color-swatch{
+    border:2px solid black;
+    border-radius:100%;
+}
+
+
 input[type=submit].FS, #errorOverride.FS{
     width:6.5rem;
 }
@@ -64,4 +73,5 @@ legend{
     font-size:1.5rem;
     font-weight:bold;
 }
+
 

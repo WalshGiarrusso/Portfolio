@@ -5,6 +5,9 @@ lclStorage = window.localStorage;
 $(document).ready(function (){
     alert("This site is currently under construction. Visit http://walshgiarrusso.com/old-site/home for previous version of site.");
 
+ 
+ 
+
     checkHODO();
 
     checkFormStyling();
@@ -146,7 +149,11 @@ function targetColors(){
     };
     changeColors(colorSends);
 };
+
+
 function changeColors(targets){
+    
+  
     lclStorage.setItem('icnColor', targets[3]);
 
     $(document.body).css({ 
@@ -156,7 +163,8 @@ function changeColors(targets){
         "color": targets[1]
     });
     //border color
-    $('.BottomBorder, .TopBorder, .TB.FS').css('border-color', targets[2])
+    $('.BottomBorder, .TopBorder, .TB.FS, input.FS').css('border-color', targets[2])
+    
     //button colors
     $('.TB.FS').css({
         "background-color": targets[1],
@@ -169,6 +177,11 @@ function changeColors(targets){
     });
     //focus indicator
     $('*:focus, *').css('outline-color', targets[2]);
+
+    //special
+    
+
+
 
     $(".TB.CFS:not(.FS)").css({
         "border-color":"rgb(132, 132, 132)",

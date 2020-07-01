@@ -207,8 +207,7 @@ $('#submitSiteInteractivity').click(function(){
     };
     
 });
-
-
+//color input focus
 
 
 
