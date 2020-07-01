@@ -23,7 +23,7 @@ input[type=color].FS{
     border:2px solid black;
     margin-top:.5rem;
     margin-bottom:.5rem;
-    padding:.1rem;
+    padding:.25rem;
     border-radius:100%;
 }
 input[type=color].FS::-webkit-color-swatch-wrapper {
@@ -32,20 +32,24 @@ input[type=color].FS::-webkit-color-swatch-wrapper {
 
 /*This looks redundant, but using a comma selector here breaks the psuedoclass for Chrome.*/
 input[type=color].FS::-webkit-color-swatch{
-    border:2px solid black;
+    border:none;
     border-radius:100%;
 }
 input[type=color].FS::-moz-color-swatch{
-    border:2px solid black;
+    border:none;
     border-radius:100%;
 }
-
-
 input[type=submit].FS, #errorOverride.FS{
     width:6.5rem;
 }
+input[type=range]{
+    display:block;
+}
 label{
    line-height: 100%;
+    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
+   margin-top:1rem;
+   margin-bottom:1rem;
 }
 fieldset{
     margin-bottom:1rem;
@@ -62,16 +66,30 @@ fieldset.FS{
     margin-bottom:1rem;  
 }
 #errorBox strong{
-    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
     display:block;
+    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
+    
     margin-top:1rem;
     margin-bottom:1rem;
 }
 legend{
+    font-weight:bold;
     /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
     margin-bottom:1rem;
     font-size:1.5rem;
-    font-weight:bold;
+  
 }
-
+.InputGroup{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.ColorTextInput.FS{
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    border-bottom:.5rem solid black;
+    width:12rem;
+    height:2.75rem;
+}
 

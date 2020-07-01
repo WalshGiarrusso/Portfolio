@@ -221,11 +221,3 @@ function checkFormStyling(){
         targetColors();
     };
 };
-function aaaaa(){
-    $(".TB.CFS:not(.FS)").css({
-        "border-width":"1px",
-        "border-color":"-internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));",
-        "background-color":"-internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));",
-        "color":"black"
-    });
-}

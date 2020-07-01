@@ -49,6 +49,36 @@ $('#maxContrastButton').click(function(){
     targetColors();
 });
 //handle site colors submission
+
+//match text and color inputs
+$('.ColorTextInput').keyup(function(e){
+    if ($(this).is(":focus") && event.key == "Enter") {
+        matchColorInput('text', $(this).attr('id'), $(this).val());
+    };
+
+});
+$('input[type=color]').change(function(){
+    matchColorInput('color', $(this).attr('id'), $(this).val())
+});
+
+function matchColorInput(cSRC, srcID, color ){
+    console.log('procced: '+ cSRC+''+srcID+''+color);
+    
+    if(srcID.startsWith('text')){ 
+        (cSRC === 'color') ? $('#textColorTI').val(color) : $('#textColorInput').val(color);
+        
+
+    }else if(srcID.startsWith('background')){
+        (cSRC === 'color') ? $('#backgroundColorTI').val(color) : $('#backgroundColorInput').val(color);
+
+    }else{
+        (cSRC === 'color') ? $('#borderColorTI').val(color) : $('#borderColorInput').val(color);
+    };
+
+
+};
+
+
 $('#submitSiteColors').click(function(){
     //retrieve colors
     var bkgColor = $('#backgroundColorInput').val();
@@ -207,7 +237,6 @@ $('#submitSiteInteractivity').click(function(){
     };
     
 });
-//color input focus
 
 
 

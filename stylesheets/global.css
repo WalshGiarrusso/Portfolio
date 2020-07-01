@@ -250,13 +250,14 @@ address{
     display:none;
 }
 .Indent{
-    padding-left:1.25rem;
+    padding-left:1.5rem;
 }
 .MarginIndent{
-    margin-left: 1.25rem;
+    margin-left: 1.5rem;
+    
 }
 .DoubleIndentM{
-    margin-left:2.5rem;
+    margin-left:3rem;
 }
 .NoBreak{
     overflow-wrap: normal;

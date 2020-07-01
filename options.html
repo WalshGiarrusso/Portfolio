@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self"> 
 
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
@@ -219,16 +219,30 @@
                         Colors
                     </legend>
                     <label class="MarginIndent" for="textColorInput">Text Color</label>
-                  
-                    <input class="MarginIndent FS CFS" type="color" name="Text Color" id="textColorInput" value="#000000"> 
-                  
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                        
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="textColorTI" placeholder="Enter a Hex Triplet" value="#000000" maxlength="7">
+                    </div>
+
                     <label class="MarginIndent" for="backgroundColorInput">Background Color</label>
                   
-                    <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
               
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="backgroundColorTI" placeholder="Enter a Hex Triplet" value="#ffffff" maxlength="7">
+                    </div>
+
                     <label class="MarginIndent" for="borderColorInput">Border/Focus Color</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="borderColorTI" placeholder="Enter a Hex Triplet" value="#000000" maxlength="7">
+                    </div>
+                    
+              
+                    
                 
-                    <input class="MarginIndent FS CFS" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                    
 
                 </fieldset>
 
@@ -238,12 +252,12 @@
                         Icon Styles
                     </legend>
                     <div class="MarginIndent">
-                        <input class="FS CFS" type="radio" name="IconColor" id="lightIconsCheckbox" value="lightIconsCheckbox">
+                        <input class="FS CFS" type="radio" name="Icon Color" id="lightIconsCheckbox" value="lightIconsCheckbox">
                         <label for="lightIconsCheckbox">Light Icons</label>
                     </div>
                     
                     <div class="MarginIndent">
-                        <input class="FS CFS" type="radio" name="IconColor" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
+                        <input class="FS CFS" type="radio" name="Icon Color" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
                         <label for="darkIconsCheckbox">Dark Icons</label>
                     </div>
                     
@@ -272,11 +286,11 @@
                         Visual
                     </legend>
                     <div class="MarginIndent">
-                        <input class="FS CFS" type="checkbox" name="reduceMotion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
+                        <input class="FS CFS" type="checkbox" name="Reduce Motion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
                         <label for="reduceMotionCheckbox">Reduce Motion (Animations on Hover)</label>
                     </div>
                     <div class="MarginIndent">
-                        <input class="FS CFS" type="checkbox" name="FS" id="fSCheckbox" value="fSCheckbox">
+                        <input class="FS CFS" type="checkbox" name="Disable Form Styling" id="fSCheckbox" value="fSCheckbox">
                         <label for="fSCheckbox">Disable Form Styling</label>
                     </div>
                 </fieldset>
@@ -294,13 +308,39 @@
                     <legend>
                         Sizing
                     </legend>
-                    <h4>
+                    <h4 class="MarginIndent">
                         Text Sizing
                     </h4>
-                    <p>
-                        On a Windows desktop, press the control <kbd aria-hidden="true">Ctrl</kbd> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in. <br>
-                        On a Mac desktop, press the command <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> and plus <kbd aria-hidden="true">+</kbd> together to zoom in. 
-                    </p>
+                    <section class="MarginIndent">
+                        <h5 class="MarginIndent">
+                            Windows
+                        </h5>
+                        <p class="DoubleIndentM">
+                            Press the control <kbd aria-hidden="true">Ctrl</kbd> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                           
+                        </p>
+                    </section>
+                    <section class="MarginIndent">
+                        <h5 class="MarginIndent">
+                            Mac
+                        </h5>
+    
+                        <p class="DoubleIndentM">
+                            Press the command <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                        </p>
+                    </section>
+                    <section class="MarginIndent">
+                        <h5 class="MarginIndent">
+                            Mobile
+                        </h5>
+                        <p class="DoubleIndentM">
+                            Visit the settings for your mobile browser or mobile device to zoom in.
+                        </p>
+                    </section>
+                   
+                   
+                    
+                    
 
 
                     
@@ -312,14 +352,15 @@
                         Spacing
                     </legend>
 
-                    <input type="range" name="letterSpacingRange" id="letterSpacingRange">
                     <label for="letterSpacingRange">Letter Spacing</label>
-
-                    <input type="range" name="lineSpacingRange" id="lineSpacingRange">
+                    <input class="MarginIndent" type="range" name="letterSpacingRange" id="letterSpacingRange">
+                    
                     <label for="lineSpacingRange">Line Spacing</label>
-
-                    <input type="range" name="paragraphSpacingRange" id="paragraphSpacingRange">
+                    <input class="MarginIndent" type="range" name="lineSpacingRange" id="lineSpacingRange">
+                    
                     <label for="paragraphSpacingRange">Paragraph Spacing</label>
+                    <input class="MarginIndent" type="range" name="paragraphSpacingRange" id="paragraphSpacingRange">
+                    
                     
 
                 </fieldset>
