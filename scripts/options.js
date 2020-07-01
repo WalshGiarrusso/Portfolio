@@ -3,25 +3,25 @@ lclStorage = window.localStorage;
 $(document).ready(function(){
     //Initialize Site Colors
     if((lclStorage.getItem('bkgColor')) && (lclStorage.getItem('txtColor')) && (lclStorage.getItem('bdrColor')) && (lclStorage.getItem('icnColor'))){
-            $('#backgroundColorInput').val(lclStorage.getItem('bkgColor'));
-            $('#textColorInput').val(lclStorage.getItem('txtColor'));
-            $('#borderColorInput').val(lclStorage.getItem('bdrColor'));
+            $('#backgroundColorInput, #backgroundColorTI').val(lclStorage.getItem('bkgColor'));
+            $('#textColorInput, #textColorTI').val(lclStorage.getItem('txtColor'));
+            $('#borderColorInput, #borderColorTI').val(lclStorage.getItem('bdrColor'));
             if(lclStorage.getItem('icnColor') === 'dark'){
                 $('#lightIconsCheckbox').prop("checked", false);
             }else{
                 $('#darkIconsCheckbox').prop("checked", true);
             };
     }else if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-        $('#backgroundColorInput').val('#121212');
-        $('#textColorInput').val('#ffffff');
-        $('#borderColorInput').val('#ffffff');
+        $('#backgroundColorInput, #backgroundColorTI').val('#121212');
+        $('#textColorInput, #textColorTI').val('#ffffff');
+        $('#borderColorInput, #borderColorTI').val('#ffffff');
         $('#lightIconsCheckbox').prop("checked", true);
         $('#darkIconsCheckbox').prop("checked", false);
        
     }else{
-        $('#backgroundColorInput').val('#ffffff');
-        $('#textColorInput').val('#000000');
-        $('#borderColorInput').val('#000000');
+        $('#backgroundColorInput, #backgroundColorTI').val('#ffffff');
+        $('#textColorInput, #textColorTI').val('#000000');
+        $('#borderColorInput, #borderColorTI').val('#000000');
         $('#lightIconsCheckbox').prop("checked", false);
         $('#darkIconsCheckbox').prop("checked", true);
     };
@@ -56,6 +56,8 @@ $('.ColorTextInput').keyup(function(e){
         matchColorInput('text', $(this).attr('id'), $(this).val());
     };
 
+}).focusout(function(){
+    matchColorInput('text', $(this).attr('id'), $(this).val());
 });
 $('input[type=color]').change(function(){
     matchColorInput('color', $(this).attr('id'), $(this).val())

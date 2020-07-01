@@ -10,6 +10,8 @@ $(document).ready(function (){
 
     checkHODO();
 
+    
+
     checkFormStyling();
 
     targetColors();

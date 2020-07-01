@@ -36,6 +36,7 @@ a, button, input{
     min-width: 44px;
     min-height:44px;
     
+    
     letter-spacing: 0.12em; 
     word-spacing: 0.16em;
 
@@ -295,6 +296,7 @@ address{
     border-radius: 1.5rem;
     border:none;
     padding: 0 1rem;
+    height:2.75rem;
 }
 .TB_hover{
     transition: 250ms;
@@ -324,7 +326,7 @@ address{
         display:block;
     }
 }
-@media only screen and (max-width: 32.250em){
+@media only screen and (max-width: 33.750em){
     #headerNavigation, #siteMapLink{
         display:none;
     }
@@ -333,4 +335,28 @@ address{
         flex-flow:row nowrap;
         align-items: center;
     }
+    .Indent{
+        padding-left:.75rem;
+    }
+    .MarginIndent{
+        margin-left:.75rem;
+    }
+    .DoubleIndentM{
+        margin-left:1.5rem;
+    }
 }  
+@media only screen and (max-width: 22.500em){
+    .Indent{
+        padding-left:0;
+    }
+    .MarginIndent{
+        margin-left:0;
+    }
+    .DoubleIndentM{
+        margin-left:0;
+    }
+    .InputGroup{
+        justify-content: space-between;
+    }
+
+}

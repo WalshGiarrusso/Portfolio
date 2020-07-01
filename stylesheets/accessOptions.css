@@ -7,7 +7,16 @@ input[type=radio].FS, input[type=checkbox].FS{
     border-radius: .75rem;
     display:inline-block;
     vertical-align:bottom;
-    
+}
+input[type=radio].FS::-ms-check, input[type=checkbox].FS::-ms-check{
+   
+    border:2px solid black;
+    background:white;
+    border-radius: .75rem;
+    display:inline-block;
+    vertical-align:bottom;
+
+
 }
 input[type=radio].FS:checked, input[type=checkbox].FS:checked{
     background:black;
@@ -25,19 +34,24 @@ input[type=color].FS{
     margin-bottom:.5rem;
     padding:.25rem;
     border-radius:100%;
+    height:2.75rem;
+    width:2.75rem;
 }
 input[type=color].FS::-webkit-color-swatch-wrapper {
     padding:0;
+    outline:none;
 }
 
 /*This looks redundant, but using a comma selector here breaks the psuedoclass for Chrome.*/
 input[type=color].FS::-webkit-color-swatch{
     border:none;
     border-radius:100%;
+    
 }
 input[type=color].FS::-moz-color-swatch{
     border:none;
     border-radius:100%;
+ 
 }
 input[type=submit].FS, #errorOverride.FS{
     width:6.5rem;
@@ -83,6 +97,7 @@ legend{
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
+    
 }
 .ColorTextInput.FS{
     box-sizing:border-box;
@@ -91,5 +106,8 @@ legend{
     border-bottom:.5rem solid black;
     width:12rem;
     height:2.75rem;
+    color:inherit;
+    background-color:inherit;
+    border-style:solid;
 }
 
