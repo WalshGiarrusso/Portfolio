@@ -9,14 +9,16 @@ input[type=radio].FS, input[type=checkbox].FS{
     vertical-align:bottom;
 }
 input[type=radio].FS::-ms-check, input[type=checkbox].FS::-ms-check{
-   
-    border:2px solid black;
-    background:white;
-    border-radius: .75rem;
+    border-radius: .5rem;
     display:inline-block;
     vertical-align:bottom;
+    background:white;
+    border:2px solid black;
 
-
+}
+input[type=radio].FS:checked::-ms-check, input[type=checkbox].FS:checked::-ms-check{
+    
+    background:black;
 }
 input[type=radio].FS:checked, input[type=checkbox].FS:checked{
     background:black;
@@ -95,7 +97,7 @@ legend{
 }
 .InputGroup{
     display:flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     
 }
@@ -107,7 +109,7 @@ legend{
     width:12rem;
     height:2.75rem;
     color:inherit;
-    background-color:inherit;
+    background-color:rgba(0,0,0,0);
     border-style:solid;
 }
 

@@ -66,11 +66,11 @@ $('input[type=color]').change(function(){
 function matchColorInput(cSRC, srcID, color ){
     console.log('procced: '+ cSRC+''+srcID+''+color);
     
-    if(srcID.startsWith('text')){ 
+    if(/^text/.test(srcID)){ 
         (cSRC === 'color') ? $('#textColorTI').val(color) : $('#textColorInput').val(color);
         
 
-    }else if(srcID.startsWith('background')){
+    }else if(/^background/.test(srcID)){
         (cSRC === 'color') ? $('#backgroundColorTI').val(color) : $('#backgroundColorInput').val(color);
 
     }else{
