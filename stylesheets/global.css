@@ -2,8 +2,13 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     color:inherit;
-    line-height:1.5;
+    
+    letter-spacing: 0.12em; 
+    word-spacing: 0.16em;
+    
+    
 }
+
 *:focus{
     outline-color: black;
     outline: 2px solid;
@@ -23,8 +28,8 @@ body{
     font-weight: 400;
     font-style: normal;
     color:black;
-    letter-spacing: 0.12em; 
-    word-spacing: 0.16em;
+    
+    
 }
 
 a, button, input{
@@ -38,8 +43,7 @@ a, button, input{
     
    
     
-    letter-spacing: 0.12em; 
-    word-spacing: 0.16em;
+   
 
     font-size:1rem;
     font-family:inherit;
@@ -63,6 +67,7 @@ kbd{
     border:1px solid #9fa6ad;
     border-radius:3px;
     box-shadow: 0 1px 1px  rgba(12,13,14,0.15), inset 0 1px 0 0 #ffffff;
+    letter-spacing: 0em;
 }
 
 
@@ -94,9 +99,13 @@ h5{
 h6{
     font-size:1.1rem;
 }
-p, h1, h2, h3, h4, h5, h6{
+p, a, h1, h2, h3, h4, h5, h6, .FB{
+    line-height:1.5;
+}
+main p, main h1, main h2, main h3, main h4, main h5, main h6, main a, main .FB {
     margin-bottom: 2em;
 }
+
 .FooterInfoHide section h4, .FooterInfoHide section p, small p{
     margin:0;
     font-size:1rem;
@@ -109,7 +118,8 @@ address{
     font-style:normal;
 }
 #main{
-    padding: 1rem 5%;
+    padding: 1rem 0;
+   
                     /*REMOVE EVENTUALLY*/
     min-height:50vh;
 }
@@ -184,7 +194,7 @@ address{
         /*Breadcrumb Menu*/
 #breadcrumbMenu{
     display:flex;
-    flex-flow:row nowrap;
+    flex-flow:row wrap;
     align-items: baseline;
 }
 
@@ -212,12 +222,15 @@ address{
     display:flex;
     flex-flow:row wrap;
     justify-content:space-around;
+    
+    
    
 }
   #accessibilityInformation li{
     width:44%;
-   
-   
+}
+#accessibilityInformation li a{
+    justify-content: center;
 }
 #footerAccessStatement, #footerConformanceClaim{
     display:none;
@@ -284,6 +297,16 @@ address{
     white-space:nowrap;
     border:0;
 }
+.LabelledInput, .InputGroup{
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+}
+.Created{
+    word-spacing:inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    margin-bottom: inherit;
+}
 
 /*Button Styling*/
 .FB{
@@ -298,7 +321,7 @@ address{
     border-radius: 1.5rem;
     border:none;
     padding: 0 1rem;
-    height:2.75rem;
+    
 }
 .TB_hover{
     transition: 250ms;
@@ -311,7 +334,7 @@ address{
 
 /*Media Queries*/
 
-@media only screen and (max-width: 47.063em){
+@media only screen and (max-width: 58.250em){
     #optionsBar, #sHOParent, .FooterInfoHide{
         display:none;
     }
@@ -327,8 +350,9 @@ address{
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
+   
 }
-@media only screen and (max-width: 33.750em){
+@media only screen and (max-width: 36.750em){
     #headerNavigation, #siteMapLink{
         display:none;
     }
@@ -345,6 +369,9 @@ address{
     }
     .DoubleIndentM{
         margin-left:1.5rem;
+    }
+    #accessibilityInformation{
+        text-align: center; 
     }
 }  
 @media only screen and (max-width: 22.500em){

@@ -5,18 +5,15 @@ lclStorage = window.localStorage;
 $(document).ready(function (){
     alert("This site is currently under construction. Visit http://walshgiarrusso.com/old-site/home for previous version of site.");
 
- 
- 
-
     checkHODO();
-
-    
 
     checkFormStyling();
 
     targetColors();
 
     checkMotionClasses();
+
+    setTextSpacing();
 
     
    
@@ -223,3 +220,12 @@ function checkFormStyling(){
         targetColors();
     };
 };
+//text spacing
+function setTextSpacing(){
+    $('*:not(kbd)').css({
+        "letter-spacing":lclStorage.getItem('letterSpacing'),
+        "word-spacing":lclStorage.getItem('wordSpacing')
+    });
+    $('p, a, h1, h2, h3, h4, h5, h6, .FB').css('line-height', lclStorage.getItem('lineSpacing'));
+    $('main p, main h1, main h2, main h3, main h4, main h5, main h6, main a, main .FB').css("margin-bottom", lclStorage.getItem('paragraphSpacing'));
+}

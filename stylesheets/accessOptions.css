@@ -7,25 +7,28 @@ input[type=radio].FS, input[type=checkbox].FS{
     border-radius: .75rem;
     display:inline-block;
     vertical-align:bottom;
+    margin:0;
+
 }
 input[type=radio].FS::-ms-check, input[type=checkbox].FS::-ms-check{
     border-radius: .5rem;
     display:inline-block;
     vertical-align:bottom;
     background:white;
-    border:2px solid black;
-
+    border-width:2px;
+    border-style:solid;
+    border-color:inherit;
+    margin:0;
 }
 input[type=radio].FS:checked::-ms-check, input[type=checkbox].FS:checked::-ms-check{
-    
+    background-clip:content-box;
     background:black;
 }
 input[type=radio].FS:checked, input[type=checkbox].FS:checked{
+    background-clip:content-box;
     background:black;
 }
-input[type=color]{
-    display: block;   
-}
+
 input[type=color].FS{
     appearance: none;
     -moz-appearance: none;
@@ -43,8 +46,6 @@ input[type=color].FS::-webkit-color-swatch-wrapper {
     padding:0;
     outline:none;
 }
-
-/*This looks redundant, but using a comma selector here breaks the psuedoclass for Chrome.*/
 input[type=color].FS::-webkit-color-swatch{
     border:none;
     border-radius:100%;
@@ -56,16 +57,15 @@ input[type=color].FS::-moz-color-swatch{
  
 }
 input[type=submit].FS, #errorOverride.FS{
-    width:6.5rem;
+    min-width:6.5rem;
 }
-input[type=range]{
+input[type=range], input[type=color], input[type=reset]{
     display:block;
 }
 label{
-   line-height: 100%;
+   line-height: 1;
     /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
-   margin-top:1rem;
-   margin-bottom:1rem;
+   
 }
 fieldset{
     margin-bottom:1rem;
@@ -107,9 +107,93 @@ legend{
     -webkit-box-sizing:border-box;
     border-bottom:.5rem solid black;
     width:12rem;
-    height:2.75rem;
+
     color:inherit;
     background-color:rgba(0,0,0,0);
     border-style:solid;
 }
 
+/*range*/
+/*range*/
+input[type=range] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-sizing:content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    border-radius:1rem;
+ 
+    width:15rem;
+    background:white;       
+    padding: .5rem .5rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
+    
+
+    
+}
+input[type=range]::-webkit-slider-runnable-track {
+   
+    height:.75rem;
+    border:2px solid black;
+    border-radius:.75rem;
+    
+}
+input[type=range]::-moz-range-track {
+    height:.75rem;
+    border:2px solid black;
+    border-radius:.75rem;
+    
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:1.25rem;
+    height:2.75rem;
+    color:black;
+    background-color:black;
+    border-radius:.75rem;
+    margin-top:-1.125rem;
+    cursor: pointer;
+    border:none;
+}
+input[type=range]::-moz-range-thumb{
+    
+    -moz-appearance: none;
+    width:1.25rem;
+    height:2.75rem;
+    color:black;
+    background-color:black;
+    border-radius:.75rem;
+    cursor: pointer;
+    border:none;
+}
+input[type=range]::-ms-thumb{
+   -ms-appearance:none;
+   width:1.25rem;
+    height:2.75rem;
+    color:black;
+    background-color:black;
+    border-radius:.75rem;
+    margin-top:0rem;
+}
+
+input[type=range]::-ms-track {
+   background: transparent;
+}
+input[type=range]::-ms-fill-lower {
+   border:2px solid black;
+  border-radius:.75rem;
+}
+
+input[type=range]::-ms-fill-upper {
+  border:2px solid black;
+  border-radius:.75rem;
+  
+}
+#resetTextSpacing{
+    margin-top: 1rem;
+    margin-bottom:1rem;
+}

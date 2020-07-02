@@ -25,7 +25,7 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
     
-    <base href="https://walshgiarrusso.com/" target="_self"> 
+    <base href="https://walshgiarrusso.com/" target="_self">  
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -189,7 +189,7 @@
         
 
     <!--Content-->
-    <main id="main" tabindex="-1">
+    <main id="main" class="MarginIndent" tabindex="-1">
         
         <h1>
             Accessibility Options
@@ -227,8 +227,6 @@
                     </div>
 
                     <label class="MarginIndent" for="backgroundColorInput">Background Color</label>
-                  
-              
                     <div class="InputGroup">
                         <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
                         <input class="CFS FS MarginIndent ColorTextInput" type="text" id="backgroundColorTI" placeholder="Enter a Hex Triplet" value="#ffffff" maxlength="7">
@@ -252,12 +250,12 @@
                     <legend>
                         Icon Styles
                     </legend>
-                    <div class="MarginIndent">
+                    <div class="MarginIndent LabelledInput">
                         <input class="FS CFS" type="radio" name="Icon Color" id="lightIconsCheckbox" value="lightIconsCheckbox">
                         <label for="lightIconsCheckbox">Light Icons</label>
                     </div>
                     
-                    <div class="MarginIndent">
+                    <div class="MarginIndent LabelledInput">
                         <input class="FS CFS" type="radio" name="Icon Color" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
                         <label for="darkIconsCheckbox">Dark Icons</label>
                     </div>
@@ -265,7 +263,7 @@
 
                 </fieldset>
         
-                <input type="submit" class="CFS FS TB TB_hover Bold MarginIndent" id="submitSiteColors" value="Submit">
+                <input type="submit" class="CFS FS TB TB_hover Bold MarginIndent" name="Submit Site Theme" id="submitSiteColors" value="Submit">
                 
                 <p id="errorBox" class="MarginIndent">
                     
@@ -286,11 +284,11 @@
                     <legend>
                         Visual
                     </legend>
-                    <div class="MarginIndent">
+                    <div class="MarginIndent LabelledInput">
                         <input class="FS CFS" type="checkbox" name="Reduce Motion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
                         <label for="reduceMotionCheckbox">Reduce Motion (Requires Refresh)</label>
                     </div>
-                    <div class="MarginIndent">
+                    <div class="MarginIndent LabelledInput">
                         <input class="FS CFS" type="checkbox" name="Disable Form Styling" id="fSCheckbox" value="fSCheckbox">
                         <label for="fSCheckbox">Disable Form Styling</label>
                     </div>
@@ -352,17 +350,22 @@
                     <legend>
                         Spacing
                     </legend>
+                    <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Text Spacing" id="resetTextSpacing">
 
-                    <label for="letterSpacingRange">Letter Spacing</label>
-                    <input class="MarginIndent" type="range" name="letterSpacingRange" id="letterSpacingRange">
+                    <label class="MarginIndent" for="letterSpacingRange">Letter Spacing</label>
+                    <input class="DoubleIndentM" type="range" name="Letter Spacing Range" id="letterSpacingRange" min="-.05" max=".25" step=".0125" value="0.12">
                     
-                    <label for="lineSpacingRange">Line Spacing</label>
-                    <input class="MarginIndent" type="range" name="lineSpacingRange" id="lineSpacingRange">
+                    <label class="MarginIndent" for="wordSpacingRange">Word Spacing</label>
+                    <input class="DoubleIndentM" type="range" name="Word Spacing Range" id="wordSpacingRange" min="-.15" max=".3" step=".025" value="0.16">
                     
-                    <label for="paragraphSpacingRange">Paragraph Spacing</label>
-                    <input class="MarginIndent" type="range" name="paragraphSpacingRange" id="paragraphSpacingRange">
+                    <label class="MarginIndent" for="lineSpacingRange">Line Spacing</label>
+                    <input class="DoubleIndentM" type="range" name="Line Spacing Range" id="lineSpacingRange" min="1" max="2.5" step=".1" value="1.5">
                     
+                    <label class="MarginIndent" for="paragraphSpacingRange">Paragraph Spacing</label>
+                    <input class="DoubleIndentM" type="range" name="Paragraph Spacing Range" id="paragraphSpacingRange" min="0" max="3" step=".05" value="2">
                     
+                    <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Submit" id="submitTextSpacing" name="Submit Text Spacing">
+
 
                 </fieldset>
 
@@ -467,8 +470,8 @@
                     </section>
                 </li>
                 <li id="footerAccessStatement">
-                    <a href="accessibility" class="NoWrap">
-                        Accessibility Statement >
+                    <a href="accessibility">
+                        Accessibility Statement&nbsp;>
                     </a>
                 </li>
                 <li class="FooterInfoHide">
@@ -482,8 +485,8 @@
                     </section>
                 </li>
                 <li id="footerConformanceClaim">
-                    <a href="accessibility#conformanceClaim" class="NoWrap">
-                        Conformance Claim >
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim&nbsp;>
                     </a>
                 </li>
             </ul>

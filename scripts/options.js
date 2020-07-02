@@ -37,6 +37,12 @@ $(document).ready(function(){
     }else{
         $('#fSCheckbox').prop('checked', false);
     };
+    //initialize ranges
+    $('#letterSpacingRange').val(lclStorage.getItem('letterSpacing') ? parseFloat(lclStorage.getItem('letterSpacing'),10) : 0.12); 
+    $('#wordSpacingRange').val(lclStorage.getItem('wordSpacing') ? parseFloat(lclStorage.getItem('wordSpacing'),10) : 0.16);
+    $('#lineSpacingRange').val(lclStorage.getItem('lineSpacing') ? parseFloat(lclStorage.getItem('lineSpacing'),10) : 1.5); 
+    $('#paragraphSpacingRange').val(lclStorage.getItem('paragraphSpacing') ? parseFloat(lclStorage.getItem('paragraphSpacing'),10) : 2);  
+   
       
 
 });
@@ -117,18 +123,18 @@ function checkErrors(bKC, tXC, bDC, iCC){
     }else{
         $('#errorOverride').show();
         if (bkgQtxt < 7){
-            $('#errorBox').append("<strong class='MarginIndent' >Warning: the text color and the background color have a low contrast ratio ("+bkgQtxt.toFixed(3)+") </strong>");
+            $('#errorBox').append('<strong class="MarginIndent Created" >Warning: the text color and the background color have a low contrast ratio ('+bkgQtxt.toFixed(3)+')</strong>');
      
         };
         if(bkgQbdr < 7){
-            $('#errorBox').append("<strong class='MarginIndent'>Warning: the border color and the background color have a low contrast ratio ("+bkgQbdr.toFixed(3)+")</strong>");
+            $('#errorBox').append('<strong class="MarginIndent Created">Warning: the border color and the background color have a low contrast ratio ('+bkgQbdr.toFixed(3)+')</strong>');
             
         };
         if(bkgQicn < 3){
-            $('#errorBox').append("<strong class='MarginIndent'>Warning: the icon color and the background color have a low contrast ratio ("+bkgQicn.toFixed(3)+")</strong>");
+            $('#errorBox').append('<strong class="MarginIndent Created">Warning: the icon color and the background color have a low contrast ratio ('+bkgQicn.toFixed(3)+')</strong>');
          
         };
-        $('#errorBox').append("<strong class='MarginIndent'>Try making one color brighter and the other color darker.</strong>");
+        $('#errorBox').append('<strong class="MarginIndent Created">Try making one color brighter and the other color darker.</strong>');
         return false;
     };
 };
@@ -240,5 +246,13 @@ $('#submitSiteInteractivity').click(function(){
     
 });
 
+//handle text spacing submit
+$('#submitTextSpacing').click(function(){
+    lclStorage.setItem('letterSpacing', $('#letterSpacingRange').val() + 'em');
+    lclStorage.setItem('wordSpacing', $('#wordSpacingRange').val() + 'em');
+    lclStorage.setItem('lineSpacing', $('#lineSpacingRange').val());
+    lclStorage.setItem('paragraphSpacing', $('#paragraphSpacingRange').val() + 'em');
+    setTextSpacing();
 
+});
 
