@@ -14,7 +14,7 @@
     outline: 2px solid;
     outline-offset:.35rem;
 }
-main a{
+main a, p a{
     text-decoration: underline;
     display:inline;
     margin:0;
