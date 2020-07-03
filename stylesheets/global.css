@@ -14,10 +14,10 @@
     outline: 2px solid;
     outline-offset:.35rem;
 }
-p a{
-    min-width:0;
-    min-height:0;
+main a{
+    text-decoration: underline;
     display:inline;
+    margin:0;
 }
 label{
     display:inline-block;
@@ -102,8 +102,9 @@ h6{
 p, a, h1, h2, h3, h4, h5, h6, .FB{
     line-height:1.5;
 }
-main p, main h1, main h2, main h3, main h4, main h5, main h6, main a, main .FB {
-    margin-bottom: 2em;
+main p, main h1, main h2, main h3, main h4, main h5, main h6, main .FB {
+    margin-bottom:1em;
+    margin-top:1em;
 }
 
 .FooterInfoHide section h4, .FooterInfoHide section p, small p{
@@ -320,7 +321,7 @@ address{
 .TB.FS{
     border-radius: 1.5rem;
     border:none;
-    padding: 0 1rem;
+    padding: 1rem;
     
 }
 .TB_hover{

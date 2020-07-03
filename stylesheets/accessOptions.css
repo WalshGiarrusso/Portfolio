@@ -39,8 +39,6 @@ input[type=color].FS{
     margin-bottom:.5rem;
     padding:.25rem;
     border-radius:100%;
-    height:2.75rem;
-    width:2.75rem;
 }
 input[type=color].FS::-webkit-color-swatch-wrapper {
     padding:0;
@@ -64,11 +62,10 @@ input[type=range], input[type=color], input[type=reset]{
 }
 label{
    line-height: 1;
-    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
-   
 }
 fieldset{
     margin-bottom:1rem;
+    width:90%;
 }
 fieldset.FS{
     border:none;
@@ -76,17 +73,12 @@ fieldset.FS{
 #errorOverride{
     display: none;
 }
-#errorBox{
-    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
-    margin-top: 1rem;
-    margin-bottom:1rem;  
-}
+
 #errorBox strong{
     display:block;
-    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
     
-    margin-top:1rem;
-    margin-bottom:1rem;
+    
+    
 }
 legend{
     font-weight:bold;
@@ -114,7 +106,7 @@ legend{
 }
 
 /*range*/
-/*range*/
+
 input[type=range] {
     appearance: none;
     -moz-appearance: none;
@@ -124,7 +116,7 @@ input[type=range] {
     -moz-box-sizing: content-box;
     border-radius:1rem;
  
-    width:15rem;
+    width:12rem;
     background:white;       
     padding: .5rem .5rem;
     margin-top:1rem;
@@ -136,7 +128,7 @@ input[type=range] {
 }
 input[type=range]::-webkit-slider-runnable-track {
    
-    height:.75rem;
+    height:1rem;
     border:2px solid black;
     border-radius:.75rem;
     
@@ -150,33 +142,33 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-webkit-slider-thumb{
     -webkit-appearance: none;
-    width:1.25rem;
+    width:2.75rem;
     height:2.75rem;
     color:black;
     background-color:black;
-    border-radius:.75rem;
-    margin-top:-1.125rem;
+    border-radius:2.75rem;
+    margin-top:-1rem;
     cursor: pointer;
     border:none;
 }
 input[type=range]::-moz-range-thumb{
     
     -moz-appearance: none;
-    width:1.25rem;
+    width:2.75rem;
     height:2.75rem;
     color:black;
     background-color:black;
-    border-radius:.75rem;
+    border-radius:2.75rem;
     cursor: pointer;
     border:none;
 }
 input[type=range]::-ms-thumb{
    -ms-appearance:none;
-   width:1.25rem;
+    width:2.75rem;
     height:2.75rem;
     color:black;
     background-color:black;
-    border-radius:.75rem;
+    border-radius:2.75rem;
     margin-top:0rem;
 }
 
@@ -193,7 +185,20 @@ input[type=range]::-ms-fill-upper {
   border-radius:.75rem;
   
 }
-#resetTextSpacing{
+input[type=reset]{
     margin-top: 1rem;
     margin-bottom:1rem;
+}
+.FauxFieldset{
+    padding-left:.75rem;
+   
+}
+#iAS.FS{
+    padding:0;
+}
+#iAS legend{
+    font-size: 1.25rem;
+}
+#submitAudioPrefs, #submitVideoPrefs{
+    margin:1rem 0;
 }

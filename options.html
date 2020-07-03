@@ -25,7 +25,8 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
     
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self">   
+     
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -203,18 +204,13 @@
             <h2>
                 Site Presentation
             </h2>
-
-        
             <button class="CFS FS TB TB_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
                 Max Contrast
             </button>
-        
             <h3 class="MarginIndent">
                 Theme
             </h3>
             <form class="MarginIndent" id="customColorsForm" onsubmit="return false">
-                
-              
                 <fieldset class="CFS MarginIndent FS">
                     <legend>
                         Colors
@@ -303,49 +299,65 @@
                 Text Presentation
             </h3>
             <form class="MarginIndent" id="textPresOptions" onsubmit="return false">
-                <fieldset class="MarginIndent CFS FS">
-                    <legend>
+                
+                <section class="MarginIndent FauxFieldset">
+                    <h4 >
                         Sizing
-                    </legend>
-                    <h4 class="MarginIndent">
-                        Text Sizing
                     </h4>
-                    <section class="MarginIndent">
+                    <section>
                         <h5 class="MarginIndent">
-                            Windows
+                            Text Sizing
                         </h5>
-                        <p class="DoubleIndentM">
-                            Press the control <kbd aria-hidden="true">Ctrl</kbd> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
-                           
-                        </p>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Windows
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Press the control <kbd aria-hidden="true">Ctrl</kbd> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                               
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Mac
+                            </h6>
+        
+                            <p class="DoubleIndentM">
+                                Press the command <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Mobile
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Visit the settings for your mobile browser or mobile device to zoom in.
+                            </p>
+                        </section>
+
                     </section>
-                    <section class="MarginIndent">
-                        <h5 class="MarginIndent">
-                            Mac
-                        </h5>
-    
-                        <p class="DoubleIndentM">
-                            Press the command <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
-                        </p>
-                    </section>
-                    <section class="MarginIndent">
-                        <h5 class="MarginIndent">
-                            Mobile
-                        </h5>
-                        <p class="DoubleIndentM">
-                            Visit the settings for your mobile browser or mobile device to zoom in.
-                        </p>
-                    </section>
-                   
-                   
+                    <fieldset class="MarginIndent CFS FS" id="iAS">
+                        <legend>
+                            Interaction Target Sizing
+                        </legend>
+
+                        <label class="MarginIndent" for="targetSizingRange">
+                            Input, Button, and Link Sizing
+                        </label>
+                        <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Target Sizing">
+                        <input type="range" class="MarginIndent" id="targetSizingRange" name="Input, Button and Link Sizing" min="1" max="4" step=".05" value="2.75">
+
+                        
+                    
+                        <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Submit" name="Submit Interaction Target Sizing" id="submitTargetSizing">
+
+                    </fieldset>
+
+                </section>
                     
                     
-
-
-                    
-
-                </fieldset>
-
+                
+             
                 <fieldset class="MarginIndent CFS FS">
                     <legend>
                         Spacing
@@ -353,16 +365,16 @@
                     <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Text Spacing" id="resetTextSpacing">
 
                     <label class="MarginIndent" for="letterSpacingRange">Letter Spacing</label>
-                    <input class="DoubleIndentM" type="range" name="Letter Spacing Range" id="letterSpacingRange" min="-.05" max=".25" step=".0125" value="0.12">
+                    <input class="MarginIndent" type="range" name="Letter Spacing Range" id="letterSpacingRange" min="-.05" max=".25" step=".0125" value="0.12">
                     
                     <label class="MarginIndent" for="wordSpacingRange">Word Spacing</label>
-                    <input class="DoubleIndentM" type="range" name="Word Spacing Range" id="wordSpacingRange" min="-.15" max=".3" step=".025" value="0.16">
+                    <input class="MarginIndent" type="range" name="Word Spacing Range" id="wordSpacingRange" min="-.15" max=".3" step=".025" value="0.16">
                     
                     <label class="MarginIndent" for="lineSpacingRange">Line Spacing</label>
-                    <input class="DoubleIndentM" type="range" name="Line Spacing Range" id="lineSpacingRange" min="1" max="2.5" step=".1" value="1.5">
+                    <input class="MarginIndent" type="range" name="Line Spacing Range" id="lineSpacingRange" min="1" max="2.5" step=".1" value="1.5">
                     
                     <label class="MarginIndent" for="paragraphSpacingRange">Paragraph Spacing</label>
-                    <input class="DoubleIndentM" type="range" name="Paragraph Spacing Range" id="paragraphSpacingRange" min="0" max="3" step=".05" value="2">
+                    <input class="MarginIndent" type="range" name="Paragraph Spacing Range" id="paragraphSpacingRange" min="0" max="3" step=".05" value="2">
                     
                     <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Submit" id="submitTextSpacing" name="Submit Text Spacing">
 
@@ -383,10 +395,57 @@
             <h2>
                 Site Content
             </h2>
+            <h3 class="MarginIndent">
+                Video
+            </h3>
+            <form class="DoubleIndentM" id="videoPrefs" onsubmit="return false">
+                <label for="videoVolumeLevel">
+                    Preferred Volume Level 
+                </label>
+                <input type="range" class="MarginIndent" id="videoVolumeLevel" name="Preferred Video Volume Level" min=".01" max="1" step=".01" value=".4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayVideo" class="FS CFS" name="Automatically Play Videos">
+                    <label for="autoplayVideo" >
+                        Automatically Play Videos
+                    </label>
+                </div>
+                <div class="LabelledInput">
+                    <input type="checkbox" id="noBackgroundAudio" class="FS CFS">
+                    <label for="noBackgroundAudio">
+                        Disable Background Audio
+                    </label>
+                </div>
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Submit" id="submitVideoPrefs" name="Submit Video Preferences">
+            </form>
+
+            <h3 class="MarginIndent">
+                Audio
+            </h3>
+            <form class="DoubleIndentM" id="audioPrefs" onsubmit="return false">
+                <label for="audioVolumeLevel">
+                    Preferred Volume Level
+                </label>
+                <input type="range" class="MarginIndent" id="audioVolumeLevel" name="Preferred Audio Volume Level" min=".01" max="1" step=".01" value=".4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayAudio" class="FS CFS" name="Automatically Play Audio">
+                    <label for="autoplayAudio">
+                        Automatically Play Audio
+                    </label>
+                </div>
+                
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Submit" id="submitAudioPrefs" name="Submit Audio Preferences">
+            </form>
+            <h3 class="MarginIndent">
+                Text
+            </h3>
+            <a class="DoubleIndentM" href="   ">
+                Easily Understood Pages&nbsp;>
+            </a>
+           
            
         </section>
-
-
        
         
 

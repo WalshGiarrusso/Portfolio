@@ -41,8 +41,17 @@ $(document).ready(function(){
     $('#letterSpacingRange').val(lclStorage.getItem('letterSpacing') ? parseFloat(lclStorage.getItem('letterSpacing'),10) : 0.12); 
     $('#wordSpacingRange').val(lclStorage.getItem('wordSpacing') ? parseFloat(lclStorage.getItem('wordSpacing'),10) : 0.16);
     $('#lineSpacingRange').val(lclStorage.getItem('lineSpacing') ? parseFloat(lclStorage.getItem('lineSpacing'),10) : 1.5); 
-    $('#paragraphSpacingRange').val(lclStorage.getItem('paragraphSpacing') ? parseFloat(lclStorage.getItem('paragraphSpacing'),10) : 2);  
-   
+    $('#paragraphSpacingRange').val(lclStorage.getItem('paragraphSpacing') ? parseFloat(lclStorage.getItem('paragraphSpacing'),10) : 2);
+    //initialize targets
+    $('#targetSizingRange').val(lclStorage.getItem('targetSizing') ? parseFloat(lclStorage.getItem('targetSizing'),10) : 2.75);
+    //initialize video preferences
+    $('#videoVolumeLevel').val(lclStorage.getItem('videoVolume') ? parseFloat(lclStorage.getItem('videoVolume'),10) : .4);
+    (lclStorage.getItem('backgroundAudio') == 'true') ? $('#noBackgroundAudio').prop('checked', true)  : $('#noBackgroundAudio').prop('checked', false);
+    (lclStorage.getItem('videoAutoplay') == 'true') ? $('#autoplayVideo').prop('checked', true)  : $('#autoplayVideo').prop('checked', false);
+    //initialize audio preferences
+    $('#audioVolumeLevel').val(lclStorage.getItem('audioVolume') ? parseFloat(lclStorage.getItem('audioVolume'),10) : .4);
+    (lclStorage.getItem('audioAutoplay') == 'true') ? $('#autoplayAudio').prop('checked', true)  : $('#autoplayAudio').prop('checked', false);
+  
       
 
 });
@@ -256,3 +265,19 @@ $('#submitTextSpacing').click(function(){
 
 });
 
+//handle target sizing submit
+$('#submitTargetSizing').click(function(){
+    lclStorage.setItem("targetSizing", $('#targetSizingRange').val()+'rem');
+    checkTargetSizing();
+});
+//handle video prefs submit
+$('#submitVideoPrefs').click(function(){
+    lclStorage.setItem('videoVolume', $('#videoVolumeLevel').val());
+    lclStorage.setItem('videoAutoplay', $('#autoplayVideo').is(':checked') ? 'true' : 'false');
+    lclStorage.setItem('backgroundAudio', $('#noBackgroundAudio').is(':checked') ? 'true' : 'false');
+});
+//handle audio prefs submit
+$('#submitAudioPrefs').click(function(){
+    lclStorage.setItem('audioVolume', $('#audioVolumeLevel').val());
+    lclStorage.setItem('audioAutoplay', $('#autoplayAudio').is(':checked') ? 'true' : 'false');
+});
