@@ -107,7 +107,7 @@ main p, main h1, main h2, main h3, main h4, main h5, main h6, main .FB {
     margin-top:1em;
 }
 
-.FooterInfoHide section h4, .FooterInfoHide section p, small p{
+.FooterInfoHide h4, .FooterInfoHide p, small p{
     margin:0;
     font-size:1rem;
 }
@@ -117,6 +117,15 @@ small{
 
 address{
     font-style:normal;
+}
+input[type=search].FS{
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    border-bottom:.5rem solid black;
+    color:inherit;
+    background-color:rgba(0,0,0,0);
+    border-style:solid;
 }
 #main{
     padding: 1rem 0;
@@ -246,7 +255,71 @@ address{
     font-size:inherit;
     margin:0;
 }
-  
+
+/*Gallery Card*/
+.Card{
+    text-decoration: none;
+    position:relative;
+    display: inline-block;
+    transition:250ms;
+    width:20rem;
+    height:20rem;
+    margin:1rem;
+    
+
+}
+.Card_hover:hover{
+    transform:scale(1.05);
+}
+.CardImage{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.CardTitle{
+    font-size:1.5rem;
+    position:absolute;
+    top:-1rem;
+    background-color:black;
+    color:white;
+    z-index: 1;
+    padding: 0 1rem;
+    max-width:100%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.CardDesc{
+    width:100%;
+    padding:.5rem 1rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    position:absolute;
+    bottom:0;
+    background-color:black;
+    color:white;
+    z-index: 1;
+}
+#galleryList{
+    margin:1.5rem;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+}
+
+#gallerySifterSearch{
+    display:flex;
+    flex-flow:column nowrap;
+    width:80%;
+    
+}
+#gallerySearch{
+    margin-top:1rem;
+}
 
 /*General*/
 .BottomBorder{
@@ -351,6 +424,10 @@ address{
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
+    .Card{
+       width: 18rem;
+       height:18rem;
+    }
    
 }
 @media only screen and (max-width: 36.750em){
@@ -374,6 +451,13 @@ address{
     #accessibilityInformation{
         text-align: center; 
     }
+    .Card{
+        width:15rem;
+        height:15rem;
+    }
+    
+    
+    
 }  
 @media only screen and (max-width: 22.500em){
     .Indent{
@@ -388,5 +472,5 @@ address{
     .InputGroup{
         justify-content: space-between;
     }
-
+   
 }
