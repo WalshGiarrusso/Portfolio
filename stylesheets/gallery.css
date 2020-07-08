@@ -78,11 +78,14 @@ input[type="date"]{
 
 #gallerySifterType{
     width:10.5rem;
+    padding:0;
+}
+#startDate, #endDate, label[for=startDate], label[for=endDate]{
+    line-height: 2.75rem;
+    vertical-align: baseline;
 }
 
-
 #gallerySifterFilter{
-    
     display:none;
 }
 #showFiltersButton{

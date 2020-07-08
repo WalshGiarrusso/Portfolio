@@ -118,9 +118,7 @@ small{
 address{
     font-style:normal;
 }
-label{
-    line-height: 1;
- }
+
 input[type=search].FS, select.FS, input[type=date].FS{
     box-sizing:content-box;
     -moz-box-sizing: content-box;

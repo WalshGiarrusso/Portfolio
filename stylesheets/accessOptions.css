@@ -78,7 +78,9 @@ legend{
 fieldset{
     margin-bottom:1rem;
 }
-
+label{
+    line-height: 1;
+ }
 .InputGroup{
     display:flex;
     flex-flow: row wrap;
