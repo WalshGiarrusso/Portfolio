@@ -79,9 +79,12 @@ input[type="date"]{
 
 #gallerySifterType{
     width:10.5rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
    
 }
-#startDate, #endDate, label[for=startDate], label[for=endDate]{
+#startDate, #endDate, #gallerySifterType label[for=startDate], label[for=endDate], label[for=gallerySifterType]{
     line-height: 2.75rem;
     vertical-align: baseline;
 }
