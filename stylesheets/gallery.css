@@ -59,6 +59,7 @@ input[type="date"]{
 
 #gallerySearch{
     margin-top:1rem;
+    margin-bottom:1rem;
     border-radius: 0px;
     width:80%;
     display:inline-block;
@@ -78,9 +79,7 @@ input[type="date"]{
 
 #gallerySifterType{
     width:10.5rem;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
+   
 }
 #startDate, #endDate, label[for=startDate], label[for=endDate]{
     line-height: 2.75rem;
