@@ -60,16 +60,8 @@ input[type=submit].FS, #errorOverride.FS{
 input[type=range], input[type=color], input[type=reset]{
     display:block;
 }
-label{
-   line-height: 1;
-}
-fieldset{
-    margin-bottom:1rem;
-    width:90%;
-}
-fieldset.FS{
-    border:none;
-}
+
+
 #errorOverride{
     display: none;
 }
@@ -81,12 +73,12 @@ fieldset.FS{
     
 }
 legend{
-    font-weight:bold;
-    /*MAKE SURE THIS IS HANDLED BY PARAGRAPH SPACING AXS OPTION*/
     margin-bottom:1rem;
-    font-size:1.5rem;
-  
 }
+fieldset{
+    margin-bottom:1rem;
+}
+
 .InputGroup{
     display:flex;
     flex-flow: row wrap;

@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">    
+    <base href="https://walshgiarrusso.com/" target="_self">      
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/gallery.css">
     
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
@@ -47,7 +48,7 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="gallery#main">
+                <a class="Bold" href="gallery#mainContent">
                     Skip to Main Content
                 </a>
             </li>
@@ -79,7 +80,7 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="gallery#main">
+                <a class="Bold" href="gallery#mainContent">
                     Skip to Content
                 </a>
             </li>
@@ -188,15 +189,90 @@
 
     <!--Content-->
     <main id="main">
-        <h1 class="MarginIndent">Gallery</h1>
+        <h1 class="MarginIndent" id="mainContent" tabindex="-1">Gallery</h1>
 
-        <!--Search Options-->
-        <div class="DoubleIndentM" id="gallerySifterSearch">
-            <label for="gallerySearch">
-                Search by Title
-            </label>
-            <input class="CFS FS" type="search" id="gallerySearch">
-        </div>
+        <!--Search Options--> 
+        <form class="DoubleIndentM">
+            <fieldset class="CFS FS" id="gallerySifterSearch">
+                <legend>
+                    Search
+                </legend>
+                <label class="MarginIndent" for="gallerySearch">
+                    Search by Title
+                </label>
+                <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
+            </fieldset>
+            <button id="showFiltersButton" class="FB Left Bold">
+                Show Filters
+            </button>
+            
+            <fieldset class="CFS FS" id="gallerySifterFilter">
+                <legend>
+                    Filter
+                </legend>
+                <div class="MarginIndent">
+                    <div>
+                        <label  for="gallerySifterType">
+                            By Type
+                        </label>
+                        
+                        <select class="CFS FS" name="Select Type" id="gallerySifterType">
+                            <option value="">
+                                Select Type
+                            </option>
+                            <option value="all">
+                                All
+                            </option>
+                            <option value="design">
+                                Design
+                            </option>
+                            <option value="music">
+                                Music
+                            </option>
+                            <option value="other">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="startDate"> 
+                            Start Date
+                        </label>
+                        <input type="date" class="CFS FS" id="startDate" name="Start Date">
+                  
+                    </div>
+                    <div>
+                            
+                        <label for="EndDate"> 
+                            End Date
+                        </label>
+                        <input type="date" class="CFS FS" id="endDate" name="End Date">
+                    </div>
+                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters"  >
+
+                </div>
+                    
+
+                    
+
+             
+                   
+             
+
+                  
+
+               
+            </fieldset>
+
+        </form>
+
+      
+        
+
+    
+        
+
+        
         
 
         
@@ -434,6 +510,7 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
+    <script src="scripts/gallery.js"></script>
     
 </body>
 </html>

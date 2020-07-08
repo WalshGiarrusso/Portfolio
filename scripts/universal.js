@@ -162,10 +162,10 @@ function changeColors(targets){
         "color": targets[1]
     });
     //border color
-    $('.BottomBorder, .TopBorder, .TB.FS, input.FS').css('border-color', targets[2])
+    $('.BottomBorder, .TopBorder, .TB.FS, input.FS, select.FS').css('border-color', targets[2])
     
     //button colors
-    $('.TB.FS').css({
+    $('.TB.FS, .CardDesc, .CardTitle').css({
         "background-color": targets[1],
         "color": targets[0]
     });
@@ -234,5 +234,5 @@ function setTextSpacing(){
 };
 //target sizing
 function checkTargetSizing(){
-    lclStorage.getItem('targetSizing') ? $('a, button, input').css({"min-width": lclStorage.getItem('targetSizing'),"min-height":  lclStorage.getItem('targetSizing')}) : $('a, button, input').css({"min-width":"2.75rem","min-height":"2.75rem"}); 
+    lclStorage.getItem('targetSizing') ? $('a, button, input, select').css({"min-width": lclStorage.getItem('targetSizing'),"min-height":  lclStorage.getItem('targetSizing')}) : $('a, button, input, select').css({"min-width":"2.75rem","min-height":"2.75rem"}); 
 };

@@ -32,7 +32,7 @@ body{
     
 }
 
-a, button, input{
+a, button, input, select{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -118,7 +118,10 @@ small{
 address{
     font-style:normal;
 }
-input[type=search].FS{
+label{
+    line-height: 1;
+ }
+input[type=search].FS, select.FS, input[type=date].FS{
     box-sizing:border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing:border-box;
@@ -127,11 +130,33 @@ input[type=search].FS{
     background-color:rgba(0,0,0,0);
     border-style:solid;
 }
+select.FS{
+    border-top-width: .125rem;
+    border-right-width: .125rem;
+    border-left-width: .125rem;
+}
+fieldset{
+    margin-bottom:1rem;
+    width:90%;
+}
+fieldset.FS{
+    border:none;
+}
+legend{
+    font-weight:bold;
+    margin-bottom:1rem;
+    font-size:1.5rem;
+  
+}
 #main{
     padding: 1rem 0;
+    
    
                     /*REMOVE EVENTUALLY*/
     min-height:50vh;
+}
+#mainContent{
+    display:inline-block;
 }
 /*Superbars*/
     /*Accessibility Options*/
@@ -256,70 +281,7 @@ input[type=search].FS{
     margin:0;
 }
 
-/*Gallery Card*/
-.Card{
-    text-decoration: none;
-    position:relative;
-    display: inline-block;
-    transition:250ms;
-    width:20rem;
-    height:20rem;
-    margin:1rem;
-    
 
-}
-.Card_hover:hover{
-    transform:scale(1.05);
-}
-.CardImage{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-.CardTitle{
-    font-size:1.5rem;
-    position:absolute;
-    top:-1rem;
-    background-color:black;
-    color:white;
-    z-index: 1;
-    padding: 0 1rem;
-    max-width:100%;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-}
-.CardDesc{
-    width:100%;
-    padding:.5rem 1rem;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    display:flex;
-    flex-flow:row nowrap;
-    justify-content: space-between;
-    position:absolute;
-    bottom:0;
-    background-color:black;
-    color:white;
-    z-index: 1;
-}
-#galleryList{
-    margin:1.5rem;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: center;
-}
-
-#gallerySifterSearch{
-    display:flex;
-    flex-flow:column nowrap;
-    width:80%;
-    
-}
-#gallerySearch{
-    margin-top:1rem;
-}
 
 /*General*/
 .BottomBorder{
@@ -424,11 +386,7 @@ input[type=search].FS{
     #footerConformanceClaim, #footerAccessStatement{
         display:block;
     }
-    .Card{
-       width: 18rem;
-       height:18rem;
-    }
-   
+
 }
 @media only screen and (max-width: 36.750em){
     #headerNavigation, #siteMapLink{
@@ -451,10 +409,7 @@ input[type=search].FS{
     #accessibilityInformation{
         text-align: center; 
     }
-    .Card{
-        width:15rem;
-        height:15rem;
-    }
+  
     
     
     
