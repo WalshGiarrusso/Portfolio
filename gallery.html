@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">      
+    <base href="https://walshgiarrusso.com/" target="_self">   
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -201,6 +201,7 @@
                     Search by Title
                 </label>
                 <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
+                <input type="submit"  class="FS CFS TB TB_hover Bold ILB" value="Submit" name="Submit Gallery Filters" id="submitGallerySearch">
             </fieldset>
             <button id="showFiltersButton" class="FB Left Bold">
                 Show Filters
@@ -211,11 +212,11 @@
                     Filter
                 </legend>
                 <div class="MarginIndent">
+                    <button id="hideFiltersButton" class="FB Left Bold">
+                        Hide Filters
+                    </button>
                     <div>
-                        <label  for="gallerySifterType">
-                            By Type
-                        </label>
-                        
+                       
                         <select class="CFS FS" name="Select Type" id="gallerySifterType">
                             <option value="">
                                 Select Type
@@ -233,23 +234,33 @@
                                 Other
                             </option>
                         </select>
+
+                        <label  for="gallerySifterType">
+                            Type
+                        </label>
+                        
                     </div>
                     <div>
+                        
+                        <input type="date" class="CFS FS" id="startDate" name="Start Date">
                         <label for="startDate"> 
                             Start Date
                         </label>
-                        <input type="date" class="CFS FS" id="startDate" name="Start Date">
-                  
                     </div>
                     <div>
                             
+                        
+                        <input type="date" class="CFS FS" id="endDate" name="End Date" >
+
                         <label for="EndDate"> 
                             End Date
                         </label>
-                        <input type="date" class="CFS FS" id="endDate" name="End Date">
                     </div>
                     <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters"  >
 
+
+                   
+                    
                 </div>
                     
 

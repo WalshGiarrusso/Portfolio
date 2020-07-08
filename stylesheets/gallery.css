@@ -59,16 +59,22 @@ input[type="date"]{
 
 #gallerySearch{
     margin-top:1rem;
-    border-radius: 0;
+    border-radius: 0px;
     width:80%;
+    display:inline-block;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+#gallerySifterSearch label{
     display:block;
 }
 
 #gallerySifterFilter > div >div{
-    display:inline-block;
     margin-top:.5rem;
     margin-bottom:.5rem;
 }
+
 
 #gallerySifterType{
     width:10.5rem;
@@ -84,6 +90,7 @@ input[type="date"]{
     font-size:1.5rem;
  
 }
+
 /*Media Queries*/
 
 @media only screen and (max-width: 58.250em){
@@ -91,19 +98,26 @@ input[type="date"]{
        width: 18rem;
        height:18rem;
     }
+    
    
-   
+}
+@media only screen and (max-width: 41.625em){
+    #gallerySifterFilter > div > div{
+        display:flex;
+        flex-flow:row-reverse nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
 }
 @media only screen and (max-width: 36.750em){
     .Card{
         width:15rem;
         height:15rem;
     }
+    
+    
    
     
     
     
 }  
-@media only screen and (max-width: 22.500em){
-
-}

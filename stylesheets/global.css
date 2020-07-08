@@ -122,19 +122,19 @@ label{
     line-height: 1;
  }
 input[type=search].FS, select.FS, input[type=date].FS{
-    box-sizing:border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing:border-box;
+    box-sizing:content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    vertical-align: baseline;
     border-bottom:.5rem solid black;
     color:inherit;
     background-color:rgba(0,0,0,0);
     border-style:solid;
-}
-select.FS{
     border-top-width: .125rem;
     border-right-width: .125rem;
     border-left-width: .125rem;
 }
+
 fieldset{
     margin-bottom:1rem;
     width:90%;
