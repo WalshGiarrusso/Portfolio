@@ -407,6 +407,9 @@ legend{
     #accessibilityInformation{
         text-align: center; 
     }
+    .ArticleWrapper{
+        margin-right:.75rem;
+    }
   
     
     
@@ -425,5 +428,8 @@ legend{
     .InputGroup{
         justify-content: space-between;
     }
-   
+    .ArticleWrapper{
+        margin-right:5%;
+        margin-left:5%;
+    }
 }

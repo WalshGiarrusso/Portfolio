@@ -24,18 +24,19 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">
+    <base href="https://walshgiarrusso.com/" target="_self">     
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
     <!--Externals-->
-        <!--jQuery-->
+         <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!--Polyfills-->
     <script src="polyfills/spectrum/spectrum.js"></script>
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/blog.css">
     
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
@@ -191,38 +192,82 @@
         <h1 id="mainContent" tabindex="-1">
             Blog
         </h1>
+        
+        <form class="MarginIndent">
+            <fieldset class="CFS FS">
+                <legend>
+                    Search
+                </legend>
+                <label class="MarginIndent">
+                    By Article Title
+                </label>
+                <input type="search" class="CFS FS MarginIndent" id="articleSearch"> 
+    
+                <input type="submit" class="FS CFS TB TB_hover Bold ILB">
+            </fieldset>
+           
 
-        <section class="MarginIndent">
-            <h2>
-                Consectetur Adipiscing Elit
-            </h2>
-            <p class="MarginIndent">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-        </section>
+        </form>
 
-        <section class="MarginIndent">
-            <hgroup>
-                <h2>
-                    Pellentesque Diam 
-                </h2>
-                <h3 class="MarginIndent">
-                    Volutpat Commodo Sed
-                </h3>
-            </hgroup>
-            <p class="DoubleIndentM">
-                Egestas egestas fringilla phasellus. In ante metus dictum at tempor commodo. Euismod in pellentesque massa placerat duis. Tincidunt eget nullam non nisi est. Consectetur libero id faucibus nisl tincidunt eget nullam. Nec dui nunc mattis enim ut tellus. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit.
-            </p>
-            <h3 class="MarginIndent">
-                Pharetra vel Turpis Nunc
-            </h3>
-            <p class="DoubleIndentM">
-                Elementum nisi quis eleifend quam adipiscing vitae. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Nunc id cursus metus aliquam eleifend mi in. Adipiscing at in tellus integer feugiat scelerisque. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Dolor magna eget est lorem ipsum. Morbi tristique senectus et netus et.
-            </p>
-        </section>
 
+
+        <ol class="MarginIndent">
+            <li class="BottomBorder ArticleWrapper TopBorder">
+                <article>
+                    <a>
+                        <h2>
+                            Lorem Ipsum Dolor sit Amet.
+                        </h2>
+                        <p>
+                            Consectetur adipiscing elit. Vestibulum odio eros, commodo eu imperdiet at, dictum at magna.
+                        </p>
+                    </a>
+                </article>
+            </li>
+            <li class="BottomBorder ArticleWrapper">
+                <article>
+                    <a>
+                        <h2>
+                            Etiam quis Dapibus Dui.
+                        </h2>
+                        <p>
+                          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                    </a>
+                </article>
+            </li>
+            <li class="BottomBorder ArticleWrapper">
+                <article>
+                    <a>
+                        <h2>
+                            Nam et Augue sed Risus Tristique Imperdiet.
+                        </h2>
+                        <p>
+                            Mauris vehicula varius nibh ut luctus. Integer varius posuere purus, quis tincidunt neque efficitur sed. Maecenas in nibh at est vulputate aliquet.
+                        </p>
+                    </a>
+                </article>
+            </li>
+        </ol>
         
 
+        <nav id="pageNavigator">  
+            <div>
+                <button class="FB Bold">
+                    <
+                </button>
+            
+                <p class="Bold">
+                    1
+                </p>
+    
+                <button class="FB Bold">
+                    >
+                </button>
+            </div>
+            
+
+        </nav>
 
     </main>
 
