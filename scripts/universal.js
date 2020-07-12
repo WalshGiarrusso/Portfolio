@@ -236,3 +236,42 @@ function setTextSpacing(){
 function checkTargetSizing(){
     lclStorage.getItem('targetSizing') ? $('a, button, input, select').css({"min-width": lclStorage.getItem('targetSizing'),"min-height":  lclStorage.getItem('targetSizing')}) : $('a, button, input, select').css({"min-width":"2.75rem","min-height":"2.75rem"}); 
 };
+
+//Compare strings
+function stringSim(s1, s2) {
+    var lon = s1;
+    var sho = s2;
+    if (s1.length < s2.length) {
+      lon = s2;
+      sho = s1;
+    }
+    var lonLen = lon.length;
+    if (lonLen == 0) {
+      return 1.0;
+    }
+    return (lonLen - editDistance(lon, sho)) / parseFloat(lonLen);
+};
+function editDistance(s1, s2) {
+    var costs = new Array();
+    for (var i = 0; i <= s1.length; i++) {
+      var lastValue = i;
+      for (var j = 0; j <= s2.length; j++) {
+        if (i == 0)
+          costs[j] = j;
+        else {
+          if (j > 0) {
+            var newValue = costs[j - 1];
+            if (s1.charAt(i - 1) != s2.charAt(j - 1)){
+              newValue = Math.min(Math.min(newValue, lastValue),
+                costs[j]) + 1;
+            };
+            costs[j - 1] = lastValue;
+            lastValue = newValue;
+          };
+        };
+      };
+      if (i > 0)
+        costs[s2.length] = lastValue;
+    };
+    return costs[s2.length];
+  };

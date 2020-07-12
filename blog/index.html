@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
 
     <!--Info-->
-    <title>Gallery - Walsh Giarrusso</title>
+    <title>Blog - Walsh Giarrusso</title>
     <meta name="author" content="Walsh Anthony Giarrusso">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">   
+    <base href="https://walshgiarrusso.com/" target="_self">  
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
-    <link rel="stylesheet" href="stylesheets/gallery.css">
     
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
@@ -48,7 +47,7 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="gallery#mainContent">
+                <a class="Bold" href="blog#mainContent">
                     Skip to Main Content
                 </a>
             </li>
@@ -80,7 +79,7 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="gallery#mainContent">
+                <a class="Bold" href="blog#mainContent">
                     Skip to Content
                 </a>
             </li>
@@ -105,12 +104,12 @@
                 </li>
                 <li>
                     <a class="Icon" href="gallery">
-                        <span class="ScreenReader-Only">Current Page: </span>Gallery
+                        Gallery
                     </a>
                 </li>
                 <li>
                     <a class="Icon" href="blog">
-                        Blog
+                        <span class="ScreenReader-Only">Current Page: </span>Blog
                     </a>
                 </li>
                 <li>
@@ -145,12 +144,12 @@
             </li>
             <li>
                 <a class="Bold" href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>Gallery
+                    Gallery
                 </a>
             </li>
             <li>
                 <a class="Bold" href="blog">
-                    Blog
+                    <span class="ScreenReader-Only">Current Page: </span>Blog
                 </a>
             </li>
             <li>
@@ -175,8 +174,8 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>gallery
+                <a href="blog">
+                    <span class="ScreenReader-Only">Current Page: </span>blog
                 </a>
             </li>
         </ul>
@@ -188,187 +187,41 @@
         
 
     <!--Content-->
-    <main id="main">
-        <h1 class="MarginIndent" id="mainContent" tabindex="-1">Gallery</h1>
+    <main id="main" class="MarginIndent">
+        <h1 id="mainContent" tabindex="-1">
+            Blog
+        </h1>
 
-        <!--Search Options--> 
-        <form class="DoubleIndentM">
-            <fieldset class="CFS FS" id="gallerySifterSearch">
-                <legend>
-                    Search
-                </legend>
-                <label class="MarginIndent" for="gallerySearch">
-                    Search by Title
-                </label>
-                <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
-                <input type="submit"  class="FS CFS TB TB_hover Bold ILB" value="Submit" name="Submit Gallery Filters" id="submitGallerySearch">
-            </fieldset>
-            <button id="showFiltersButton" class="FB Left Bold">
-                Show Filters
-            </button>
-            
-            <fieldset class="CFS FS" id="gallerySifterFilter">
-                <legend>
-                    Filter
-                </legend>
-                <div class="MarginIndent">
-                    <button id="hideFiltersButton" class="FB Left Bold">
-                        Hide Filters
-                    </button>
-                    <div>
-                       
-                        <select class="CFS FS" name="Select Type" id="gallerySifterType">
-                            <option value="">
-                                Select Type
-                            </option>
-                            <option value="all">
-                                All
-                            </option>
-                            <option value="design">
-                                Design
-                            </option>
-                            <option value="music">
-                                Music
-                            </option>
-                            <option value="other">
-                                Other
-                            </option>
-                        </select>
+        <section class="MarginIndent">
+            <h2>
+                Consectetur Adipiscing Elit
+            </h2>
+            <p class="MarginIndent">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </section>
 
-                        <label  for="gallerySifterType">
-                            Type
-                        </label>
-                        
-                    </div>
-                    <div>
-                        
-                        <input type="date" class="CFS FS" id="startDate" name="Start Date" value="2015-03-25">
-                        <label for="startDate"> 
-                            Start Date
-                        </label>
-                    </div>
-                    <div>
-                        <input type="date" class="CFS FS" id="endDate" name="End Date" value="2025-03-25">
+        <section class="MarginIndent">
+            <hgroup>
+                <h2>
+                    Pellentesque Diam 
+                </h2>
+                <h3 class="MarginIndent">
+                    Volutpat Commodo Sed
+                </h3>
+            </hgroup>
+            <p class="DoubleIndentM">
+                Egestas egestas fringilla phasellus. In ante metus dictum at tempor commodo. Euismod in pellentesque massa placerat duis. Tincidunt eget nullam non nisi est. Consectetur libero id faucibus nisl tincidunt eget nullam. Nec dui nunc mattis enim ut tellus. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit.
+            </p>
+            <h3 class="MarginIndent">
+                Pharetra vel Turpis Nunc
+            </h3>
+            <p class="DoubleIndentM">
+                Elementum nisi quis eleifend quam adipiscing vitae. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Nunc id cursus metus aliquam eleifend mi in. Adipiscing at in tellus integer feugiat scelerisque. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Dolor magna eget est lorem ipsum. Morbi tristique senectus et netus et.
+            </p>
+        </section>
 
-                        <label for="EndDate"> 
-                            End Date
-                        </label>
-                    </div>
-                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters"  >
-
-
-                   
-                    
-                </div>
-                
-            </fieldset>
-
-        </form>
-        <!--Gallery/List-->
-        <ul id="galleryList" >
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img src="old-site/projects/monocropping%20files/monocropping%20project%20wordless%20variant.png" alt=" " class="CardImage">
-                    <h2 class="CardTitle">
-                        Monocropping
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                            Design
-                        </span>
-                        <time class="CardTime" datetime="2020-03-02">
-                            3/2/2020
-                        </time>
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-
-
-        <!--List Item Demo-->
         
-
 
 
     </main>
@@ -382,7 +235,7 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="gallery#top">
+                    <a class="Bold" href="blog#top">
                             Back to Top
                     </a>
                 </li>
@@ -410,12 +263,12 @@
             </li>
             <li>
                 <a href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>Gallery
+                    Gallery
                 </a>
             </li>
             <li>
                 <a href="blog">
-                    Blog
+                    <span class="ScreenReader-Only">Current Page: </span>Blog
                 </a>
             </li>
             <li>
@@ -436,7 +289,7 @@
         <div role="contentinfo">
             <ul class="BottomBorder" id="accessibilityInformation">
                 <li class="FooterInfoHide">
-                  
+                    
                     <h4>
                         Accessibility Statement
                     </h4>
@@ -446,7 +299,7 @@
                             View full accessibility statement here.
                         </a>
                     </p>
-              
+                   
                 </li>
                 <li id="footerAccessStatement">
                     <a href="accessibility" class="NoBreak">
@@ -454,14 +307,14 @@
                     </a>
                 </li>
                 <li class="FooterInfoHide">
-                   
+             
                     <h4>
                         Conformance Claim
                     </h4>
                     <p>
                         All of the text content for the conformance claim goes here.
                     </p>
-                
+            
                 </li>
                 <li id="footerConformanceClaim">
                     <a href="accessibility#conformanceClaim">
@@ -496,7 +349,6 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
-    <script src="scripts/gallery.js"></script>
     
 </body>
 </html>
