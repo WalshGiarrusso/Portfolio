@@ -1,4 +1,4 @@
- var base = $('head base').attr('href');
+var base = $('head base').attr('href');
 
 
 $.getJSON(base + "data/blogPosts.json", function(data){
