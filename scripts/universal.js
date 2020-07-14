@@ -239,11 +239,12 @@ function checkTargetSizing(){
 
 //Compare strings
 function compareParse(raw){
-    var ret = raw.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+    var ret = raw.replace(/-/g, ' ').trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
     return ret;
 
 };
-function stringSim(s1, s2) {
+function stringSim(s1, s2){
+    //s1 is the input
     var lon = s1;
     var sho = s2;
     if (s1.length < s2.length) {
@@ -254,7 +255,8 @@ function stringSim(s1, s2) {
     if (lonLen == 0) {
       return 1.0;
     }
-    return (lonLen - editDistance(lon, sho)) / parseFloat(lonLen);
+    var coms = findCommons(s1.split(" "), s2.split(" ")).length;
+    return ((lonLen - editDistance(lon, sho)) / parseFloat(lonLen) + (coms*.15));
 };
 function editDistance(s1, s2) {
     var costs = new Array();
@@ -279,4 +281,10 @@ function editDistance(s1, s2) {
         costs[s2.length] = lastValue;
     };
     return costs[s2.length];
-  };
+};
+
+function findCommons(arr1, arr2) {
+    var ret = [];
+    ret = arr1.filter(value => arr2.includes(value));
+    return ret;
+};
