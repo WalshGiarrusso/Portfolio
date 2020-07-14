@@ -49,13 +49,13 @@ $('#submitGallerySearch').click(function(){
     return false;
 });
 function handleSearch(){
-    var searchString = $('#gallerySearch').val().trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+    var searchString = compareParse($('#gallerySearch').val());
     
     var matchString;
 
     $('.Card').each(function(){
         var coms = 0;
-        matchString = $(this).children('h2').text().trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+        matchString = compareParse($(this).children('h2').text());
       
         coms = parseInt(stringSim(searchString, matchString)*-1000);
         $(this).parent('li').css('order', coms);

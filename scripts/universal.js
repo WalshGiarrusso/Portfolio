@@ -238,6 +238,11 @@ function checkTargetSizing(){
 };
 
 //Compare strings
+function compareParse(raw){
+    var ret = raw.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+    return ret;
+
+};
 function stringSim(s1, s2) {
     var lon = s1;
     var sho = s2;

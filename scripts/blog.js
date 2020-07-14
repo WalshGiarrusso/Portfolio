@@ -53,11 +53,22 @@ $('#articlePgFwdBtn').click(function(){
 //search functionality
 
 $('#submitArticleSearch').click(function(){
-    var searchString = $('#submitArticleSearch').val().trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+
+    var searchString = compareParse($("#articleSearch").val());
+
     $.getJSON(base + "data/blogPosts.json", function(data){
-        data.sort(function(a,b){
-            var aScore = stringSim(searchString, a.title.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ''));
-            var bScore = stringSim(searchString, b.title.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ''));
+        data.posts.sort(function(a,b){
+
+   
+            var aTitle = compareParse(a.title);
+            var bTitle = compareParse(b.title);
+            var aScore = stringSim(searchString, aTitle);
+            var bScore = stringSim(searchString, bTitle);
+
+
+            //console.log('ss: '+searchString)
+            //console.log('a1: '+aTitle+' b1: '+bTitle);
+            //console.log('a: '+ aScore+' b: '+bScore);
             if(aScore < bScore){
                 return -1;
             }else if(aScore > bScore){
