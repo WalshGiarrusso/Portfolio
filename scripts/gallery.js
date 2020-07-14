@@ -15,13 +15,13 @@ $("#hideFiltersButton").click(function(){
     return false;
 });
 
-$("#submitGalleryFilters").click(function(){
-    var startDate = new Date($('#startDate').val());
-    var endDate = new Date($('#endDate').val());
-    var chosenType = $('#gallerySifterType').val();
-    filterOut(startDate, endDate, chosenType);
-    return false;
-});
+//$("#submitGalleryFilters").click(function(){
+//    var startDate = new Date($('#startDate').val());
+//    var endDate = new Date($('#endDate').val());
+//    var chosenType = $('#gallerySifterType').val();
+//    filterOut(startDate, endDate, chosenType);
+//    return false;
+//});
 function filterOut(sD, eD, cT){
     $('.Card').each(function(){
         $(this).show();
@@ -97,3 +97,18 @@ function populateGallery(pageNumber, cardArr){
     storedArr = cardArr;
 
 };
+//filter func
+$("#submitGalleryFilters").click(function(){
+    var startDate = new Date($('#startDate').val());
+    var endDate = new Date($('#endDate').val());
+    var chosenType = $('#gallerySifterType').val();
+    $.getJSON(baseUrl + "data/galleryCards.json", function(data){
+        $.each(data.cards, function(){
+            if(chosenType !== "" && chosenType !== "all" && this.type !== chosenType){
+                data.cards.splice(data.cards.index(this), 1);
+                
+            };
+        });
+
+    });
+});
