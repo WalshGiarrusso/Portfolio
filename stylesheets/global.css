@@ -345,6 +345,26 @@ legend{
     letter-spacing: 0;
 }
 
+.PageNavigator{
+    margin-top:.65rem;
+    margin-left:-1.5rem;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items:center;
+
+}
+.PageNavigator p{
+    font-size:1.5rem;
+    margin:0 .75rem;
+}
+.PageNavigator button{
+    font-size:1.25rem;
+    margin-top:0;
+    margin-bottom:0;
+    line-height:100%;
+}
+
 
 /*Button Styling*/
 .FB{
@@ -410,8 +430,9 @@ legend{
     #accessibilityInformation{
         text-align: center; 
     }
-    .ArticleWrapper{
-        margin-right:.75rem;
+   
+    .PageNavigator{
+        margin-left:-.75rem;
     }
   
     
@@ -431,8 +452,9 @@ legend{
     .InputGroup{
         justify-content: space-between;
     }
-    .ArticleWrapper{
-        margin-right:5%;
-        margin-left:5%;
+    .PageNavigator{
+        margin-left:0rem;
     }
+    
+   
 }

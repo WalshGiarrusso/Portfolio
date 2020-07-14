@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-        <base href="https://walshgiarrusso.com/" target="_self">   
+    <base href="https://walshgiarrusso.com/" target="_self"> 
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -188,11 +188,11 @@
         
 
     <!--Content-->
-    <main id="main">
-        <h1 class="MarginIndent" id="mainContent" tabindex="-1">Gallery</h1>
+    <main id="main" class="MarginIndent">
+        <h1 id="mainContent" tabindex="-1">Gallery</h1>
 
         <!--Search Options--> 
-        <form class="DoubleIndentM">
+        <form class="MarginIndent">
             <fieldset class="CFS FS" id="gallerySifterSearch">
                 <legend>
                     Search
@@ -265,7 +265,7 @@
 
         </form>
         <!--Gallery/List-->
-        <ul id="galleryList" >
+        <ol id="galleryList" >
             <li>
                 <a class="Card Card_hover" href="   ">
                     <img src=" " alt=" " class="CardImage">
@@ -344,11 +344,26 @@
                     </p>
                 </a>
             </li>
-        </ul>
+        </ol>
+
+        <nav class="PageNavigator">  
+            
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn">
+                    <&nbsp;Last<span class="ScreenReader-Only"> Page</span>
+            </button>
+        
+            <p class="Bold LetterExempt" id="galleryPageNumber">
+                <span class="ScreenReader-Only">Page Number: </span>1
+            </p>
+
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn">
+                    Next<span class="ScreenReader-Only"> Page</span>&nbsp;>
+            </button>
+
+        </nav>
 
 
-
-        <!--List Item Demo-->
+       
         
 
 

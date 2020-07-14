@@ -48,7 +48,7 @@
     z-index: 1;
 }
 #galleryList{
-    margin:1.5rem;
+    margin-left:-1.5rem;
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
@@ -119,16 +119,20 @@ input[type="date"]{
         justify-content: space-between;
         align-items: baseline;
     }
+    
 }
 @media only screen and (max-width: 36.750em){
     .Card{
         width:15rem;
         height:15rem;
     }
-    
-    
-   
-    
-    
-    
+    #galleryList{
+        margin-left:-.75rem;
+    }
+
 }  
+@media only screen and (max-width: 22.500em){
+    #galleryList{
+        margin-left:0rem;
+    }
+}
