@@ -1,11 +1,15 @@
 .ArticleWrapper{
     margin-right:3rem;
+    overflow:auto;
+    transition:none;
 }
 .ArticleWrapper h2{
     font-size:1.5rem;
 }
 .ArticleWrapper a{
     text-decoration:none;
+    display:block;
+    overflow:auto;
 }
 #pageNavigator{
     margin-top:.65rem;
@@ -44,7 +48,11 @@ label{
     display:block;
 }
 
-
+.ArticleWrapper:focus-within{
+    outline: 2px solid;
+    outline-offset: .35rem;
+    
+}
 
 /*Media Queries*/
 
