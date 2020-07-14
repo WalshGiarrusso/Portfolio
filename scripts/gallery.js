@@ -102,13 +102,32 @@ $("#submitGalleryFilters").click(function(){
     var startDate = new Date($('#startDate').val());
     var endDate = new Date($('#endDate').val());
     var chosenType = $('#gallerySifterType').val();
+    var opArray;
     $.getJSON(baseUrl + "data/galleryCards.json", function(data){
-        $.each(data.cards, function(){
-            if(chosenType !== "" && chosenType !== "all" && this.type !== chosenType){
-                data.cards.splice(data.cards.index(this), 1);
-                
+        opArray = data.cards;
+        console.log('before: '+opArray);
+        $(data.cards).each(function(){
+            if(chosenType !== "" && chosenType !== "all" && this.type.toLowerCase() !== chosenType){
+                opArray.splice($(opArray).index(this),1);
             };
         });
+        
+
+
+        $(opArray).each(function(){
+            var cD = new Date(this.iDate);
+            if((cD < startDate) || (cD > endDate)){
+                opArray.splice($(opArray).index(this),1);
+            };
+        });
+        console.log('after: '+opArray);
+
+       
 
     });
+
+
+
+
+    return false;
 });

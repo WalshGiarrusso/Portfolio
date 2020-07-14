@@ -5,16 +5,6 @@
             "title":"Monocropping",
             "imgSrc":"projects/monocropping/monocropping%20project%20wordless%20variant.png",
             "imgAlt":"Image Preview Link to Monocropping Project",
-            "type":"Music",
-            "iDate":"2020-03-02",
-            "eDate":"3/2/2020",
-            "link":"projects/monocropping"
-        },
-
-        {
-            "title":"Monocropping",
-            "imgSrc":"projects/monocropping/monocropping%20project%20wordless%20variant.png",
-            "imgAlt":"Image Preview Link to Monocropping Project",
             "type":"Design",
             "iDate":"2020-03-02",
             "eDate":"3/2/2020",
@@ -25,9 +15,19 @@
             "title":"Monocropping",
             "imgSrc":"projects/monocropping/monocropping%20project%20wordless%20variant.png",
             "imgAlt":"Image Preview Link to Monocropping Project",
+            "type":"Design",
+            "iDate":"2020-05-02",
+            "eDate":"5/2/2020",
+            "link":"projects/monocropping"
+        },
+
+        {
+            "title":"Monocropping",
+            "imgSrc":"projects/monocropping/monocropping%20project%20wordless%20variant.png",
+            "imgAlt":"Image Preview Link to Monocropping Project",
             "type":"Other",
-            "iDate":"2020-03-02",
-            "eDate":"3/2/2020",
+            "iDate":"2015-03-02",
+            "eDate":"3/2/2015",
             "link":"projects/monocropping"
         },
 
