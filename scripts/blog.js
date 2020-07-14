@@ -1,10 +1,11 @@
 var base = $('head base').attr('href');
 var curPageNum = 1;
 var maxPageNum;
+var stored;
 
 $(document).ready(function(){
     $.getJSON(base + "data/blogPosts.json", function(data){
-
+        maxPageNum = Math.ceil((data.posts.length/10));
         populateContent(curPageNum, data.posts);
     });
 });
@@ -25,12 +26,25 @@ function populateContent(pageNum, postArr){
         };
        
     };
+    stored = postArr;
 
 };
 
 //page functionality
-
-
+$('#articlePgBackBtn').click(function(){
+    if(curPageNum > 1){
+        curPageNum--;
+        $('#articlePageNumber').text(curPageNum);
+        populateContent(curPageNum, stored);
+    };
+});
+$('#articlePgFwdBtn').click(function(){
+    if(curPageNum < maxPageNum){
+        curPageNum++;
+        $('#articlePageNumber').text(curPageNum);
+        populateContent(curPageNum, stored);
+    };
+});
 //search functionality
 
 
