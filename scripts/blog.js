@@ -52,10 +52,27 @@ $('#articlePgFwdBtn').click(function(){
 });
 //search functionality
 
-
-$.getJSON(base + "data/blogPosts.json", function(data){
-    
+$('#submitArticleSearch').click(function(){
+    var searchString = $('#submitArticleSearch').val().trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+    $.getJSON(base + "data/blogPosts.json", function(data){
+        data.sort(function(a,b){
+            var aScore = stringSim(searchString, a.title.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ''));
+            var bScore = stringSim(searchString, b.title.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ''));
+            if(aScore < bScore){
+                return -1;
+            }else if(aScore > bScore){
+                return 1;
+            }else{
+                return 0;
+            };
+        });
+        populateContent(curPageNum, data.posts);
+    });
+    return false;
 });
+
+
+//.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
 
 //testing purposes only
 $(document).click(function(){
