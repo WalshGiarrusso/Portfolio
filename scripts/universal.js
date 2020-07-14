@@ -222,7 +222,7 @@ function checkFormStyling(){
 };
 //text spacing
 function setTextSpacing(){
-    $('*:not(kbd)').css({
+    $('*:not(kbd):not(.LetterExempt)').css({
         "letter-spacing":lclStorage.getItem('letterSpacing'),
         "word-spacing":lclStorage.getItem('wordSpacing')
     });
