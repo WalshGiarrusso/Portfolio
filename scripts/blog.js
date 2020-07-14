@@ -5,7 +5,7 @@ var maxPageNum;
 $(document).ready(function(){
     $.getJSON(base + "data/blogPosts.json", function(data){
 
-        populateContent(curPageNum, data);
+        populateContent(curPageNum, data.posts);
     });
 });
 
@@ -35,7 +35,7 @@ function populateContent(pageNum, postArr){
 
 
 $.getJSON(base + "data/blogPosts.json", function(data){
-    console.log(data.posts[1].title);
+    
 });
 
 //testing purposes only
