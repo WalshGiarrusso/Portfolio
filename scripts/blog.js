@@ -13,9 +13,14 @@ $(document).ready(function(){
 
 function populateContent(pageNum, postArr){
     $('.ArticleWrapper').show();
-    
+            
     for(i = ((pageNum-1)*10), v = 0; v < 10; i++, v++){
-        if(i > postArr.length){
+
+           // console.log("i: "+i);
+           // console.log("length: "+postArr.length);
+           // console.log("truth: "+(i > postArr.length));
+    
+        if(i >= postArr.length){
             //make sure this works properly
             $('.ArticleWrapper').eq(v).hide();
         }else{
