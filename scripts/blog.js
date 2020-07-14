@@ -55,6 +55,7 @@ $('#articlePgFwdBtn').click(function(){
 $('#submitArticleSearch').click(function(){
 
     var searchString = compareParse($("#articleSearch").val());
+    console.log('ss: '+searchString)
 
     $.getJSON(base + "data/blogPosts.json", function(data){
         data.posts.sort(function(a,b){
@@ -65,10 +66,9 @@ $('#submitArticleSearch').click(function(){
             var aScore = stringSim(searchString, aTitle);
             var bScore = stringSim(searchString, bTitle);
 
+            console.log('a1: '+aTitle+'/'+aScore+' b1: '+bTitle+'/'+bScore);
 
-            //console.log('ss: '+searchString)
-            //console.log('a1: '+aTitle+' b1: '+bTitle);
-            //console.log('a: '+ aScore+' b: '+bScore);
+          
             if(aScore < bScore){
                 return 1;
             }else if(aScore > bScore){
