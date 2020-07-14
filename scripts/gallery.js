@@ -72,8 +72,8 @@ function handleSearch(){
 
 $(document).ready(function(){
     $.getJSON(baseUrl + "data/galleryCards.json", function(data){
-        mPageNum = Math.ceil((data.posts.length/6));
-        populateGallery(cPageNum, data.posts);
+        mPageNum = Math.ceil((data.cards.length/6));
+        populateGallery(cPageNum, data.cards);
     });
 });
 
