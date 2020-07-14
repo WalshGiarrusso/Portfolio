@@ -77,6 +77,8 @@ $('#submitArticleSearch').click(function(){
                 return 0;
             };
         });
+        curPageNum = 1;
+        $('#articlePageNumber').text(curPageNum);
         populateContent(curPageNum, data.posts);
     });
     return false;
