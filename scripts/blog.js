@@ -21,13 +21,11 @@ function populateContent(pageNum, postArr){
            // console.log("truth: "+(i > postArr.length));
     
         if(i >= postArr.length){
-            //make sure this works properly
             $('.ArticleWrapper').eq(v).hide();
         }else{
             $(".ArticleTitle").eq(v).text(postArr[i].title);
             $(".ArticleDesc").eq(v).text(postArr[i].desc);
-
-            //do it for article link here
+            $(".ArticleLink").eq(v).attr("href", postArr[i].link);
         };
        
     };

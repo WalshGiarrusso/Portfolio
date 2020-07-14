@@ -1,3 +1,7 @@
+var cPageNum = 1;
+var mPageNum;
+var storedArr;
+
 $('#showFiltersButton').click(function(){
     $('#gallerySifterFilter').show();
     $(this).hide();
@@ -59,7 +63,36 @@ function handleSearch(){
       
         coms = parseInt(stringSim(searchString, matchString)*-1000);
         $(this).parent('li').css('order', coms);
-    
     });
-    
+};
+
+
+//shift
+
+$(document).ready(function(){
+    $.getJSON(base + "data/galleryCards.json", function(data){
+        mPageNum = Math.ceil((data.posts.length/6));
+        populateGallery(cPageNum, data.posts);
+    });
+});
+
+function populateGallery(pageNumber, cardArr){
+    $('.Card').parent('li').show();
+
+    for(i = ((pageNumber-1)*6), v = 0; v < 6; i++, v++){
+        if(i >= cardArr.length){
+            $('.Card').parent('li').hide();
+        }else{
+            $('.CardTitle').eq(v).text(cardArr[i].title);
+            $('.CardImage').eq(v).attr({
+                "src": cardArr[i].imgSrc,
+                "alt": cardArr[i].imgAlt
+            });
+            $('.CardType').eq(v).text(cardArr[i].type);
+            $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].eDate);
+            $('.Card').eq(v).attr("href", cardArr[i].link);
+        };
+    };
+    storedArr = cardArr;
+
 };
