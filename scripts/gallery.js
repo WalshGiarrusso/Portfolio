@@ -1,6 +1,7 @@
 var cPageNum = 1;
 var mPageNum;
 var storedArr;
+var baseUrl = $('head base').attr('href');
 
 $('#showFiltersButton').click(function(){
     $('#gallerySifterFilter').show();
@@ -70,7 +71,7 @@ function handleSearch(){
 //shift
 
 $(document).ready(function(){
-    $.getJSON(base + "data/galleryCards.json", function(data){
+    $.getJSON(baseUrl + "data/galleryCards.json", function(data){
         mPageNum = Math.ceil((data.posts.length/6));
         populateGallery(cPageNum, data.posts);
     });
