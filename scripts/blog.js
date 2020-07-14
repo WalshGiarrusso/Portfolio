@@ -70,9 +70,9 @@ $('#submitArticleSearch').click(function(){
             //console.log('a1: '+aTitle+' b1: '+bTitle);
             //console.log('a: '+ aScore+' b: '+bScore);
             if(aScore < bScore){
-                return -1;
-            }else if(aScore > bScore){
                 return 1;
+            }else if(aScore > bScore){
+                return -1;
             }else{
                 return 0;
             };
