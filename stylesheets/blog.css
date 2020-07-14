@@ -2,8 +2,8 @@
     margin-right:3rem;
     overflow:auto;
     transition:none;
-    padding-top:.25rem;
-    padding-bottom:.25rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
 }
 .ArticleWrapper:focus-within{
     outline: 2px solid;
@@ -12,6 +12,10 @@
 }
 .ArticleWrapper h2{
     font-size:1.5rem;
+    margin-top:0;
+}
+.ArticleWrapper p{
+    margin-bottom:0;
 }
 .ArticleWrapper a{
     text-decoration:none;
