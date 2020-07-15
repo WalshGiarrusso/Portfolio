@@ -148,7 +148,7 @@ $('#galleryPgBackBtn').click(function(){
         populateGallery(cPageNum, storedArr);
     };
 });
-$('#galleryPgFwdkBtn').click(function(){
+$('#galleryPgFwdBtn').click(function(){
     if(cPageNum < mPageNum){
         cPageNum++;
         $('#galleryPageNumber').text(cPageNum);
