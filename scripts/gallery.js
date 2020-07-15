@@ -53,19 +53,19 @@ $("#hideFiltersButton").click(function(){
 //    handleSearch();
 //    return false;
 //});
-function handleSearch(){
-    var searchString = compareParse($('#gallerySearch').val());
+//function handleSearch(){
+//    var searchString = compareParse($('#gallerySearch').val());
     
-    var matchString;
+//    var matchString;
 
-    $('.Card').each(function(){
-        var coms = 0;
-        matchString = compareParse($(this).children('h2').text());
+//    $('.Card').each(function(){
+//        var coms = 0;
+//        matchString = compareParse($(this).children('h2').text());
       
-        coms = parseInt(stringSim(searchString, matchString)*-1000);
-        $(this).parent('li').css('order', coms);
-    });
-};
+//        coms = parseInt(stringSim(searchString, matchString)*-1000);
+//        $(this).parent('li').css('order', coms);
+//    });
+//};
 
 
 //shift
@@ -113,7 +113,7 @@ function populateGallery(pageNumber, cardArr){
 };
 //filter func
 $("#submitGalleryFilters").click(function(){
-    $('#gallerySearch').trigger(':reset');
+    $('#gallerySearch').val('');
     var startDate = new Date($('#startDate').val());
     var endDate = new Date($('#endDate').val());
     var chosenType = $('#gallerySifterType').val();
@@ -154,4 +154,29 @@ $('#galleryPgFwdBtn').click(function(){
         $('#galleryPageNumber').text(cPageNum);
         populateGallery(cPageNum, storedArr);
     };
+});
+
+//search func
+
+$('#submitGallerySearch').click(function(){
+
+    var searchStr = compareParse($("#gallerySearch").val());
+    storedArr.sort(function(a,b){
+        var aTi = compareParse(a.title);
+        var bTi = compareParse(b.title);
+        var aScr = stringSim(searchStr, aTi);
+        var bScr = stringSim(searchStr, bTi);
+        if(aScr < bScr){
+            return 1;
+        }else if(aScr > bScr){
+            return -1;
+        }else{
+            return 0;
+        };
+        
+    });
+    cPageNum = 1;
+    $("#galleryPageNumber").text(cPageNum);
+    populateGallery(cPageNum, storedArr);
+    return false;
 });

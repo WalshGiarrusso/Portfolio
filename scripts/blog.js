@@ -53,7 +53,7 @@ $('#articlePgFwdBtn').click(function(){
 $('#submitArticleSearch').click(function(){
 
     var searchString = compareParse($("#articleSearch").val());
-    console.log('ss: '+searchString)
+    
 
     $.getJSON(base + "data/blogPosts.json", function(data){
         data.posts.sort(function(a,b){
