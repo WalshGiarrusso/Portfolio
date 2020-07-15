@@ -49,10 +49,10 @@ $("#hideFiltersButton").click(function(){
 //    };
 //};
 
-$('#submitGallerySearch').click(function(){
-    handleSearch();
-    return false;
-});
+//$('#submitGallerySearch').click(function(){
+//    handleSearch();
+//    return false;
+//});
 function handleSearch(){
     var searchString = compareParse($('#gallerySearch').val());
     
@@ -82,7 +82,7 @@ function populateGallery(pageNumber, cardArr){
     $('.Card').parent('li').show();
 
     mPageNum = Math.ceil((cardArr.length/6));
-    
+
     for(i = ((pageNumber-1)*6), v = 0; v < 6; i++, v++){
         if(i >= cardArr.length){
 
@@ -113,28 +113,45 @@ function populateGallery(pageNumber, cardArr){
 };
 //filter func
 $("#submitGalleryFilters").click(function(){
+    $('#gallerySearch').trigger(':reset');
     var startDate = new Date($('#startDate').val());
     var endDate = new Date($('#endDate').val());
     var chosenType = $('#gallerySifterType').val();
     var opArray;
     $.getJSON(baseUrl + "data/galleryCards.json", function(data){
         opArray = data.cards;
-       
         $(data.cards).each(function(){
             if(chosenType !== "" && chosenType !== "all" && this.type.toLowerCase() !== chosenType){
                 opArray.splice($(opArray).index(this),1);
             };
         });
-        
         $(opArray).each(function(){
             var cD = new Date(this.iDate);
             if((cD < startDate) || (cD > endDate)){
                 opArray.splice($(opArray).index(this),1);
             };
         });
-
-        populateGallery(1, opArray);
+        cPageNum = 1;
+        $("#galleryPageNumber").text(cPageNum);
+        populateGallery(cPageNum, opArray);
 
     });
     return false;
+});
+
+
+//page functionality
+$('#galleryPgBackBtn').click(function(){
+    if(cPageNum > 1){
+        cPageNum--;
+        $('#galleryPageNumber').text(cPageNum);
+        populateGallery(cPageNum, storedArr);
+    };
+});
+$('#galleryPgFwdkBtn').click(function(){
+    if(cPageNum < mPageNum){
+        cPageNum++;
+        $('#galleryPageNumber').text(cPageNum);
+        populateGallery(cPageNum, storedArr);
+    };
 });
