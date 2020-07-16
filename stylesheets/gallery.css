@@ -1,58 +1,3 @@
-/*Gallery Card*/
-.Card{
-    text-decoration: none;
-    position:relative;
-    display: inline-block;
-    transition:250ms;
-    width:20rem;
-    height:20rem;
-    margin:1rem;
-    
-
-}
-.Card_hover:hover{
-    transform:scale(1.05);
-}
-.CardImage{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-.CardTitle{
-    font-size:1.25rem;
-    position:absolute;
-    top:0;
-    background-color:black;
-    color:white;
-    z-index: 1;
-    padding: .3125rem 1rem;
-    max-width:100%;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-}
-
-.CardDesc{
-    width:100%;
-    padding:.5rem 1rem;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    display:flex;
-    flex-flow:row nowrap;
-    justify-content: space-between;
-    position:absolute;
-    bottom:0;
-    background-color:black;
-    color:white;
-    z-index: 1;
-}
-#galleryList{
-    margin-left:-1.5rem;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: center;
-}
 input[type="date"]{
     width:10.5rem;
 }
@@ -104,14 +49,7 @@ input[type="date"]{
 
 /*Media Queries*/
 
-@media only screen and (max-width: 58.250em){
-    .Card{
-       width: 18rem;
-       height:18rem;
-    }
-    
-   
-}
+
 @media only screen and (max-width: 41.625em){
     #gallerySifterFilter > div > div{
         display:flex;
@@ -121,18 +59,5 @@ input[type="date"]{
     }
     
 }
-@media only screen and (max-width: 36.750em){
-    .Card{
-        width:15rem;
-        height:15rem;
-    }
-    #galleryList{
-        margin-left:-.75rem;
-    }
 
-}  
-@media only screen and (max-width: 22.500em){
-    #galleryList{
-        margin-left:0rem;
-    }
-}
+    
