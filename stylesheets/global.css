@@ -147,8 +147,9 @@ legend{
   
 }
 #main{
-    padding: 1rem 0;
-    
+    padding-top: 1rem;
+    padding-bottom:1rem;
+    padding-right:1.5rem;
    
                     /*REMOVE EVENTUALLY*/
     min-height:50vh;
@@ -348,7 +349,7 @@ legend{
 
 .PageNavigator{
     margin-top:.65rem;
-    margin-left:-1.5rem;
+
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
@@ -417,7 +418,8 @@ legend{
 }
 
 .GalleryList{
-    margin-left:-1.5rem;
+
+
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
@@ -426,7 +428,10 @@ ul.GalleryList{
     justify-content: space-around;
 
 }
-
+.CenterOut{
+    margin-left:-1.5rem;
+    padding-right:-1.5rem;
+}
 /*Button Styling*/
 .FB{
     border:none;
@@ -471,7 +476,8 @@ ul.GalleryList{
     .Card{
         width: 18rem;
         height:18rem;
-     }
+    }
+    
      
 
 }
@@ -497,16 +503,17 @@ ul.GalleryList{
         text-align: center; 
     }
    
-    .PageNavigator{
-        margin-left:-.75rem;
-    }
+    
     .Card{
         width:15rem;
         height:15rem;
     }
-    .GalleryList{
+
+    .CenterOut{
+        padding-right:-.75rem;
         margin-left:-.75rem;
     }
+
   
     
     
@@ -525,12 +532,11 @@ ul.GalleryList{
     .InputGroup{
         justify-content: space-between;
     }
-    .PageNavigator{
-        margin-left:0rem;
+    .CenterOut{
+        padding-right:0;
+        margin-left:0;
     }
-    .GalleryList{
-        margin-left:0rem;
-    }
+
 
    
 }
