@@ -486,6 +486,7 @@ ul.GalleryList{
 
 }
 @media only screen and (max-width: 36.750em){
+    
     #headerNavigation, #siteMapLink{
         display:none;
     }
@@ -510,6 +511,9 @@ ul.GalleryList{
         width:15rem;
         height:15rem;
     }
+    #main{
+        padding-right:.75rem;   
+    }
 
     .CenterOut{
         padding-right:-.75rem;
@@ -521,6 +525,7 @@ ul.GalleryList{
     #mainContent{
         margin-left:-.75rem;
         text-align:center;
+        margin-right:-.75rem;
     }
 
   
