@@ -506,8 +506,6 @@ ul.GalleryList{
     #accessibilityInformation{
         text-align: center; 
     }
-   
-    
     .Card{
         width:15rem;
         height:15rem;
@@ -516,6 +514,13 @@ ul.GalleryList{
     .CenterOut{
         padding-right:-.75rem;
         margin-left:-.75rem;
+    }
+
+
+
+    #mainContent{
+        margin-left:-.75rem;
+        text-align:center;
     }
 
   
@@ -527,10 +532,8 @@ ul.GalleryList{
     .Indent{
         padding-left:0;
     }
-    .MarginIndent{
-        margin-left:0;
-    }
-    .DoubleIndentM{
+   
+    .MarginIndent, .DoubleIndentM, #mainContent{
         margin-left:0;
     }
     .InputGroup{
@@ -540,6 +543,45 @@ ul.GalleryList{
         padding-right:0;
         margin-left:0;
     }
+
+
+
+
+    #main{
+        padding-left:2.5%;
+        padding-right:2.5%;
+    }
+    main h1, main h2, main h3, main h4, main h5, main h6, main p:not(.HangingIndent), main a:not(.HangingIndent), main section:not(.Bibliography):not(.CenterExempt){
+        text-align:center;
+    }
+    .TB:not(:hidden){
+        display:inline;
+    }
+    label:not(:hidden){
+        display:block;
+        margin-top:.75rem;
+        margin-bottom:.75rem;
+    }
+    fieldset:not(:hidden){
+        display:inline-block;
+        text-align:center;
+        margin-left:0;
+        margin-right:0;
+    }
+    main > a:not(:hidden){
+        display:block;
+    }
+    main form{
+        text-align:center;
+
+    }
+    main .FB:not(:hidden){
+        margin-left:0;
+        margin-right:0;
+        display:inline-block;
+    }
+
+
 
 
    
