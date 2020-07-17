@@ -533,7 +533,7 @@ ul.GalleryList{
     
     
 }  
-@media only screen and (max-width: 28em){
+@media only screen and (max-width: 26em){
     .Indent{
         padding-left:0;
     }
