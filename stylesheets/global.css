@@ -153,9 +153,7 @@ legend{
                     /*REMOVE EVENTUALLY*/
     min-height:50vh;
 }
-#mainContent{
-    display:inline-block;
-}
+
 /*Superbars*/
     /*Accessibility Options*/
 #optionsBar{
@@ -334,6 +332,9 @@ legend{
 .LabelledInput, .InputGroup{
     margin-top:.5rem;
     margin-bottom: .5rem;
+}
+.Blk{
+    display:block;
 }
 .Created{
     word-spacing:inherit;

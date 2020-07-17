@@ -222,15 +222,19 @@ function checkFormStyling(){
 };
 //text spacing
 function setTextSpacing(){
+    lclStorage.setItem('paragraphSpacing', (!lclStorage.getItem('paragraphSpacing')) ? "2em" : lclStorage.getItem('paragraphSpacing'));
+     
+
     $('*:not(kbd):not(.LetterExempt)').css({
-        "letter-spacing":lclStorage.getItem('letterSpacing'),
-        "word-spacing":lclStorage.getItem('wordSpacing')
+        "letter-spacing":((!lclStorage.getItem('letterSpacing')) ? "0.125em" : lclStorage.getItem('letterSpacing')),
+        "word-spacing":((!lclStorage.getItem('wordSpacing')) ? "0.15em" : lclStorage.getItem('wordSpacing'))
     });
-    $('p, a, h1, h2, h3, h4, h5, h6, .FB:not(#pageNavigator button)').css('line-height', lclStorage.getItem('lineSpacing'));
+    $('p, a, h1, h2, h3, h4, h5, h6, .FB:not(#pageNavigator button)').css('line-height',((!lclStorage.getItem('lineSpacing')) ? "1.5" : lclStorage.getItem('lineSpacing')));
     $('main p, main h1, main h2, main h3, main h4, main h5, main h6, main .FB').css({
         "margin-bottom": (lclStorage.getItem('paragraphSpacing')*.5),
         "margin-top": (lclStorage.getItem('paragraphSpacing')*.5),
     });
+    
 };
 //target sizing
 function checkTargetSizing(){
