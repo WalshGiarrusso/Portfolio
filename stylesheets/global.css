@@ -432,6 +432,10 @@ ul.GalleryList{
     margin-left:-1.5rem;
     padding-right:-1.5rem;
 }
+.HangingIndent{
+    padding-left:1.25rem;
+    text-indent: -1.25rem;
+}
 /*Button Styling*/
 .FB{
     border:none;
