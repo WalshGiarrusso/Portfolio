@@ -430,7 +430,7 @@ ul.GalleryList{
 }
 .CenterOut{
     margin-left:-1.5rem;
-    padding-right:-1.5rem;
+    margin-right:-1.5rem;
 }
 .HangingIndent{
     padding-left:1.25rem;
@@ -516,7 +516,7 @@ ul.GalleryList{
     }
 
     .CenterOut{
-        padding-right:-.75rem;
+        margin-right:-.75rem;
         margin-left:-.75rem;
     }
 
@@ -544,11 +544,8 @@ ul.GalleryList{
     .InputGroup{
         justify-content: space-between;
     }
-    .CenterOut{
-        padding-right:0;
-        margin-left:0;
-    }
-    #mainContent{
+    
+    #mainContent, .CenterOut{
         margin-left:0;
         
         margin-right:0;
