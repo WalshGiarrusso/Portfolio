@@ -538,7 +538,7 @@ ul.GalleryList{
         padding-left:0;
     }
    
-    .MarginIndent, .DoubleIndentM, #mainContent{
+    .MarginIndent, .DoubleIndentM{
         margin-left:0;
     }
     .InputGroup{
@@ -548,7 +548,11 @@ ul.GalleryList{
         padding-right:0;
         margin-left:0;
     }
-
+    #mainContent{
+        margin-left:0;
+        
+        margin-right:0;
+    }
 
 
 
