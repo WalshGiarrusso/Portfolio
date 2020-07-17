@@ -59,7 +59,7 @@ input[type="date"]{
     }
     
 }
-@media only screen and (max-width: 22.500em){
+@media only screen and (max-width: 28em){
     #showFiltersButton{
         margin-left:0;
     }
