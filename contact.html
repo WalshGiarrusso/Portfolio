@@ -4,15 +4,18 @@
 <head>
     <meta charset="utf-8">
 
+    <!--Info-->
     <title>Contact - Walsh Giarrusso</title>
     <meta name="author" content="Walsh Anthony Giarrusso">
-    <!--to be filled-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To Be Filled-->
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="">
     <meta name="googlebot" content="">
 
-    <!--favicon-->
+    <!--Favicon-->
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -21,34 +24,331 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    
+    <base href="https://walshgiarrusso.com/" target="_self">  
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
-    <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">
-    <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
-    <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
-
-
-
-    <!--externals-->
-        <!--stylesheets-->
-    <link rel="stylesheet" href="stylesheets/global.css">
-            <!--fonts-->
-    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
-        <!--scripts-->
-    <script src="scripts/universal.js"></script>
-
-    <!--jquery-->
+    <!--Externals-->
+        <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
 </head>
 <body>
 
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="contact#mainContent">
+                    Skip to Main Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Accessibility Options
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="languages">
+                    Translation Options &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Hide Header Options
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    Don't Show Again
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Show by Default
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="contact#mainContent">
+                    Skip to Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Options
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="top">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A logo image of a stylized W.">
+        <!--Navbar-->
+        <nav aria-label="Main">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="about">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="contact">
+                        <span class="ScreenReader-Only">Current Page: </span>Contact
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Main Navigation">
+        <ul>
+            <li>
+                <a class="Bold" href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="contact">
+                    <span class="ScreenReader-Only">Current Page: </span>Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="contact">
+                    <span class="ScreenReader-Only">Current Page: </span>contact
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="sitemap">
+            View Sitemap
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        <h1 id="mainContent" tabindex="-1">
+            Contact
+        </h1>
+
+        <section class="MarginIndent">
+            <h2>
+                Consectetur Adipiscing Elit
+            </h2>
+            <p class="MarginIndent">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </section>
+
+        <section class="MarginIndent">
+            <hgroup>
+                <h2>
+                    Pellentesque Diam 
+                </h2>
+                <h3 class="MarginIndent">
+                    Volutpat Commodo Sed
+                </h3>
+            </hgroup>
+            <p class="DoubleIndentM">
+                Egestas egestas fringilla phasellus. In ante metus dictum at tempor commodo. Euismod in pellentesque massa placerat duis. Tincidunt eget nullam non nisi est. Consectetur libero id faucibus nisl tincidunt eget nullam. Nec dui nunc mattis enim ut tellus. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit.
+            </p>
+            <h3 class="MarginIndent">
+                Pharetra vel Turpis Nunc
+            </h3>
+            <p class="DoubleIndentM">
+                Elementum nisi quis eleifend quam adipiscing vitae. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Nunc id cursus metus aliquam eleifend mi in. Adipiscing at in tellus integer feugiat scelerisque. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Dolor magna eget est lorem ipsum. Morbi tristique senectus et netus et.
+            </p>
+        </section>
+
+        
+
+
+    </main>
 
 
 
 
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="contact#top">
+                            Back to Top
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="sitemap">
+                            View Sitemap
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Show Header Options
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
 
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="contact">
+                    <span class="ScreenReader-Only">Current Page: </span>Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    
+                    <h4>
+                        Accessibility Statement
+                    </h4>
+                    <p>
+                        Text content for accessibility statement.
+                        <a href="accessibility">
+                            View full accessibility statement here.
+                        </a>
+                    </p>
+                   
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="accessibility" class="NoBreak">
+                        Accessibility Statement&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+             
+                    <h4>
+                        Conformance Claim
+                    </h4>
+                    <p>
+                        All of the text content for the conformance claim goes here.
+                    </p>
+            
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim&nbsp;>
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
 
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
 
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
+            
+                    Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+    
 </body>
 </html>
