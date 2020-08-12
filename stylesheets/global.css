@@ -301,6 +301,9 @@ legend{
 .Indent{
     padding-left:1.5rem;
 }
+.KeepIndent{
+    margin-left:1.5rem;
+}
 .MarginIndent{
     margin-left: 1.5rem;
     
@@ -345,6 +348,9 @@ legend{
 }
 .LetterExempt{
     letter-spacing: 0;
+}
+ul.ListTakeStyling{
+    list-style-type: disc;
 }
 
 .PageNavigator{
@@ -551,6 +557,7 @@ ul.GalleryList{
         margin-right:0;
     }
 
+    
 
 
     #main{
