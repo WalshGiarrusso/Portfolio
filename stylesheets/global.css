@@ -570,7 +570,7 @@ ul.GalleryList{
         padding-left:5%;
         padding-right:5%;
     }
-    main h1, main h2, main h3, main h4, main h5, main h6, main a:not(.HangingIndent){
+    main h1, main h2, main h3, main h4, main h5, main h6, main a:not(.HangingIndent):not(.ArticleLink){
         text-align:center;
     }
     .TB:not(:hidden){
@@ -613,9 +613,7 @@ ul.GalleryList{
         padding-top:0.5rem;
         padding-bottom:0.5rem;
     }
-    .ArticleLink{
-        text-align:left;
-    }
+  
     
 
 
