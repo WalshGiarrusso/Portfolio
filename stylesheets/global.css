@@ -613,6 +613,9 @@ ul.GalleryList{
         padding-top:0.5rem;
         padding-bottom:0.5rem;
     }
+    .ArticleLink{
+        text-align:left;
+    }
     
 
 
