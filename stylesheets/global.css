@@ -561,10 +561,10 @@ ul.GalleryList{
 
 
     #main{
-        padding-left:2.5%;
-        padding-right:2.5%;
+        padding-left:5%;
+        padding-right:5%;
     }
-    main h1, main h2, main h3, main h4, main h5, main h6, main p:not(.HangingIndent), main a:not(.HangingIndent), main section:not(.Bibliography):not(.CenterExempt){
+    main h1, main h2, main h3, main h4, main h5, main h6, main a:not(.HangingIndent){
         text-align:center;
     }
     .TB:not(:hidden){
