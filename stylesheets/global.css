@@ -49,6 +49,9 @@ a, button, input, select{
     font-family:inherit;
     cursor:pointer;
 }
+input[type=range]{
+    margin-right:0;
+}
 a, button{
     display: flex;
     align-items: center;
@@ -135,10 +138,11 @@ input[type=search].FS, select.FS, input[type=date].FS{
 
 fieldset{
     margin-bottom:1rem;
-    width:90%;
+    
 }
 fieldset.FS{
     border:none;
+    margin-inline-end: 0;
 }
 legend{
     font-weight:bold;
@@ -456,6 +460,8 @@ ul.GalleryList{
     border:none;
     padding: 1rem;
     
+    
+    
 }
 .TB_hover{
     transition: 250ms;
@@ -574,12 +580,13 @@ ul.GalleryList{
         display:block;
         margin-top:.75rem;
         margin-bottom:.75rem;
+        text-align:center;
     }
     fieldset:not(:hidden){
         display:inline-block;
         text-align:center;
-        margin-left:0;
-        margin-right:0;
+        margin-left:auto;
+        margin-right:auto;
     }
     main > a:not(:hidden){
         display:block;
@@ -593,6 +600,20 @@ ul.GalleryList{
         margin-right:0;
         display:inline-block;
     }
+    main .TB, input[type=range]{
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .LabelledInput > *{
+        display:block;
+        
+        
+    }
+    .LabelledInput > label{
+        padding-top:0.5rem;
+        padding-bottom:0.5rem;
+    }
+    
 
 
 

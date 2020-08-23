@@ -197,9 +197,6 @@ input[type=reset]{
     margin:1rem 0;
 }
 @media only screen and (max-width: 26em){
-    input[type=range]{
-        display:inline-block;
-    }
     .FauxFieldset, #iAS.FS{
         margin-left:0;
         padding-left:0;
