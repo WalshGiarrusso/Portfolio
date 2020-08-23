@@ -308,6 +308,9 @@ legend{
 .KeepIndent{
     margin-left:1.5rem;
 }
+.DoubleKeepIndent{
+    margin-left:3rem;
+}
 .MarginIndent{
     margin-left: 1.5rem;
     
