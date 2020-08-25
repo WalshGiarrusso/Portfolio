@@ -1,9 +1,8 @@
-$('#variantSelector').change(function(){
-    var val = $(this).val();
+$('#submitVariantSelection').click(function(){
+    var val = $('#variantSelector').val();
     $('.HrefTarget').attr('href', (val !== "" ? val : $(this).attr('href')));
     $('.SrcTarget').attr('src', (val !== "" ? val : $(this).attr('src')));
 });
-
 $('#fitPageButton').click(function(){
     $('#contentImage').css({
         "max-height":"100vh",
@@ -12,7 +11,6 @@ $('#fitPageButton').click(function(){
     $(this).hide();
     $('#realSizeButton').show();
 });
-
 $('#realSizeButton').click(function(){
     $('#contentImage').css({
         "max-height":"",
