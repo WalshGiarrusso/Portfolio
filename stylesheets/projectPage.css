@@ -10,8 +10,8 @@ i{
     max-width: 80%;
 }
 #showcaseOptions{
+    
     margin-top:.5rem;
-
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
@@ -20,4 +20,10 @@ i{
 #showcaseOptions > *{
     margin: 0.5rem;
 }
-
+#optionsHeader{
+    width: 100%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    text-align:center;
+}

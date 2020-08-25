@@ -126,7 +126,7 @@
             </ul>
             <!--Mobile Menu-->
             <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
-                <img class="Swap" src="icons/open-dark.svg" alt="Button to Open or Close Mobile Menu">
+                <img class="Swap" src="icons/open-dark.svg" alt="A button to open or close the mobile menu.">
                 <span id="mobileMenuLabel">
                     Open Menu
                 </span>
@@ -189,10 +189,18 @@
 
     <!--Content-->
     <main id="main" class="MarginIndent">
-        <h1 id="mainContent" tabindex="-1">Gallery</h1>
+        <section>
+            <h1 id="mainContent" tabindex="-1">Gallery</h1>
+            <p class="MarginIndent">
+                If you need assistance with any inputs on this page, please <a href="contact">contact me</a>.
+            </p>
+        </section>
+        
 
-        <!--Search Options--> 
+        <!--Search Options-->
+        
         <form class="MarginIndent">
+           
             <fieldset class="CFS FS" id="gallerySifterSearch">
                 <legend>
                     Search
@@ -254,7 +262,7 @@
                             End Date
                         </label>
                     </div>
-                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters"  >
+                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters">
 
 
                    
@@ -348,7 +356,7 @@
 
         <nav class="PageNavigator CenterOut">  
             
-            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn">
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn" name="Last Page Button">
                     <&nbsp;Last<span class="ScreenReader-Only"> Page</span>
             </button>
         
@@ -356,7 +364,7 @@
                 <span class="ScreenReader-Only">Page Number: </span>1
             </p>
 
-            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn">
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn" name="Next Page Button">
                     Next<span class="ScreenReader-Only"> Page</span>&nbsp;>
             </button>
 
