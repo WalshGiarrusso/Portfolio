@@ -175,7 +175,7 @@ legend{
     display:none;
 }
     /*Header*/
-#top{
+#top, #arriba{
     padding: 0.5rem 5%;
     display:flex;
     flex-flow:row nowrap;
@@ -377,6 +377,10 @@ ul.ListTakeStyling{
     margin-bottom:0;
     line-height:100%;
 }
+.LangLabel{
+    width:100%;
+    text-align:center;
+}
 
 /*Gallery Card*/
 .Card{
@@ -558,7 +562,7 @@ ul.GalleryList{
         justify-content: space-between;
     }
     
-    #mainContent, .CenterOut{
+    #mainContent, #contenidoPrincipal .CenterOut{
         margin-left:0;
         
         margin-right:0;

@@ -2,6 +2,8 @@
 
 lclStorage = window.localStorage;
 
+var pLang = document.documentElement.lang;
+
 $(document).ready(function (){
     alert("This site is currently under construction. Visit http://walshgiarrusso.com/old-site/home for previous version of site.");
 
@@ -17,10 +19,22 @@ $(document).ready(function (){
 
     checkTargetSizing();
    
+    
 
     
     
 });
+
+//CheckLanguage
+function checkLang(){
+    if(pLang == 'en'){
+        return 0;
+    }else if(pLang == 'es'){
+        return 1;
+    }else{
+        return 0;
+    }
+};
 
 //Input Handling
     //Clicks
@@ -100,25 +114,71 @@ $('#mobileMenuButton').click(function(){
     if($('#mobileMenu').is(':visible')){
         $('#mobileMenu').hide();
         $('#mobileMenuButton > img').attr("src", "icons/open-"+lclStorage.getItem('icnColor')+".svg");
-        $('#mobileMenuLabel').text('Open Menu');
-        $('#mobileMenuButton').attr('title', 'Open Menu');
+        
+        switch(checkLang()){
+            case 0:
+                $('#mobileMenuLabel').text('Open Menu');
+                $('#mobileMenuButton').attr('title', 'Open Menu');
+
+            break;
+            case 1:
+                $('#mobileMenuLabel').text('Abrir Menú');
+                $('#mobileMenuButton').attr('title', 'Abrir Menú');
+            break;
+            default:
+                $('#mobileMenuLabel').text('Open Menu');
+                $('#mobileMenuButton').attr('title', 'Open Menu');
+            break;
+        };
+        
 
 
     }else{
-        $('#mobileMenu ').show();
+
+        $('#mobileMenu').show();
         $('#mobileMenuButton > img').attr("src", "icons/close-"+lclStorage.getItem('icnColor')+".svg");
-        $('#mobileMenuLabel').text('Close Menu');
-        $('#mobileMenuButton').attr('title', 'Close Menu');
+
+        switch(checkLang()){
+            case 0:
+                $('#mobileMenuLabel').text('Close Menu');
+                $('#mobileMenuButton').attr('title', 'Close Menu');
+
+            break;
+            case 1:
+                $('#mobileMenuLabel').text('Cerrar Menú');
+                $('#mobileMenuButton').attr('title', 'Cerrar Menú');
+            break;
+            default:
+                $('#mobileMenuLabel').text('Close Menu');
+                $('#mobileMenuButton').attr('title', 'Close Menu');
+            break;
+        };
+        
     };
 });
     
 
 mqMM = window.matchMedia('(min-width:32.250em)');
 mqMM.addListener(function(){
-    $('#mobileMenuButton').attr('title', 'Open Menu');
+    
     $('#mobileMenu').hide();
     $('#mobileMenuButton > img').attr("src", "icons/open-"+lclStorage.getItem('icnColor')+".svg");
-    $('#mobileMenuLabel').text('Open Menu');
+    switch(checkLang()){
+        case 0:
+            $('#mobileMenuLabel').text('Open Menu');
+            $('#mobileMenuButton').attr('title', 'Open Menu');
+
+        break;
+        case 1:
+            $('#mobileMenuLabel').text('Abrir Menú');
+            $('#mobileMenuButton').attr('title', 'Abrir Menú');
+        break;
+        default:
+            $('#mobileMenuLabel').text('Open Menu');
+            $('#mobileMenuButton').attr('title', 'Open Menu');
+        break;
+    };
+  
 });
 
 
