@@ -110,7 +110,7 @@ main p, main h1, main h2, main h3, main h4, main h5, main h6, main .FB {
     margin-top:1em;
 }
 
-.FooterInfoHide h1, .FooterInfoHide p, small p{
+.FooterInfoHide h2, .FooterInfoHide p, small p{
     margin:0;
     font-size:1rem;
 }
@@ -282,7 +282,7 @@ legend{
     margin-inline-end: 0px;
     margin-inline-start: 0px;
     text-decoration:none;
-    
+    margin:0;
 }
 
   
