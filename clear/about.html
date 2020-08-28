@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <!--Info-->
+    <title>Clear Read About - Walsh Giarrusso</title>
+    <meta name="author" content="Walsh Anthony Giarrusso">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To Be Filled-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="googlebot" content="">
+
+    <!--Favicon-->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <base href="https://walshgiarrusso.com/" target="_self"> 
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
+
+    <!--Externals-->
+        <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
+</head>
+<body>
+
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="clear/#mainContent">
+                    Skip to Main Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/options">
+                    Accessibility Options
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/languages">
+                    Translation Options &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Hide Header Options
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    Don't Show Again
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Show by Default
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="clear/#mainContent">
+                    Skip to Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/options">
+                    Options
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="top">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A stylized letter w logo.">
+        <!--Navbar-->
+        <nav aria-label="Main">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="clear">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="clear/gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="clear/blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="clear/about">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="clear/contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="">
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Main">
+        <ul>
+            <li>
+                <a class="Bold" href="clear">
+                    <span class="ScreenReader-Only">Current Page: </span>Home
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="clear/contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="clear">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="clear">clear</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="clear">
+                    hmf
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="clear/sitemap">
+            View Sitemap
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        <!--Web Accessibility-->
+        
+        <section>
+            <h1 id="mainContent" tabindex="-1">
+                My name is Walsh Giarrusso.
+            </h1>
+            
+            <p class="MarginIndent">
+                I’m currently a senior in high school, as well as a self-taught programmer, graphic designer, and music producer.
+                I want to enable others to succeed and be there for people who wouldn't otherwise have someone in their corner.
+                I also use my time to advocate for things I think are important, like web accessibility and police reform.
+                I look up to Tammy Duckworth, Muhammad Yunus, John Lewis, and Robert F. Kennedy.
+                I believe we all have a duty to try to leave the world a better place than we found it. 
+                This website serves as a hub for all of my work, including my service, my art, and my advocacy.
+            </p>
+        </section>
+       
+        <a href="clear/about" class="MarginIndent">
+            More about me&nbsp;>
+        </a>
+        <!--Featured Works-->
+        <section>
+            <hgroup>
+                <h2 class="MarginIndent">
+                    My Work
+                </h2>
+                <h3 class="DoubleIndentM">
+                    Featured
+                </h3>
+            </hgroup>
+           
+            <ul class="GalleryList CenterOut">
+                <li>
+                    <a class="Card Card_hover" href="clear/gallery/monocropping">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocropping
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Design
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                3/2/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="Card Card_hover" href="clear/gallery/monocropping">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocropping
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Design
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                3/2/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="Card Card_hover" href="clear/gallery/monocropping">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocropping
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Design
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                3/2/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            
+        </section>
+        <a href="clear/gallery" class="MarginIndent">
+            More of my work&nbsp;>
+        </a>
+
+        <section class="MarginIndent">
+            <h2>
+                Useful Links
+            </h2>
+            <p class="MarginIndent">
+                If you need help with this website, consider visiting the <a href="clear/options">options page</a>, the <a href="clear/languages">langauges page</a>, and the <a href="clear/sitemap">sitemap page</a>.
+                If you still need help after that, please <a href="clear/contact">contact me</a>.
+            </p>
+
+            <p class="MarginIndent">
+                You're currently on a Clear Read page.
+                Clear Read pages only contain text which can be easily read and understood.
+                This can make the site more accessibile for kids, people with disabilites, language learners, and even people who simply prefer it.
+                To exit the Clear Read pages, click <a href="">here</a>.
+            </p>
+        </section>
+    
+        
+       
+    </main>
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="clear/#top">
+                            Back to Top
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="clear/sitemap">
+                            View Sitemap
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Show Header Options
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
+
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="clear">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="clear/gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a href="clear/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="clear/about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="clear/contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Accessibility Statement
+                        </h2>
+                        <p>
+                            Text content for accessibility statement. <a href="clear/accessibility">View full statement here</a>.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="clear/accessibility" class="NoBreak">
+                        Accessibility Statement&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Conformance Claim
+                        </h2>
+                        <p>
+                            All of the text content for the conformance claim goes here.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="clear/accessibility#conformanceClaim">
+                        Conformance Claim&nbsp;>
+                    </a>
+                </li>
+            </ul>
+            
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
+
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
+            
+                    Copyright © 2020 Walsh Anthony Giarrusso. Some Rights Reserved.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <!--Info-->
+    <title>hmf - Walsh Giarrusso</title>
+    <meta name="author" content="Walsh Anthony Giarrusso">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To Be Filled-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="googlebot" content="">
+
+    <!--Favicon-->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <base href="https://walshgiarrusso.com/" target="_self">   
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
+
+    <!--Externals-->
+        <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
+</head>
+<body>
+
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Saltar Enlace y Opciones">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="es/#contenidoPrincipal">
+                    Saltar al Contenido Principal
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/opciones">
+                    Opciones de Accesibilidad
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/idiomas">
+                    Opciones de Traducción &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Ocultar Opciones de Encabezado
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    No Mostrar de Nuevo
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Mostrar por Defecto
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="es/#contenidoPrincipal">
+                    Saltar al Contenido
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/opciones">
+                    Opciones
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="arriba">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="Un logotipo w de letra estilizada.">
+        <!--Navbar-->
+        <nav aria-label="Principal">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="es">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/galeria">
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/acerca">
+                        Acerca
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/contacto">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Abrir Menú" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="">
+                <span id="mobileMenuLabel">
+                    Abrir Menú
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Menú Principal Móvil">
+        <ul>
+            <li>
+                <a class="Bold" href="">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/galeria">
+                    Galería
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/acerca">
+                    Acerca
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/contacto">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="El Hilo de Ariadna">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="es">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="es">
+                    <span class="LangLabel">es</span>
+                </a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="es">
+                    <span class="ScreenReader-Only">Página Actual: </span>hmf
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="es/mapadelsitio">
+            Ver Mapa del Sitio
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        <!--Web Accessibility-->
+        
+        <section>
+            <h1 id="contenidoPrincipal" tabindex="-1">
+                Me llamo Walsh Giarrusso.
+            </h1>
+            
+            <p class="MarginIndent">
+                En este momento, soy en mi último año en la escuela secundaria, y también soy un programador, diseñador gráfico, y productor musica autodidactas.
+                Quiero permitir que otros tengan éxito y estar allí para las personas que de otra manera no tendrían a alguien en su esquina.
+                También uso mi tiempo para abogar por cosas que creo que son importantes, como la accesibilidad web y la reforma policial.
+                Admiro a Tammy Duckworth, Muhammad Yunus, John Lewis y Robert F. Kennedy.
+                Creo que todos tenemos el deber de tratar de dejar el mundo un lugar mejor de lo que lo encontramos.
+                Este sitio web sirve como un centro para todo mi trabajo, incluyendo el trabajo de servicio que hago, el arte que fabrico y las causas por las que abogo.
+            </p>
+        </section>
+       
+        <a href="es/acerca" class="MarginIndent">
+            Más acerca de mí&nbsp;>
+        </a>
+        <!--Featured Works-->
+        <section>
+            <hgroup>
+                <h2 class="MarginIndent">
+                    Mi Trabajo
+                </h2>
+                <h3 class="DoubleIndentM">
+                    Obras Destacaron
+                </h3>
+            </hgroup>
+           
+            <ul class="GalleryList CenterOut">
+                <li>
+                    <a class="Card Card_hover" href="es/galeria/monocultivo">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="Un vínculo de imagen a la página del proyecto de monocultivo. Retrata un campo de maíz que oscurece parcialmente la palabra 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocultivo
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Diseño
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                2/3/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="Card Card_hover" href="es/galeria/monocultivo">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="Un vínculo de imagen a la página del proyecto de monocultivo. Retrata un campo de maíz que oscurece parcialmente la palabra 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocultivo
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Diseño
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                2/3/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a class="Card Card_hover" href="es/galeria/monocultivo">
+                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="Un vínculo de imagen a la página del proyecto de monocultivo. Retrata un campo de maíz que oscurece parcialmente la palabra 'monocropping.'" >
+                        <h2 class="CardTitle">
+                            Monocultivo
+                        </h2>
+                        <p class="CardDesc">
+                            <span class="CardType">
+                                Diseño
+                            </span>
+                            <time class="CardTime" datetime="2020-03-02">
+                                2/3/2020
+                            </time>
+                        </p>
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </section>
+        <a href="es/galeria" class="MarginIndent">
+            Más de mi trabajo&nbsp;>
+        </a>
+
+        <section class="MarginIndent">
+            <h2>
+                Enlaces Utiles
+            </h2>
+            <p class="MarginIndent">
+                Si necesita ayuda con este sitio web, considere visitar la <a href="es/opciones">página de opciones</a>, la <a href="es/idiomas">página de idiomas</a>, y la <a href="es/mapadelsitio">página del mapa del sitio</a>.
+                Si todavía necesita ayuda, por favor póngase en <a href="es/contacto">contacto conmigo</a>.
+            </p>
+        </section>
+    
+        
+       
+    </main>
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="#arriba">
+                            Volver a la Arriba
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="es/mapadelsitio">
+                            Ver Mapa del Sitio
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Mostrar Opciones Encima
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
+
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="es">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="es/galeria">
+                    Galería
+                </a>
+            </li>
+            <li>
+                <a href="es/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="es/acerca">
+                    Acerca
+                </a>
+            </li>
+            <li>
+                <a href="es/contacto">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Declaración de Accesibilidad
+                        </h2>
+                        <p>
+                            Contenido de texto para declaración de accesibilidad. <a href="es/accesibilidad">Vea la declaración de accesibilidad completa aquí</a>.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="es/accesibilidad">
+                        Declaración de Accesibilidad&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Reclamación de Conformidad
+                        </h2>
+                        <p>
+                            Contenido de texto para reclamación de conformidad 
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="es/accesibilidad#reclamaciondeconformidad">
+                        Reclamación de Conformidad&nbsp;>
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
+
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
+            
+                    Derechos de autor © 2020 Walsh Anthony Giarrusso. Algunos derechos reservados.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+</body>
+</html>
