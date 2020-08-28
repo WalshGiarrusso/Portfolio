@@ -319,6 +319,9 @@ legend{
 .KeepIndent{
     margin-left:1.5rem;
 }
+.KeepDoubleIndent{
+    margin-left:3rem;
+}
 
 .MarginIndent{
     margin-left: 1.5rem;
