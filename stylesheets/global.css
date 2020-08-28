@@ -110,7 +110,7 @@ main p, main h1, main h2, main h3, main h4, main h5, main h6, main .FB {
     margin-top:1em;
 }
 
-.FooterInfoHide h4, .FooterInfoHide p, small p{
+.FooterInfoHide h4, .FooterInfoHide h3, .FooterInfoHide p, small p{
     margin:0;
     font-size:1rem;
 }
@@ -274,6 +274,17 @@ legend{
 #footerAccessStatement a, #footerConformanceClaim a{
     font-weight:700;
 }
+.FooterHeader{
+    font-size:1rem;
+    font-weight:bold;
+    margin-block-end: 1.33em;
+    margin-block-start:1.33em;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    text-decoration:none;
+    
+}
+
   
 #copyrightInfo{
     text-align:center;
@@ -474,6 +485,7 @@ ul.GalleryList{
 .TB_hover:hover, .TB_hover:focus{
     transform:scale(1.1);
 }
+
 
 
 /*Media Queries*/
