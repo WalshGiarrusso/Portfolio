@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/gallery.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
 </head>
@@ -46,7 +47,7 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/gallery/#mainContent">
                     Skip to Main Content
                 </a>
             </li>
@@ -78,7 +79,7 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/gallery/#mainContent">
                     Skip to Content
                 </a>
             </li>
@@ -103,7 +104,7 @@
                 </li>
                 <li>
                     <a class="Icon" href="clear/gallery">
-                        Gallery
+                        <span class="ScreenReader-Only">Current Page: </span>Gallery
                     </a>
                 </li>
                 <li>
@@ -138,12 +139,12 @@
         <ul>
             <li>
                 <a class="Bold" href="clear">
-                    <span class="ScreenReader-Only">Current Page: </span>Home
+                    Home
                 </a>
             </li>
             <li>
                 <a class="Bold" href="clear/gallery">
-                    Gallery
+                    <span class="ScreenReader-Only">Current Page: </span>Gallery
                 </a>
             </li>
             <li>
@@ -179,8 +180,8 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="clear">
-                    hmf
+                <a href="clear/gallery">
+                    <span class="ScreenReader-Only">Current Page: </span>gallery
                 </a>
             </li>
         </ul>
@@ -193,110 +194,192 @@
 
     <!--Content-->
     <main id="main" class="MarginIndent">
-        <!--Web Accessibility-->
+        <section>
+            <h1 id="mainContent" tabindex="-1">Gallery</h1>
+            <p class="MarginIndent">
+                If you need assistance with any inputs on this page, please <a href="clear/contact">contact me</a>.
+            </p>
+        </section>
         
-        <section>
-            <h1 id="mainContent" tabindex="-1">
-                My name is Walsh Giarrusso.
-            </h1>
-            
-            <p class="MarginIndent">
-                I’m currently a senior in high school, as well as a self-taught programmer, graphic designer, and music producer.
-                I want to enable others to succeed and be there for people who wouldn't otherwise have someone in their corner.
-                I also use my time to advocate for things I think are important, like web accessibility and police reform.
-                I look up to Tammy Duckworth, Muhammad Yunus, John Lewis, and Robert F. Kennedy.
-                I believe we all have a duty to try to leave the world a better place than we found it. 
-                This website serves as a hub for all of my work, including my service, my art, and my advocacy.
-            </p>
-        </section>
-       
-        <a href="clear/about" class="MarginIndent">
-            More about me&nbsp;>
-        </a>
-        <!--Featured Works-->
-        <section>
-            <hgroup>
-                <h2 class="MarginIndent">
-                    My Work
-                </h2>
-                <h3 class="DoubleIndentM">
-                    Featured
-                </h3>
-            </hgroup>
+
+        <!--Search Options-->
+        
+        <form class="MarginIndent">
            
-            <ul class="GalleryList CenterOut">
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-            </ul>
+            <fieldset class="CFS FS" id="gallerySifterSearch">
+                <legend>
+                    Search
+                </legend>
+                <label class="MarginIndent" for="gallerySearch">
+                    Search by Title
+                </label>
+                <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
+                <input type="submit"  class="FS CFS TB TB_hover Bold ILB" value="Submit" name="Submit Gallery Search" id="submitGallerySearch">
+            </fieldset>
+            <button id="showFiltersButton" class="FB Left Bold">
+                Show Filters
+            </button>
             
-        </section>
-        <a href="clear/gallery" class="MarginIndent">
-            More of my work&nbsp;>
-        </a>
+            <fieldset class="CFS FS" id="gallerySifterFilter">
+                <legend>
+                    Filter
+                </legend>
+                <div class="MarginIndent">
+                    <button id="hideFiltersButton" class="FB Left Bold">
+                        Hide Filters
+                    </button>
+                    <div>
+                       
+                        <select class="CFS FS" name="Select Type" id="gallerySifterType">
+                            <option value="">
+                                Select Type
+                            </option>
+                            <option value="all">
+                                All
+                            </option>
+                            <option value="design">
+                                Design
+                            </option>
+                            <option value="music">
+                                Music
+                            </option>
+                            <option value="other">
+                                Other
+                            </option>
+                        </select>
 
-        <section class="MarginIndent">
-            <h2>
-                Useful Links
-            </h2>
-            <p class="MarginIndent">
-                If you need help with this website, consider visiting the <a href="clear/options">options page</a>, the <a href="clear/languages">langauges page</a>, and the <a href="clear/sitemap">sitemap page</a>.
-                If you still need help after that, please <a href="clear/contact">contact me</a>.
+                        <label  for="gallerySifterType">
+                            Type
+                        </label>
+                        
+                    </div>
+                    <div>
+                        
+                        <input type="date" class="CFS FS" id="startDate" name="Start Date" value="2015-03-25">
+                        <label for="startDate"> 
+                            Start Date
+                        </label>
+                    </div>
+                    <div>
+                        <input type="date" class="CFS FS" id="endDate" name="End Date" value="2025-03-25">
+
+                        <label for="endDate"> 
+                            End Date
+                        </label>
+                    </div>
+                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters">
+
+
+                   
+                    
+                </div>
+                
+            </fieldset>
+
+        </form>
+        <!--Gallery/List-->
+        <ol class="GalleryList CenterOut" >
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+        </ol>
+
+        <nav class="PageNavigator CenterOut">  
+            
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn" name="Last Page Button">
+                    &lt;&nbsp;Last<span class="ScreenReader-Only"> Page</span>
+            </button>
+        
+            <p class="Bold LetterExempt" id="galleryPageNumber">
+                <span class="ScreenReader-Only">Page Number: </span>1
             </p>
 
-            <p class="MarginIndent">
-                You're currently on a Clear Read page.
-                Clear Read pages only contain text which can be easily read and understood.
-                This can make the site more accessibile for kids, people with disabilites, language learners, and even people who simply prefer it.
-                To exit the Clear Read pages, click <a href="">here</a>.
-            </p>
-        </section>
-    
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn" name="Next Page Button">
+                    Next<span class="ScreenReader-Only"> Page</span>&nbsp;>
+            </button>
+
+        </nav>
+
+
+       
+        
+
+
         
        
     </main>
@@ -307,7 +390,7 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="clear/#top">
+                    <a class="Bold" href="clear/gallery/#top">
                             Back to Top
                     </a>
                 </li>
@@ -335,7 +418,7 @@
             </li>
             <li>
                 <a href="clear/gallery">
-                    Gallery
+                    <span class="ScreenReader-Only">Current Page: </span>Gallery
                 </a>
             </li>
             <li>
@@ -419,5 +502,6 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
+    <script src="scripts/gallery.js"></script>
 </body>
 </html>

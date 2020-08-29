@@ -25,7 +25,15 @@ function populateContent(pageNum, postArr){
         }else{
             $(".ArticleTitle").eq(v).text(postArr[i].title);
             $(".ArticleDesc").eq(v).text(postArr[i].desc);
-            $(".ArticleLink").eq(v).attr("href", postArr[i].link);
+
+
+            if($('title').text().substring(0,5) == "Clear"){
+                $(".ArticleLink").eq(v).attr("href", 'clear/'+postArr[i].link);
+            }else{
+                $(".ArticleLink").eq(v).attr("href", postArr[i].link);
+            }
+
+            
         };
        
     };

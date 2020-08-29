@@ -105,7 +105,12 @@ function populateGallery(pageNumber, cardArr){
             });
             $('.CardType').eq(v).text(cardArr[i].type);
             $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].eDate);
-            $('.Card').eq(v).attr("href", cardArr[i].link);
+            if($('title').text().substring(0,5) == "Clear"){
+                $('.Card').eq(v).attr("href", 'clear/'+cardArr[i].link);
+            }else{
+                $('.Card').eq(v).attr("href", cardArr[i].link);
+            }
+            
         };
     };
     storedArr = cardArr;

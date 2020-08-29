@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/projectPage.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
 </head>
@@ -46,7 +47,7 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/gallery/monocropping/#mainContent">
                     Skip to Main Content
                 </a>
             </li>
@@ -78,7 +79,7 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/gallery/monocropping/#mainContent">
                     Skip to Content
                 </a>
             </li>
@@ -138,7 +139,7 @@
         <ul>
             <li>
                 <a class="Bold" href="clear">
-                    <span class="ScreenReader-Only">Current Page: </span>Home
+                    Home
                 </a>
             </li>
             <li>
@@ -179,11 +180,22 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="clear">
-                    hmf
+                <a href="clear/gallery">
+                    gallery
+                </a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="clear/gallery/monocropping">
+                    <span class="ScreenReader-Only">Current Page: </span>monocropping
                 </a>
             </li>
         </ul>
+
+
+        <span class="ScreenReader-Only">Current Page: </span>
         <!--Sitemap Link-->
         <a id="siteMapLink" class="Bold" href="clear/sitemap">
             View Sitemap
@@ -193,111 +205,210 @@
 
     <!--Content-->
     <main id="main" class="MarginIndent">
-        <!--Web Accessibility-->
         
-        <section>
+        <section id="contentShowcase">
             <h1 id="mainContent" tabindex="-1">
-                My name is Walsh Giarrusso.
+                Monocropping
             </h1>
-            
             <p class="MarginIndent">
-                I’m currently a senior in high school, as well as a self-taught programmer, graphic designer, and music producer.
-                I want to enable others to succeed and be there for people who wouldn't otherwise have someone in their corner.
-                I also use my time to advocate for things I think are important, like web accessibility and police reform.
-                I look up to Tammy Duckworth, Muhammad Yunus, John Lewis, and Robert F. Kennedy.
-                I believe we all have a duty to try to leave the world a better place than we found it. 
-                This website serves as a hub for all of my work, including my service, my art, and my advocacy.
+                If you need assistance with any inputs on this page, please <a href="contact">contact me</a>.
             </p>
+            <img id="contentImage" class="SrcTarget" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="This picture shows a cross-section of land with rows of identical corn stalks growing on top. The word 'Monocropping' is written in all-capital letters, slightly obscured by the first two rows of corn.">
         </section>
-       
-        <a href="clear/about" class="MarginIndent">
-            More about me&nbsp;>
-        </a>
-        <!--Featured Works-->
-        <section>
-            <hgroup>
-                <h2 class="MarginIndent">
-                    My Work
-                </h2>
-                <h3 class="DoubleIndentM">
-                    Featured
-                </h3>
-            </hgroup>
-           
-            <ul class="GalleryList CenterOut">
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-            </ul>
-            
-        </section>
-        <a href="clear/gallery" class="MarginIndent">
-            More of my work&nbsp;>
-        </a>
-
-        <section class="MarginIndent">
-            <h2>
-                Useful Links
-            </h2>
-            <p class="MarginIndent">
-                If you need help with this website, consider visiting the <a href="clear/options">options page</a>, the <a href="clear/languages">langauges page</a>, and the <a href="clear/sitemap">sitemap page</a>.
-                If you still need help after that, please <a href="clear/contact">contact me</a>.
-            </p>
-
-            <p class="MarginIndent">
-                You're currently on a Clear Read page.
-                Clear Read pages only contain text which can be easily read and understood.
-                This can make the site more accessibile for kids, people with disabilites, language learners, and even people who simply prefer it.
-                To exit the Clear Read pages, click <a href="">here</a>.
-            </p>
-        </section>
-    
         
+        <section id="showcaseOptions" class="CenterOut">
+            <h2 id="optionsHeader">
+                Options
+            </h2>
+
+           
+            <label for="variantSelector">
+                Select Variant:
+            </label>
+            <select class="CFS FS" name="Select Variant" id="variantSelector">
+                <option value="">
+                    Select Variant
+                </option> 
+                <option value="gallery/monocropping/monocropping%20project%20wordless%20variant.png">
+                    Wordless
+                </option>
+                <option value="gallery/monocropping/monocropping%20project.png">
+                    Words
+                </option>
+            </select>
+
+            <input type="submit" class="FS CFS TB Bold" value="Submit" name="Submit Variant Selection" id="submitVariantSelection">
+            
+
+
+
+
+            <button class="CFS FS TB TB_hover" id="fitPageButton" name="Fit Page">
+                <span class="ScreenReader-Only">Make Image </span>Fit Page
+            </button>
+
+            <button class="CFS FS TB TB_hover Hidden" id="realSizeButton" name="Default Size">
+                <span class="ScreenReader-Only">Make Image </span>Default Size
+            </button>
+            
+        </section>
+        
+        
+        <section class="MarginIndent CenterExempt">
+            <h2>
+                Monocropping - Design, March 2nd, 2020
+            </h2>
+            <a target="_blank" class="HrefTarget MarginIndent" href="gallery/monocropping/monocropping%20project%20wordless%20variant.png">
+                Open image in a new tab&nbsp;>
+            </a>
+            <p class="MarginIndent">
+                This design was created as part of a school assignment on monocropping, which is a type of crop rotation that has been becoming increasingly prevalent in agriculture since the 1980s.
+                It was done in Adobe Photoshop with the basic tools over about an hour, plus some time to research the information that appears in the "Words" variant.
+                Although I am happy with it, I'm not satisfied with how the "rocks" look in the cross-section.
+                I think they look rushed and could have been done much better.
+            </p>
+            
+            <h3 class="MarginIndent"> 
+                Transcription
+            </h3>
+
+            
+
+            <section class="MarginIndent">
+                <h4 class="MarginIndent">
+                    Wordless Variant
+                </h4>
+                <p class="DoubleIndentM">
+                    <i>
+                        Partially obscured by the first and second rows of corn:
+                    </i>
+                
+
+                    "MONOCROPPING"
+                    
+                </p>
+            </section>
+            <section class="MarginIndent">
+                <h4 class="MarginIndent">
+                    Words Variant
+                </h4>
+                <p class="DoubleIndentM">
+                    <i>
+                        Above the graphic:
+                    </i>
+                    "Monocropping means planting one crop on one plot of land, year after year. <br>
+                    It's often used for staple crops due to its scalability & efficiency. <br>
+                    It leads to a lack of diversity, which harms the soil. <br>
+                    It also creates an artificial niche for pests, lowering crop resilience. <br>
+                    Low-quality soil necessitates synthetic fertilizer, & infestation necessitates pesticides. <br>
+                    Excessive use of these chemicals can harm the long-term health of the soil. <br>
+                    Effects on the surrounding environment are amplified by a monocrop's massive size. <br>
+                    Its prevalence is due to increased consolidation & technology on the farms of the 1980s. <br>
+                    Government subsidies encourage monocropping of staple crops. <br>
+                    Climate change will worsen many of the problems with monocropping. <br>
+                    You can discourage monocropping by voting for smarter farm subsidies & by buying organic."
+                    <br>
+                    <br>
+                    <i>
+                        Partially obscured by the first and second rows of corn:
+                    </i>
+                    "MONOCROPPING"
+                    <br>
+                    <br>
+                    <i>
+                        In the bottom-left corner of the cross-section:
+                    </i>
+                    "By Walsh Giarrusso"
+                </p>
+            </section>
+            <section class="MarginIndent Bibliography" >
+                <h3>
+                    Bibliography
+                </h3>
+                <ol class="MarginIndent">
+                    <li>
+                        <p class="HangingIndent">
+                            Besky, S. (2017, June 28). Monoculture. Retrieved from
+                            <a target="_blank" href="https://culanth.org/fieldsights/monoculture">
+                                https://culanth.org/fieldsights/monoculture
+                            </a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Evan. (2017, December 5). Monocultures in America: A System That Needs More Diversity. Retrieved from
+                            <a target="_blank" href="https://blogs.umass.edu/natsci397a-eross/monocultures-in-america-a-system-that-needs-more-diversity/">
+                                https://blogs.umass.edu/natsci397a-eross/monocultures-in-america-a-system-that-needs-more-diversity/
+                            </a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Government, U. S. (n.d.). Pesticides in Groundwater. Retrieved from
+                            <a target="_blank" href="https://www.usgs.gov/special-topic/water-science-school/science/pesticides-groundwater?qt-science_center_objects=0#qt-science_center_objects">
+                                https://www.usgs.gov/special-topic/water-science-school/science/pesticides-groundwater?qt-science_center_objects=0#qt-science_center_objects
+                            </a>
+                        </p>
+                    </li>
+                 
+                    <li>
+                        <p class="HangingIndent">
+                            Marias, A., Hardy, M., Booyse, M., & Botha, A. (2012). Effects of Monoculture, Crop Rotation, and Soil Moisture Content on Selected Soil Physicochemical and Microbial Parameters in Wheat Fields. Hindawi, 2012, 1-14. doi: 10.1155/2012/593623
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Mead, R., Riley, J., Dear, K., & Singh, S. P. (1986). Stability Comparison of Intercropping and Monocropping Systems. Biometrics, 42(2), 253. doi: 10.2307/2531048
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Rochford, S. (2014, February 6). Indiana University-Monocropping. Retrieved from 
+                            <a target="_blank" href="https://blogs.iu.edu/sustainthefuture/2014/02/06/monocropping/">
+                                https://blogs.iu.edu/sustainthefuture/2014/02/06/monocropping/
+                            </a>
+
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Schulte, J. R., McGuire, A., & McGuire, A. (2015, May 26). Washington State University. Retrieved from 
+                            <a target="_blank" href="http://csanr.wsu.edu/theories-meta-analysis-monocultures/">
+                                http://csanr.wsu.edu/theories-meta-analysis-monocultures/
+                            </a>
+
+
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            
+                            Stewart, R. E. (2018, May 17). Factors in cropping. Retrieved from 
+                            <a target="_blank" href="https://www.britannica.com/technology/agricultural-technology/Factors-in-cropping#ref558283">
+                                https://www.britannica.com/technology/agricultural-technology/Factors-in-cropping#ref558283
+                            </a>
+
+                        </p>
+                    </li>
+                    <li>
+                        <p class="HangingIndent">
+                            Various Authors. (n.d.). Monocropping. Retrieved from 
+                            <a target="_blank" href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/monocropping">
+                                https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/monocropping
+                            </a>
+                        </p>
+                    </li>
+
+                </ol>
+
+
+            </section>
+          
+
+        </section>
        
     </main>
 
@@ -307,7 +418,7 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="clear/#top">
+                    <a class="Bold" href="clear/gallery/monocropping/#top">
                             Back to Top
                     </a>
                 </li>
@@ -419,5 +530,6 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
+    <script src="scripts/projectPage.js"></script>
 </body>
 </html>

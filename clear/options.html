@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/accessOptions.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
 </head>
@@ -46,13 +47,13 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/options#mainContent">
                     Skip to Main Content
                 </a>
             </li>
             <li>
                 <a class="Bold" href="clear/options">
-                    Accessibility Options
+                    <span class="ScreenReader-Only">Current Page: </span>Accessibility Options
                 </a>
             </li>
             <li>
@@ -78,13 +79,13 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="clear/#mainContent">
+                <a class="Bold" href="clear/options#mainContent">
                     Skip to Content
                 </a>
             </li>
             <li>
                 <a class="Bold" href="clear/options">
-                    Options
+                    <span class="ScreenReader-Only">Current Page: </span>Options
                 </a>
             </li>
         </ul>
@@ -138,7 +139,7 @@
         <ul>
             <li>
                 <a class="Bold" href="clear">
-                    <span class="ScreenReader-Only">Current Page: </span>Home
+                    Home
                 </a>
             </li>
             <li>
@@ -179,8 +180,8 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="clear">
-                    hmf
+                <a href="clear/options">
+                    <span class="ScreenReader-Only">Current Page: </span>options
                 </a>
             </li>
         </ul>
@@ -193,110 +194,265 @@
 
     <!--Content-->
     <main id="main" class="MarginIndent">
-        <!--Web Accessibility-->
-        
-        <section>
-            <h1 id="mainContent" tabindex="-1">
-                My name is Walsh Giarrusso.
-            </h1>
-            
-            <p class="MarginIndent">
-                I’m currently a senior in high school, as well as a self-taught programmer, graphic designer, and music producer.
-                I want to enable others to succeed and be there for people who wouldn't otherwise have someone in their corner.
-                I also use my time to advocate for things I think are important, like web accessibility and police reform.
-                I look up to Tammy Duckworth, Muhammad Yunus, John Lewis, and Robert F. Kennedy.
-                I believe we all have a duty to try to leave the world a better place than we found it. 
-                This website serves as a hub for all of my work, including my service, my art, and my advocacy.
-            </p>
-        </section>
        
-        <a href="clear/about" class="MarginIndent">
-            More about me&nbsp;>
+        <h1 id="mainContent" tabindex="-1">
+            Accessibility Options
+        </h1>
+        
+        <a class="MarginIndent NoWrap" href="clear/languages">
+            Langauge Options&nbsp;>
         </a>
-        <!--Featured Works-->
-        <section>
-            <hgroup>
-                <h2 class="MarginIndent">
-                    My Work
-                </h2>
-                <h3 class="DoubleIndentM">
-                    Featured
-                </h3>
-            </hgroup>
-           
-            <ul class="GalleryList CenterOut">
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a class="Card Card_hover" href="clear/gallery/monocropping">
-                        <img class="CardImage" src="gallery/monocropping/monocropping%20project%20wordless%20variant.png" alt="An image link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'" >
-                        <h2 class="CardTitle">
-                            Monocropping
-                        </h2>
-                        <p class="CardDesc">
-                            <span class="CardType">
-                                Design
-                            </span>
-                            <time class="CardTime" datetime="2020-03-02">
-                                3/2/2020
-                            </time>
-                        </p>
-                    </a>
-                </li>
-            </ul>
-            
-        </section>
-        <a href="clear/gallery" class="MarginIndent">
-            More of my work&nbsp;>
-        </a>
-
+        <p class="MarginIndent">
+            If you need assistance with any inputs on this page, please <a href="clear/contact">contact me</a>.
+        </p>
+        
         <section class="MarginIndent">
             <h2>
-                Useful Links
+                Site Presentation
             </h2>
-            <p class="MarginIndent">
-                If you need help with this website, consider visiting the <a href="clear/options">options page</a>, the <a href="clear/languages">langauges page</a>, and the <a href="clear/sitemap">sitemap page</a>.
-                If you still need help after that, please <a href="clear/contact">contact me</a>.
-            </p>
+            <button class="CFS FS TB TB_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
+                Max Contrast
+            </button>
+            <h3 class="MarginIndent">
+                Theme
+            </h3>
+            <form class="MarginIndent" id="customColorsForm" onsubmit="return false">
+                <fieldset class="CFS MarginIndent FS">
+                    <legend>
+                        Colors
+                    </legend>
+                    <label class="MarginIndent" for="textColorInput">Text Color</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                        
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="textColorTI" placeholder="Enter a Hex Triplet" value="#000000" maxlength="7">
+                    </div>
 
-            <p class="MarginIndent">
-                You're currently on a Clear Read page.
-                Clear Read pages only contain text which can be easily read and understood.
-                This can make the site more accessibile for kids, people with disabilites, language learners, and even people who simply prefer it.
-                To exit the Clear Read pages, click <a href="">here</a>.
-            </p>
+                    <label class="MarginIndent" for="backgroundColorInput">Background Color</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="backgroundColorTI" placeholder="Enter a Hex Triplet" value="#ffffff" maxlength="7">
+                    </div>
+
+                    <label class="MarginIndent" for="borderColorInput">Border/Focus Color</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="borderColorTI" placeholder="Enter a Hex Triplet" value="#000000" maxlength="7">
+                    </div>
+                    
+              
+                    
+                
+                    
+
+                </fieldset>
+
+                
+                <fieldset class="MarginIndent FS CFS">
+                    <legend>
+                        Icon Styles
+                    </legend>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="radio" name="Icon Color" id="lightIconsCheckbox" value="lightIconsCheckbox">
+                        <label for="lightIconsCheckbox">Light Icons</label>
+                    </div>
+                    
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="radio" name="Icon Color" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
+                        <label for="darkIconsCheckbox">Dark Icons</label>
+                    </div>
+                    
+
+                </fieldset>
+        
+                <input type="submit" class="CFS FS TB TB_hover Bold MarginIndent" name="Submit Site Theme" id="submitSiteColors" value="Submit">
+                
+                <p id="errorBox" class="MarginIndent">
+                    
+                </p>
+            
+                <button class="CFS FS TB TB_hover Bold MarginIndent" name="Proceed" id="errorOverride">
+                    Proceed
+                </button>
+            </form>
+
+
+            <h3 class="MarginIndent">
+                Interactivity
+            </h3>
+            
+            <form class="MarginIndent" id="interactivityOptions" onsubmit="return false">
+                <fieldset class="MarginIndent CFS FS">
+                    <legend>
+                        Visual
+                    </legend>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="checkbox" name="Reduce Motion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
+                        <label for="reduceMotionCheckbox">Reduce Motion (Requires Refresh)</label>
+                    </div>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="checkbox" name="Disable Form Styling" id="fSCheckbox" value="fSCheckbox">
+                        <label for="fSCheckbox">Disable Form Styling</label>
+                    </div>
+                </fieldset>
+                
+
+                <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" id="submitSiteInteractivity" value="Submit">
+            </form>
+
+
+            <h3 class="MarginIndent">
+                Text Presentation
+            </h3>
+            <form class="MarginIndent" id="textPresOptions" onsubmit="return false">
+                
+                <section class="MarginIndent FauxFieldset">
+                    <h4 >
+                        Sizing
+                    </h4>
+                    <section>
+                        <h5 class="MarginIndent">
+                            Text Sizing
+                        </h5>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Windows
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Press the control <kbd aria-hidden="true">Ctrl</kbd> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                               
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Mac
+                            </h6>
+        
+                            <p class="DoubleIndentM">
+                                Press the command <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> and plus <kbd aria-hidden="true">+</kbd> keys together to zoom in.
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Mobile
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Visit the settings for your mobile browser or mobile device to zoom in.
+                            </p>
+                        </section>
+
+                    </section>
+                    <fieldset class="MarginIndent CFS FS" id="iAS">
+                        <legend>
+                            Interaction Target Sizing
+                        </legend>
+
+                        <label class="MarginIndent" for="targetSizingRange">
+                            Input, Button, and Link Sizing
+                        </label>
+                        <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Target Sizing">
+                        <input type="range" class="MarginIndent" id="targetSizingRange" name="Input, Button and Link Sizing" min="1" max="4" step="0.05" value="2.75">
+
+                        
+                    
+                        <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Submit" name="Submit Interaction Target Sizing" id="submitTargetSizing">
+
+                    </fieldset>
+
+                </section>
+                    
+                    
+                
+             
+                <fieldset class="MarginIndent CFS FS">
+                    <legend>
+                        Spacing
+                    </legend>
+                    <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Text Spacing" id="resetTextSpacing">
+
+                    <label class="MarginIndent" for="letterSpacingRange">Letter Spacing</label>
+                    <input class="MarginIndent" type="range" name="Letter Spacing Range" id="letterSpacingRange" min="-0.05" max="0.25" step="0.0125" value="0.12">
+                    
+                    <label class="MarginIndent" for="wordSpacingRange">Word Spacing</label>
+                    <input class="MarginIndent" type="range" name="Word Spacing Range" id="wordSpacingRange" min="-0.15" max="0.3" step="0.025" value="0.16">
+                    
+                    <label class="MarginIndent" for="lineSpacingRange">Line Spacing</label>
+                    <input class="MarginIndent" type="range" name="Line Spacing Range" id="lineSpacingRange" min="1" max="2.5" step="0.1" value="1.5">
+                    
+                    <label class="MarginIndent" for="paragraphSpacingRange">Paragraph Spacing</label>
+                    <input class="MarginIndent" type="range" name="Paragraph Spacing Range" id="paragraphSpacingRange" min="0" max="3" step="0.05" value="2">
+                    
+                    <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Submit" id="submitTextSpacing" name="Submit Text Spacing">
+
+
+                </fieldset>
+
+            </form>
+
+
+            
+
+
+
+
         </section>
-    
+        
+        <section class="MarginIndent">
+            <h2>
+                Site Content
+            </h2>
+            <h3 class="MarginIndent">
+                Video
+            </h3>
+            <form class="DoubleIndentM" id="videoPrefs" onsubmit="return false">
+                <label for="videoVolumeLevel">
+                    Preferred Volume Level 
+                </label>
+                <input type="range" class="MarginIndent" id="videoVolumeLevel" name="Preferred Video Volume Level" min="0.01" max="1" step="0.01" value="0.4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayVideo" class="FS CFS" name="Automatically Play Videos">
+                    <label for="autoplayVideo" >
+                        Automatically Play Videos
+                    </label>
+                </div>
+                <div class="LabelledInput">
+                    <input type="checkbox" id="noBackgroundAudio" class="FS CFS" name="Disable Background Audio">
+                    <label for="noBackgroundAudio">
+                        Disable Background Audio
+                    </label>
+                </div>
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Submit" id="submitVideoPrefs" name="Submit Video Preferences">
+            </form>
+
+            <h3 class="MarginIndent">
+                Audio
+            </h3>
+            <form class="DoubleIndentM" id="audioPrefs" onsubmit="return false">
+                <label for="audioVolumeLevel">
+                    Preferred Volume Level
+                </label>
+                <input type="range" class="MarginIndent" id="audioVolumeLevel" name="Preferred Audio Volume Level" min="0.01" max="1" step="0.01" value="0.4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayAudio" class="FS CFS" name="Automatically Play Audio">
+                    <label for="autoplayAudio">
+                        Automatically Play Audio
+                    </label>
+                </div>
+                
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Submit" id="submitAudioPrefs" name="Submit Audio Preferences">
+            </form>
+            <h3 class="MarginIndent">
+                Text
+            </h3>
+            <a class="DoubleIndentM" href="">
+                Standard Pages&nbsp;>
+            </a>
+           
+           
+        </section>
+       
         
        
     </main>
@@ -307,7 +463,7 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="clear/#top">
+                    <a class="Bold" href="clear/options#top">
                             Back to Top
                     </a>
                 </li>
@@ -419,5 +575,6 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
+    <script src="scripts/options.js"></script>
 </body>
 </html>
