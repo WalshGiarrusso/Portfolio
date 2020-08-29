@@ -5,8 +5,7 @@ lclStorage = window.localStorage;
 var pLang = document.documentElement.lang;
 
 $(document).ready(function (){
-    alert("This site is currently under construction. Visit http://walshgiarrusso.com/old-site/home for previous version of site.");
-
+  
     checkHODO();
 
     checkFormStyling();
