@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
 
     <!--Info-->
-    <title>Gallery - Walsh Giarrusso</title>
+    <title>Outlook - Walsh Giarrusso</title>
     <meta name="author" content="Walsh Anthony Giarrusso">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
-    <base href="https://walshgiarrusso.com/" target="_self">  
+    <base href="https://walshgiarrusso.com/" target="_self"> 
         <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
         <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
 
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
-    <link rel="stylesheet" href="stylesheets/gallery.css">
+    <link rel="stylesheet" href="stylesheets/projectPage.css">
     
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
@@ -48,7 +48,7 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="gallery/#mainContent">
+                <a class="Bold" href="gallery/monocropping/#mainContent">
                     Skip to Main Content
                 </a>
             </li>
@@ -80,7 +80,7 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="gallery/#mainContent">
+                <a class="Bold" href="gallery/monocropping/#mainContent">
                     Skip to Content
                 </a>
             </li>
@@ -105,7 +105,7 @@
                 </li>
                 <li>
                     <a class="Icon" href="gallery">
-                        <span class="ScreenReader-Only">Current Page: </span>Gallery
+                        Gallery
                     </a>
                 </li>
                 <li>
@@ -145,7 +145,7 @@
             </li>
             <li>
                 <a class="Bold" href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>Gallery
+                    Gallery
                 </a>
             </li>
             <li>
@@ -175,8 +175,14 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>gallery
+                <a href="gallery">gallery</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="gallery/monocropping">
+                    <span class="ScreenReader-Only">Current Page: </span>outlook
                 </a>
             </li>
         </ul>
@@ -189,196 +195,75 @@
 
     <!--Content-->
     <main id="main" class="MarginIndent">
-        <section>
-            <h1 id="mainContent" tabindex="-1">Gallery</h1>
+        
+        <section id="contentShowcase">
+            <h1 id="mainContent" tabindex="-1">
+                Outlook
+            </h1>
             <p class="MarginIndent">
                 If you need assistance with any inputs on this page, please <a href="contact">contact me</a>.
             </p>
+            <img id="contentImage" class="SrcTarget" src="gallery/outlook/outlook.png" alt="A woman looking out of a window at a crowded city situated on top of a waterfall landscape, which itself is situated on a layer of pink clouds.">
         </section>
         
+        <section id="showcaseOptions" class="CenterOut">
+            <h2 id="optionsHeader">
+                Options
+            </h2>
 
-        <!--Search Options-->
-        
-        <form class="MarginIndent">
-           
-            <fieldset class="CFS FS" id="gallerySifterSearch">
-                <legend>
-                    Search
-                </legend>
-                <label class="MarginIndent" for="gallerySearch">
-                    Search by Title
-                </label>
-                <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
-                <input type="submit"  class="FS CFS TB TB_hover Bold ILB" value="Submit" name="Submit Gallery Search" id="submitGallerySearch">
-            </fieldset>
-            <button id="showFiltersButton" class="FB Left Bold">
-                Show Filters
+           <!--            
+            <label for="variantSelector">
+                Select Variant:
+            </label>
+            <select class="CFS FS" name="Select Variant" id="variantSelector">
+                <option value="">
+                    Select Variant
+                </option> 
+                <option value="gallery/monocropping/monocropping%20project%20wordless%20variant.png">
+                    Wordless
+                </option>
+                <option value="gallery/monocropping/monocropping%20project.png">
+                    Words
+                </option>
+            </select>
+
+            <input type="submit" class="FS CFS TB Bold" value="Submit" name="Submit Variant Selection" id="submitVariantSelection">
+            -->
+
+
+
+
+
+            <button class="CFS FS TB TB_hover" id="fitPageButton" name="Fit Page">
+                <span class="ScreenReader-Only">Make Image </span>Fit Page
+            </button>
+
+            <button class="CFS FS TB TB_hover Hidden" id="realSizeButton" name="Default Size">
+                <span class="ScreenReader-Only">Make Image </span>Default Size
             </button>
             
-            <fieldset class="CFS FS" id="gallerySifterFilter">
-                <legend>
-                    Filter
-                </legend>
-                <div class="MarginIndent">
-                    <button id="hideFiltersButton" class="FB Left Bold">
-                        Hide Filters
-                    </button>
-                    <div>
-                       
-                        <select class="CFS FS" name="Select Type" id="gallerySifterType">
-                            <option value="">
-                                Select Type
-                            </option>
-                            <option value="all">
-                                All
-                            </option>
-                            <option value="design">
-                                Design
-                            </option>
-                            <option value="digital">
-                                Digital
-                            </option>
-                            <option value="music">
-                                Music
-                            </option>
-                            <option value="other">
-                                Other
-                            </option>
-                        </select>
-
-                        <label  for="gallerySifterType">
-                            Type
-                        </label>
-                        
-                    </div>
-                    <div>
-                        
-                        <input type="date" class="CFS FS" id="startDate" name="Start Date" value="2015-03-25">
-                        <label for="startDate"> 
-                            Start Date
-                        </label>
-                    </div>
-                    <div>
-                        <input type="date" class="CFS FS" id="endDate" name="End Date" value="2025-03-25">
-
-                        <label for="endDate"> 
-                            End Date
-                        </label>
-                    </div>
-                    <input type="submit"  class="FS CFS TB TB_hover Bold" value="Submit" name="Submit Gallery Filters" id="submitGalleryFilters">
-
-
-                   
-                    
-                </div>
-                
-            </fieldset>
-
-        </form>
-        <!--Gallery/List-->
-        <ol class="GalleryList CenterOut" >
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a class="Card Card_hover" href="   ">
-                    <img class="CardImage" src=" " alt=" " >
-                    <h2 class="CardTitle">
-                    </h2>
-                    <p class="CardDesc">
-                        <span class="CardType">
-                        </span>
-                        <time class="CardTime">
-                        </time>
-                    </p>
-                </a>
-            </li>
-        </ol>
-
-        <nav class="PageNavigator CenterOut">  
-            
-            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn" name="Last Page Button">
-                    &lt;&nbsp;Last<span class="ScreenReader-Only"> Page</span>
-            </button>
+        </section>
         
-            <p class="Bold LetterExempt" id="galleryPageNumber">
-                <span class="ScreenReader-Only">Page Number: </span>1
+        
+        <section class="MarginIndent CenterExempt">
+            <h2>
+                Outlook - Digital, April 13th, 2020
+            </h2>
+            <a target="_blank" class="HrefTarget MarginIndent" href="gallery/outlook/outlook.png">
+                Open image in a new tab&nbsp;>
+            </a>
+            <p class="MarginIndent">
+                This image was created because I wanted to try my hand at using photo editing and manipulation for artistic purposes rather than for design purposes.
+                I am rather happy with how it turned out, although I think the photo editing itself could probably be a little more polished.
             </p>
+            
+           
+            
 
-            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn" name="Next Page Button">
-                    Next<span class="ScreenReader-Only"> Page</span>&nbsp;>
-            </button>
+            
+          
 
-        </nav>
-
-
-       
-        
-
-
-
+        </section>
     </main>
 
 
@@ -390,7 +275,7 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="gallery/#top">
+                    <a class="Bold" href="gallery/monocropping/#top">
                             Back to Top
                     </a>
                 </li>
@@ -418,7 +303,7 @@
             </li>
             <li>
                 <a href="gallery">
-                    <span class="ScreenReader-Only">Current Page: </span>Gallery
+                    Gallery
                 </a>
             </li>
             <li>
@@ -489,7 +374,9 @@
 
             <p id="copyrightInfo">
                 <small>
-                    Copyright © 2020 Walsh Anthony Giarrusso. Some Rights Reserved.
+            
+                    Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+            
                 </small>
             </p>
             
@@ -499,7 +386,7 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
-    <script src="scripts/gallery.js"></script>
+    <script src="scripts/projectPage.js"></script>
     
 </body>
 </html>
