@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <!--Info-->
+    <title>Nurtured Accretion - Walsh Giarrusso</title>
+    <meta name="author" content="Walsh Anthony Giarrusso">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To Be Filled-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="googlebot" content="">
+
+    <!--Favicon-->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <base href="https://walshgiarrusso.com/" target="_self"> 
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
+
+    <!--Externals-->
+        <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/projectPage.css">
+    
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
+</head>
+<body>
+
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="gallery/monocropping/#mainContent">
+                    Skip to Main Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Accessibility Options
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="languages">
+                    Translation Options &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Hide Header Options
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    Don't Show Again
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Show by Default
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="gallery/monocropping/#mainContent">
+                    Skip to Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Options
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="top">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A stylized letter w logo.">
+        <!--Navbar-->
+        <nav aria-label="Main">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="about">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="">
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Main Navigation">
+        <ul>
+            <li>
+                <a class="Bold" href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="gallery">gallery</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="gallery/monocropping">
+                    <span class="ScreenReader-Only">Current Page: </span>nurtured accretion
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="sitemap">
+            View Sitemap
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        
+        <section id="contentShowcase">
+            <h1 id="mainContent" tabindex="-1">
+                Nurtured Accretion
+            </h1>
+            <p class="MarginIndent">
+                If you need assistance with any inputs on this page, please <a href="contact">contact me</a>.
+            </p>
+            <img id="contentImage" class="SrcTarget" src="gallery/nurtured%20accretion/nurtured%20accretion.png" alt="Depicts a pair of enormous hands holding an island surrounded by nearby clouds and distant celestial bodies.">
+        </section>
+        
+        <section id="showcaseOptions" class="CenterOut">
+            <h2 id="optionsHeader">
+                Options
+            </h2>
+
+
+
+
+            <button class="CFS FS TB TB_hover" id="fitPageButton" name="Fit Page">
+                <span class="ScreenReader-Only">Make Image </span>Fit Page
+            </button>
+
+            <button class="CFS FS TB TB_hover Hidden" id="realSizeButton" name="Default Size">
+                <span class="ScreenReader-Only">Make Image </span>Default Size
+            </button>
+            
+        </section>
+        
+        
+        <section class="MarginIndent CenterExempt">
+            <h2>
+                Nurtured Accretion - Digital, September 3rd, 2020
+            </h2>
+            <a target="_blank" class="HrefTarget MarginIndent" href="gallery/nurtured%20accretion/nurtured%20accretion.png">
+                Open image in a new tab&nbsp;>
+            </a>
+            <p class="MarginIndent">
+                Lorem Ipsum Dolor Sit Amet
+            </p>
+            
+           
+            
+
+            
+          
+
+        </section>
+    </main>
+
+
+
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="gallery/monocropping/#top">
+                            Back to Top
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="sitemap">
+                            View Sitemap
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Show Header Options
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
+
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
+           <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Accessibility Statement
+                        </h2>
+                        <p>
+                            Ensuring accessibility is this website's number one priority. <a href="accessibility">View the full accessibility statement here</a>.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="accessibility" class="NoBreak">
+                        Accessibility Statement&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Conformance Claim
+                        </h2>
+                        <p>
+                            Since August 2020, all walshgiarrusso.com web pages fully conform to <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> Level AAA. 
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim&nbsp;>
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
+
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
+            
+                    Copyright © 2020 Walsh Anthony Giarrusso. All Rights Reserved.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+    <script src="scripts/projectPage.js"></script>
+    
+</body>
+</html>
