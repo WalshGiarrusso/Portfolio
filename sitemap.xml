@@ -8,6 +8,10 @@
 
       <priority>1.0</priority>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
 
    <url>
@@ -15,6 +19,10 @@
       <loc>https://walshgiarrusso.com/gallery/</loc>
 
       <priority>0.8</priority>
+
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
 
    </url>
 
@@ -24,6 +32,10 @@
 
       <priority>0.8</priority>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
 
    <url>
@@ -32,11 +44,19 @@
 
       <priority>0.6</priority>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
    
    <url>
 
       <loc>https://walshgiarrusso.com/contact</loc>
+
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
 
    </url>
 
@@ -44,11 +64,19 @@
 
       <loc>https://walshgiarrusso.com/gallery/monocropping/</loc>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
    
    <url>
 
       <loc>https://walshgiarrusso.com/gallery/outlook/</loc>
+
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
 
    </url>
 
@@ -56,11 +84,19 @@
 
       <loc>https://walshgiarrusso.com/gallery/nurtured%20accretion/</loc>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
 
    <url>
 
       <loc>https://walshgiarrusso.com/accessibility</loc>
+
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
 
    </url>
    
@@ -68,17 +104,29 @@
 
       <loc>https://walshgiarrusso.com/languages</loc>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
 
    <url>
 
       <loc>https://walshgiarrusso.com/options</loc>
 
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
+
    </url>
    
    <url>
 
       <loc>https://walshgiarrusso.com/sitemap</loc>
+
+      <lastmod>2020-09-14</lastmod>
+
+      <changefreq>weekly</changefreq>
 
    </url>
 
