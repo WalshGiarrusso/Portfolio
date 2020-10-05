@@ -5,8 +5,8 @@ $('#submitVariantSelection').click(function(){
 });
 $('#fitPageButton').click(function(){
     $('#contentImage').css({
-        "max-height":"100vh",
-        "max-width":"100vw"
+        "max-height":"100%",
+        "max-width":"100%"
     });
     $(this).hide();
     $('#realSizeButton').show();
