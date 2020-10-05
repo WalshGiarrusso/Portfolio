@@ -238,7 +238,6 @@ function changeColors(targets){
 
     //special
     $('select option').css('color', targets[0]);
-    $('input::-webkit-calendar-picker-indicator').css('color', targets[1]);
     
 
 

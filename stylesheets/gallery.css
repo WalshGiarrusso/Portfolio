@@ -46,6 +46,9 @@ input[type="date"]{
     margin-top:0;
  
 }
+input[type=date]::-webkit-calendar-picker-indicator{
+    background-color:white;
+ }
 
 /*Media Queries*/
 
