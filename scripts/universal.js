@@ -237,6 +237,8 @@ function changeColors(targets){
     $('*:focus, *').css('outline-color', targets[2]);
 
     //special
+    $('select option').css('color', targets[0]);
+    $('input::-webkit-calendar-picker-indicator').css('color', targets[1]);
     
 
 
