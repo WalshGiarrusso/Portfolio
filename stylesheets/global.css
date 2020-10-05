@@ -158,7 +158,9 @@ legend{
                     /*REMOVE EVENTUALLY*/
     min-height:50vh;
 }
-
+#breadcrumbMenu li a {
+    justify-content: center;
+}
 /*Superbars*/
     /*Accessibility Options*/
 #optionsBar{
