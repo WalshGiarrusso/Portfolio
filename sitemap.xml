@@ -32,7 +32,7 @@
 
       <priority>0.8</priority>
 
-      <lastmod>2020-09-14</lastmod>
+      <lastmod>2020-10-05</lastmod>
 
       <changefreq>weekly</changefreq>
 
@@ -66,7 +66,7 @@
 
       <lastmod>2020-09-14</lastmod>
 
-      <changefreq>weekly</changefreq>
+      <changefreq>never</changefreq>
 
    </url>
    
@@ -76,7 +76,7 @@
 
       <lastmod>2020-09-14</lastmod>
 
-      <changefreq>weekly</changefreq>
+      <changefreq>never</changefreq>
 
    </url>
 
@@ -86,7 +86,7 @@
 
       <lastmod>2020-09-14</lastmod>
 
-      <changefreq>weekly</changefreq>
+      <changefreq>never</changefreq>
 
    </url>
 
@@ -124,10 +124,20 @@
 
       <loc>https://walshgiarrusso.com/sitemap</loc>
 
-      <lastmod>2020-09-14</lastmod>
+      <lastmod>2020-10-05</lastmod>
 
       <changefreq>weekly</changefreq>
 
    </url>
+
+   <url>
+      <loc>https://walshgiarrusso.com/blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis</loc>
+
+      <lastmod>2020-10-05</lastmod>
+
+      <changefreq>never</changefreq>
+   
+   </url>
+
 
 </urlset> 
