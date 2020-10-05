@@ -29,6 +29,16 @@
             "iDate":"2020-09-03",
             "eDate":"9/3/2020",
             "link":"gallery/nurtured%20accretion"
+        },
+
+        {
+            "title":"Inside",
+            "imgSrc":"gallery/inside/inside-mini.png",
+            "imgAlt":"Link to the inside project page. Depicts a cozy desktop situated below a window with raindrops falling down it.",
+            "type":"Photography",
+            "iDate":"2020-04-21",
+            "eDate":"4/21/2020",
+            "link":"gallery/inside"
         }
 
     ]
