@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <!--Info-->
+    <title>replace-title | Walsh Giarrusso</title>
+    <meta name="author" content="Walsh Giarrusso">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://walshgiarrusso.com">
+    <link rel="alternate" hreflang="en" href="https://walshgiarrusso.com">
+    <link rel="alternate" hreflang="es" href="https://walshgiarrusso.com/es/">
+
+    <!--Favicon-->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <base href="https://walshgiarrusso.com/" target="_self"> 
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
+
+    <!--Externals-->
+        <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
+</head>
+<body>
+
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Saltar Enlace y Opciones">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="replace-link#contenidoPrincipal">
+                    Saltar al Contenido Principal
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/opciones">
+                    Opciones de Accesibilidad
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/idiomas">
+                    Opciones de traducción &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Ocultar Opciones de Encabezado
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    No Mostrar de Nuevo
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Mostrar de Forma Predeterminada
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="replace-link#contenidoPrincipal">
+                    Saltar al Contenido
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/opciones">
+                    Opciones
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="principio">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="Un logotipo W de letra estilizada.">
+        <!--Navbar-->
+        <nav aria-label="Main">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="es/">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/galeria">
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/acerca">
+                        Acerca
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="es/contacto">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="">
+                <span id="mobileMenuLabel">
+                    Abrir Menú
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Menú Principal Móvil">
+        <ul>
+            <li>
+                <a class="Bold" href="es/">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/galeria">
+                    Galería
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/acerca">
+                    Acerca
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="es/contacto">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="La Miga de Pan">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="es/">
+                    es
+                </a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="replace-link">
+                    replace-lctitle
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="es/mapadelsitio">
+            Ver Mapa del Sitio
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        <h1 id="contenidoPrincipal" tabindex="-1">
+            
+        </h1>
+    </main>
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="replace-link#principio">
+                            Volver al Principio
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="es/mapadelsitio">
+                            Ver Mapa del Sitio
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Mostrar Opciones de Encabezado
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
+
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="es/">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="es/galeria">
+                    Galería
+                </a>
+            </li>
+            <li>
+                <a href="es/blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="es/acerca">
+                    Acerca
+                </a>
+            </li>
+            <li>
+                <a href="es/contacto">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility -->
+        <div role="contentinfo">
+            <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Declaración de Accesibilidad
+                        </h2>
+                        <p>
+                            Garantizar la accesibilidad es la prioridad número uno de este sitio web. <a href="es/accesibilidad">Vea la declaración de accesibilidad completa aquí</a>.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="es/accesibilidad" class="NoBreak">
+                        Declaración de Accesibilidad&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Reclamación de Conformidad
+                        </h2>
+                        <p>
+                            Desde agosto de 2020, todas las páginas web de walshgiarrusso.com se ajustan completamente a <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> Nivel AAA. 
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="es/accesibilidad#reclamacionDeConformidad">
+                        Reclamación de Conformidad&nbsp;>
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Enlace Telefónico">
+                   +1 (973) 202 0158
+                </a>
+
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Enlace de Correo Electrónico">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+            <p id="copyrightInfo">
+                <small>
+            
+                    Copyright &#169; 2020 Walsh Giarrusso. Some Rights Reserved.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+</body>
+</html>
