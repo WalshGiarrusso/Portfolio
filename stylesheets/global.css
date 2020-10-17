@@ -177,7 +177,7 @@ legend{
     display:none;
 }
     /*Header*/
-#top, #arriba{
+#top, #principio{
     padding: 0.5rem 5%;
     display:flex;
     flex-flow:row nowrap;
@@ -556,7 +556,7 @@ ul.GalleryList{
 
 
 
-    #mainContent{
+    #mainContent, #contenidoPrincipal{
         margin-left:-.75rem;
         text-align:center;
         margin-right:-.75rem;
@@ -579,7 +579,7 @@ ul.GalleryList{
         justify-content: space-between;
     }
     
-    #mainContent, #contenidoPrincipal .CenterOut{
+    #mainContent, #contenidoPrincipal, .CenterOut{
         margin-left:0;
         
         margin-right:0;
