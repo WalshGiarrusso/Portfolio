@@ -56,6 +56,10 @@ a, button{
     display: flex;
     align-items: center;
 }
+abbr, p abbr, a abbr{
+    text-decoration:underline;
+    text-decoration-style:double;
+}
 button{
     justify-content:center;
 }

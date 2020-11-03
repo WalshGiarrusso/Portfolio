@@ -2,26 +2,6 @@
     "cards":[
 
         {
-            "title":"Monocropping",
-            "imgSrc":"gallery/monocropping/monocropping%20project%20wordless%20variant.png",
-            "imgAlt":"Link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'",
-            "type":"Design",
-            "iDate":"2020-03-02",
-            "eDate":"3/2/2020",
-            "link":"gallery/monocropping"
-        },
-
-        {
-            "title":"Outlook",
-            "imgSrc":"gallery/outlook/outlook.png",
-            "imgAlt":"Link to the outlook project page. Depicts a woman looking out of a window at a fantastic landscape.",
-            "type":"Digital",
-            "iDate":"2020-04-13",
-            "eDate":"4/13/2020",
-            "link":"gallery/outlook"
-        },
-
-        {
             "title":"Nurtured Accretion",
             "imgSrc":"gallery/nurtured%20accretion/nurtured%20accretion-mini.png",
             "imgAlt":"Link to the nurtured accretion project page. Depicts a pair of enormous hands holding an island surrounded by nearby clouds and distant celestial bodies.",
@@ -39,6 +19,26 @@
             "iDate":"2020-04-21",
             "eDate":"4/21/2020",
             "link":"gallery/inside"
+        },
+
+        {
+            "title":"Outlook",
+            "imgSrc":"gallery/outlook/outlook.png",
+            "imgAlt":"Link to the outlook project page. Depicts a woman looking out of a window at a fantastic landscape.",
+            "type":"Digital",
+            "iDate":"2020-04-13",
+            "eDate":"4/13/2020",
+            "link":"gallery/outlook"
+        },
+
+        {
+            "title":"Monocropping",
+            "imgSrc":"gallery/monocropping/monocropping%20project%20wordless%20variant.png",
+            "imgAlt":"Link to the monocropping project page. Depicts a cornfield partially obscuring the word 'monocropping.'",
+            "type":"Design",
+            "iDate":"2020-03-02",
+            "eDate":"3/2/2020",
+            "link":"gallery/monocropping"
         }
 
     ]
