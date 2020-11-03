@@ -2,17 +2,19 @@
     "posts":[
 
         {
-            "title":"The Political Impacts of the 2008 Financial Crisis",
-            "desc":"How did a universally hated bailout divide United States politics?",
-            "link":"blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis"
-        },
-
-        {
             "title":"Coming Soon: An Individual's Guide to Limiting Police Violence",
             "desc":"What you can do to limit police violence.",
             "link":"blog/"
 
+        },
+
+        {
+            "title":"The Political Impacts of the 2008 Financial Crisis",
+            "desc":"How did a universally hated bailout divide United States politics?",
+            "link":"blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis"
         }
+
+        
 
        
     ]
