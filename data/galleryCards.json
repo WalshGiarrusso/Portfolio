@@ -8,7 +8,12 @@
             "type":"Digital",
             "iDate":"2020-09-03",
             "eDate":"9/3/2020",
-            "link":"gallery/nurtured%20accretion"
+            "link":"gallery/nurtured%20accretion",
+            "estitle":"El Acreción Cultivado",
+            "esalt":"Enlace a la página del proyecto de \"El Acreción Cultivado.\" Representa un par de enormes manos sosteniendo una isla rodeada de nubes cercanas y cuerpos celestes distantes.",
+            "estype":"Digital",
+            "esedate":"3/9/2020",
+            "eslink":"es/galeria/el%20acrecion%20cultivado"
         },
 
         {
@@ -18,7 +23,13 @@
             "type":"Photography",
             "iDate":"2020-04-21",
             "eDate":"4/21/2020",
-            "link":"gallery/inside"
+            "link":"gallery/inside",
+            "estitle":"El Interior",
+            "esalt":"Enlace a la página del proyecto de \"El Interior.\" Representa un acogedor escritorio situado debajo de una ventana con gotas de lluvia cayendo por ella.",
+            "estype":"Fotografía",
+            "esedate":"21/4/2020",
+            "eslink":"es/galeria/el%20interior"
+            
         },
 
         {
@@ -28,7 +39,12 @@
             "type":"Digital",
             "iDate":"2020-04-13",
             "eDate":"4/13/2020",
-            "link":"gallery/outlook"
+            "link":"gallery/outlook",
+            "estitle":"La Vista",
+            "esalt":"Enlace a la página del proyecto de \"La Vista.\" Representa a una mujer mirando por una ventana a un paisaje fantástico.",
+            "estype":"Digital",
+            "esedate":"13/4/2020",
+            "eslink":"es/galeria/la%20vista"
         },
 
         {
@@ -38,7 +54,12 @@
             "type":"Design",
             "iDate":"2020-03-02",
             "eDate":"3/2/2020",
-            "link":"gallery/monocropping"
+            "link":"gallery/monocropping",
+            "estitle":"Monocultivo",
+            "esalt":"Enlace a la página del proyecto \"Monocultivo.\" Representa un campo de maíz que oscurece parcialmente la palabra 'monocultivo.'",
+            "estype":"Diseño",
+            "esedate":"2/3/2020",
+            "eslink":"es/galeria/monocultivo"
         }
 
     ]

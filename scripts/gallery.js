@@ -15,59 +15,6 @@ $("#hideFiltersButton").click(function(){
     return false;
 });
 
-//$("#submitGalleryFilters").click(function(){
-//    var startDate = new Date($('#startDate').val());
-//    var endDate = new Date($('#endDate').val());
-//    var chosenType = $('#gallerySifterType').val();
-//    filterOut(startDate, endDate, chosenType);
-//    return false;
-//});
-//function filterOut(sD, eD, cT){
-//    $('.Card').each(function(){
-//        $(this).show();
-//    });
-//    if(cT !== "" && cT !== "all"){
-//        $('.Card').each(function(){
-//            if($(this).children('p').children('span').text().trim().toLowerCase() !== cT){
-//                $(this).hide();
-//            };
-//        });
-//    };
-//    if(sD != "Invalid Date"){
-//        $('.Card').each(function(){
-//            if(new Date($(this).children('p').children('time').attr('datetime')) < sD){
-//                $(this).hide();
-//            };
-//        });
-//    };
-//    if(eD != "Invalid Date"){
-//        $('.Card').each(function(){
-//            if(new Date($(this).children('p').children('time').attr('datetime')) > eD){
-//                $(this).hide();
-//            };
-//        });
-//    };
-//};
-
-//$('#submitGallerySearch').click(function(){
-//    handleSearch();
-//    return false;
-//});
-//function handleSearch(){
-//    var searchString = compareParse($('#gallerySearch').val());
-    
-//    var matchString;
-
-//    $('.Card').each(function(){
-//        var coms = 0;
-//        matchString = compareParse($(this).children('h2').text());
-      
-//        coms = parseInt(stringSim(searchString, matchString)*-1000);
-//        $(this).parent('li').css('order', coms);
-//    });
-//};
-
-
 //shift
 
 $(document).ready(function(){
@@ -85,30 +32,34 @@ function populateGallery(pageNumber, cardArr){
 
     for(i = ((pageNumber-1)*6), v = 0; v < 6; i++, v++){
         if(i >= cardArr.length){
-
-            
-            
-            console.log('go');
-
-
-
             $('.Card').parent('li').eq(v).hide();
         }else{
-
-            console.log('i:' +i +' '+cardArr[i].title+' '+cardArr[i].type);
-
-
-            $('.CardTitle').eq(v).text(cardArr[i].title);
-            $('.CardImage').eq(v).attr({
-                "src": cardArr[i].imgSrc,
-                "alt": cardArr[i].imgAlt
-            });
-            $('.CardType').eq(v).text(cardArr[i].type);
-            $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].eDate);
-            if($('title').text().substring(0,5) == "Clear"){
-                $('.Card').eq(v).attr("href", 'clear/'+cardArr[i].link);
-            }else{
-                $('.Card').eq(v).attr("href", cardArr[i].link);
+            switch(checkLang()){
+                case 0:
+                    $('.CardTitle').eq(v).text(cardArr[i].title);
+                    $('.CardImage').eq(v).attr({
+                        "src": cardArr[i].imgSrc,
+                        "alt": cardArr[i].imgAlt
+                    });
+                    $('.CardType').eq(v).text(cardArr[i].type);
+                    $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].eDate);
+                    if($('title').text().substring(0,5) == "Clear"){
+                        $('.Card').eq(v).attr("href", 'clear/'+cardArr[i].link);
+                    }else{
+                        $('.Card').eq(v).attr("href", cardArr[i].link);
+                    }
+                    break;
+                case 1:
+                    $('.CardTitle').eq(v).text(cardArr[i].estitle);
+                    $('.CardImage').eq(v).attr({
+                        "src": cardArr[i].imgSrc,
+                        "alt": cardArr[i].esalt
+                    });
+                    $('.CardType').eq(v).text(cardArr[i].estype);
+                    $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].esedate);
+                    $('.Card').eq(v).attr("href", cardArr[i].eslink);
+                    break;
+                
             }
             
         };

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!--Info-->
-    <title>replace-title | Walsh Giarrusso</title>
+    <title>Opciones | Walsh Giarrusso</title>
     <meta name="author" content="Walsh Giarrusso">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
         <!--Stylesheets-->
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/accessOptions.css">
             <!--Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
 </head>
@@ -45,13 +46,13 @@
     <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Saltar Enlace y Opciones">
         <ul id="optionsBar">
             <li>
-                <a class="Bold" href="replace-link#contenidoPrincipal">
+                <a class="Bold" href="es/opciones#contenidoPrincipal">
                     Saltar al Contenido Principal
                 </a>
             </li>
             <li>
                 <a class="Bold" href="es/opciones">
-                    Opciones de Accesibilidad
+                    <span class="ScreenReader-Only">Página Actual: </span>Opciones de Accesibilidad
                 </a>
             </li>
             <li>
@@ -77,13 +78,13 @@
         </ul>
         <ul id="mobileOptionsBar">
             <li>
-                <a class="Bold" href="replace-link#contenidoPrincipal">
+                <a class="Bold" href="es/opciones#contenidoPrincipal">
                     Saltar al Contenido
                 </a>
             </li>
             <li>
                 <a class="Bold" href="es/opciones">
-                    Opciones
+                    <span class="ScreenReader-Only">Página Actual: </span>Opciones
                 </a>
             </li>
         </ul>
@@ -180,13 +181,13 @@
                 <span class="NoWrap">&nbsp;/&nbsp;</span>
             </li>
             <li>
-                <a href="replace-link">
-                    replace-lctitle
+                <a href="es/opciones">
+                    <span class="ScreenReader-Only">Página Actual: </span>opciones
                 </a>
             </li>
         </ul>
         <!--Sitemap Link-->
-        <a id="siteMapLink" class="Bold" href="es/mapadelsitio">
+        <a id="siteMapLink" class="Bold" href="es/mapa%20del%20sitio">
             Ver Mapa del Sitio
         </a>
     </nav>
@@ -205,12 +206,12 @@
         <div role="navigation" aria-label="Miscellaneous Links">
             <ul class="BottomBorder" id="footerLinks" >
                 <li>
-                    <a class="Bold" href="replace-link#principio">
+                    <a class="Bold" href="es/opciones#principio">
                             Volver al Principio
                     </a>
                 </li>
                 <li>
-                        <a class="Bold" href="es/mapadelsitio">
+                        <a class="Bold" href="es/mapa%20del%20sitio">
                             Ver Mapa del Sitio
                         </a>
                 </li>
@@ -316,5 +317,6 @@
 
     <!--Scripts-->
     <script src="scripts/universal.js"></script>
+    <script src="scripts/options.js"></script>
 </body>
 </html>

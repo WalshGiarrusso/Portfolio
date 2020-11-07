@@ -15,25 +15,34 @@ function populateContent(pageNum, postArr){
     $('.ArticleWrapper').show();
             
     for(i = ((pageNum-1)*10), v = 0; v < 10; i++, v++){
-
-           // console.log("i: "+i);
-           // console.log("length: "+postArr.length);
-           // console.log("truth: "+(i > postArr.length));
     
         if(i >= postArr.length){
             $('.ArticleWrapper').eq(v).hide();
         }else{
-            $(".ArticleTitle").eq(v).text(postArr[i].title);
-            $(".ArticleDesc").eq(v).text(postArr[i].desc);
-
-
-            if($('title').text().substring(0,5) == "Clear"){
-                $(".ArticleLink").eq(v).attr("href", 'clear/'+postArr[i].link);
-            }else{
-                $(".ArticleLink").eq(v).attr("href", postArr[i].link);
-            }
-
-            
+            switch(checkLang()){
+                case 0:
+                    $(".ArticleTitle").eq(v).text(postArr[i].title);
+                    $(".ArticleDesc").eq(v).text(postArr[i].desc);
+                    if($('title').text().substring(0,5) == "Clear"){
+                        $(".ArticleLink").eq(v).attr("href", 'clear/'+postArr[i].link);
+                    }else{
+                        $(".ArticleLink").eq(v).attr("href", postArr[i].link);
+                    }
+                    break;
+                case 1:
+                    $(".ArticleTitle").eq(v).text(postArr[i].estitle);
+                    $(".ArticleDesc").eq(v).text(postArr[i].esdesc);
+                    $(".ArticleLink").eq(v).attr("href", postArr[i].eslink);
+                    break;
+                default:
+                    $(".ArticleTitle").eq(v).text(postArr[i].title);
+                    $(".ArticleDesc").eq(v).text(postArr[i].desc);
+                    if($('title').text().substring(0,5) == "Clear"){
+                        $(".ArticleLink").eq(v).attr("href", 'clear/'+postArr[i].link);
+                    }else{
+                        $(".ArticleLink").eq(v).attr("href", postArr[i].link);
+                    }
+            }            
         };
        
     };
@@ -90,14 +99,3 @@ $('#submitArticleSearch').click(function(){
     return false;
 });
 
-
-//.trim().toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
-
-//testing purposes only
-$(document).click(function(){
-
-    $.getJSON(base + "data/blogPosts.json", function(data){
-        
-    });
-
-});
