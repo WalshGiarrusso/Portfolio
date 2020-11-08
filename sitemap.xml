@@ -1,154 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
    <url>
-
       <loc>https://walshgiarrusso.com/</loc>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/"/>
       <priority>1.0</priority>
-
-      <lastmod>2020-09-21</lastmod>
-
+      <lastmod>2020-11-07</lastmod>
       <changefreq>weekly</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>weekly</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/gallery/</loc>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/"/>
       <priority>0.8</priority>
-
-      <lastmod>2020-09-14</lastmod>
-
+      <lastmod>2020-11-07</lastmod>
       <changefreq>weekly</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>weekly</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/blog/</loc>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/blog/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/blog/"/>
       <priority>0.8</priority>
-
-      <lastmod>2020-10-05</lastmod>
-
+      <lastmod>2020-11-07</lastmod>
       <changefreq>weekly</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/blog/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/blog/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/blog/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>weekly</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/about</loc>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/acerca"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/about"/>
       <priority>0.6</priority>
-
-      <lastmod>2020-09-14</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/acerca</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/acerca"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/about"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
    
    <url>
-
       <loc>https://walshgiarrusso.com/contact</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/contacto"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/contact"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/contacto</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/contacto"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/contact"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/gallery/monocropping/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/monocultivo/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/monocropping/"/>
 
-      <lastmod>2020-09-14</lastmod>
-
+      <lastmod>2020-11-07</lastmod>
       <changefreq>never</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/monocultivo/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/monocultivo/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/monocropping/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>never</changefreq>
    </url>
    
    <url>
-
       <loc>https://walshgiarrusso.com/gallery/outlook/</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/la%20vista/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/outlook/"/>
+      <lastmod>2020-11-07</lastmod>
       <changefreq>never</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/la%20vista/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/la%20vista/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/outlook/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>never</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/gallery/nurtured%20accretion/</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/el%20acrecion%20cultivado/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/nurtured%20accretion/"/>
+      <lastmod>2020-11-07</lastmod>
       <changefreq>never</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/el%20acrecion%20cultivado/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/el%20acrecion%20cultivado/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/nurtured%20accretion/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>never</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/gallery/inside/</loc>
-
-      <lastmod>2020-10-05</lastmod>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/el%20interior/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/inside/"/>
+      <lastmod>2020-11-07</lastmod>
       <changefreq>never</changefreq>
-
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/el%20interior/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/el%20interior/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/inside/"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>never</changefreq>
    </url>
 
-
    <url>
-
       <loc>https://walshgiarrusso.com/accessibility</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/accesibilidad"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/accessibility"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/accesibilidad</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/accesibilidad"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/accessibility"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
    
    <url>
-
       <loc>https://walshgiarrusso.com/languages</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/idiomas"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/languages"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/idiomas</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/idiomas"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/languages"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
 
    <url>
-
       <loc>https://walshgiarrusso.com/options</loc>
-
-      <lastmod>2020-09-14</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/opciones"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/options"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/opciones</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/opciones"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/options"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
    
    <url>
-
       <loc>https://walshgiarrusso.com/sitemap</loc>
-
-      <lastmod>2020-10-05</lastmod>
-
-      <changefreq>weekly</changefreq>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/mapa%20del%20sitio"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/sitemap"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/mapa%20del%20sitio</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/mapa%20del%20sitio"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/sitemap"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
 
    <url>
       <loc>https://walshgiarrusso.com/blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis</loc>
-
-      <lastmod>2020-10-05</lastmod>
-
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/blog/los%20impactos%20politicos%20de%20la%20crisis%20financiera%202008"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis"/>
+      <lastmod>2020-11-07</lastmod>
       <changefreq>never</changefreq>
-   
    </url>
-
-
+   <url>
+      <loc>https://walshgiarrusso.com/es/blog/los%20impactos%20politicos%20de%20la%20crisis%20financiera%202008</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/blog/los%20impactos%20politicos%20de%20la%20crisis%20financiera%202008"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/blog/the%20political%20impacts%20of%20the%202008%20financial%20crisis"/>
+      <lastmod>2020-11-07</lastmod>
+      <changefreq>never</changefreq>
+   </url>
+   
 </urlset> 
