@@ -192,8 +192,252 @@
     <!--Content-->
     <main id="main" class="MarginIndent">
         <h1 id="contenidoPrincipal" tabindex="-1">
-            
+            Opciones de Accesibilidad
         </h1>
+        
+        <a class="MarginIndent NoWrap" href="es/idiomas">
+            Opciones de las Idiomas&nbsp;>
+        </a>
+        <p class="MarginIndent">
+            Si tú necesitas ayuda con los opciones en esta página, favor <a href="es/contacto">contactarte conmigo</a>.
+        </p>
+        
+        <section class="MarginIndent">
+            <h2>
+                Presentación del Sitio
+            </h2>
+            <button class="CFS FS TB TB_hover Bold MarginIndent" name="Max Contrast" id="maxContrastButton">
+                Contraste Máximo
+            </button>
+            <h3 class="MarginIndent">
+                Temas
+            </h3>
+            <form class="MarginIndent" id="customColorsForm" onsubmit="return false">
+                <fieldset class="CFS MarginIndent FS">
+                    <legend>
+                        Tema de Color
+                    </legend>
+                    <label class="MarginIndent" for="textColorInput">Color de Texto</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Text Color" id="textColorInput" value="#000000"> 
+                        
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="textColorTI" placeholder="Introduzca un Trillizo Hexidecimal" value="#000000" maxlength="7">
+                    </div>
+
+                    <label class="MarginIndent" for="backgroundColorInput">Color de Fondo</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Background Color" id="backgroundColorInput" value="#ffffff"> 
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="backgroundColorTI" placeholder="Introduzca un Trillizo Hexidecimal" value="#ffffff" maxlength="7">
+                    </div>
+
+                    <label class="MarginIndent" for="borderColorInput">Color del Indicador de Borde y Enfoque</label>
+                    <div class="InputGroup">
+                        <input class="MarginIndent FS CFS" type="color" name="Border Color" id="borderColorInput" value="#000000">
+                        <input class="CFS FS MarginIndent ColorTextInput" type="text" id="borderColorTI" placeholder="Introduzca un Trillizo Hexidecimal" value="#000000" maxlength="7">
+                    </div>
+                </fieldset>
+
+                
+                <fieldset class="MarginIndent FS CFS">
+                    <legend>
+                        Temas de los Estilos de Iconos
+                    </legend>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="radio" name="Icon Color" id="lightIconsCheckbox" value="lightIconsCheckbox">
+                        <label for="lightIconsCheckbox">Iconos de Colores Claros</label>
+                    </div>
+                    
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="radio" name="Icon Color" id="darkIconsCheckbox" value="darkIconsCheckbox" checked>
+                        <label for="darkIconsCheckbox">Iconos de Colores Oscuros</label>
+                    </div>
+                    
+
+                </fieldset>
+        
+                <input type="submit" class="CFS FS TB TB_hover Bold MarginIndent" name="Submit Site Theme" id="submitSiteColors" value="Entregar">
+                
+                <p id="errorBox" class="MarginIndent">
+                    
+                </p>
+            
+                <button class="CFS FS TB TB_hover Bold MarginIndent" name="Proceed" id="errorOverride">
+                    Proceder de Todos Modos
+                </button>
+            </form>
+
+
+            <h3 class="MarginIndent">
+                Interactividad
+            </h3>
+            
+            <form class="MarginIndent" id="interactivityOptions" onsubmit="return false">
+                <fieldset class="MarginIndent CFS FS">
+                    <legend>
+                        Interactividad Visual
+                    </legend>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="checkbox" name="Reduce Motion" id="reduceMotionCheckbox" value="reduceMotionCheckbox">
+                        <label for="reduceMotionCheckbox">Reduce el Movimiento (Esta Opción Requiere una Actualización de Página)</label>
+                    </div>
+                    <div class="MarginIndent LabelledInput">
+                        <input class="FS CFS" type="checkbox" name="Disable Form Styling" id="fSCheckbox" value="fSCheckbox">
+                        <label for="fSCheckbox">Desactivar Estilos de Formulario</label>
+                    </div>
+                </fieldset>
+                
+
+                <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" id="submitSiteInteractivity" value="Entregar">
+            </form>
+
+
+            <h3 class="MarginIndent">
+                Apariencia del Texto
+            </h3>
+            <form class="MarginIndent" id="textPresOptions" onsubmit="return false">
+                
+                <section class="MarginIndent FauxFieldset">
+                    <h4>
+                        Tamaño
+                    </h4>
+                    <section>
+                        <h5 class="MarginIndent">
+                            Tamaño del Texto
+                        </h5>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Windows
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Presione la tecla de control <kbd aria-hidden="true">Ctrl</kbd> y la tecla del signo más <kbd aria-hidden="true">+</kbd> juntas para acercar.
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Mac
+                            </h6>
+        
+                            <p class="DoubleIndentM">
+                                Presione la tecla de comando <kbd aria-hidden="true">CMD</kbd> <span aria-hidden="true">(<kbd>&#8984;</kbd>)</span> y la tecla de signo más <kbd aria-hidden="true">+</kbd> juntas para acercar.
+                            </p>
+                        </section>
+                        <section class="MarginIndent">
+                            <h6 class="MarginIndent">
+                                Móvil
+                            </h6>
+                            <p class="DoubleIndentM">
+                                Visita la configuración de tus navegador móvil o dispositivo móvil para acercar.
+                            </p>
+                        </section>
+
+                    </section>
+                    <fieldset class="MarginIndent CFS FS" id="iAS">
+                        <legend>
+                            Tamaño de los Blancos de Interacción
+                        </legend>
+
+                        <label class="MarginIndent" for="targetSizingRange">
+                            Tamaño de Entradas, Botones y Enlaces
+                        </label>
+                        <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Target Sizing" value="Reajustar">
+                        <input type="range" class="MarginIndent" id="targetSizingRange" name="Input, Button and Link Sizing" min="1" max="4" step="0.05" value="2.75">
+
+                        
+                    
+                        <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Entregar" name="Submit Interaction Target Sizing" id="submitTargetSizing">
+
+                    </fieldset>
+
+                </section>
+                    
+                    
+                
+             
+                <fieldset class="MarginIndent CFS FS">
+                    <legend>
+                        Espaciado
+                    </legend>
+                    <input type="reset" class="FS CFS TB TB_hover Bold MarginIndent" name="Reset Text Spacing" id="resetTextSpacing" value="Reajustar">
+
+                    <label class="MarginIndent" for="letterSpacingRange">Espaciado de Letras</label>
+                    <input class="MarginIndent" type="range" name="Letter Spacing Range" id="letterSpacingRange" min="-0.05" max="0.25" step="0.0125" value="0.12">
+                    
+                    <label class="MarginIndent" for="wordSpacingRange">Espaciado de Palabras</label>
+                    <input class="MarginIndent" type="range" name="Word Spacing Range" id="wordSpacingRange" min="-0.15" max="0.3" step="0.025" value="0.16">
+                    
+                    <label class="MarginIndent" for="lineSpacingRange">Espaciado de Línea</label>
+                    <input class="MarginIndent" type="range" name="Line Spacing Range" id="lineSpacingRange" min="1" max="2.5" step="0.1" value="1.5">
+                    
+                    <label class="MarginIndent" for="paragraphSpacingRange">Espaciado de Párrafos</label>
+                    <input class="MarginIndent" type="range" name="Paragraph Spacing Range" id="paragraphSpacingRange" min="0" max="3" step="0.05" value="2">
+                    
+                    <input type="submit" class="FS CFS TB TB_hover Bold MarginIndent" value="Entregar" id="submitTextSpacing" name="Submit Text Spacing">
+
+
+                </fieldset>
+
+            </form>
+
+
+            
+
+
+
+
+        </section>
+        
+        <section class="MarginIndent">
+            <h2>
+                Contenido del Sitio
+            </h2>
+            <h3 class="MarginIndent">
+                Video
+            </h3>
+            <form class="DoubleIndentM" id="videoPrefs" onsubmit="return false">
+                <label for="videoVolumeLevel">
+                    Nivel de Volumen Preferido
+                </label>
+                <input type="range" class="MarginIndent" id="videoVolumeLevel" name="Preferred Video Volume Level" min="0.01" max="1" step="0.01" value="0.4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayVideo" class="FS CFS" name="Automatically Play Videos">
+                    <label for="autoplayVideo" >
+                        Reproducir Vídeos Automáticamente
+                    </label>
+                </div>
+                <div class="LabelledInput">
+                    <input type="checkbox" id="noBackgroundAudio" class="FS CFS" name="Disable Background Audio">
+                    <label for="noBackgroundAudio">
+                        Desactivar el Audio de Fondo
+                    </label>
+                </div>
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Entregar" id="submitVideoPrefs" name="Submit Video Preferences">
+            </form>
+
+            <h3 class="MarginIndent">
+                Audio
+            </h3>
+            <form class="DoubleIndentM" id="audioPrefs" onsubmit="return false">
+                <label for="audioVolumeLevel">
+                    Nivel de Volumen Preferido
+                </label>
+                <input type="range" class="MarginIndent" id="audioVolumeLevel" name="Preferred Audio Volume Level" min="0.01" max="1" step="0.01" value="0.4">
+                <div class="LabelledInput">
+                    <input type="checkbox" id="autoplayAudio" class="FS CFS" name="Automatically Play Audio">
+                    <label for="autoplayAudio">
+                        Reproducir Audio Automáticamente
+                    </label>
+                </div>
+                
+
+                <input type="submit" class="FS CFS TB TB_hover Bold" value="Entregar" id="submitAudioPrefs" name="Submit Audio Preferences">
+            </form>           
+        </section>
+       
+        
+
+
+
     </main>
 
     <!--Footer-->

@@ -79,7 +79,6 @@ $('input[type=color]').change(function(){
 });
 
 function matchColorInput(cSRC, srcID, color ){
-    console.log('procced: '+ cSRC+''+srcID+''+color);
     
     if(/^text/.test(srcID)){ 
         (cSRC === 'color') ? $('#textColorTI').val(color) : $('#textColorInput').val(color);
@@ -131,19 +130,42 @@ function checkErrors(bKC, tXC, bDC, iCC){
         return true;
     }else{
         $('#errorOverride').show();
-        if (bkgQtxt < 7){
-            $('#errorBox').append('<strong class="MarginIndent Created" >Warning: the text color and the background color have a low contrast ratio ('+bkgQtxt.toFixed(3)+')</strong>');
-     
-        };
-        if(bkgQbdr < 7){
-            $('#errorBox').append('<strong class="MarginIndent Created">Warning: the border color and the background color have a low contrast ratio ('+bkgQbdr.toFixed(3)+')</strong>');
+
+        switch(checkLang()){
+            case 0:
+                if (bkgQtxt < 7){
             
-        };
-        if(bkgQicn < 3){
-            $('#errorBox').append('<strong class="MarginIndent Created">Warning: the icon color and the background color have a low contrast ratio ('+bkgQicn.toFixed(3)+')</strong>');
-         
-        };
-        $('#errorBox').append('<strong class="MarginIndent Created">Try making one color brighter and the other color darker.</strong>');
+                    $('#errorBox').append('<strong class="MarginIndent Created" >Warning: the text color and the background color have a low contrast ratio ('+bkgQtxt.toFixed(3)+')</strong>');
+
+                };
+                if(bkgQbdr < 7){
+                    $('#errorBox').append('<strong class="MarginIndent Created">Warning: the border color and the background color have a low contrast ratio ('+bkgQbdr.toFixed(3)+')</strong>');
+                    
+                };
+                if(bkgQicn < 3){
+                    $('#errorBox').append('<strong class="MarginIndent Created">Warning: the icon color and the background color have a low contrast ratio ('+bkgQicn.toFixed(3)+')</strong>');
+                 
+                };
+                $('#errorBox').append('<strong class="MarginIndent Created">Try making one color brighter and the other color darker.</strong>');
+                break;
+            case 1:
+                if (bkgQtxt < 7){
+            
+                    $('#errorBox').append('<strong class="MarginIndent Created" >Advertencia: el color del texto y el color de fondo tienen una relación de contraste baja ('+bkgQtxt.toFixed(3)+')</strong>');
+
+                };
+                if(bkgQbdr < 7){
+                    $('#errorBox').append('<strong class="MarginIndent Created">Advertencia: el color del borde y el color de fondo tienen una relación de contraste baja ('+bkgQbdr.toFixed(3)+')</strong>');
+                    
+                };
+                if(bkgQicn < 3){
+                    $('#errorBox').append('<strong class="MarginIndent Created">Advertencia: el color del icono y el color de fondo tienen una relación de contraste baja ('+bkgQicn.toFixed(3)+')</strong>');
+                 
+                };
+                $('#errorBox').append('<strong class="MarginIndent Created">Intente hacer que un color sea más brillante y el otro color más oscuro.</strong>');
+                break;
+        }
+        
         return false;
     };
 };
