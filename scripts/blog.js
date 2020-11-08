@@ -42,12 +42,10 @@ function populateContent(pageNum, postArr){
                     }else{
                         $(".ArticleLink").eq(v).attr("href", postArr[i].link);
                     }
-            }            
+            }           
         };
-       
     };
     stored = postArr;
-
 };
 
 //page functionality
@@ -75,14 +73,21 @@ $('#submitArticleSearch').click(function(){
     $.getJSON(base + "data/blogPosts.json", function(data){
         data.posts.sort(function(a,b){
 
-   
-            var aTitle = compareParse(a.title);
-            var bTitle = compareParse(b.title);
+            var aTitle
+            var bTitle
+
+            switch(checkLang()){
+                case 0:
+                    aTitle = compareParse(a.title);
+                    bTitle = compareParse(b.title);
+                    break;
+                case 1:
+                    aTitle = compareParse(a.estitle);
+                    bTitle = compareParse(b.estitle);
+                    break;
+            };
             var aScore = stringSim(searchString, aTitle);
             var bScore = stringSim(searchString, bTitle);
-
-            console.log('a1: '+aTitle+'/'+aScore+' b1: '+bTitle+'/'+bScore);
-
           
             if(aScore < bScore){
                 return 1;
