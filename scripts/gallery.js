@@ -56,7 +56,7 @@ function populateGallery(pageNumber, cardArr){
                         "alt": cardArr[i].esalt
                     });
                     $('.CardType').eq(v).text(cardArr[i].estype);
-                    $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].esedate);
+                    $('.CardTime').eq(v).attr("datetime", cardArr[i].iDate).text(cardArr[i].eDate);
                     $('.Card').eq(v).attr("href", cardArr[i].eslink);
                     break;
                 
@@ -77,8 +77,23 @@ $("#submitGalleryFilters").click(function(){
     $.getJSON(baseUrl + "data/galleryCards.json", function(data){
         opArray = data.cards;
         $(data.cards).each(function(){
-            if(chosenType !== "" && chosenType !== "all" && this.type.toLowerCase() !== chosenType){
-                opArray.splice($(opArray).index(this),1);
+
+
+            if(chosenType !== "" && chosenType !== "all"){
+                switch(checkLang()){
+                    case 0:
+                        if(this.type.toLowerCase() !== chosenType){
+                            opArray.splice($(opArray).index(this),1);
+                        }
+                        break;
+                    case 1:
+                        if(this.estype.toLowerCase() !== chosenType){
+                            opArray.splice($(opArray).index(this),1);
+                        }
+                        break;
+
+                }
+                
             };
         });
         $(opArray).each(function(){
@@ -88,7 +103,7 @@ $("#submitGalleryFilters").click(function(){
             };
         });
         cPageNum = 1;
-        $("#galleryPageNumber").text(cPageNum);
+        $('#selPageNum').text(cPageNum);
         populateGallery(cPageNum, opArray);
 
     });
@@ -100,14 +115,14 @@ $("#submitGalleryFilters").click(function(){
 $('#galleryPgBackBtn').click(function(){
     if(cPageNum > 1){
         cPageNum--;
-        $('#galleryPageNumber').text(cPageNum);
+        $('#selPagNum').text(cPageNum);
         populateGallery(cPageNum, storedArr);
     };
 });
 $('#galleryPgFwdBtn').click(function(){
     if(cPageNum < mPageNum){
         cPageNum++;
-        $('#galleryPageNumber').text(cPageNum);
+        $('#selPagNum').text(cPageNum);
         populateGallery(cPageNum, storedArr);
     };
 });
@@ -132,7 +147,7 @@ $('#submitGallerySearch').click(function(){
         
     });
     cPageNum = 1;
-    $("#galleryPageNumber").text(cPageNum);
+    $('#selPageNum').text(cPageNum);
     populateGallery(cPageNum, storedArr);
     return false;
 });

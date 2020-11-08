@@ -52,14 +52,14 @@ function populateContent(pageNum, postArr){
 $('#articlePgBackBtn').click(function(){
     if(curPageNum > 1){
         curPageNum--;
-        $('#articlePageNumber').text(curPageNum);
+        $('#selPagNumTwo').text(curPageNum);
         populateContent(curPageNum, stored);
     };
 });
 $('#articlePgFwdBtn').click(function(){
     if(curPageNum < maxPageNum){
         curPageNum++;
-        $('#articlePageNumber').text(curPageNum);
+        $('#selPagNumTwo').text(curPageNum);
         populateContent(curPageNum, stored);
     };
 });
@@ -98,7 +98,7 @@ $('#submitArticleSearch').click(function(){
             };
         });
         curPageNum = 1;
-        $('#articlePageNumber').text(curPageNum);
+        $('#selPagNumTwo').text(curPageNum);
         populateContent(curPageNum, data.posts);
     });
     return false;

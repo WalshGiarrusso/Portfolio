@@ -192,8 +192,191 @@
     <!--Content-->
     <main id="main" class="MarginIndent">
         <h1 id="contenidoPrincipal" tabindex="-1">
-            
+            Galería
         </h1>
+        
+        <p class="MarginIndent">
+            Si tú necesitas ayuda con opciones de entrada en esta página, favor <a href="es/contacto">contactarte conmigo</a>.
+        </p>        
+
+        <!--Search Options-->
+        
+        <form class="MarginIndent">
+           
+            <fieldset class="CFS FS" id="gallerySifterSearch">
+                <legend>
+                    Búsqueda
+                </legend>
+                <label class="MarginIndent" for="gallerySearch">
+                    Buscar por Título de Proyecto
+                </label>
+                <input class="CFS FS MarginIndent" type="search" name="Gallery Search" id="gallerySearch">
+                <input type="submit"  class="FS CFS TB TB_hover Bold ILB" value="Entregar" name="Submit Gallery Search" id="submitGallerySearch">
+            </fieldset>
+            <button id="showFiltersButton" class="FB Left Bold">
+                Mostrar los Filtros
+            </button>
+            
+            <fieldset class="CFS FS" id="gallerySifterFilter">
+                <legend>
+                    Filtrar
+                </legend>
+                <div class="MarginIndent">
+                    <button id="hideFiltersButton" class="FB Left Bold">
+                        Ocultar los Filtros
+                    </button>
+                    <div>
+                       
+                        <select class="CFS FS" name="Select Type" id="gallerySifterType">
+                            <option value="">
+                                Seleccionar Tipo
+                            </option>
+                            <option value="all">
+                                Todo
+                            </option>
+                            <option value="diseño">
+                                Diseño
+                            </option>
+                            <option value="digital">
+                                Digital
+                            </option>
+                            <option value="música">
+                                Música
+                            </option>
+                            <option value="fotografía">
+                                Fotografía
+                            </option>
+                            <option value="otro">
+                                Otro
+                            </option>
+                        </select>
+
+                        <label  for="gallerySifterType">
+                            Tipo
+                        </label>
+                        
+                    </div>
+                    <div>
+                        
+                        <input type="date" class="CFS FS" id="startDate" name="Start Date" value="2015-03-25">
+                        <label for="startDate"> 
+                            Fecha de Inicio
+                        </label>
+                    </div>
+                    <div>
+                        <input type="date" class="CFS FS" id="endDate" name="End Date" value="2025-03-25">
+
+                        <label for="endDate"> 
+                            Fecha de Finalización
+                        </label>
+                    </div>
+                    <input type="submit" class="FS CFS TB TB_hover Bold" value="Entregar" name="Submit Gallery Filters" id="submitGalleryFilters">
+
+
+                   
+                    
+                </div>
+                
+            </fieldset>
+
+        </form>
+        <!--Gallery/List-->
+        <ol class="GalleryList CenterOut" >
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a class="Card Card_hover" href="   ">
+                    <img class="CardImage" src=" " alt=" " >
+                    <h2 class="CardTitle">
+                    </h2>
+                    <p class="CardDesc">
+                        <span class="CardType">
+                        </span>
+                        <time class="CardTime">
+                        </time>
+                    </p>
+                </a>
+            </li>
+        </ol>
+
+        <nav class="PageNavigator CenterOut">  
+            
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgBackBtn" name="Last Page Button">
+                    &lt;&nbsp;Página Anterior
+            </button>
+        
+            <p class="Bold LetterExempt" id="galleryPageNumber">
+                <span class="ScreenReader-Only">Número de Página: </span><span id="selPagNum">1</span>
+            </p>
+
+            <button class="CFS FS TB TB_hover Bold" id="galleryPgFwdBtn" name="Next Page Button">
+                Próxima Página&nbsp;>
+            </button>
+
+        </nav>
     </main>
 
     <!--Footer-->
