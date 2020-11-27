@@ -251,6 +251,34 @@
    </url>
 
    <url>
+      <loc>https://walshgiarrusso.com/gallery/gloriosa/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/gloriosa/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/gloriosa/"/>
+      <lastmod>2020-11-27</lastmod>
+      <changefreq>never</changefreq>
+   </url>
+   <url>
+      <loc>https://walshgiarrusso.com/es/galeria/gloriosa/</loc>
+      <xhtml:link
+         rel="alternate"
+         hreflang="es"
+         href="https://walshgiarrusso.com/es/galeria/gloriosa/"/>
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://walshgiarrusso.com/gallery/gloriosa/"/>
+      <lastmod>2020-11-27</lastmod>
+      <changefreq>never</changefreq>
+   </url>
+   
+
+   <url>
       <loc>https://walshgiarrusso.com/accessibility</loc>
       <xhtml:link
          rel="alternate"

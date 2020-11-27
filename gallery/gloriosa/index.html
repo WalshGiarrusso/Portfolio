@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <!--Info-->
+    <title>Gloriosa | Walsh Giarrusso</title>
+    <meta name="author" content="Walsh Anthony Giarrusso">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--To Be Filled-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="googlebot" content="">
+
+    <!--Favicon-->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <base href="https://walshgiarrusso.com/" target="_self">    
+        <!--        <base href="C:\Users\Walsh\Desktop\Portfolio\" target="_self">         -->
+        <!--        <base href="https://walshgiarrusso.com/" target="_self">         -->
+
+    <!--Externals-->
+        <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Polyfills-->
+    <script src="polyfills/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" href="polyfills/spectrum/spectrum.css">
+        <!--Stylesheets-->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/projectPage.css">
+    
+            <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/rra6aie.css">
+</head>
+<body>
+
+<!--Superbars-->
+    <!--Accessibility Options-->
+    <nav class="BottomBorder" id="optionsBarWrapper" aria-label="Skip Link and Options">
+        <ul id="optionsBar">
+            <li>
+                <a class="Bold" href="gallery/gloriosa#mainContent">
+                    Skip to Main Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Accessibility Options
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="languages">
+                    Translation Options &#127758;&#xFE0E;
+                </a>
+            </li>
+            <li>
+                <button class="Left FB Bold" id="hideHeaderOptions">
+                    Hide Header Options
+                </button>
+            </li>
+            <li id="hideHOList">
+                <button class="Left FB Bold" id="hideHOByDefault">
+                    Don't Show Again
+                </button>
+            </li>
+            <li id="showHOList" class="Hidden">
+                <button class="Left FB Bold" id="showHOByDefault">
+                    Show by Default
+                </button>
+            </li>
+        </ul>
+        <ul id="mobileOptionsBar">
+            <li>
+                <a class="Bold" href="gallery/gloriosa#mainContent">
+                    Skip to Content
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="options">
+                    Options
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Header-->
+    <header class="BottomBorder" id="top">
+        <!--Logo-->
+        <img class="Swap"  id="logoImage" src="icons/logo-dark.svg" alt="A stylized letter w logo.">
+        <!--Navbar-->
+        <nav aria-label="Main">
+            <ul id="headerNavigation">
+                <li>
+                    <a class="Icon" href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="about">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a class="Icon" href="contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <!--Mobile Menu-->
+            <button class="Bold FB" id="mobileMenuButton" title="Open Menu" aria-labelledby="mobileMenuLabel">
+                <img class="Swap" src="icons/open-dark.svg" alt="">
+                <span id="mobileMenuLabel">
+                    Open Menu
+                </span>
+            </button>
+        </nav>
+        
+
+    </header>
+    <!--Mobile Menu-->
+    <nav class="BottomBorder" id="mobileMenu" aria-label="Mobile Main Navigation">
+        <ul>
+            <li>
+                <a class="Bold" href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a class="Bold" href="contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Breadcrumb-->
+    <nav class="BottomBorder" id="breadcrumbBar" aria-label="Breadcrumb">
+        <ul id="breadcrumbMenu">
+            <li>
+                <a href="">walshgiarrusso.com</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="gallery">gallery</a>
+            </li>
+            <li aria-hidden="true">
+                <span class="NoWrap">&nbsp;/&nbsp;</span>
+            </li>
+            <li>
+                <a href="gallery/gloriosa">
+                    <span class="ScreenReader-Only">Current Page: </span>gloriosa
+                </a>
+            </li>
+        </ul>
+        <!--Sitemap Link-->
+        <a id="siteMapLink" class="Bold" href="sitemap">
+            View Sitemap
+        </a>
+    </nav>
+        
+
+    <!--Content-->
+    <main id="main" class="MarginIndent">
+        
+        <section id="contentShowcase">
+            <h1 id="mainContent" tabindex="-1">
+                Gloriosa
+            </h1>
+            <p class="MarginIndent">
+                If you need assistance with any inputs on this page, please <a href="contact">contact me</a>.
+            </p>
+            <audio class="AudioTarget" controls src="gallery/gloriosa/gloriosa.mp3">
+            
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+            
+        </section>
+        
+        <section id="showcaseOptions" class="CenterOut">
+            <h2 id="optionsHeader">
+                Options
+            </h2>
+            
+            <p class="AudTitle">
+                Gloriosa
+            </p>
+          
+            <p id="audTimeLengthDisplay">
+                <span class="AudCurLength">
+                    0:00
+                </span>
+                <span> / </span>
+                <span class="AudTotLength">
+
+                </span>
+            </p>
+            <section class="AudioControls">
+
+                
+                <section>
+                
+                    <section>
+                        <label for="audioTimeSlider">
+                            Time
+                        </label>
+                        <input type="range" id="audioTimeSlider" min="0" step="1"> 
+                    </section>
+                    
+                 
+                    <section>
+                        <label for="audioVolSlider">
+                            Volume
+                        </label>
+                        <input type="range" id="audioVolSlider" max="1" min="0" step="0.01">    
+                    </section>
+                </section>
+               
+              <section>
+                <button class="AudioPlayPause CFS FS TB TB_Hover Bold">
+                    Play
+                </button>
+                <button class="AudioStop CFS FS TB TB_Hover Bold">
+                    Stop
+                </button>
+                <button class="AudioRewind CFS FS TB TB_Hover Bold">
+                    Rewind
+                </button>
+                <button class="AudioFF CFS FS TB TB_Hover Bold">
+                    Fast Forward
+                </button>   
+              </section>
+               
+                
+
+            </section>
+
+
+
+
+        
+            
+        </section>
+        
+        
+        <section class="MarginIndent CenterExempt">
+            <h2>
+                Gloriosa - Music, <time datetime="2020-11-17">November 17th, 2020</time>
+            </h2>
+         
+            <p class="MarginIndent">
+                I made this after a long period away from music. I'm extremely happy with it. It may be my favorite song that I've ever made. I think that it strikes the balance between repetition and variation, and I love the sound selection. There is a lot of variation in timbre in this song that's unlike anything I've ever made before. The quality of my mixes are pretty consistent, and this is definitely on the higher end of that spectrum, but the areas in which this song really shines are sound selection and composition. 
+            </p>
+
+            <section class="MarginIndent">
+                <h3> 
+                    Direct Download
+                </h3>
+                <p class="MarginIndent">
+                    Use <a href="gallery/gloriosa/gloriosa.mp3" download>this link</a> to download Gloriosa as an <abbr title="MPEG Audio Layer-3">MP3</abbr> file if you're having issues.
+                </p>
+    
+            </section>
+           
+            <section class="MarginIndent">
+                <h3> 
+                    Audio Description
+                </h3>
+                <p class="MarginIndent">
+                    Drum samples, as well as synthetic bass, gated pad, saxophone, piano, and guitar play an original instrumental composition in F minor at 116 <abbr title="Beats Per Minute">BPM</abbr>. 
+                </p>
+            </section>
+        </section>
+
+        <section class="DoubleIndentM Bibliography">
+            <h3>
+                Bibliography
+            </h3>
+            <ul class="MarginIndent">
+                <li>
+                    <p class="HangingIndent">
+                        Evie Shaffer, <i>Orange-Petaled Flower,</i> <time datetime="2019-06-17">June 17, 2019</time>, Photography, 2536 by 3626 pixels, Pexels Stock Photos, accessed <time datetime="2020-11-17">November 17, 2020</time> from
+                        <a target="_blank" href="https://www.pexels.com/photo/orange-petaled-flower-2512388/">
+                            https://www.pexels.com/photo/orange-petaled-flower-2512388/
+                        </a>
+                    </p>
+                </li>          
+            </ul>
+        </section>
+    </main>
+
+
+
+
+    <!--Footer-->
+    <footer class="TopBorder" id="mainFooter">
+        <!--Important Links-->
+        <div role="navigation" aria-label="Miscellaneous Links">
+            <ul class="BottomBorder" id="footerLinks" >
+                <li>
+                    <a class="Bold" href="gallery/gloriosa#top">
+                            Back to Top
+                    </a>
+                </li>
+                <li>
+                        <a class="Bold" href="sitemap">
+                            View Sitemap
+                        </a>
+                </li>
+                <li id="sHOParent">
+                        <button class="Bold FB Left" id="showHeaderOptions">
+                            Show Header Options
+                        </button>
+                    </li>
+            </ul>
+        </div>
+        
+
+    <!--Footer Navigation-->
+    <div role="navigation" aria-label="Footer Redundant">
+        <ul class="Bold BottomBorder" id="footerNavigation" >
+            <li>
+                <a href="">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="gallery">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a href="blog">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="about">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+  
+    <!--Accessibility Information-->
+        <div role="contentinfo">
+           <ul class="BottomBorder" id="accessibilityInformation">
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Accessibility Statement
+                        </h2>
+                        <p>
+                            Ensuring accessibility is this website's number one priority. <a href="accessibility">View the full accessibility statement here</a>.
+                        </p>
+                    </section>
+                </li>
+                <li id="footerAccessStatement">
+                    <a href="accessibility" class="NoBreak">
+                        Accessibility Statement&nbsp;>
+                    </a>
+                </li>
+                <li class="FooterInfoHide">
+                    <section>
+                        <h2 class="FooterHeader">
+                            Conformance Claim
+                        </h2>
+                        <p>
+                            Since August 2020, all walshgiarrusso.com web pages fully conform to <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> Level AAA. 
+                        </p>
+                    </section>
+                </li>
+                <li id="footerConformanceClaim">
+                    <a href="accessibility#conformanceClaim">
+                        Conformance Claim&nbsp;>
+                    </a>
+                </li>
+            </ul>
+    
+            <!--Extra Info-->
+            <address class="BottomBorder" id="footerInfo">
+                <a href="tel:+1973-202-0158" aria-label="Telephone Link">
+                   +1 (973) 202 0158
+                </a>
+
+                <a href="mailto:walshgiarrusso@gmail.com" aria-label="Email Link">
+                    walshgiarrusso@gmail.com
+                </a>
+
+            </address>
+
+           <p id="copyrightInfo">
+                <small>
+            
+                    Copyright &#169; 2020 Walsh Giarrusso. Some Rights Reserved.
+            
+                </small>
+            </p>
+            
+        </div>
+    
+    </footer>
+
+    <!--Scripts-->
+    <script src="scripts/universal.js"></script>
+    <script src="scripts/projectPage.js"></script>
+    
+</body>
+</html>

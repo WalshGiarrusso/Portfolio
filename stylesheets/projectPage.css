@@ -4,11 +4,6 @@
     margin-left:auto;
     margin-right:auto;
     display:block;
-
-    
-    /*test only*/
-   
-    
 }
 #showcaseOptions{
     
@@ -34,10 +29,46 @@
     margin-right:auto;
     width:5.5rem;
 }
-/*test only*/
 #contentImageContainer{
     
     max-width:100%;
     overflow:auto;
     
+}
+
+/*Audio Controls*/
+.AudTitle{
+    font-size:3rem;
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+}
+.AudioControls{
+    display:flex;
+    flex-flow:column nowrap;
+    width:100%;
+  
+}
+.AudioControls > section{
+    display:flex;
+    flex-flow:row nowrap;
+    width:100%;
+    justify-content: space-around;
+    margin: .75rem 0;
+} 
+.AudioControls > section > button{
+    box-sizing:border-box;
+    width:12%;
+   
+}
+.AudioControls > section > section{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: center;
+}
+#audTimeLengthDisplay{
+    font-size:3.5rem;
+}
+input[type=range]{
+    width:20rem;
 }

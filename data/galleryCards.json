@@ -16,6 +16,20 @@
         },
 
         {
+            "title":"Gloriosa",
+            "imgSrc":"gallery/gloriosa/gloriosa.png",
+            "imgAlt":"Link to the gloriosa project page. Depicts a hand reaching out towards an orange-petaled flower.",
+            "type":"Music",
+            "iDate":"2020-11-17",
+            "eDate":"11/17/2020",
+            "link":"gallery/gloriosa",
+            "estitle":"Gloriosa",
+            "esalt":"Enlace a la página del proyecto de \"Gloriosa.\" Representa una mano que se extiende hacia una flor de pétalos de naranja.",
+            "estype":"Música",
+            "eslink":"es/galeria/gloriosa"
+        },
+
+        {
             "title":"Inside",
             "imgSrc":"gallery/inside/inside-mini.png",
             "imgAlt":"Link to the inside project page. Depicts a cozy desktop situated below a window with raindrops falling down it.",
