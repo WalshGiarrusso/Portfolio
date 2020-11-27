@@ -29,9 +29,9 @@ function initAudio(){
     $('.AudioTarget').prop("volume", lclProjStorage.getItem('audioVolume') ? lclProjStorage.getItem('audioVolume') : 0.4)
     $('#audioVolSlider').val(lclProjStorage.getItem('audioVolume') ? lclProjStorage.getItem('audioVolume') : 0.4)
     $('.AudioTarget').autoplay = lclProjStorage.getItem('audioAutoplay') ? lclProjStorage.getItem('audioAutoplay') : false
-    $('.AudTotLength').text(toMinutes(audioPlayer[0].duration))
     $('#audioTimeSlider').prop("max",audioPlayer[0].duration).val(0)
 };
+
 var audScrubInterrupt = false;
 const audioPlayer = $('audio')
 const audPlayPause = $('.AudioPlayPause')
@@ -93,3 +93,6 @@ function toMinutes(sec){
     return outString
 }
 
+$(window).on('load',function(){
+    $('.AudTotLength').text(toMinutes(audioPlayer[0].duration))
+});
