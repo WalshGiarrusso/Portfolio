@@ -48,6 +48,9 @@ a, button, input, select{
     font-size:1rem;
     font-family:inherit;
     cursor:pointer;
+
+    /*Color fix attempt*/
+    color:inherit;
 }
 input[type=range]{
     margin-right:0;
