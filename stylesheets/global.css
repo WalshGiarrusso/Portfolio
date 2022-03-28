@@ -27,7 +27,7 @@ body{
     font-family: trade-gothic-next, sans-serif;
     font-weight: 400;
     font-style: normal;
-    
+    color:inherit;
     
     
 }
@@ -170,7 +170,7 @@ ul, ol{
 a{
     text-decoration:none;
     justify-content:flex-start;
-    color:inherit;
+    color:white !important;
 }
 h1{
     font-size:2.25rem;    
