@@ -49,8 +49,6 @@ a, button, input, select{
     font-family:inherit;
     cursor:pointer;
 
-    /*Color fix attempt*/
-    color:inherit;
 }
 input[type=range]{
     margin-right:0;
@@ -170,9 +168,6 @@ ul, ol{
 a{
     text-decoration:none;
     justify-content:flex-start;
-}
-a, a:visited, a:link{
-    color: inherit;
 }
 h1{
     font-size:2.25rem;    
